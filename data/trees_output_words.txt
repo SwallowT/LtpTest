@@ -1,370 +1,82 @@
 
 (0,Root
-	(8,Root,指
-		(1,mDEPD,注)
-		(2,mRELA,1
-			(3,mPUNC,：))
-		(5,EXP,数据
-			(4,FEAT,网络)
-			(6,mPUNC,，))
-		(7,mDEPD,是)
-		(23,CONT,数据
-			(11,dFEAT,收集
-				(10,MATL,网络
-					(9,mRELA,通过))
-				(12,mPUNC,、)
-				(13,eCOO,存储
-					(14,mPUNC,、)
-					(15,eCOO,传输
-						(16,mPUNC,、)
-						(17,eCOO,处理))))
-			(19,rCONT,产生
-				(18,mRELA,和)
-				(20,mDEPD,的))
-			(21,SCO,各种)
-			(22,FEAT,电子))
-		(24,mPUNC,。)))
-
-(0,Root
-	(24,Root,包括
-		(21,EXP,信息
-			(9,rCONT,记录
-				(3,PAT,信息
-					(2,FEAT,个人
-						(1,MEAS,2)))
-				(8,MANN,方式
-					(4,mRELA,以)
-					(5,eCOO,电子)
-					(6,mRELA,或者)
-					(7,SCO,其他))
-				(10,mDEPD,的))
-			(18,rEXP,有关
-				(17,DATV,自然人
-					(11,mRELA,与)
-					(13,rPAT,识别
-						(12,mDEPD,已))
-					(15,mDEPD,可识别
-						(14,mRELA,或者)
-						(16,mDEPD,的)))
-				(19,mDEPD,的))
-			(20,SCO,各种)
-			(22,mPUNC,，))
-		(23,mNEG,不)
-		(29,LINK,信息
-			(26,rCONT,处理
-				(25,MANN,匿名化)
-				(27,mDEPD,后)
-				(28,mDEPD,的)))
-		(30,mPUNC,。)))
-
-(0,Root
-	(19,Root,危害
-		(5,ePREC,遭到
-			(3,EXP,数据
-				(1,MEAS,3)
-				(2,FEAT,重要))
-			(4,mRELA,一旦)
-			(6,CONT,篡改
-				(7,mPUNC,、)
-				(8,eCOO,破坏)
-				(9,mPUNC,、)
-				(10,eCOO,泄露)
-				(13,eCOO,获取
-					(11,mRELA,或者)
-					(12,MANN,非法)
-					(14,mPUNC,、)
-					(16,eCOO,利用
-						(15,MANN,非法))))
-			(17,mPUNC,，))
-		(18,mDEPD,可能)
-		(21,CONT,安全
-			(20,EXP,国家)
-			(22,mPUNC,、)
-			(24,eCOO,利益
-				(23,FEAT,公共)))
-		(25,mDEPD,的)
-		(26,DATV,数据)
-		(27,mPUNC,。)))
-
-(0,Root
-	(7,Root,包括
-		(1,mDEPD,注)
-		(2,mRELA,1
-			(3,mPUNC,：))
-		(5,EXP,数据
-			(4,FEAT,重要))
-		(6,mNEG,不)
-		(9,DATV,秘密
-			(8,FEAT,国家))
-		(10,mPUNC,。)))
-
-(0,Root
-	(8,Root,包括
-		(1,mDEPD,注)
-		(2,mRELA,2
-			(3,mPUNC,：))
-		(5,EXP,数据
-			(4,FEAT,重要))
-		(6,mDEPD,一般)
-		(7,mNEG,不)
-		(10,LINK,信息
-			(9,FEAT,个人)
-			(15,eCOO,信息
-				(11,mRELA,和)
-				(14,dFEAT,管理
-					(12,AGT,企业
-						(13,mDEPD,内部)))))
-		(16,mPUNC,，)
-		(45,eSUCC,属于
-			(17,mRELA,但)
-			(18,dEXP,达到
-				(23,CONT,信息
-					(20,FEAT,规模
-						(19,FEAT,一定)
-						(21,mDEPD,的))
-					(22,FEAT,个人)
-					(33,eCOO,数据
-						(24,mRELA,或者)
-						(30,rPAT,形成
-							(29,dLOC,加工
-								(25,mRELA,基于)
-								(28,PAT,信息
-									(26,FEAT,海量)
-									(27,FEAT,个人)))
-							(31,mDEPD,的))
-						(32,FEAT,衍生)
-						(34,mPUNC,，))))
-			(36,eSUCC,影响
-				(35,mRELA,如)
-				(38,CONT,安全
-					(37,EXP,国家)
-					(41,eCOO,利益
-						(39,mRELA,或)
-						(40,FEAT,公共)))
-				(42,mPUNC,，))
-			(43,mRELA,则)
-			(44,mDEPD,可能)
-			(47,LINK,数据
-				(46,FEAT,重要))
-			(48,mPUNC,。))))
-
-(0,Root
-	(5,Root,关系
-		(1,MEAS,4)
-		(4,EXP,数据
-			(2,FEAT,国家)
-			(3,FEAT,核心))
-		(7,DATV,安全
-			(6,EXP,国家)
-			(8,mPUNC,、)
-			(10,eCOO,命脉
-				(9,FEAT,国民经济)
-				(11,mPUNC,、)
-				(12,FEAT,重要民生
-					(13,mPUNC,、))))
-		(19,DATV,数据
-			(16,FEAT,利益
-				(14,FEAT,重大)
-				(15,FEAT,公共)
-				(17,mDEPD,等)
-				(18,mDEPD,的)))
-		(20,mPUNC,。)))
-
-(0,Root
-	(23,Root,数据
-		(19,rPAT,收集
-			(3,AGT,数据
-				(1,MEAS,5)
-				(2,FEAT,公共))
-			(8,AGT,机构
-				(7,FEAT,服务
-					(5,eCOO,管理
-						(4,FEAT,公共))
-					(6,mRELA,和)))
-			(17,LOC,过程
-				(9,mRELA,在)
-				(11,dFEAT,履行
-					(10,MANN,依法)
-					(16,CONT,职责
-						(15,FEAT,服务
-							(13,eCOO,管理
-								(12,FEAT,公共))
-							(14,mRELA,和))))
-				(18,mDEPD,中))
-			(20,mPUNC,、))
-		(21,rCONT,产生
-			(22,mDEPD,的))
-		(24,mPUNC,，)
-		(42,eCOO,数据
-			(25,mRELA,及其他)
-			(34,rPAT,收集
-				(28,AGT,个人
-					(26,eCOO,组织)
-					(27,mRELA,和))
-				(30,dTIME,提供
-					(29,mRELA,在)
-					(32,CONT,服务
-						(31,FEAT,公共))
-					(33,mDEPD,中))
-				(35,mPUNC,、))
-			(36,rCONT,产生
-				(37,mDEPD,的))
-			(38,dFEAT,涉及
-				(40,DATV,利益
-					(39,FEAT,公共))
-				(41,mDEPD,的))
-			(43,mPUNC,。))))
-
-(0,Root
-	(10,Root,包括
-		(1,mDEPD,注
-			(2,mPUNC,：))
-		(7,EXP,机构
-			(6,FEAT,服务
-				(4,eCOO,管理
-					(3,FEAT,公共))
-				(5,mRELA,和))
-			(8,mPUNC,，))
-		(9,mDEPD,通常)
-		(12,LINK,党政机关
-			(11,SCO,各级)
-			(13,mPUNC,、)
-			(22,eCOO,单位
-				(14,rFEAT,具有
-					(19,LINK,职能
-						(18,FEAT,服务
-							(16,eCOO,管理
-								(15,FEAT,公共))
-							(17,mRELA,和)))
-					(20,mDEPD,的))
-				(21,FEAT,企事业)))
-		(23,mPUNC,。)))
-
-(0,Root
-	(21,Root,数据
-		(1,MEAS,7)
-		(19,rCONT,产生
-			(3,EXP,数据
-				(2,FEAT,衍生)
-				(4,FEAT,原始数据))
-			(17,dREAS,活动
-				(5,mRELA,经过)
-				(14,FEAT,聚合
-					(8,eCOO,统计
-						(6,eCOO,计算
-							(7,mPUNC,、))
+	(18,Root,识别
+		(1,mRELA,2)
+		(4,dTIME,分类
+			(2,mPUNC,）)
+			(3,PAT,数据)
+			(5,mDEPD,时)
+			(6,mRELA,按照))
+		(16,MANN,优先次序
+			(14,EXP,数据
+				(11,eCOO,数据
+					(8,eCOO,信息
+						(7,FEAT,个人)
 						(9,mPUNC,、))
-					(10,eCOO,关联
-						(11,mPUNC,、))
-					(12,eCOO,挖掘)
-					(13,mRELA,或)
-					(15,mDEPD,等))
-				(16,FEAT,加工))
-			(18,mRELA,而)
-			(20,mDEPD,的))
-		(22,mPUNC,。)))
-
-(0,Root
-	(13,Root,分为
-		(1,mDEPD,注)
-		(7,MANN,程度
-			(2,mPUNC,：)
-			(3,mRELA,根据)
-			(4,FEAT,数据
-				(5,mDEPD,的))
-			(6,FEAT,加工)
-			(8,mPUNC,，))
-		(9,mDEPD,可)
-		(12,PAT,数据
-			(10,mRELA,将)
-			(11,FEAT,衍生))
-		(15,LINK,数据
-			(14,FEAT,脱敏)
-			(16,mPUNC,、)
-			(18,eCOO,数据
-				(17,FEAT,标签)
-				(19,mPUNC,、)
-				(21,eCOO,数据
-					(20,FEAT,统计)
-					(22,mPUNC,、)
-					(24,eCOO,数据
-						(23,FEAT,关联)
-						(25,mDEPD,等)))))
-		(26,mPUNC,。)))
+					(10,FEAT,公共)
+					(12,mPUNC,、))
+				(13,FEAT,法人)
+				(15,mDEPD,的)))
+		(17,MANN,依次)
+		(19,mPUNC,，)
+		(20,eSUCC,采取
+			(23,CONT,原则
+				(21,mRELA,就)
+				(22,FEAT,高从严))
+			(26,dCONT,进行
+				(25,DATV,数据
+					(24,mRELA,对))
+				(27,CONT,分类))
+			(28,mPUNC,：))))
 
 (0,Root
 	(17,Root,识别
-		(1,mRELA,2))
-		(3,dTIME,分类
-			(2,PAT,数据)
-			(4,mDEPD,时)
-			(5,mRELA,按照))
-		(15,MANN,优先次序
-			(13,EXP,数据
-				(10,eCOO,数据
-					(7,eCOO,信息
-						(6,FEAT,个人)
-						(8,mPUNC,、))
-					(9,FEAT,公共)
-					(11,mPUNC,、))
-				(12,FEAT,法人)
-				(14,mDEPD,的)))
-		(16,MANN,依次)
-		(18,mPUNC,，)
-		(19,eSUCC,采取)
-		(25,eSUCC,进行
-			(22,MANN,原则
-				(20,mRELA,就)
-				(21,FEAT,高从严))
-			(24,DATV,数据
-				(23,mRELA,对))
-			(26,CONT,分类)
-			(27,mPUNC,：)
-			(44,eSUCC,识别
-				(28,mPUNC,●)
-				(32,ePREC,属于
-					(29,mRELA,当)
-					(30,EXP,数据)
-					(31,mRELA,既)
-					(34,EXP,信息
-						(33,FEAT,个人))
-					(36,eSUCC,属于
-						(35,mRELA,又)
-						(38,LINK,数据
-							(37,FEAT,公共))
-						(41,EXP,数据
-							(39,mRELA,或)
-							(40,FEAT,法人))
-						(42,mDEPD,时)
-						(43,mPUNC,，)))
-				(45,eSUCC,为
-					(47,LINK,信息
-						(46,FEAT,个人))
-					(48,mPUNC,；)
-					(49,mPUNC,●)
-					(62,eSUCC,识别
-						(53,ePREC,属于
-							(50,mRELA,当)
-							(51,EXP,数据)
-							(52,mRELA,既)
-							(55,LINK,数据
-								(54,FEAT,公共))
-							(57,eSUCC,属于
-								(56,mRELA,又)
-								(59,LINK,数据
-									(58,FEAT,法人))
-								(60,mDEPD,时)
-								(61,mPUNC,，)))
-						(63,eSUCC,为
-							(65,LINK,数据
-								(64,FEAT,公共))
-							(66,mPUNC,。))))))))
+		(5,dTIME,属于
+			(1,mPUNC,●)
+			(2,mRELA,当)
+			(3,LINK,数据)
+			(4,mRELA,既)
+			(7,EXP,信息
+				(6,FEAT,个人))
+			(9,eSUCC,属于
+				(8,mRELA,又)
+				(11,LINK,数据
+					(10,FEAT,公共)
+					(14,eCOO,数据
+						(12,mRELA,或)
+						(13,FEAT,法人)))
+				(15,mDEPD,时)
+				(16,mPUNC,，)))
+		(18,eSUCC,为)
+		(20,CONT,信息
+			(19,FEAT,个人))
+		(21,mPUNC,；)))
+
+(0,Root
+	(14,Root,识别
+		(5,dTIME,属于
+			(1,mPUNC,●)
+			(2,mRELA,当)
+			(3,EXP,数据)
+			(4,mRELA,既)
+			(7,EXP,数据
+				(6,FEAT,公共))
+			(9,eSUCC,属于
+				(8,mRELA,又)
+				(11,EXP,数据
+					(10,FEAT,法人))
+				(12,mDEPD,时)
+				(13,mPUNC,，)))
+		(15,mDEPD,为
+			(17,LINK,数据
+				(16,FEAT,公共)))
+		(18,mPUNC,。)))
 
 (0,Root
 	(7,Root,识别
-		(1,mRELA,3
-			(2,mPUNC,)))
+		(1,mRELA,3)
 		(4,dTIME,定级
+			(2,mPUNC,）)
 			(3,PAT,数据)
 			(5,mDEPD,时))
 		(6,MANN,优先)
@@ -376,115 +88,118 @@
 				(13,mPUNC,、)
 				(15,eCOO,数据
 					(14,FEAT,重要)
-					(16,mPUNC,，)))
-			(18,eSUCC,涉及
-				(17,mDEPD,如)
-				(29,dCONT,进行
-					(19,mDEPD,应)
-					(28,MANN,级别
-						(20,mRELA,按照)
-						(24,eCOO,级别
-							(23,FEAT,数据
-								(21,FEAT,国家)
-								(22,FEAT,核心))
-							(25,mPUNC,、))
-						(27,FEAT,数据
-							(26,FEAT,重要)))
-					(30,CONT,定级))
-				(31,mPUNC,。)))))
+					(16,mPUNC,，))))
+		(18,eCOO,涉及
+			(17,mDEPD,如)
+			(29,dCONT,进行
+				(19,mDEPD,应)
+				(28,MANN,级别
+					(20,mRELA,按照)
+					(24,eCOO,级别
+						(23,FEAT,数据
+							(21,FEAT,国家)
+							(22,FEAT,核心))
+						(25,mPUNC,、))
+					(27,FEAT,数据
+						(26,FEAT,重要)))
+				(30,CONT,定级))
+			(31,mPUNC,。))))
 
 (0,Root
 	(8,Root,分为
-		(4,LOC,角度
+		(4,mDEPD,角度
 			(1,mRELA,从)
 			(2,FEAT,数据)
 			(3,FEAT,主体)
 			(5,mPUNC,，))
 		(7,PAT,数据
 			(6,mRELA,将))
-		(10,LINK,数据
-			(9,FEAT,公共)
-			(11,mPUNC,、))
 		(19,LINK,类别
 			(16,FEAT,数据
 				(13,eCOO,信息
+					(10,eCOO,数据
+						(9,FEAT,公共)
+						(11,mPUNC,、))
 					(12,FEAT,个人)
 					(14,mPUNC,、))
 				(15,FEAT,法人))
 			(18,MEAS,个
 				(17,MEAS,三)))
 		(20,mPUNC,，)
-		(24,eSUCC,示
-			(21,mDEPD,如)
-			(22,LOC,表 1)
-			(23,mDEPD,所)
-			(25,mPUNC,：)
-			(29,eCOO,遭到
-				(27,MANN,数据
-					(26,mRELA,根据))
-				(28,mRELA,一旦)
-				(30,CONT,篡改
-					(31,mPUNC,、)
-					(32,eCOO,破坏)
-					(33,mPUNC,、)
-					(34,eCOO,泄露))
-				(37,eCOO,获取
-					(35,mRELA,或者)
-					(36,MANN,非法)
-					(38,mPUNC,、)
-					(40,eCOO,利用
-						(39,MANN,非法)
-						(41,mPUNC,，)))
-				(57,CONT,程度
-					(54,rLINK,造成
-						(53,DATV,权益
-							(42,mRELA,对)
-							(51,FEAT,组织
-								(47,eCOO,利益
-									(43,FEAT,国家)
-									(44,eCOO,安全
-										(45,mPUNC,、))
-									(46,FEAT,公共))
-								(48,mRELA,或者)
-								(49,eCOO,个人
-									(50,mPUNC,、)))
-							(52,FEAT,合法))
-						(55,mDEPD,的))
-					(56,FEAT,危害)
-					(58,mPUNC,，)
-					(63,dFEAT,分成
-						(60,CONT,数据
-							(59,mRELA,将))
-						(62,STAT,低到高
-							(61,mRELA,从))
-						(64,CONT,公开级)
-						(69,EXP,内部级
-							(65,mPUNC,（)
-							(66,MEAS,1 级)
-							(67,mPUNC,）)
-							(68,mPUNC,、)
-							(70,mPUNC,（)
-							(71,eCOO,2 级)
-							(72,mPUNC,）)
-							(73,mPUNC,、)
-							(74,eCOO,敏感级)
-							(75,mPUNC,（)
-							(76,eCOO,3 级)
-							(77,mPUNC,）)
-							(78,mPUNC,、))
-						(79,FEAT,重要级)))))
-		(90,LINK,级别
-			(84,FEAT,核心级
-				(81,MEAS,4 级
-					(80,mPUNC,（)
-					(82,mPUNC,）)
-					(83,mPUNC,、))
-				(85,mPUNC,（))
-			(89,MEAS,个
-				(86,MEAS,5 级
-					(87,mPUNC,）))
-				(88,MEAS,五))
-			(91,mPUNC,。))))
+		(21,eSUCC,如)
+		(23,eSUCC,示
+			(22,EXP,表1所)
+			(24,mPUNC,：))))
+
+(0,Root
+	(40,Root,分成
+		(4,ePREC,遭到
+			(2,EXP,数据
+				(1,mRELA,根据))
+			(3,mRELA,一旦)
+			(5,CONT,篡改
+				(6,mPUNC,、)
+				(7,eCOO,破坏)
+				(8,mPUNC,、)
+				(9,eCOO,泄露)
+				(12,eCOO,获取
+					(10,mRELA,或者)
+					(11,MANN,非法)
+					(13,mPUNC,、)
+					(15,eCOO,利用
+						(14,mDEPD,非法))
+					(16,mPUNC,，))))
+		(32,CONT,程度
+			(29,rSCO,造成
+				(28,DATV,权益
+					(17,mRELA,对)
+					(22,eCOO,利益
+						(19,eCOO,安全
+							(18,EXP,国家)
+							(20,mPUNC,、))
+						(21,FEAT,公共))
+					(23,mRELA,或者)
+					(24,FEAT,个人
+						(25,mPUNC,、))
+					(26,FEAT,组织)
+					(27,FEAT,合法))
+				(30,mDEPD,的))
+			(31,FEAT,危害)
+			(33,mPUNC,，))
+		(34,mDEPD,将)
+		(35,PAT,数据)
+		(37,STAT,低
+			(36,mRELA,从))
+		(39,STAT,高
+			(38,mRELA,到))
+		(41,LINK,公开级
+			(42,mPUNC,（)
+			(43,eCOO,1级)
+			(44,mPUNC,）)
+			(45,mPUNC,、)
+			(46,eCOO,内部级
+				(47,mPUNC,（)
+				(48,MEAS,2级)
+				(49,mPUNC,）)
+				(50,mPUNC,、)
+				(51,eCOO,敏感级
+					(53,eCOO,3级
+						(52,mPUNC,（)))
+				(54,mPUNC,）)
+				(55,mPUNC,、)))
+		(67,LINK,级别
+			(61,FEAT,核心级
+				(56,eCOO,重要级
+					(57,mPUNC,（))
+				(58,MEAS,4级)
+				(59,mPUNC,）)
+				(60,mPUNC,、)
+				(62,mPUNC,（))
+			(66,MEAS,个
+				(63,MEAS,5级
+					(64,mPUNC,）))
+				(65,MEAS,五)))
+		(68,mPUNC,。)))
 
 (0,Root
 	(12,Root,分为
@@ -719,7 +434,7 @@
 			(10,mNEG,无法)
 			(11,mDEPD,单独)
 			(12,mDEPD,唯一)
-			(15,CONT,自然 人
+			(15,CONT,自然人
 				(14,FEAT,特定))
 			(16,mPUNC,，)
 			(23,eSUCC,识别
@@ -866,27 +581,27 @@
 			(20,MEAS,个
 				(19,MEAS,多)))
 		(22,mPUNC,，)
-		(23,eSUCC,见
-			(24,CONT,附录)
-			(35,dCONT,分为
-				(25,mRELA,A
-					(26,mPUNC,.))
-				(32,STAT,程度
-					(27,mRELA,按照)
-					(29,FEAT,信息
-						(28,FEAT,个人)
-						(30,mDEPD,的))
-					(31,FEAT,敏感)
-					(33,mPUNC,，))
-				(34,mDEPD,可)
-				(38,LINK,信息
-					(36,FEAT,一般)
-					(37,FEAT,个人)
-					(42,eCOO,信息
-						(39,mRELA,与)
-						(40,FEAT,敏感)
-						(41,FEAT,个人))))
-			(43,mPUNC,。))))
+		(23,eSUCC,见附录A
+			(24,mPUNC,。))))
+
+(0,Root
+	(9,Root,分为
+		(6,MANN,程度
+			(1,mRELA,按照)
+			(3,FEAT,信息
+				(2,FEAT,个人)
+				(4,mDEPD,的))
+			(5,FEAT,敏感)
+			(7,mPUNC,，))
+		(8,mDEPD,可)
+		(12,LINK,信息
+			(10,FEAT,一般)
+			(11,FEAT,个人)
+			(16,eCOO,信息
+				(13,mRELA,与)
+				(14,FEAT,敏感)
+				(15,FEAT,个人)))
+		(17,mPUNC,。)))
 
 (0,Root
 	(9,Root,分成
@@ -1012,125 +727,102 @@
 				(58,mPUNC,。)))))
 
 (0,Root
-	(19,Root,关注
-		(6,DATV,示例参见附录
-			(4,eCOO,分类
-				(3,PAT,信息
-					(2,FEAT,个人
-						(1,FEAT,敏感))))
-			(5,mRELA,和))
-		(7,mRELA,A.)
-		(8,dTIME,判定
-			(12,dCONT,属于
-				(10,EXP,信息
-					(9,FEAT,个人))
-				(11,mDEPD,是否)
-				(15,EXP,信息
-					(14,FEAT,个人
-						(13,FEAT,敏感))))
-			(16,mDEPD,时)
-			(17,mPUNC,，))
-		(18,mDEPD,可)
-		(22,CONT,点
-			(20,FEAT,以下)
-			(21,MEAS,三))
-		(23,mPUNC,：)
-		(39,dCONT,属于
-			(24,mDEPD,例如
-				(25,mPUNC,，))
-			(38,EXP,信息
-				(36,FEAT,记录
-					(33,eCOO,信息
-						(27,eCOO,身份
-							(26,FEAT,特定)
-							(28,mPUNC,、))
-						(30,eCOO,健康
-							(29,EXP,医疗)
-							(31,mPUNC,、))
-						(32,FEAT,性取向)
-						(34,mPUNC,、))
-					(35,FEAT,犯罪)
-					(37,mDEPD,等)))
-			(49,LINK,信息
-				(41,rCONT,泄露
-					(40,mRELA,一旦))
-				(43,rEXP,侵害
-					(42,mDEPD,即)
-					(45,PAT,尊严
-						(44,FEAT,人格))
-					(46,mDEPD,的))
-				(47,FEAT,敏感)
-				(48,FEAT,个人)))
-		(50,mPUNC,。)))
+	(12,Root,关注
+		(1,dTIME,判定)
+		(5,dTIME,属于
+			(3,EXP,信息
+				(2,FEAT,个人))
+			(4,mDEPD,是否)
+			(8,EXP,信息
+				(7,FEAT,个人
+					(6,FEAT,敏感)))
+			(9,mDEPD,时)
+			(10,mPUNC,，))
+		(11,mDEPD,可)
+		(15,CONT,点
+			(13,FEAT,以下)
+			(14,MEAS,三))
+		(16,mPUNC,：)))
 
 (0,Root
-	(27,Root,利用
-		(1,mDEPD,例如
-			(2,mPUNC,，))
-		(6,dEXP,使用
-			(3,eCOO,泄露
-				(4,mPUNC,、))
-			(5,MANN,非法)
-			(15,PAT,信息
-				(11,FEAT,关系
-					(8,eCOO,住址
-						(7,FEAT,家庭)
+	(17,Root,属于
+		(2,mDEPD,例如
+			(1,mPUNC,*)
+			(3,mPUNC,，))
+		(16,EXP,信息
+			(14,FEAT,记录
+				(11,eCOO,信息
+					(8,eCOO,健康
+						(5,eCOO,身份
+							(4,FEAT,特定)
+							(6,mPUNC,、))
+						(7,EXP,医疗)
 						(9,mPUNC,、))
-					(10,FEAT,家属)
-					(12,mDEPD,等))
-				(13,FEAT,家庭)
-				(14,FEAT,相关))
-			(16,mPUNC,，))
-		(17,mDEPD,可能)
-		(18,mDEPD,会)
-		(25,REAS,犯罪
-			(19,mRELA,为)
-			(23,FEAT,绑架
-				(21,eCOO,抢劫
-					(20,eCOO,入室))
-				(22,mRELA,或)
-				(24,mDEPD,等)))
-		(26,mDEPD,所)
-		(28,mPUNC,；)
-		(37,eSUCC,用于
-			(34,PAT,复印件
-				(31,FEAT,主体
-					(30,FEAT,信息
-						(29,FEAT,个人))
-					(32,mDEPD,的))
-				(33,FEAT,身份证))
-			(36,AGT,他人
-				(35,mRELA,被))
-			(40,eSUCC,登记
-				(38,MANN,手机号卡)
-				(39,MANN,实名)
-				(41,mPUNC,、)
-				(45,eCOO,办卡
-					(43,AGT,账户
-						(42,FEAT,银行))
-					(44,eCOO,开户)
-					(46,mDEPD,等)))
-			(47,mPUNC,。))))
+					(10,FEAT,性取向)
+					(12,mPUNC,、))
+				(13,FEAT,犯罪)
+				(15,mDEPD,等)))
+		(27,LINK,信息
+			(19,dFEAT,泄露
+				(18,mRELA,一旦))
+			(21,rEXP,侵害
+				(20,mDEPD,即)
+				(23,PAT,尊严
+					(22,FEAT,人格))
+				(24,mDEPD,的))
+			(25,FEAT,敏感)
+			(26,FEAT,个人))
+		(28,mPUNC,。)))
 
 (0,Root
-	(5,Root,是
-		(3,EXP,信息
-			(1,FEAT,私密)
-			(2,FEAT,个人)
-			(4,mPUNC,，))
-		(17,LINK,信息
-			(7,LOC,信息
-				(6,FEAT,个人)
-				(8,mDEPD,中))
-			(10,dFEAT,愿
-				(9,mNEG,不))
-			(13,rCONT,知晓
-				(12,DATV,他人
-					(11,mRELA,为))
-				(14,mDEPD,的))
-			(15,FEAT,个人)
-			(16,FEAT,隐私))
-		(18,mPUNC,。)))
+	(28,Root,利用
+		(1,mPUNC,*)
+		(2,mDEPD,例如
+			(3,mPUNC,，))
+		(7,dMANN,使用
+			(4,eCOO,泄露
+				(5,mPUNC,、))
+			(6,MANN,非法)
+			(16,PAT,信息
+				(12,FEAT,关系
+					(9,eCOO,住址
+						(8,FEAT,家庭)
+						(10,mPUNC,、))
+					(11,FEAT,家属)
+					(13,mDEPD,等))
+				(14,FEAT,家庭)
+				(15,FEAT,相关))
+			(17,mPUNC,，))
+		(18,mDEPD,可能)
+		(19,mDEPD,会)
+		(26,REAS,犯罪
+			(20,mRELA,为)
+			(24,FEAT,绑架
+				(22,eCOO,抢劫
+					(21,eCOO,入室))
+				(23,mRELA,或)
+				(25,mDEPD,等)))
+		(27,mDEPD,所)
+		(29,mPUNC,；)
+		(38,eSUCC,用于
+			(35,PAT,复印件
+				(32,FEAT,主体
+					(31,FEAT,信息
+						(30,FEAT,个人))
+					(33,mDEPD,的))
+				(34,FEAT,身份证))
+			(37,AGT,他人
+				(36,mRELA,被))
+			(41,eSUCC,登记
+				(39,TOOL,手机号卡)
+				(40,MANN,实名)
+				(42,mPUNC,、)
+				(45,eCOO,开户
+					(44,EXP,账户
+						(43,FEAT,银行)))
+				(46,eCOO,办卡
+					(47,mDEPD,等)))
+			(48,mPUNC,。))))
 
 (0,Root
 	(13,Root,有
@@ -1221,16 +913,16 @@
 				(36,CONT,篡改
 					(37,mPUNC,、)
 					(38,eCOO,破坏)
-					(39,mPUNC,、))
-				(43,eCOO,获取
-					(40,eCOO,泄露)
-					(41,mRELA,或者)
-					(42,MANN,非法)
-					(44,mPUNC,、)
-					(46,eCOO,利用
-						(45,MANN,非法)))
+					(39,mPUNC,、)
+					(43,eCOO,获取
+						(40,eCOO,泄露)
+						(41,mRELA,或者)
+						(42,MANN,非法)
+						(44,mPUNC,、)
+						(46,eCOO,利用
+							(45,MANN,非法))))
 				(47,mPUNC,，))
-			(54,EXP,角度
+			(54,LOC,角度
 				(50,dFEAT,危害
 					(48,mDEPD,是否)
 					(49,mDEPD,可能)
@@ -1239,83 +931,89 @@
 					(53,mDEPD,的)))
 			(56,CONT,识别)
 			(57,mPUNC,，)
-			(58,eSUCC,包括
-				(61,eSUCC,限于
-					(59,mRELA,但)
-					(60,mNEG,不)
-					(62,mPUNC,：)
-					(66,dCONT,分为
-						(64,EXP,数据
-							(63,FEAT,法人))
-						(65,mDEPD,可)
-						(68,LINK,数据
-							(67,FEAT,业务)
-							(69,mPUNC,、)
-							(72,eCOO,数据
-								(71,FEAT,管理
-									(70,FEAT,经营))
-								(73,mPUNC,、)
-								(75,eCOO,运行
-									(74,FEAT,系统)
-									(78,eCOO,数据
-										(76,mRELA,和)
-										(77,FEAT,安全)))))
-						(79,MEAS,三类))
-					(80,mPUNC,。))))))
+			(58,eSUCC,包括)
+			(61,eSUCC,限于
+				(59,mDEPD,但)
+				(60,mNEG,不)
+				(62,mPUNC,：)))))
 
 (0,Root
-	(4,Root,是
-		(2,EXP,数据
-			(1,FEAT,业务)
-			(3,mPUNC,，))
-		(16,LINK,数据
-			(5,FEAT,组织
-				(12,eSUCC,收集
-					(10,LOC,过程
-						(6,mRELA,在)
-						(7,dFEAT,开展)
-						(9,FEAT,经营
-							(8,FEAT,业务生产))
-						(11,mDEPD,中))
-					(14,eSUCC,产生
-						(13,mRELA,和)
-						(15,mDEPD,的)))))
-		(17,mPUNC,。)))
+	(5,Root,分为
+		(1,mPUNC,*)
+		(3,EXP,数据
+			(2,FEAT,法人))
+		(4,mDEPD,可)
+		(7,LINK,数据
+			(6,FEAT,业务)
+			(8,mPUNC,、)
+			(11,eCOO,数据
+				(10,FEAT,管理
+					(9,FEAT,经营))
+				(12,mPUNC,、)))
+		(18,LINK,三类
+			(17,eCOO,数据
+				(14,eCOO,运行
+					(13,FEAT,系统))
+				(15,mRELA,和)
+				(16,FEAT,安全)))
+		(19,mPUNC,。)))
 
 (0,Root
 	(5,Root,是
+		(1,mPUNC,*)
 		(3,EXP,数据
-			(2,FEAT,管理
-				(1,PAT,经营))
+			(2,FEAT,业务)
 			(4,mPUNC,，))
-		(16,LINK,数据
-			(6,dFEAT,组织
-				(12,eSUCC,收集
-					(10,LOC,过程
-						(7,dFEAT,进行)
-						(9,FEAT,管理
-							(8,FEAT,内部))
-						(11,mDEPD,中))
-					(14,eSUCC,产生
-						(13,mRELA,和)
-						(15,mDEPD,的))))
-			(17,mPUNC,，)
-			(20,eCOO,战略
-				(18,mDEPD,如)
-				(19,FEAT,经营)
-				(21,mPUNC,、)
-				(23,eCOO,数据
-					(22,FEAT,财务)
-					(24,mPUNC,、)
-					(25,eCOO,并购
-						(28,eCOO,信息
-							(26,mRELA,及)
-							(27,FEAT,融资)
-							(29,mPUNC,、)
-							(31,eCOO,信息
-								(30,FEAT,经营)
-								(32,mDEPD,等)))))))
-		(33,mPUNC,。)))
+		(18,LINK,数据
+			(6,FEAT,组织
+				(14,eSUCC,收集
+					(12,LOC,过程
+						(7,mRELA,在)
+						(8,dFEAT,开展)
+						(11,FEAT,经营
+							(10,FEAT,生产
+								(9,FEAT,业务)))
+						(13,mDEPD,中))
+					(16,eSUCC,产生
+						(15,mRELA,和)
+						(17,mDEPD,的)))))
+		(19,mPUNC,。)))
+
+(0,Root
+	(6,Root,是
+		(1,mPUNC,*)
+		(4,EXP,数据
+			(3,FEAT,管理
+				(2,FEAT,经营))
+			(5,mPUNC,，))
+		(17,LINK,数据
+			(7,dFEAT,组织
+				(13,eSUCC,收集
+					(11,LOC,过程
+						(8,dFEAT,进行)
+						(10,dFEAT,管理
+							(9,FEAT,内部))
+						(12,mDEPD,中))
+					(15,eSUCC,产生
+						(14,mRELA,和)
+						(16,mDEPD,的))))
+			(18,mPUNC,，)
+			(21,eCOO,战略
+				(19,mDEPD,如)
+				(20,FEAT,经营)
+				(22,mPUNC,、)
+				(24,eCOO,数据
+					(23,FEAT,财务)
+					(25,mPUNC,、)
+					(26,eCOO,并购
+						(29,eCOO,信息
+							(27,mRELA,及)
+							(28,FEAT,融资)
+							(30,mPUNC,、)
+							(32,eCOO,信息
+								(31,FEAT,经营)
+								(33,mDEPD,等)))))))
+		(34,mPUNC,。)))
 
 (0,Root
 	(8,Root,指
@@ -1367,144 +1065,149 @@
 		(19,EXP,级别
 			(15,FEAT,数据
 				(12,FEAT,数据
-					(3,eCOO,数据
-						(1,FEAT,国家)
-						(2,FEAT,核心)
-						(4,mPUNC,、))
 					(6,eCOO,数据
+						(3,eCOO,数据
+							(1,FEAT,国家)
+							(2,FEAT,核心)
+							(4,mPUNC,、))
 						(5,FEAT,重要)
 						(7,mPUNC,、))
-					(8,FEAT,个人)
 					(9,eCOO,信息
+						(8,FEAT,个人)
 						(10,mPUNC,、))
 					(11,FEAT,公共)
 					(13,mDEPD,等))
 				(14,FEAT,特定)
 				(16,mDEPD,的))
-			(18,FEAT,安全
-				(17,FEAT,最低))
+			(17,FEAT,最低)
+			(18,FEAT,安全)
 			(20,mPUNC,，))
 		(21,mDEPD,可)
-		(23,mDEPD,如下)
-		(24,mPUNC,：)
-		(33,eSUCC,低于
-			(25,mRELA,a
-				(26,mPUNC,）))
-			(31,EXP,级别
-				(29,FEAT,数据
-					(27,FEAT,国家)
-					(28,FEAT,核心)
-					(30,mDEPD,的)))
-			(32,mNEG,不)
-			(35,MEAS,级
-				(34,MEAS,5))
-			(36,mPUNC,；)
-			(44,eSUCC,低于
-				(37,mRELA,b
-					(38,mPUNC,）))
-				(42,EXP,级别
-					(40,FEAT,数据
-						(39,FEAT,重要)
-						(41,mDEPD,的)))
-				(43,mNEG,不)
-				(46,MEAS,级
-					(45,MEAS,4))
-				(47,mPUNC,；)
-				(54,eSUCC,低于
-					(48,mRELA,c
-						(49,mPUNC,）))
-					(52,EXP,信息
-						(50,FEAT,敏感)
-						(51,FEAT,个人))
-					(53,mNEG,不)
-					(56,LOC,级
-						(55,MEAS,4))
-					(57,mPUNC,，)
-					(62,eCOO,低于
-						(60,EXP,信息
-							(58,FEAT,一般)
-							(59,FEAT,个人))
-						(61,mNEG,不)
-						(64,LOC,级
-							(63,MEAS,3))
-						(65,mPUNC,，)
-						(72,eCOO,低于
-							(70,EXP,信息
-								(66,LOC,组织)
-								(68,FEAT,员工
-									(67,LOC,内部))
-								(69,FEAT,个人))
-							(71,mNEG,不)
-							(74,MEAS,级
-								(73,MEAS,2))
-							(75,mPUNC,，)
-							(79,eCOO,低于
-								(77,EXP,信息
-									(76,FEAT,个人标签))
-								(78,mNEG,不)
-								(81,MEAS,级
-									(80,MEAS,2))
-								(82,mPUNC,；)
-								(92,eCOO,低于
-									(83,mRELA,d
-										(84,mPUNC,）))
-									(90,EXP,级别
-										(86,FEAT,开放
-											(85,FEAT,有条件)
-											(87,mDEPD,的))
-										(89,FEAT,数据
-											(88,FEAT,公共)))
-									(91,mNEG,不)
-									(94,LOC,级
-										(93,MEAS,2))
-									(95,mPUNC,，)
-									(102,eSUCC,低于
-										(100,EXP,数据
-											(96,dFEAT,禁止
-												(97,dCONT,开放
-													(98,mDEPD,的)))
-											(99,FEAT,公共))
-										(101,mNEG,不)
-										(104,MEAS,级
-											(103,MEAS,4))
-										(105,mPUNC,。)))))))))))
+		(23,eSUCC,如下)
+		(24,mPUNC,：)))
 
 (0,Root
-	(2,Root,给出
-		(1,EXP,表 A.1)
-		(3,mDEPD,了)
-		(8,PAT,类别
-			(5,FEAT,信息
-				(4,FEAT,个人)
-				(6,mDEPD,的))
-			(7,FEAT,一级)
-			(9,mPUNC,、)
-			(11,eCOO,类别
-				(10,FEAT,二级)
-				(14,eCOO,数据
-					(12,mRELA,和)
-					(13,FEAT,相关))))
-		(15,eSUCC,示例
-			(16,mPUNC,。))))
+	(9,Root,低于
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(7,EXP,级别
+			(5,FEAT,数据
+				(3,FEAT,国家)
+				(4,FEAT,核心)
+				(6,mDEPD,的)))
+		(8,mNEG,不)
+		(10,MEAS,5级)
+		(11,mPUNC,；)))
 
 (0,Root
-	(2,Root,给出
-		(1,EXP,表A.2)
-		(3,mDEPD,了)
-		(9,PAT,类别
-			(6,FEAT,信息
-				(4,FEAT,敏感)
-				(5,FEAT,个人)
-				(7,mDEPD,的))
-			(8,FEAT,一级)
-			(10,mPUNC,、)
-			(12,eCOO,类别
-				(11,FEAT,二级)))
-		(16,eSUCC,示例
-			(15,DATV,数据
-				(13,mRELA,和)
-				(14,FEAT,相关))
-			(17,mPUNC,。))))
+	(8,Root,低于
+		(1,mRELA,b)
+		(2,mPUNC,）)
+		(6,EXP,级别
+			(4,FEAT,数据
+				(3,FEAT,重要)
+				(5,mDEPD,的)))
+		(7,mNEG,不)
+		(9,LINK,4级)
+		(10,mPUNC,；)))
+
+(0,Root
+	(7,Root,低于
+		(1,mRELA,c)
+		(2,mPUNC,）)
+		(5,EXP,信息
+			(3,FEAT,敏感)
+			(4,FEAT,个人))
+		(6,mNEG,不)
+		(8,MEAS,4级)
+		(9,mPUNC,，)
+		(14,eCOO,低于
+			(12,EXP,信息
+				(10,FEAT,一般)
+				(11,FEAT,个人))
+			(13,mNEG,不)
+			(15,MEAS,3级)
+			(16,mPUNC,，)
+			(23,eCOO,低于
+				(21,EXP,信息
+					(19,FEAT,员工
+						(17,LOC,组织
+							(18,mDEPD,内部)))
+					(20,FEAT,个人))
+				(22,mNEG,不)
+				(24,MEAS,2级)
+				(25,mPUNC,，)
+				(30,eCOO,低于
+					(28,EXP,信息
+						(27,FEAT,标签
+							(26,FEAT,个人)))
+					(29,mNEG,不)
+					(31,MEAS,2级)
+					(32,mPUNC,；))))))
+
+(0,Root
+	(10,Root,低于
+		(1,mRELA,d
+			(2,mPUNC,）))
+		(8,EXP,级别
+			(7,FEAT,数据
+				(3,dFEAT,有条件)
+				(4,rPAT,开放
+					(5,mDEPD,的))
+				(6,FEAT,公共)))
+		(9,mNEG,不)
+		(11,MEAS,2级)
+		(12,mPUNC,，)
+		(19,eCOO,低于
+			(17,EXP,数据
+				(13,dFEAT,禁止
+					(14,CONT,开放)
+					(15,mDEPD,的))
+				(16,FEAT,公共))
+			(18,mNEG,不)
+			(20,MEAS,4级)
+			(21,mPUNC,。))))
+
+(0,Root
+	(4,Root,给出
+		(1,EXP,表A
+			(2,mPUNC,。))
+		(3,EXP,1)
+		(5,mDEPD,了)
+		(10,PAT,类别
+			(7,FEAT,信息
+				(6,FEAT,个人)
+				(8,mDEPD,的))
+			(9,FEAT,一级)
+			(11,mPUNC,、)
+			(13,eCOO,类别
+				(12,FEAT,二级)
+				(16,eCOO,数据
+					(14,mRELA,和)
+					(15,FEAT,相关))))
+		(17,eSUCC,示例
+			(18,mPUNC,。))))
+
+(0,Root
+	(4,Root,给出
+		(1,EXP,表A
+			(2,mPUNC,。))
+		(3,MEAS,2)
+		(5,mDEPD,了)
+		(11,PAT,类别
+			(8,FEAT,信息
+				(6,FEAT,敏感)
+				(7,FEAT,个人)
+				(9,mDEPD,的))
+			(10,FEAT,一级)
+			(12,mPUNC,、)
+			(14,eCOO,类别
+				(13,FEAT,二级)))
+		(18,eSUCC,示例
+			(17,DATV,数据
+				(15,mRELA,和)
+				(16,FEAT,相关))
+			(19,mPUNC,。))))
 
 (0,Root
 	(7,Root,指
@@ -1651,149 +1354,156 @@
 			(26,MEAS,两)
 			(27,FEAT,大))
 		(29,mPUNC,，)
-		(34,eSUCC,给出
-			(32,EXP,A.2
-				(30,FEAT,表A.1)
-				(31,mRELA,和))
-			(33,MANN,分别)
-			(35,mDEPD,了)
-			(43,CONT,分类示例
-				(40,CONT,数据
-					(39,MEAS,类
-						(36,SCO,这)
-						(37,MEAS,两)
-						(38,FEAT,大))
-					(41,mDEPD,的))
-				(42,MANN,详细))
-			(44,mPUNC,。))))
+		(38,eSUCC,给出
+			(36,mRELA,2
+				(34,eCOO,A
+					(30,EXP,表A
+						(31,mPUNC,。))
+					(32,eCOO,1)
+					(33,mRELA,和)
+					(35,mPUNC,。)))
+			(37,MANN,分别)
+			(39,mDEPD,了)
+			(47,CONT,分类示例
+				(44,CONT,数据
+					(43,MEAS,类
+						(40,SCO,这)
+						(41,MEAS,两)
+						(42,FEAT,大))
+					(45,mDEPD,的))
+				(46,FEAT,详细))
+			(48,mPUNC,。)
+			(49,mPUNC,、))))
 
 (0,Root
-	(17,Root,分为
-		(8,MANN,程度
-			(1,mPUNC,、)
-			(2,mRELA,按照)
-			(4,FEAT,对象
-				(3,FEAT,数据)
-				(5,mDEPD,的))
-			(6,FEAT,重要)
-			(7,FEAT,敏感)
-			(9,mPUNC,，))
-		(16,PAT,资源
-			(10,mRELA,将)
-			(13,FEAT,企业
-				(11,FEAT,基础)
-				(12,FEAT,电信))
-			(14,FEAT,网络)
-			(15,FEAT,数据))
-		(21,LINK,级别
-			(19,MEAS,个
-				(18,MEAS,四))
-			(20,FEAT,安全))
-		(22,mPUNC,，)
-		(34,eSUCC,分为
-			(28,STAT,数据子类示例如表B.3
-				(26,rLINK,包含
-					(25,EXP,级别
-						(23,SCO,各个)
-						(24,FEAT,安全))
-					(27,mDEPD,的)))
-			(30,STAT,主题
-				(29,mRELA,按))
-			(33,MANN,数据
-				(31,mRELA,将)
-				(32,FEAT,公共))
-			(36,LINK,基础
-				(35,FEAT,以下)
-				(37,FEAT,大类))
-			(38,mPUNC,：)
-			(40,LINK,政务
-				(39,FEAT,综合)
-				(41,mPUNC,、)
-				(43,eCOO,管理
-					(42,FEAT,经济)
-					(44,mPUNC,、)
-					(45,FEAT,国土资源)
-					(46,mPUNC,、)
-					(62,eCOO,管理
-						(47,eCOO,能源
-							(48,mPUNC,、))
-						(49,eCOO,工业
-							(50,mPUNC,、))
-						(51,eCOO,交通
+	(16,Root,分为
+		(7,MANN,程度
+			(1,mRELA,按照)
+			(3,FEAT,对象
+				(2,FEAT,数据)
+				(4,mDEPD,的))
+			(5,FEAT,重要)
+			(6,FEAT,敏感)
+			(8,mPUNC,，))
+		(15,PAT,资源
+			(9,mRELA,将)
+			(12,FEAT,企业
+				(10,FEAT,基础)
+				(11,FEAT,电信))
+			(13,FEAT,网络)
+			(14,FEAT,数据))
+		(20,LINK,级别
+			(18,MEAS,个
+				(17,MEAS,四))
+			(19,FEAT,安全))
+		(21,mPUNC,，)
+		(28,mPUNC,。
+			(27,FEAT,数据子类示例如表B
+				(25,rCONT,包含
+					(24,EXP,级别
+						(22,SCO,各个)
+						(23,FEAT,安全))
+					(26,mDEPD,的))))))
+
+(0,Root
+	(7,Root,分为
+		(1,mRELA,3)
+		(3,MANN,主题
+			(2,mRELA,按))
+		(6,CONT,数据
+			(4,mRELA,将)
+			(5,FEAT,公共))
+		(11,LINK,类
+			(8,FEAT,以下)
+			(9,FEAT,基础)
+			(10,FEAT,大))
+		(12,mPUNC,：)
+		(14,LINK,政务
+			(13,FEAT,综合)
+			(15,mPUNC,、)
+			(17,eCOO,管理
+				(16,FEAT,经济)
+				(18,mPUNC,、)
+				(19,FEAT,国土资源)
+				(20,mPUNC,、)
+				(30,eCOO,产业
+					(21,eCOO,能源
+						(22,mPUNC,、))
+					(23,eCOO,工业
+						(24,mPUNC,、)
+						(25,eCOO,交通)
+						(26,mPUNC,、)
+						(27,eCOO,邮政)
+						(28,mPUNC,、))
+					(29,FEAT,信息)
+					(31,mPUNC,、)
+					(33,eCOO,建设
+						(32,DATV,城乡)
+						(34,mPUNC,、))
+					(39,eCOO,保护
+						(35,DATV,城市)
+						(36,eCOO,管理)
+						(37,mPUNC,、)
+						(38,PAT,环境)
+						(40,mPUNC,、)
+						(41,PAT,口岸物流)
+						(42,mPUNC,、))))
+			(43,eCOO,农业
+				(44,mPUNC,、)
+				(45,eCOO,水利)
+				(46,mPUNC,、)
+				(47,eCOO,财政
+					(48,mPUNC,、)
+					(49,eCOO,商业)
+					(50,mPUNC,、)
+					(55,eCOO,服务业
+						(51,eCOO,贸易
 							(52,mPUNC,、))
-						(53,eCOO,邮政
-							(54,mPUNC,、))
-						(55,FEAT,信息)
-						(56,eCOO,产业
-							(57,mPUNC,、)
-							(59,eCOO,建设
-								(58,FEAT,城乡))
-							(60,mPUNC,、))
-						(61,PAT,城市)
-						(63,mPUNC,、)
-						(64,PAT,环境)
-						(65,eCOO,保护
+						(53,eCOO,旅游
+							(54,mPUNC,、)))
+					(56,mPUNC,、))
+				(61,eCOO,测绘
+					(57,eCOO,气象)
+					(58,mPUNC,、)
+					(59,eCOO,水文
+						(60,mPUNC,、))
+					(69,eCOO,监察
+						(62,mPUNC,、)
+						(63,eCOO,地震)
+						(64,mPUNC,、)
+						(67,eCOO,政法
+							(65,FEAT,对外事务)
 							(66,mPUNC,、)
-							(67,PAT,口岸物流))))
-				(68,mPUNC,、)
-				(69,eCOO,农业)
-				(70,mPUNC,、)))
-		(125,LINK,党团
-			(122,eCOO,行政
-				(104,eCOO,卫生
-					(71,eCOO,水利
-						(72,mPUNC,、))
-					(73,eCOO,财政
-						(74,mPUNC,、))
-					(75,eCOO,商业)
-					(79,eCOO,旅游
-						(77,eCOO,贸易
+							(68,mPUNC,、))
+						(70,mPUNC,、)
+						(77,eCOO,卫生
+							(73,eCOO,教育
+								(71,eCOO,科技
+									(72,mPUNC,、))
+								(74,mPUNC,、))
+							(75,eCOO,文化)
 							(76,mPUNC,、)
-							(78,mPUNC,、)))
-					(80,mPUNC,、)
-					(81,eCOO,服务业
-						(92,eCOO,事务
+							(78,mPUNC,、)
+							(79,eCOO,体育)
+							(80,mPUNC,、)
+							(81,eCOO,军事)
 							(82,mPUNC,、)
-							(83,eCOO,气象)
-							(84,mPUNC,、)
-							(85,eCOO,水文)
-							(86,mPUNC,、)
-							(87,eCOO,测绘)
-							(88,mPUNC,、)
-							(89,eCOO,地震)
-							(90,mPUNC,、)
-							(91,FEAT,对外)
-							(93,mPUNC,、)
-							(94,eCOO,政法)
-							(95,mPUNC,、)
-							(96,eCOO,监察)
-							(97,mPUNC,、)))
-					(98,eCOO,科技)
-					(99,mPUNC,、)
-					(100,eCOO,教育)
-					(101,mPUNC,、)
-					(102,eCOO,文化)
-					(103,mPUNC,、)
-					(105,mPUNC,、)
-					(106,eCOO,体育)
-					(107,mPUNC,、)
-					(108,eCOO,军事)
-					(109,mPUNC,、)
-					(110,eCOO,国防)
-					(111,mPUNC,、)
-					(112,eCOO,劳动)
-					(113,mPUNC,、)
-					(114,eCOO,人事)
-					(115,mPUNC,、)
-					(116,eCOO,民政)
-					(117,mPUNC,、))
-				(118,eCOO,社区
-					(119,mPUNC,、))
-				(120,eCOO,文秘
-					(121,mPUNC,、))
-				(123,mPUNC,、))
-			(124,FEAT,综合)
-			(126,mPUNC,。))))
+							(83,eCOO,国防)
+							(87,eCOO,人事
+								(85,eCOO,劳动
+									(84,mPUNC,、)
+									(86,mPUNC,、))
+								(88,mPUNC,、)
+								(95,eCOO,行政
+									(91,eCOO,社区
+										(89,eCOO,民政)
+										(90,mPUNC,、)
+										(92,mPUNC,、))
+									(93,eCOO,文秘
+										(94,mPUNC,、))
+									(96,mPUNC,、)
+									(97,FEAT,综合党团))))))))
+		(98,mPUNC,。)))
 
 (0,Root
 	(7,Root,分为
@@ -1961,8 +1671,8 @@
 
 (0,Root
 	(13,Root,识别
-		(5,EXP,属性
-			(2,FEAT,标识符 微数据
+		(5,DATV,属性
+			(2,FEAT,标识符微数据
 				(1,FEAT,直接)
 				(3,mDEPD,中)
 				(4,mDEPD,的))
@@ -1974,70 +1684,66 @@
 		(11,mDEPD,可以)
 		(12,MANN,单独)
 		(16,CONT,主体
-			(14,FEAT,个人)
-			(15,FEAT,信息))
-		(17,mPUNC,。)))
-
-(0,Root
-	(5,Root,地址
-		(3,eCOO,姓名
-			(1,mDEPD,例如
-				(2,mPUNC,：))
-			(4,mPUNC,、))
-		(6,mPUNC,、)
-		(9,eCOO,地址
-			(8,FEAT,邮件
-				(7,FEAT,电子))
-			(12,eCOO,号码
-				(10,mPUNC,、)
-				(11,FEAT,电话)
-				(13,mPUNC,、)
-				(15,eCOO,号码
-					(14,FEAT,传真)
-					(16,mPUNC,、)
-					(17,FEAT,信用卡)
-					(18,eCOO,号码
-						(19,mPUNC,、)
-						(20,FEAT,车牌)
-						(21,eCOO,号码
-							(22,mPUNC,、)
-							(24,FEAT,识别号码
-								(23,CONT,车辆))
-							(25,mPUNC,、)
-							(27,eCOO,号码
-								(26,FEAT,社会保险)
-								(28,mPUNC,、)
-								(29,FEAT,健康卡号码)
-								(30,mPUNC,、)
-								(31,FEAT,病历号码)
-								(32,mPUNC,、)
-								(33,FEAT,设备标识符)
-								(42,eCOO,地址号
-									(36,FEAT,识别码
-										(34,mPUNC,、)
-										(35,FEAT,生物)
-										(37,mPUNC,、)
-										(38,FEAT,互联网))
-									(39,FEAT,协议)
-									(41,FEAT,IP）
-										(40,mPUNC,（))
-									(47,eCOO,定位符（URL
-										(43,mRELA,和)
-										(46,FEAT,资源
-											(44,FEAT,网络)
-											(45,FEAT,通用))
-										(48,mPUNC,）)
-										(49,mDEPD,等)
-										(50,mPUNC,。)))))))))))
+			(15,FEAT,信息
+				(14,FEAT,个人)))
+		(17,mPUNC,。)
+		(20,eSUCC,姓名
+			(18,mDEPD,例如
+				(19,mPUNC,：))
+			(21,mPUNC,、)
+			(22,eCOO,地址)
+			(23,mPUNC,、)
+			(25,eCOO,地址
+				(24,FEAT,电子邮件)
+				(26,mPUNC,、)
+				(33,eCOO,号码
+					(28,eCOO,号码
+						(27,FEAT,电话)
+						(29,mPUNC,、)
+						(30,FEAT,传真号码)
+						(31,mPUNC,、))
+					(32,FEAT,信用卡)
+					(34,mPUNC,、)
+					(35,FEAT,车牌)
+					(36,eCOO,号码
+						(37,mPUNC,、)
+						(40,eCOO,号码
+							(39,FEAT,识别
+								(38,FEAT,车辆))
+							(41,mPUNC,、)
+							(42,FEAT,社会保险)
+							(43,eCOO,号码
+								(46,eCOO,号码
+									(44,mPUNC,、)
+									(45,FEAT,健康卡)
+									(47,mPUNC,、)
+									(48,FEAT,病历号码)
+									(49,mPUNC,、)
+									(51,eCOO,标识符
+										(50,FEAT,设备)
+										(52,mPUNC,、)
+										(53,FEAT,生物识别码))
+									(54,mPUNC,、))))))))
+		(62,eSUCC,定位符（URL
+			(57,FEAT,地址号
+				(56,FEAT,协议（IP）
+					(55,FEAT,互联网)))
+			(58,mRELA,和)
+			(59,FEAT,网络)
+			(61,FEAT,资源
+				(60,FEAT,通用))
+			(63,mPUNC,）)
+			(64,mDEPD,等))
+		(65,mPUNC,。)))
 
 (0,Root
 	(6,Root,结合
 		(4,CONT,属性
-			(1,FEAT,准标识符 微数据)
-			(2,mDEPD,中
-				(3,mDEPD,的))
+			(1,FEAT,准标识符微数据
+				(2,mDEPD,中
+					(3,mDEPD,的)))
 			(5,mPUNC,，))
-		(8,DATV,属性
+		(8,CONT,属性
 			(7,SCO,其它))
 		(11,eSUCC,识别
 			(9,mDEPD,可)
@@ -2045,77 +1751,74 @@
 			(14,CONT,主体
 				(13,FEAT,信息
 					(12,FEAT,个人)))
-			(15,mPUNC,。))))
-
-(0,Root
-	(3,Root,性别
-		(1,mDEPD,比如
-			(2,mPUNC,：))
-		(4,mPUNC,、)
-		(23,eCOO,地点
-			(11,eCOO,日期
-				(6,eCOO,日期
-					(5,FEAT,出生))
-				(8,eCOO,年龄
-					(7,mRELA,或)
-					(9,mPUNC,、))
-				(10,FEAT,事件)
-				(12,mPUNC,（)
-				(16,eCOO,手术
-					(14,eCOO,入院
-						(13,mDEPD,例如)
-						(15,mPUNC,、)))
-				(20,FEAT,访问
-					(18,eCOO,出院
-						(17,mPUNC,、)
-						(19,mPUNC,、))
-					(21,mPUNC,）)))
-			(22,mPUNC,、)
-			(24,mPUNC,（)
-			(35,eCOO,血统
-				(25,mDEPD,例如)
-				(29,eCOO,名称
-					(26,FEAT,邮政编码)
-					(27,mPUNC,、)
-					(28,FEAT,建筑)
-					(30,mPUNC,、)
-					(31,eCOO,地区
-						(32,mPUNC,）))
-					(33,mPUNC,、))
-				(34,FEAT,族裔)
-				(36,mPUNC,、)
-				(37,eCOO,出生国
-					(38,mPUNC,、))
-				(42,eCOO,身份
-					(39,eCOO,语言
-						(40,mPUNC,、))
-					(41,FEAT,原住民)
-					(43,mPUNC,、))))
-		(47,eCOO,地位
-			(44,mDEPD,可见
-				(45,mDEPD,的))
-			(46,FEAT,少数民族)
-			(48,mPUNC,、)
-			(49,eCOO,职业)
-			(52,eCOO,状况
+			(15,mPUNC,。)
+			(18,eSUCC,性别
+				(16,mDEPD,比如
+					(17,mPUNC,：))
+				(19,mPUNC,、)
+				(21,eCOO,日期
+					(20,FEAT,出生))
+				(26,eCOO,日期
+					(23,eCOO,年龄
+						(22,mRELA,或)
+						(24,mPUNC,、))
+					(25,FEAT,事件)
+					(27,mPUNC,（)
+					(29,eCOO,入院
+						(28,mDEPD,例如)
+						(30,mPUNC,、)
+						(31,eCOO,手术
+							(32,mPUNC,、)))
+					(33,FEAT,出院
+						(34,mPUNC,、))
+					(35,FEAT,访问
+						(36,mPUNC,）))
+					(37,mPUNC,、)
+					(38,eCOO,地点
+						(39,mPUNC,（)
+						(46,FEAT,地区
+							(44,eCOO,名称
+								(40,mDEPD,例如)
+								(41,FEAT,邮政编码)
+								(42,mPUNC,、)
+								(43,FEAT,建筑)
+								(45,mPUNC,、))
+							(47,mPUNC,）)))
+					(48,mPUNC,、)
+					(49,FEAT,族裔血统))
 				(50,mPUNC,、)
-				(51,FEAT,婚姻))
-			(53,mPUNC,、)
-			(55,eCOO,水平
-				(54,dFEAT,受教育)
-				(56,mPUNC,、)
-				(58,eCOO,年限
-					(57,FEAT,上学)
-					(59,mPUNC,、)
-					(61,eCOO,历史
-						(60,FEAT,犯罪)
-						(62,mPUNC,、))
-					(66,eCOO,信仰
-						(63,FEAT,总收入)
-						(64,mRELA,和)
-						(65,FEAT,宗教)
-						(67,mDEPD,等)
-						(68,mPUNC,。)))))))
+				(51,eCOO,出生国
+					(52,mPUNC,、)
+					(56,eCOO,身份
+						(53,eCOO,语言
+							(54,mPUNC,、))
+						(55,FEAT,原住民)
+						(57,mPUNC,、)
+						(75,eCOO,历史
+							(69,eCOO,水平
+								(68,dFEAT,受教育
+									(58,mDEPD,可见)
+									(59,mDEPD,的)
+									(61,eCOO,地位
+										(60,FEAT,少数民族)
+										(62,mPUNC,、)
+										(63,eCOO,职业)
+										(64,mPUNC,、)
+										(66,eCOO,状况
+											(65,FEAT,婚姻))
+										(67,mPUNC,、)))
+								(70,mPUNC,、))
+							(71,FEAT,上学)
+							(72,eCOO,年限
+								(73,mPUNC,、))
+							(74,FEAT,犯罪)
+							(76,mPUNC,、)
+							(80,eCOO,信仰
+								(77,eCOO,总收入)
+								(78,mRELA,和)
+								(79,FEAT,宗教)
+								(81,mDEPD,等)
+								(82,mPUNC,。)))))))))
 
 (0,Root
 	(14,Root,识别
@@ -2123,8 +1826,8 @@
 			(4,PAT,数据
 				(1,FEAT,个人)
 				(2,FEAT,健康)
-				(3,FEAT,医疗)
-				(5,FEAT,personal health data))
+				(3,FEAT,医疗))
+			(5,EXP,personalhealthdata)
 			(6,MANN,单独)
 			(7,mRELA,或者)
 			(10,DATV,信息
@@ -2135,61 +1838,58 @@
 		(16,CONT,自然人
 			(15,FEAT,特定))
 		(28,CONT,数据
-			(18,rEXP,反映
-				(17,mRELA,或者))
-			(24,FEAT,健康
-				(19,FEAT,特定)
-				(20,FEAT,自然人)
-				(21,eCOO,生理)
-				(22,mRELA,或)
-				(23,FEAT,心理)
+			(18,dFEAT,反映
+				(17,mRELA,或者)
+				(24,CONT,健康
+					(19,FEAT,特定)
+					(20,FEAT,自然人)
+					(21,eCOO,生理)
+					(22,mRELA,或)
+					(23,FEAT,心理))
 				(25,mDEPD,的))
 			(26,FEAT,相关)
-			(27,FEAT,电子))
-		(29,mPUNC,。)))
-
-(0,Root
-	(7,Root,涉及
-		(1,mDEPD,注
-			(2,mPUNC,：))
-		(6,EXP,数据
-			(3,FEAT,个人)
-			(5,FEAT,医疗
-				(4,FEAT,健康)))
-		(19,DATV,状况
-			(8,FEAT,个人)
-			(13,TIME,将来
-				(9,eCOO,过去
-					(10,mPUNC,、))
-				(11,eCOO,现在)
-				(12,mRELA,或)
-				(14,mDEPD,的))
-			(15,eCOO,身体)
-			(18,FEAT,健康
-				(16,mRELA,或)
-				(17,EXP,精神))
-			(20,mPUNC,、)
-			(25,eCOO,服务
-				(21,rEXP,接受
-					(22,mDEPD,的))
-				(24,FEAT,保健
-					(23,eCOO,医疗))
-				(32,eCOO,费用
-					(26,mRELA,和)
-					(27,rPAT,支付
-						(28,mDEPD,的))
-					(31,FEAT,服务
-						(30,FEAT,保健
-							(29,eCOO,医疗)))
-					(33,mDEPD,等))))
-		(34,mPUNC,，)
-		(36,eSUCC,附录A
-			(35,mDEPD,详见)
-			(37,mPUNC,。))))
+			(27,FEAT,电子)
+			(29,mPUNC,。注)
+			(30,mPUNC,：))
+		(35,eSUCC,涉及
+			(34,EXP,数据
+				(31,FEAT,个人)
+				(32,FEAT,健康)
+				(33,FEAT,医疗))
+			(47,DATV,状况
+				(36,FEAT,个人)
+				(37,TIME,过去
+					(38,mPUNC,、))
+				(39,TIME,现在)
+				(41,TIME,将来
+					(40,mRELA,或)
+					(42,mDEPD,的))
+				(46,FEAT,健康
+					(43,EXP,身体)
+					(45,EXP,精神
+						(44,mRELA,或)))
+				(48,mPUNC,、)
+				(53,eCOO,服务
+					(49,rCONT,接受
+						(50,mDEPD,的))
+					(52,FEAT,保健
+						(51,eCOO,医疗))
+					(60,eCOO,费用
+						(54,mRELA,和)
+						(55,rCONT,支付
+							(56,mDEPD,的))
+						(59,FEAT,服务
+							(57,FEAT,医疗)
+							(58,FEAT,保健))
+						(61,mDEPD,等))))
+			(62,mPUNC,，)
+			(64,eSUCC,附录A
+				(63,MANN,详见)
+				(65,mPUNC,。)))))
 
 (0,Root
 	(4,Root,包括
-		(3,EXP,数据	health data
+		(3,EXP,数据	healthdata
 			(1,FEAT,健康)
 			(2,FEAT,医疗))
 		(8,LINK,数据
@@ -2250,14 +1950,14 @@
 			(34,mRELA,如
 				(33,EXP,内容
 					(32,FEAT,具体)))
-			(35,TOOL,表 1)
+			(35,TOOL,表1)
 			(36,mDEPD,所)
 			(38,mPUNC,。))))
 
 (0,Root
 	(7,Root,指
 		(1,mRELA,a
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(4,FEAT,属性
 				(3,FEAT,个人)))
@@ -2279,12 +1979,12 @@
 (0,Root
 	(7,Root,指
 		(1,mRELA,b
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(4,FEAT,状况
 				(3,FEAT,健康)))
 		(6,mDEPD,是)
-		(22,LINK,数据
+		(22,CONT,数据
 			(9,dFEAT,反映
 				(8,mDEPD,能)
 				(12,CONT,情况
@@ -2304,7 +2004,7 @@
 (0,Root
 	(7,Root,指
 		(1,mRELA,c
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(4,FEAT,应用
 				(3,CONT,医疗)))
@@ -2331,7 +2031,7 @@
 (0,Root
 	(7,Root,指
 		(1,mRELA,d
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(4,FEAT,支付
 				(3,CONT,医疗)))
@@ -2355,7 +2055,7 @@
 (0,Root
 	(7,Root,指
 		(1,mRELA,e
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(4,FEAT,资源
 				(3,FEAT,卫生)))
@@ -2383,7 +2083,7 @@
 (0,Root
 	(7,Root,指
 		(1,mRELA,f
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,数据
 			(3,FEAT,公共)
 			(4,FEAT,卫生))
@@ -2403,10 +2103,10 @@
 
 (0,Root
 	(26,Root,划分
-		(22,LOC,级别
+		(22,CONT,级别
+			(1,mRELA,根据)
 			(7,eCOO,级别
 				(4,eCOO,程度
-					(1,mRELA,根据)
 					(2,FEAT,数据)
 					(3,FEAT,重要))
 				(5,mRELA,和)
@@ -2427,24 +2127,26 @@
 				(21,mDEPD,的))
 			(23,mPUNC,，))
 		(25,EXP,数据
-			(24,rCONT,建议))
-		(27,mDEPD,为
-			(42,LINK,数据
-				(30,MEAS,级
-					(28,FEAT,以下)
-					(29,MEAS,5)
-					(31,mPUNC,：)
-					(35,eCOO,级
-						(32,MEAS,a
-							(33,mPUNC,)))
-						(34,MEAS,第1)
-						(36,mPUNC,：)))
-				(40,rPAT,使用
-					(37,mDEPD,可)
-					(38,MANN,完全)
-					(39,MANN,公开)
-					(41,mDEPD,的))))
-		(43,mPUNC,。)))
+			(24,FEAT,建议))
+		(27,eSUCC,为)
+		(30,MEAS,级
+			(28,FEAT,以下)
+			(29,MEAS,5))
+		(31,mPUNC,：)))
+
+(0,Root
+	(11,Root,数据
+		(8,dFEAT,公开
+			(4,AGT,级
+				(1,mRELA,a)
+				(2,mPUNC,）)
+				(3,MEAS,第1)
+				(5,mPUNC,：))
+			(6,mDEPD,可)
+			(7,mDEPD,完全))
+		(9,rCONT,使用
+			(10,mDEPD,的))
+		(12,mPUNC,。)))
 
 (0,Root
 	(17,Root,公开
@@ -2468,12 +2170,12 @@
 
 (0,Root
 	(15,Root,数据
-		(4,MEAS,级
-			(1,mRELA,b)
-			(2,mPUNC,))
-			(3,MEAS,第2)
-			(5,mPUNC,：))
 		(12,dFEAT,供访问
+			(4,LOC,级
+				(1,mRELA,b)
+				(2,mPUNC,）)
+				(3,MEAS,第2)
+				(5,mPUNC,：))
 			(6,mDEPD,可)
 			(10,LOC,范围
 				(7,mRELA,在)
@@ -2506,12 +2208,12 @@
 
 (0,Root
 	(15,Root,数据
-		(4,MEAS,级
-			(1,mRELA,c)
-			(2,mPUNC,))
-			(3,MEAS,第3)
-			(5,mPUNC,：))
 		(11,dFEAT,供
+			(4,TIME,级
+				(1,mRELA,c)
+				(2,mPUNC,）)
+				(3,MEAS,第3)
+				(5,mPUNC,：))
 			(6,mDEPD,可)
 			(9,LOC,范围
 				(7,mRELA,在)
@@ -2551,7 +2253,7 @@
 	(15,Root,数据
 		(4,MEAS,级
 			(1,mRELA,d)
-			(2,mPUNC,))
+			(2,mPUNC,）)
 			(3,MEAS,第4)
 			(5,mPUNC,：))
 		(11,dFEAT,供
@@ -2589,7 +2291,7 @@
 		(17,dFEAT,供
 			(4,TIME,级
 				(1,mRELA,e)
-				(2,mPUNC,))
+				(2,mPUNC,）)
 				(3,MEAS,第5)
 				(5,mPUNC,：))
 			(6,mDEPD,仅)
@@ -2603,7 +2305,7 @@
 				(14,FEAT,限制
 					(13,MANN,严格))
 				(16,mDEPD,下))
-			(18,eSUCC,访问
+			(18,CONT,访问
 				(19,eSUCC,使用))
 			(20,mDEPD,的))
 		(22,mPUNC,。)))
@@ -2635,299 +2337,395 @@
 		(24,mPUNC,。)))
 
 (0,Root
+	(5,Root,包括
+		(4,LINK,数据
+			(1,FEAT,个人)
+			(3,FEAT,医疗
+				(2,FEAT,健康)))
+		(8,eSUCC,限于
+			(6,mRELA,但)
+			(7,mNEG,不)
+			(9,mPUNC,：))))
+
+(0,Root
+	(3,Root,提供
+		(1,mRELA,a
+			(2,mPUNC,）))
+		(11,CONT,信息
+			(8,rCONT,登记
+				(6,TIME,服务
+					(4,FEAT,健康)
+					(5,FEAT,医疗)
+					(7,mDEPD,时))
+				(9,mDEPD,的))
+			(10,FEAT,个人))
+		(12,mPUNC,；)))
+
+(0,Root
+	(3,Root,出于
+		(1,mRELA,b)
+		(2,mPUNC,）)
+		(6,LINK,目的
+			(5,FEAT,医疗
+				(4,FEAT,健康))
+			(7,mPUNC,，)
+			(9,eCOO,治疗
+				(8,mDEPD,例如)
+				(10,mPUNC,、)
+				(14,eCOO,护理
+					(11,eCOO,支付)
+					(12,mRELA,或)
+					(13,FEAT,保健)
+					(15,mDEPD,等)
+					(16,mPUNC,，)))
+			(22,eCOO,标识号码
+				(17,rCONT,分配
+					(18,mRELA,给)
+					(19,DATV,个人)
+					(20,mDEPD,的))
+				(21,FEAT,唯一)
+				(24,eCOO,符号
+					(23,mRELA,或)
+					(25,mDEPD,等))))
+		(26,mPUNC,；)))
+
+(0,Root
+	(18,Root,数据
+		(12,rCONT,采集
+			(1,mRELA,c
+				(2,mPUNC,）))
+			(10,LOC,过程
+				(3,mRELA,在)
+				(6,dFEAT,提供
+					(5,DATV,个人
+						(4,mRELA,向))
+					(9,CONT,服务
+						(7,FEAT,健康)
+						(8,FEAT,医疗)))
+				(11,mDEPD,中))
+			(13,mDEPD,的))
+		(15,FEAT,个人
+			(14,mRELA,有关)
+			(16,mDEPD,的))
+		(17,SCO,任何)
+		(19,mPUNC,，)
+		(37,eCOO,数据
+			(35,rCONT,记载
+				(34,DATV,病历
+					(31,eCOO,方式
+						(24,eCOO,社会史
+							(22,eCOO,病史
+								(20,mDEPD,例如)
+								(21,FEAT,既往)
+								(23,mPUNC,、))
+							(25,mPUNC,、)
+							(26,eCOO,家族史
+								(27,mPUNC,、)))
+						(28,eCOO,症状)
+						(29,mRELA,和)
+						(30,FEAT,生活)
+						(32,mDEPD,等))
+					(33,SCO,各类))
+				(36,mDEPD,的))
+			(38,mPUNC,；))))
+
+(0,Root
+	(42,Root,数据
+		(3,rEXP,来自
+			(1,mRELA,d
+				(2,mPUNC,）))
+			(5,DATV,部位
+				(4,FEAT,身体)
+				(8,eCOO,物质
+					(6,mRELA,或)
+					(7,FEAT,身体)
+					(9,mPUNC,，)
+					(11,eCOO,组织
+						(10,mDEPD,例如)))
+				(12,mPUNC,、)
+				(13,eCOO,体液
+					(14,mPUNC,、)
+					(15,eCOO,血
+						(16,mPUNC,、)
+						(17,eCOO,尿
+							(18,mPUNC,、便)
+							(19,mPUNC,、))))))
+		(37,rCONT,检查
+			(20,CONT,气体
+				(21,mPUNC,，))
+			(35,CONT,微生物
+				(27,eCOO,蛋白质
+					(22,mRELA,以及)
+					(23,eCOO,DNA
+						(24,mPUNC,、))
+					(25,eCOO,RNA
+						(26,mPUNC,、))
+					(28,mDEPD,等)
+					(30,eCOO,大分子
+						(29,FEAT,生物)
+						(31,mPUNC,、)))
+				(32,FEAT,代谢小分子
+					(33,mPUNC,、))
+				(34,FEAT,肠道)
+				(36,mDEPD,等))
+			(39,eSUCC,检验
+				(38,mRELA,或)
+				(40,mDEPD,的)))
+		(41,FEAT,结果)
+		(43,mPUNC,；)))
+
+(0,Root
+	(12,Root,数据
+		(5,rCONT,采集
+			(1,mRELA,e
+				(2,mPUNC,）))
+			(4,EXP,设备
+				(3,mDEPD,可穿戴))
+			(6,mDEPD,的))
+		(10,rEXP,相关
+			(9,DATV,健康
+				(7,mRELA,与)
+				(8,EXP,个人))
+			(11,mDEPD,的))
+		(13,mPUNC,，)
+		(16,eCOO,数据
+			(14,mRELA,并且)
+			(15,SCO,该种)
+			(17,mPUNC,：))))
+
+(0,Root
+	(6,Root,为
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(3,EXP,本身)
+		(4,mRELA,或者)
+		(5,mDEPD,明显)
+		(10,LINK,数据
+			(8,FEAT,医疗
+				(7,FEAT,健康))
+			(9,FEAT,相关))
+		(11,mPUNC,；)))
+
+(0,Root
+	(6,Root,采集
+		(1,mRELA,2)
+		(2,mPUNC,）)
+		(3,mRELA,或是)
+		(5,AGT,传感器
+			(4,mRELA,由))
+		(7,mDEPD,的)
+		(8,mPUNC,，)
+		(16,eSUCC,结合
+			(9,mRELA,并且)
+			(10,mDEPD,可以)
+			(11,MANN,单独)
+			(12,mRELA,或者)
+			(15,DATV,数据
+				(13,mRELA,与)
+				(14,SCO,其他))
+			(17,eSUCC,用来
+				(32,PAT,数据
+					(29,dFEAT,进行
+						(28,DATV,风险
+							(18,mRELA,对)
+							(25,eCOO,状况
+								(22,FEAT,用户
+									(20,FEAT,设备
+										(19,mDEPD,可穿戴)
+										(21,mDEPD,的))
+									(23,mDEPD,的))
+								(24,FEAT,健康))
+							(26,mRELA,或者)
+							(27,FEAT,疾病))
+						(30,CONT,判断)
+						(31,mDEPD,的)))
+				(33,mPUNC,；)))))
+
+(0,Root
+	(23,Root,结论
+		(1,mRELA,3)
+		(2,mPUNC,）)
+		(3,mRELA,或是)
+		(8,dFEAT,数据
+			(6,rCONT,采集
+				(5,EXP,设备
+					(4,FEAT,可穿戴))
+				(7,mDEPD,的)))
+		(9,mRELA,并且)
+		(19,dFEAT,进行
+			(18,DATV,风险
+				(10,mRELA,为)
+				(11,mRELA,对)
+				(15,eCOO,状况
+					(12,FEAT,用户
+						(13,mDEPD,的))
+					(14,FEAT,健康))
+				(16,mRELA,或者)
+				(17,FEAT,疾病))
+			(20,CONT,判断)
+			(21,mDEPD,后)
+			(22,mDEPD,的))
+		(24,mPUNC,；)))
+
+(0,Root
+	(20,Root,提供
+		(14,mDEPD,的
+			(1,mRELA,4)
+			(2,mPUNC,）)
+			(12,rAGT,进行
+				(3,mRELA,或是)
+				(11,MANN,系统
+					(4,mRELA,通过)
+					(9,eCOO,APP
+						(7,dFEAT,相连
+							(6,EXP,设备
+								(5,mDEPD,可穿戴))
+							(8,mDEPD,的)))
+					(10,mRELA,或者))
+				(13,CONT,传送))
+			(15,mPUNC,，))
+		(16,mDEPD,并非)
+		(18,AGT,设备使用者
+			(17,FEAT,可穿戴))
+		(19,MANN,另行)
+		(21,mDEPD,的)
+		(22,mPUNC,；)))
+
+(0,Root
+	(9,Root,数据
+		(1,mRELA,f
+			(2,mPUNC,）))
+		(3,rEXP,接受
+			(4,mDEPD,的))
+		(7,FEAT,服务
+			(6,FEAT,医疗
+				(5,FEAT,健康)))
+		(8,FEAT,相关)
+		(10,mPUNC,，)
+		(12,eCOO,检验
+			(11,mDEPD,例如)
+			(13,eSUCC,检查
+				(14,CONT,医嘱
+					(15,mPUNC,、)
+					(16,eCOO,诊断
+						(17,mPUNC,、)
+						(18,eCOO,操作
+							(19,mPUNC,、)
+							(23,eCOO,效果
+								(20,eCOO,药物
+									(21,mPUNC,、))
+								(22,FEAT,医疗)
+								(24,mDEPD,等))))))
+			(25,mPUNC,；))))
+
+(0,Root
+	(5,Root,提供
+		(1,mRELA,g)
+		(2,mPUNC,）)
+		(4,DATV,个人
+			(3,mRELA,为))
+		(12,CONT,数据
+			(11,FEAT,身份
+				(8,FEAT,服务
+					(6,FEAT,健康)
+					(7,FEAT,医疗)
+					(9,mDEPD,的))
+				(10,FEAT,服务者)))
+		(13,mPUNC,；)))
+
+(0,Root
+	(10,Root,数据
+		(1,mDEPD,h
+			(2,mPUNC,）))
+		(3,mRELA,关于)
+		(6,eCOO,支付
+			(4,CONT,个人
+				(5,mDEPD,的)))
+		(7,mRELA,或)
+		(8,FEAT,医保)
+		(9,FEAT,相关)
+		(11,mPUNC,；)))
+
+(0,Root
+	(6,Root,数据
+		(1,mRELA,i
+			(2,mPUNC,）))
+		(4,FEAT,科研
+			(3,FEAT,医学))
+		(5,FEAT,相关)
+		(7,mPUNC,，)
+		(21,eCOO,结果
+			(12,eCOO,数据
+				(8,mDEPD,例如)
+				(11,FEAT,病例
+					(10,FEAT,研究
+						(9,FEAT,临床)))
+				(13,mPUNC,、)
+				(15,eCOO,样本库
+					(14,FEAT,生物)
+					(16,mPUNC,、)
+					(17,FEAT,全基因组)
+					(18,mDEPD,等)))
+			(19,MEAS,多种)
+			(20,FEAT,生物组学测序)
+			(22,mPUNC,、)
+			(27,eCOO,结果
+				(26,dFEAT,研究
+					(23,CONT,医学)
+					(25,MANN,队列
+						(24,FEAT,相关)))
+				(28,mDEPD,等)
+				(29,mPUNC,；)))))
+
+(0,Root
+	(7,Root,数据
+		(1,FEAT,j）)
+		(5,FEAT,预防
+			(3,eCOO,卫生
+				(2,FEAT,公共))
+			(4,mRELA,与))
+		(6,FEAT,医学)
+		(8,mPUNC,，)
+		(23,eCOO,数据
+			(9,mDEPD,例如)
+			(17,rPAT,收集
+				(16,AGT,部门
+					(11,eCOO,中心
+						(10,FEAT,疾控)
+						(12,mPUNC,、))
+					(13,FEAT,公共)
+					(14,FEAT,卫生)
+					(15,FEAT,管理))
+				(18,mDEPD,的))
+			(22,FEAT,个人
+				(21,rPAT,监测
+					(19,PAT,疾病)
+					(20,MANN,卫生)))
+			(24,mPUNC,；))))
+
+(0,Root
 	(4,Root,数据
-		(2,FEAT,健康
-			(1,FEAT,个人))
-		(3,FEAT,医疗)
-		(5,mDEPD,包括
-			(200,dLINK,进行
-				(145,eCOO,为
-					(6,mRELA,但)
-					(7,mNEG,不限于)
-					(8,mPUNC,：)
-					(9,mRELA,a
-						(10,mPUNC,)))
-					(11,eSUCC,提供
-						(19,CONT,信息
-							(16,rPAT,登记
-								(14,REAS,服务
-									(12,FEAT,健康)
-									(13,FEAT,医疗))
-								(15,mDEPD,时)
-								(17,mDEPD,的))
-							(18,FEAT,个人))
-						(20,mPUNC,；)
-						(21,mRELA,b
-							(22,mPUNC,)))
-						(23,eCOO,出于
-							(26,CONT,目的
-								(25,FEAT,医疗
-									(24,FEAT,健康))
-								(27,mPUNC,，)
-								(29,FEAT,治疗
-									(28,mDEPD,例如)
-									(30,mPUNC,、)
-									(31,eCOO,支付)
-									(33,eCOO,保健护理
-										(32,mRELA,或)
-										(34,mDEPD,等))))
-							(35,mPUNC,，)
-							(36,eSUCC,分配
-								(37,mDEPD,给)
-								(38,DATV,个人)
-								(39,mDEPD,的)
-								(41,CONT,标识号码
-									(40,FEAT,唯一)
-									(43,eCOO,符号
-										(42,mRELA,或)
-										(44,mDEPD,等)))
-								(45,mPUNC,；)
-								(57,eSUCC,采集
-									(46,mRELA,c
-										(47,mPUNC,)))
-									(55,LOC,过程
-										(48,mRELA,在)
-										(51,dFEAT,提供
-											(50,DATV,个人
-												(49,mRELA,向)))
-										(54,FEAT,服务
-											(52,FEAT,健康)
-											(53,FEAT,医疗))
-										(56,mDEPD,中))
-									(58,mDEPD,的)
-									(63,CONT,数据
-										(59,FEAT,有关)
-										(60,FEAT,个人
-											(61,mDEPD,的))
-										(62,SCO,任何))
-									(64,mPUNC,，)
-									(65,eSUCC,例如)))))
-					(134,EXP,数据
-						(108,FEAT,大分子
-							(98,eCOO,气体
-								(95,eCOO,尿
-									(89,eCOO,组织
-										(79,eCOO,数据
-											(75,FEAT,方式
-												(70,eCOO,家族史
-													(68,eCOO,社会史
-														(66,mRELA,既往病史)
-														(67,mPUNC,、)
-														(69,mPUNC,、))
-													(71,mPUNC,、))
-												(72,FEAT,症状)
-												(74,FEAT,生活
-													(73,mRELA,和))
-												(76,mDEPD,等)
-												(77,SCO,各类病历记载)
-												(78,mDEPD,的))
-											(80,mPUNC,；)
-											(81,mRELA,d))
-											(82,rEXP,来自
-												(84,DATV,部位
-													(83,FEAT,身体))))
-										(85,mRELA,或)
-										(86,FEAT,身体物质)
-										(87,mPUNC,，)
-										(88,mDEPD,例如)
-										(90,mPUNC,、)
-										(91,eCOO,体液)
-										(92,mPUNC,、))
-									(93,eCOO,血
-										(94,mPUNC,、))
-									(96,mPUNC,、便)
-									(97,mPUNC,、))
-								(99,mPUNC,，))
-							(105,eCOO,蛋白质
-								(100,mRELA,以及)
-								(101,eCOO,DNA)
-								(103,eCOO,RNA
-									(102,mPUNC,、)
-									(104,mPUNC,、))
-								(106,mDEPD,等))
-							(107,FEAT,生物))
-						(109,mPUNC,、)
-						(120,eCOO,数据
-							(115,FEAT,检查
-								(113,CONT,微生物
-									(110,FEAT,代谢小分子)
-									(111,mPUNC,、)
-									(112,eCOO,肠道)
-									(114,mDEPD,等)))
-							(117,FEAT,检验
-								(116,mRELA,或)
-								(118,mDEPD,的))
-							(119,eCOO,结果)
-							(121,mPUNC,；))
-						(122,mRELA,e)
-						(123,mPUNC,))
-						(125,FEAT,穿戴
-							(124,mDEPD,可))
-						(127,rCONT,采集
-							(126,CONT,设备)
-							(128,mDEPD,的))
-						(129,mRELA,与)
-						(132,FEAT,相关
-							(131,DATV,健康
-								(130,eCOO,个人))
-							(133,mDEPD,的))
-						(135,mPUNC,，))
-					(136,mRELA,并且)
-					(138,EXP,数据
-						(137,FEAT,该种)
-						(139,mPUNC,：))
-					(140,mRELA,1
-						(141,mPUNC,)))
-					(142,EXP,本身)
-					(143,mRELA,或者)
-					(144,MANN,明显)
-					(149,LINK,数据
-						(147,FEAT,医疗
-							(146,FEAT,健康))
-						(148,FEAT,相关))
-					(150,mPUNC,；)
-					(151,mRELA,2
-						(152,mPUNC,)))
-					(153,mRELA,或是)
-					(157,mDEPD,的
-						(156,rCONT,采集
-							(155,CONT,传感器
-								(154,mRELA,由))))
-					(158,mPUNC,，)
-					(159,mRELA,并且))
-				(160,mDEPD,可以)
-				(161,MANN,单独)
-				(162,mRELA,或者)
-				(166,eCOO,结合
-					(165,CONT,数据
-						(163,mRELA,与)
-						(164,SCO,其他))
-					(178,FEAT,进行
-						(167,eCOO,用来对)
-						(172,eCOO,用户
-							(169,FEAT,穿戴
-								(168,mDEPD,可))
-							(170,CONT,设备
-								(171,mDEPD,的))
-							(173,mDEPD,的)
-							(175,eCOO,状况
-								(174,FEAT,健康))
-							(176,mRELA,或者)
-							(177,FEAT,疾病风险))
-						(179,CONT,判断))
-					(180,mDEPD,的)
-					(181,CONT,数据))
-				(182,mPUNC,；)
-				(183,mRELA,3)
-				(184,mPUNC,))
-				(185,mRELA,或是)
-				(187,eCOO,穿戴
-					(186,mDEPD,可)
-					(188,eCOO,设备
-						(189,eCOO,采集))
-					(190,mDEPD,的))
-				(191,FEAT,数据)
-				(192,mRELA,并且)
-				(193,mRELA,为对用户)
-				(199,CONT,风险
-					(196,eCOO,状况
-						(194,mDEPD,的)
-						(195,FEAT,健康))
-					(197,mRELA,或者)
-					(198,FEAT,疾病))
-				(201,eCOO,判断
-					(202,mDEPD,后))
-				(203,mDEPD,的)
-				(204,CONT,结论
-					(205,mPUNC,；))
-				(206,mRELA,4)
-				(207,mPUNC,))
-				(218,eCOO,进行
-					(208,mRELA,或是)
-					(217,AGT,系统
-						(209,mRELA,通过)
-						(215,eCOO,APP
-							(213,rEXP,相连
-								(210,mDEPD,可)
-								(211,EXP,穿戴)
-								(212,CONT,设备)
-								(214,mDEPD,的)))
-						(216,mRELA,或者))
-					(219,CONT,传送
-						(220,mDEPD,的))
-					(221,mPUNC,，)
-					(222,mRELA,并非)
-					(224,dCONT,穿戴
-						(223,mDEPD,可)
-						(226,eCOO,使用者
-							(225,CONT,设备)))
-					(228,eSUCC,提供
-						(227,FEAT,另行)
-						(229,mDEPD,的)
-						(231,MEAS,f
-							(230,mPUNC,；)
-							(232,mPUNC,)))
-						(233,eSUCC,接受
-							(234,mDEPD,的)
-							(239,CONT,数据
-								(236,FEAT,医疗
-									(235,FEAT,健康))
-								(237,FEAT,服务)
-								(238,FEAT,相关)
-								(240,mPUNC,，)
-								(241,mDEPD,例如)
-								(242,FEAT,检验检查医嘱
-									(284,CONT,数据
-										(243,mPUNC,、)
-										(244,FEAT,诊断)
-										(245,mPUNC,、)
-										(246,FEAT,操作)
-										(247,mPUNC,、)
-										(248,eCOO,药物)
-										(249,mPUNC,、)
-										(251,eCOO,效果
-											(250,FEAT,医疗)
-											(252,mDEPD,等))
-										(275,eCOO,数据
-											(253,mPUNC,；)
-											(267,FEAT,h
-												(265,eCOO,数据
-													(254,eCOO,g
-														(255,mPUNC,))
-														(258,eSUCC,提供
-															(257,DATV,个人
-																(256,mRELA,为))))
-													(264,FEAT,身份
-														(261,FEAT,服务
-															(259,FEAT,健康)
-															(260,FEAT,医疗)
-															(262,mDEPD,的))
-														(263,FEAT,服务者)))
-												(266,mPUNC,；))
-											(268,mPUNC,))
-											(272,FEAT,支付
-												(269,mRELA,关于)
-												(270,FEAT,个人)
-												(271,mDEPD,的))
-											(274,FEAT,相关
-												(273,mRELA,或医保))
-											(276,mPUNC,；i)
-											(280,FEAT,数据
-												(277,mPUNC,))
-												(278,FEAT,医学科研)
-												(279,FEAT,相关)
-												(281,mPUNC,，))
-											(282,mDEPD,例如))
-										(283,FEAT,临床研究病例)))
-								(285,mPUNC,、)
-								(286,FEAT,生物)))))
-				(287,CONT,样本库)
-				(288,mPUNC,、)))
-		(290,FEAT,基因组
-			(289,FEAT,全)
-			(291,mDEPD,等))
-		(292,MEAS,多种)
-		(293,FEAT,生物组)))
+		(1,FEAT,k）)
+		(3,FEAT,保健
+			(2,FEAT,妇幼))
+		(5,mPUNC,，)
+		(21,eCOO,数据
+			(6,mDEPD,例如)
+			(13,rCONT,收集
+				(11,AGT,机构
+					(10,FEAT,卫生
+						(7,EXP,妇幼保健院
+							(8,mPUNC,、))
+						(9,FEAT,医疗))
+					(12,mDEPD,等))
+				(14,mDEPD,的))
+			(17,eCOO,服务
+				(16,FEAT,保健
+					(15,FEAT,妇幼)))
+			(20,dFEAT,管理
+				(18,mRELA,与)
+				(19,MANN,健康))
+			(22,mPUNC,。))))
 
 (0,Root
 	(8,Root,包括
@@ -3066,230 +2864,168 @@
 				(6,dFEAT,遭到
 					(5,mRELA,一旦)
 					(7,CONT,篡改
-						(8,mPUNC,、))
-					(9,CONT,破坏
-						(10,mPUNC,、))
-					(14,eCOO,获取
-						(11,eCOO,泄露)
-						(12,mRELA,或者)
-						(13,MANN,非法)
-						(15,mPUNC,、)
-						(17,eCOO,利用
-							(16,MANN,非法)))
+						(8,mPUNC,、)
+						(9,eCOO,破坏)
+						(10,mPUNC,、)
+						(11,eCOO,泄露
+							(14,eCOO,获取
+								(12,mRELA,或者)
+								(13,MANN,非法))
+							(15,mPUNC,、)
+							(17,eCOO,利用
+								(16,MANN,非法))))
 					(18,mPUNC,，))
-				(20,dFEAT,危害
+				(20,rFEAT,危害
 					(19,mDEPD,可能)
 					(22,CONT,安全
 						(21,EXP,国家)
-						(23,mPUNC,、))
-					(31,CONT,权益
+						(23,mPUNC,、)
+						(25,eCOO,利益
+							(24,FEAT,公共)))
+					(31,PAT,权益
 						(29,FEAT,组织
-							(25,eCOO,利益
-								(24,FEAT,公共))
 							(26,mRELA,或者)
 							(27,eCOO,个人
 								(28,mPUNC,、)))
 						(30,FEAT,合法))
 					(32,mDEPD,的))
 				(34,mPUNC,，))
-			(36,mPUNC,：)
-			(62,LINK,数据
-				(38,MEAS,一
-					(37,mPUNC,（)
-					(39,mPUNC,）))
-				(51,FEAT,区域
-					(43,FEAT,单位
-						(40,FEAT,军事管理区)
-						(41,mPUNC,、)
-						(42,FEAT,国防科工))
-					(45,FEAT,县级
-						(44,mRELA,以及)
-						(46,mDEPD,以上))
-					(47,FEAT,党政机关)
-					(48,mDEPD,等)
-					(49,FEAT,重要)
-					(50,FEAT,敏感)
-					(52,mDEPD,的))
-				(60,FEAT,流量
-					(57,eCOO,流量
-						(54,eCOO,信息
-							(53,FEAT,地理)
-							(55,mPUNC,、))
-						(56,FEAT,人员)
-						(58,mPUNC,、))
-					(59,FEAT,车辆)
-					(61,mDEPD,等))
-				(63,mPUNC,；))
-			(76,LINK,数据
-				(71,dFEAT,反映
-					(69,EXP,物流
-						(64,mPUNC,（二)
-						(65,mPUNC,）)
-						(67,eCOO,流量
-							(66,FEAT,车辆)
-							(68,mPUNC,、))
-						(70,mDEPD,等))
-					(74,CONT,情况
-						(73,FEAT,运行
-							(72,FEAT,经济)))
-					(75,mDEPD,的))
-				(77,mPUNC,；)
-				(90,dFEAT,包含
-					(79,mRELA,三
-						(78,mPUNC,（)
-						(80,mPUNC,）))
-					(85,LINK,数据
-						(82,FEAT,充电网
-							(81,FEAT,汽车)
-							(83,mDEPD,的))
-						(84,FEAT,运行)
-						(86,mPUNC,；))
-					(88,mRELA,四
-						(87,mPUNC,（)
-						(89,mPUNC,）))
-					(92,LINK,信息
-						(91,FEAT,人脸)
-						(93,mPUNC,、)
-						(95,eCOO,信息
-							(94,FEAT,车牌)
-							(96,mDEPD,等)
-							(97,mDEPD,的))
-						(98,FEAT,车外视频)
-						(99,mPUNC,、))
-					(101,LINK,数据
-						(100,FEAT,图像)
-						(102,mPUNC,；))
-					(103,mPUNC,（五)
-					(104,mPUNC,）))))
-		(153,LINK,数据
-			(105,dFEAT,涉及)
-			(109,dFEAT,超过
-				(108,EXP,主体
-					(106,FEAT,个人)
-					(107,FEAT,信息))
-				(111,LINK,人
-					(110,MEAS,10万))
-				(112,mDEPD,的)
-				(151,LINK,权益
-					(150,FEAT,组织合法
-						(146,eCOO,利益
-							(114,eCOO,信息
-								(113,FEAT,个人)
-								(115,mPUNC,；)
-								(137,rCONT,确定
-									(117,mRELA,六
-										(116,mPUNC,（)
-										(118,mPUNC,）))
-									(121,AGT,部门
-										(119,FEAT,国家)
-										(120,FEAT,网信))
-									(136,AGT,部门
-										(122,mRELA,和)
-										(123,FEAT,国务院)
-										(129,FEAT,信息化
-											(124,eCOO,发展)
-											(125,eCOO,改革
-												(126,mPUNC,、))
-											(127,eCOO,工业)
-											(128,mRELA,和)
-											(130,mPUNC,、))
-										(131,eCOO,公安
-											(132,mPUNC,、))
-										(133,FEAT,交通运输
-											(134,mDEPD,等))
-										(135,FEAT,有关))
-									(138,mDEPD,的))
-								(139,SCO,其他)
-								(141,dFEAT,危害
-									(140,mDEPD,可能)
-									(143,PAT,安全
-										(142,EXP,国家)
-										(144,mPUNC,、))))
-							(145,FEAT,公共)
-							(148,eCOO,个人
-								(147,mRELA,或者))
-							(149,mPUNC,、))))
-				(152,mDEPD,的)))
-		(154,mPUNC,。)))
+			(36,mPUNC,：))))
 
 (0,Root
-	(9,Root,是
-		(6,dEXP,指
-			(2,MEAS,条
-				(1,MEAS,第二))
-			(4,EXP,指南
-				(3,SCO,本))
-			(5,mDEPD,所))
-		(8,EXP,数据
-			(7,FEAT,工业))
-		(21,LINK,数据
-			(17,rCONT,产生
-				(16,TIME,周期
-					(11,FEAT,领域
-						(10,FEAT,工业))
-					(14,FEAT,服务
-						(12,eCOO,产品)
-						(13,mRELA,和))
-					(15,FEAT,全生命)))
-			(19,FEAT,应用
-				(18,mRELA,和)
-				(20,mDEPD,的)))
-		(22,mPUNC,，)
-		(23,eSUCC,包括
-			(26,eSUCC,限于
-				(24,mDEPD,但)
-				(25,mNEG,不)
-				(47,CONT,数据
-					(43,rCONT,生成
-						(28,AGT,企业
-							(27,FEAT,工业))
-						(41,LOC,环节
-							(29,mRELA,在)
-							(37,FEAT,管理
-								(34,eCOO,制造
-									(30,eCOO,研发
-										(31,eSUCC,设计)
-										(32,mPUNC,、))
-									(33,FEAT,生产)
-									(35,mPUNC,、))
-								(36,FEAT,经营)
-								(38,mPUNC,、)
-								(39,FEAT,运维服务)
-								(40,mDEPD,等))
-							(42,mDEPD,中)))
-					(45,FEAT,使用
-						(44,mRELA,和)
-						(46,mDEPD,的))
-					(48,mPUNC,，)
-					(49,mRELA,以及)))
-			(53,LINK,企业
-				(51,FEAT,互联网
-					(50,FEAT,工业))
-				(52,FEAT,平台))
-			(76,LINK,数据
-				(72,rCONT,生成
-					(56,ePREC,简称
-						(54,mPUNC,（)
-						(55,LOC,以下)
-						(58,DATV,企业
-							(57,FEAT,平台))
-						(59,mPUNC,）))
-					(70,LOC,过程
-						(60,mRELA,在)
-						(62,dFEAT,接入
-							(61,EXP,设备)
-							(63,mPUNC,、))
-						(68,dFEAT,应用
-							(65,eCOO,运行
-								(64,FEAT,平台)
-								(66,mPUNC,、))
-							(67,PAT,工业APP)
-							(69,mDEPD,等))
-						(71,mDEPD,中)))
-				(74,FEAT,使用
-					(73,mRELA,和)
-					(75,mDEPD,的)))
-			(77,mPUNC,。))))
+	(27,Root,数据
+		(2,mRELA,一
+			(1,mPUNC,（)
+			(3,mPUNC,）))
+		(19,eCOO,信息
+			(4,FEAT,军事管理区)
+			(5,mPUNC,、)
+			(16,FEAT,区域
+				(12,FEAT,党政机关
+					(8,eCOO,单位
+						(7,FEAT,科工
+							(6,FEAT,国防)))
+					(9,mRELA,以及)
+					(10,FEAT,县级
+						(11,mDEPD,以上))
+					(13,mDEPD,等))
+				(14,FEAT,重要)
+				(15,FEAT,敏感)
+				(17,mDEPD,的))
+			(18,FEAT,地理)
+			(20,mPUNC,、)
+			(22,eCOO,流量
+				(21,FEAT,人员)
+				(23,mPUNC,、)))
+		(25,FEAT,流量
+			(24,FEAT,车辆)
+			(26,mDEPD,等))
+		(28,mPUNC,；)))
+
+(0,Root
+	(14,Root,数据
+		(7,FEAT,物流
+			(2,mRELA,二
+				(1,mPUNC,（)
+				(3,mPUNC,）))
+			(5,eCOO,流量
+				(4,FEAT,车辆)
+				(6,mPUNC,、))
+			(8,mDEPD,等))
+		(9,dFEAT,反映
+			(12,PAT,情况
+				(11,dFEAT,运行
+					(10,EXP,经济)))
+			(13,mDEPD,的))
+		(15,mPUNC,；)))
+
+(0,Root
+	(8,Root,数据
+		(2,mRELA,三
+			(1,mPUNC,（)
+			(3,mPUNC,）))
+		(5,FEAT,充电网
+			(4,FEAT,汽车)
+			(6,mDEPD,的))
+		(7,FEAT,运行)
+		(9,mPUNC,；)))
+
+(0,Root
+	(4,Root,包含
+		(2,mRELA,四
+			(1,mPUNC,（)
+			(3,mPUNC,）))
+		(6,LINK,信息
+			(5,FEAT,人脸)
+			(7,mPUNC,、)
+			(9,eCOO,信息
+				(8,FEAT,车牌)
+				(10,mDEPD,等)
+				(11,mDEPD,的))
+			(12,FEAT,车外视频
+				(13,mPUNC,、)))
+		(15,LINK,数据
+			(14,FEAT,图像)
+			(16,mPUNC,；))))
+
+(0,Root
+	(13,Root,信息
+		(4,dFEAT,涉及
+			(2,mRELA,五
+				(1,mPUNC,（)
+				(3,mPUNC,）))
+			(6,LINK,信息
+				(5,FEAT,个人))
+			(7,LINK,主体))
+		(8,dFEAT,超过
+			(10,DATV,人
+				(9,MEAS,10万))
+			(11,mDEPD,的))
+		(12,FEAT,个人)
+		(14,mPUNC,；)))
+
+(0,Root
+	(23,Root,确定
+		(2,mRELA,六
+			(1,mPUNC,（)
+			(3,mPUNC,）))
+		(22,AGT,部门
+			(19,FEAT,运输
+				(6,eCOO,部门
+					(4,FEAT,国家)
+					(5,FEAT,网信))
+				(7,mRELA,和)
+				(14,eCOO,信息化
+					(9,eCOO,发展
+						(8,AGT,国务院)
+						(10,eSUCC,改革
+							(11,mPUNC,、)))
+					(12,eCOO,工业)
+					(13,mRELA,和)
+					(15,mPUNC,、))
+				(16,eCOO,公安
+					(17,mPUNC,、))
+				(18,PAT,交通)
+				(20,mDEPD,等))
+			(21,FEAT,有关))
+		(24,mDEPD,的)
+		(40,CONT,数据
+			(25,SCO,其他)
+			(27,dFEAT,危害
+				(26,mDEPD,可能)
+				(29,CONT,安全
+					(28,EXP,国家)
+					(30,mPUNC,、))
+				(32,CONT,利益
+					(31,FEAT,公共))
+				(38,PAT,权益
+					(33,mRELA,或者)
+					(34,FEAT,个人
+						(35,mPUNC,、))
+					(36,FEAT,组织)
+					(37,FEAT,合法))
+				(39,mDEPD,的)))
+		(41,mPUNC,。)))
 
 (0,Root
 	(8,Root,包括
@@ -3430,44 +3166,44 @@
 		(3,EXP,数据
 			(1,FEAT,重要)
 			(2,FEAT,网络))
-		(4,EXP,key cyber data)
-		(7,dCONT,泄露
-			(6,mRELA,一旦)
-			(15,eSUCC,影响
-				(10,ePREC,篡改
-					(8,mRELA,或)
-					(9,mRELA,被)
-					(11,mPUNC,、))
+		(4,EXP,keycyberdata)
+		(42,CONT,数据
+			(15,dFEAT,影响
+				(7,ePREC,泄露
+					(6,mRELA,一旦)
+					(10,eCOO,篡改
+						(8,mRELA,或)
+						(9,mRELA,被)
+						(11,mPUNC,、)))
 				(12,EXP,损毁)
 				(13,mDEPD,可能)
 				(14,MANN,直接)
 				(17,CONT,安全
 					(16,EXP,国家)
-					(18,mPUNC,、))
-				(20,dCONT,运行
-					(19,FEAT,经济)
-					(21,mPUNC,、)
-					(23,eCOO,稳定
-						(22,EXP,社会)
-						(24,mPUNC,、)
-						(26,eCOO,健康
-							(25,FEAT,公共)
-							(28,eCOO,安全
-								(27,mRELA,和)))))
+					(18,mPUNC,、)
+					(20,eCOO,运行
+						(19,EXP,经济)
+						(21,mPUNC,、)
+						(23,eCOO,稳定
+							(22,EXP,社会)
+							(24,mPUNC,、)
+							(26,eCOO,健康
+								(25,FEAT,公共)
+								(28,eCOO,安全
+									(27,mRELA,和))))))
 				(29,mDEPD,的)
-				(30,mPUNC,，)
-				(33,eSUCC,收集
-					(32,TOOL,网络
-						(31,mRELA,通过))
-					(34,mPUNC,、)
-					(35,eSUCC,产生
-						(42,CONT,数据
-							(40,rCONT,存在
-								(36,mRELA,或)
-								(39,MANN,形式
-									(37,mRELA,以)
-									(38,FEAT,电子))
-								(41,mDEPD,的)))))))
+				(30,mPUNC,，))
+			(33,dFEAT,收集
+				(32,TOOL,网络
+					(31,mRELA,通过))
+				(34,mPUNC,、)
+				(35,eCOO,产生))
+			(40,rCONT,存在
+				(36,mRELA,或)
+				(39,MANN,形式
+					(37,mRELA,以)
+					(38,FEAT,电子))
+				(41,mDEPD,的)))
 		(43,mPUNC,。)))
 
 (0,Root
@@ -3488,9 +3224,9 @@
 (0,Root
 	(30,Root,信息
 		(9,rCONT,记录
-			(3,AGT,personal information
-				(2,FEAT,信息
-					(1,FEAT,个人)))
+			(3,AGT,personalinformation
+				(1,FEAT,个人)
+				(2,FEAT,信息))
 			(8,MANN,方式
 				(4,mRELA,以)
 				(5,eCOO,电子)
@@ -3505,7 +3241,7 @@
 				(14,mRELA,与)
 				(15,SCO,其他))
 			(18,eSUCC,识别
-				(21,PAT,身份
+				(21,CONT,身份
 					(20,FEAT,自然人
 						(19,FEAT,特定)))))
 		(23,rEXP,反映
@@ -3911,7 +3647,7 @@
 		(14,STAT,角度
 			(1,mRELA,从)
 			(4,eCOO,作用
-				(2,FEAT,数据
+				(2,CONT,数据
 					(3,mDEPD,的))
 				(5,mPUNC,、))
 			(12,FEAT,影响
@@ -3928,13 +3664,15 @@
 			(17,FEAT,重要)
 			(18,FEAT,网络))
 		(22,LINK,类别
-			(21,FEAT,以下)
-			(23,mPUNC,：)
-			(24,MEAS,a
-				(25,mPUNC,）))
-			(27,eCOO,运行类
-				(26,FEAT,经济)))
-		(28,mPUNC,。)))
+			(21,FEAT,以下))
+		(23,mPUNC,：)))
+
+(0,Root
+	(4,Root,运行类
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(3,FEAT,经济)
+		(5,mPUNC,。)))
 
 (0,Root
 	(2,Root,反映
@@ -4034,21 +3772,25 @@
 			(9,eCOO,指标
 				(8,FEAT,生理)
 				(10,mPUNC,、)))
-		(20,LINK,信c
+		(20,CONT,信
+			(13,FEAT,事件
+				(11,FEAT,公共)
+				(12,FEAT,卫生)
+				(14,mPUNC,、))
 			(17,FEAT,安全
-				(13,eCOO,事件
-					(11,FEAT,公共)
-					(12,FEAT,卫生)
-					(14,mPUNC,、))
 				(16,EXP,药品
 					(15,eCOO,食品))
 				(18,mDEPD,等)
-				(19,mDEPD,的))
-			(21,mPUNC,）)
-			(24,eCOO,环境类
-				(22,FEAT,自然资源)
-				(23,mRELA,与)))
-		(25,mPUNC,。)))
+				(19,mDEPD,的)))
+		(21,mPUNC,。)))
+
+(0,Root
+	(3,Root,自然资源
+		(1,mRELA,c
+			(2,mPUNC,）))
+		(5,eCOO,环境类
+			(4,mRELA,与)
+			(6,mPUNC,。))))
 
 (0,Root
 	(2,Root,反映
@@ -4270,31 +4012,31 @@
 						(12,mRELA,在)
 						(18,FEAT,单位
 							(13,mRELA,向)
-							(14,FEAT,政府部门
-								(15,mPUNC,、))
+							(14,FEAT,政府部门)
+							(15,mPUNC,、)
 							(16,FEAT,公共)
 							(17,FEAT,企事业))
 						(20,dFEAT,包括
 							(19,mPUNC,（))
+						(23,dFEAT,限于
+							(21,mRELA,但)
+							(22,mNEG,不)
+							(24,CONT,教育
+								(25,mPUNC,、)
+								(27,eCOO,健康
+									(26,eCOO,卫生))
+								(28,mPUNC,、)))
 						(55,dFEAT,提供
 							(42,DATV,单位
-								(23,rEXP,限于
-									(21,mRELA,但)
-									(22,mNEG,不)
-									(24,CONT,教育
-										(25,mPUNC,、)
-										(27,eCOO,健康
-											(26,eCOO,卫生))
-										(28,mPUNC,、)
-										(29,eCOO,供水
-											(30,mPUNC,、)
-											(31,eCOO,供电)
-											(32,mPUNC,、))))
 								(38,FEAT,保护
+									(29,eCOO,供水
+										(30,mPUNC,、)
+										(31,eCOO,供电)
+										(32,mPUNC,、))
 									(33,eCOO,供气
-										(34,mPUNC,、)
-										(35,eCOO,供热)
-										(36,mPUNC,、))
+										(34,mPUNC,、))
+									(35,eCOO,供热)
+									(36,mPUNC,、)
 									(37,PAT,环境)
 									(39,mPUNC,、)
 									(40,FEAT,公共交通)
@@ -4315,103 +4057,97 @@
 							(57,mDEPD,的))
 						(59,mDEPD,中)
 						(60,mPUNC,，))
-					(61,mRELA,所)
+					(61,mDEPD,所)
 					(63,mDEPD,的))
 				(70,FEAT,情况
-					(64,mRELA,有关)
 					(67,eCOO,信息
-						(65,FEAT,用户)
+						(65,FEAT,用户
+							(64,mRELA,有关))
 						(66,FEAT,基本)
 						(68,mPUNC,、))
 					(69,FEAT,使用)
 					(71,mDEPD,等)))
-			(73,mPUNC,。))))
+			(73,mPUNC,。)
+			(88,CONT,信息
+				(74,mRELA,如)
+				(79,rCONT,掌握
+					(78,AGT,企业
+						(77,FEAT,制造
+							(76,eCOO,生产
+								(75,FEAT,汽车))))
+					(80,mDEPD,的))
+				(84,FEAT,里程
+					(83,FEAT,行驶
+						(82,DATV,用户
+							(81,FEAT,重点)))
+					(85,mPUNC,、))
+				(86,FEAT,轨迹
+					(87,mDEPD,等)))
+			(89,mPUNC,。))))
 
 (0,Root
-	(15,Root,信息
-		(1,mDEPD,如)
-		(6,rCONT,掌握
-			(5,AGT,企业
-				(4,FEAT,制造
-					(3,eCOO,生产
-						(2,PAT,汽车))))
-			(7,mDEPD,的))
-		(11,eCOO,里程
-			(10,FEAT,行驶
-				(9,EXP,用户
-					(8,FEAT,重点)))
-			(12,mPUNC,、))
-		(13,FEAT,轨迹
-			(14,mDEPD,等))
-		(16,mPUNC,。)))
+	(6,Root,即
+		(1,mRELA,g
+			(2,mPUNC,）))
+		(4,EXP,信息类
+			(3,FEAT,政务)
+			(5,mPUNC,。))
+		(28,LINK,信息
+			(12,rPAT,收集
+				(10,AGT,部门
+					(7,mRELA,由)
+					(8,FEAT,国家)
+					(9,FEAT,政务))
+				(11,mRELA,所)
+				(15,eCOO,产生
+					(13,mRELA,或)
+					(14,mDEPD,的)
+					(16,mDEPD,的)
+					(17,mPUNC,，)))
+			(23,FEAT,敏感
+				(20,DATV,秘密
+					(18,mRELA,除)
+					(19,EXP,国家)
+					(21,mDEPD,外))
+				(22,mDEPD,较为)
+				(26,eCOO,公开
+					(24,mRELA,或)
+					(25,mDEPD,不宜)
+					(27,mDEPD,的))))
+		(29,mPUNC,。)))
 
 (0,Root
-	(4,Root,信息类
-		(1,mRELA,g)
-		(2,mPUNC,）)
-		(3,FEAT,政务)
-		(5,mPUNC,。)))
-
-(0,Root
-	(7,Root,收集
-		(1,mDEPD,即)
-		(5,AGT,部门
-			(2,mRELA,由)
-			(3,FEAT,国家)
-			(4,FEAT,政务))
-		(6,mRELA,所)
-		(10,eCOO,产生
-			(8,mRELA,或)
-			(9,mDEPD,的)
-			(11,mDEPD,的)
-			(12,mPUNC,，)
-			(18,eSUCC,敏感
-				(15,STAT,秘密
-					(13,mRELA,除)
-					(14,FEAT,国家)
-					(16,mDEPD,外))
-				(17,mDEPD,较为)
-				(23,eCOO,信息
-					(21,FEAT,公开
-						(19,mRELA,或)
-						(20,mNEG,不宜)
-						(22,mDEPD,的))
-					(24,mPUNC,。))))))
-
-(0,Root
-	(1,Root,h
-		(2,mPUNC,）)
-		(3,SCO,其他类
-			(4,mPUNC,。))))
-
-(0,Root
-	(4,Root,包括
-		(2,LINK,类别
-			(1,FEAT,以上))
-		(3,mNEG,未)
-		(5,mPUNC,，)
-		(26,LINK,数据
-			(18,rFEAT,产生
-				(6,mRELA,但)
-				(7,mDEPD,也)
-				(8,mDEPD,会)
-				(17,DATV,利益
-					(9,mRELA,对)
-					(14,eCOO,发展
-						(11,eCOO,安全
-							(10,EXP,国家)
-							(12,mPUNC,、))
-						(13,EXP,经济))
-					(15,mRELA,以及)
-					(16,FEAT,公共))
-				(20,CONT,影响
-					(19,FEAT,重大))
-				(21,mDEPD,的))
-			(22,SCO,其他)
-			(23,FEAT,非国家)
-			(24,FEAT,秘密
-				(25,mDEPD,的)))
-		(27,mPUNC,。)))
+	(8,Root,包括
+		(1,mDEPD,h
+			(2,mPUNC,）))
+		(6,LINK,类别
+			(3,SCO,其他类)
+			(5,FEAT,以上
+				(4,mPUNC,。)))
+		(7,mNEG,未)
+		(9,mPUNC,，)
+		(30,EXP,数据
+			(22,rFEAT,产生
+				(10,mRELA,但)
+				(11,mDEPD,也)
+				(12,mDEPD,会)
+				(21,DATV,利益
+					(13,mRELA,对)
+					(18,eCOO,发展
+						(15,eCOO,安全
+							(14,EXP,国家)
+							(16,mPUNC,、))
+						(17,EXP,经济))
+					(19,mRELA,以及)
+					(20,FEAT,公共))
+				(24,CONT,影响
+					(23,FEAT,重大))
+				(25,mDEPD,的))
+			(26,SCO,其他)
+			(27,FEAT,非国家)
+			(28,FEAT,秘密
+				(29,mDEPD,的)))
+		(31,mPUNC,。)))
 
 (0,Root
 	(16,Root,包括
@@ -4433,12 +4169,14 @@
 		(19,eSUCC,限于
 			(17,mRELA,但)
 			(18,mNEG,不)
-			(21,MEAS,a
-				(20,mPUNC,：)
-				(22,mPUNC,）))
-			(24,DATV,部门
-				(23,FEAT,政务))
-			(25,mPUNC,。))))
+			(20,mPUNC,：))))
+
+(0,Root
+	(4,Root,部门
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(3,FEAT,政务)
+		(5,mPUNC,。)))
 
 (0,Root
 	(4,Root,分布
@@ -4965,108 +4703,15 @@
 			(5,FEAT,重要)
 			(6,FEAT,网络))
 		(8,mDEPD,主要)
-		(10,mPUNC,：)
-		(15,LINK,数据
-			(11,FEAT,a
-				(12,mPUNC,）))
-			(14,FEAT,储备
-				(13,FEAT,战略)))
-		(16,mPUNC,。)))
+		(10,mPUNC,：)))
 
 (0,Root
-	(4,Root,指
-		(2,EXP,储备
-			(1,FEAT,战略))
-		(3,mDEPD,是)
-		(7,dCONT,应付
-			(5,AGT,国家)
-			(6,mRELA,为了)
-			(8,CONT,战争)
-			(12,CONT,情况
-				(9,mRELA,和)
-				(10,SCO,其他)
-				(11,FEAT,意外))
-			(13,mPUNC,，)
-			(14,eSUCC,保障
-				(17,CONT,运行
-					(15,EXP,国民经济)
-					(16,MANN,正常)
-					(20,eCOO,需求
-						(18,mRELA,和)
-						(19,FEAT,国防)))
-				(21,mPUNC,，)))
-		(39,dCONT,储存
-			(33,PAT,物资
-				(28,rCONT,建立
-					(22,mRELA,而)
-					(24,TIME,平时
-						(23,mRELA,在))
-					(25,dMANN,有
-						(26,LINK,计划)
-						(27,mDEPD,地))
-					(29,mDEPD,的))
-				(31,FEAT,数量
-					(30,FEAT,一定)
-					(32,mDEPD,的))
-				(34,mPUNC,、)
-				(35,eCOO,能源
-					(36,mDEPD,等)))
-			(37,CONT,方面
-				(38,mDEPD,的))
-			(41,eCOO,积蓄
-				(40,mRELA,或)))
-		(42,mPUNC,。)))
-
-(0,Root
-	(23,Root,属于
-		(13,LOC,数据
-			(1,dFEAT,反映)
-			(11,FEAT,情况
-				(9,FEAT,储备量
-					(7,eCOO,地点
-						(4,eCOO,计划
-							(3,FEAT,储备
-								(2,FEAT,战略))
-							(5,mPUNC,、))
-						(6,FEAT,储备)
-						(8,mPUNC,、))
-					(10,mDEPD,等))
-				(12,mDEPD,的))
-			(14,mDEPD,中)
-			(15,mPUNC,，))
-		(18,DATV,秘密
-			(16,mRELA,除)
-			(17,FEAT,国家)
-			(19,mDEPD,外)
-			(20,mPUNC,，))
-		(22,EXP,数据
-			(21,SCO,其他))
-		(26,LINK,数据
-			(24,FEAT,重要)
-			(25,FEAT,网络))
-		(27,mPUNC,。)))
-
-(0,Root
-	(6,Root,分为
-		(3,EXP,数据
-			(2,FEAT,储备
-				(1,FEAT,战略)))
-		(4,mDEPD,还)
-		(5,mDEPD,可以)
-		(19,LINK,子类
-			(17,FEAT,数据
-				(13,eCOO,数据
-					(9,eCOO,数据
-						(8,FEAT,储备
-							(7,PAT,粮食))
-						(10,mPUNC,、))
-					(12,FEAT,储备
-						(11,FEAT,物资))
-					(14,mPUNC,、))
-				(16,FEAT,储备
-					(15,PAT,能源))
-				(18,mDEPD,等)))
-		(20,mPUNC,。)))
+	(5,Root,数据
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(4,FEAT,储备
+			(3,FEAT,战略))
+		(6,mPUNC,。)))
 
 (0,Root
 	(7,Root,涉及
@@ -5239,62 +4884,62 @@
 		(36,mPUNC,。)))
 
 (0,Root
-	(5,Root,数据
-		(1,mRELA,b)
-		(2,mPUNC,）)
-		(4,FEAT,生产
-			(3,FEAT,工业))
-		(6,mPUNC,。)))
+	(14,Root,分布
+		(1,mRELA,b
+			(2,mPUNC,）))
+		(5,EXP,数据
+			(4,FEAT,生产
+				(3,FEAT,工业))
+			(6,mPUNC,。))
+		(12,DATV,资源
+			(7,mRELA,作为)
+			(8,FEAT,新
+				(9,mDEPD,的))
+			(11,FEAT,要素
+				(10,FEAT,生产))
+			(13,mPUNC,，))
+		(22,LOC,系统
+			(15,mRELA,于)
+			(19,FEAT,设施运营者
+				(17,FEAT,信息
+					(16,FEAT,关键))
+				(18,FEAT,基础))
+			(20,mDEPD,的)
+			(21,FEAT,生产)
+			(23,mDEPD,中))
+		(24,mPUNC,，)
+		(26,eSUCC,包括
+			(25,mDEPD,主要)
+			(27,mPUNC,：))))
 
 (0,Root
-	(8,Root,分布
-		(6,EXP,资源
-			(1,mRELA,作为)
-			(2,FEAT,新
-				(3,mDEPD,的))
-			(5,FEAT,要素
-				(4,FEAT,生产))
-			(7,mPUNC,，))
-		(16,LOC,系统
-			(9,mRELA,于)
-			(13,FEAT,设施运营者
-				(10,FEAT,关键)
-				(11,FEAT,信息)
-				(12,FEAT,基础)
-				(14,mDEPD,的))
-			(15,FEAT,生产)
-			(17,mDEPD,中))
-		(18,mPUNC,，)
-		(20,eSUCC,包括
-			(19,mDEPD,主要)
-			(21,mPUNC,：)
-			(26,LINK,数据
-				(22,mRELA,1
-					(23,mPUNC,）))
-				(25,FEAT,控制
-					(24,PAT,工业))
-				(27,mPUNC,，))
-			(47,LINK,数据
-				(36,rPAT,倚赖
-					(31,AGT,设施运营者
-						(28,FEAT,关键)
-						(29,FEAT,信息)
-						(30,FEAT,基础))
-					(34,LOC,过程
-						(32,mRELA,在)
-						(33,FEAT,生产)
-						(35,mDEPD,中))
-					(37,mDEPD,的))
-				(39,eCOO,信息
-					(38,dFEAT,控制)
-					(40,mPUNC,、)
-					(42,eCOO,状态
-						(41,FEAT,工况)
-						(43,mPUNC,、)
-						(44,FEAT,工艺参数)
-						(45,mDEPD,等)))
-				(46,FEAT,生产))
-			(48,mPUNC,。))))
+	(5,Root,数据
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(4,dFEAT,控制
+			(3,PAT,工业))
+		(6,mPUNC,，)
+		(26,eCOO,数据
+			(15,rPAT,倚赖
+				(10,AGT,设施运营者
+					(7,FEAT,关键)
+					(8,FEAT,信息)
+					(9,FEAT,基础))
+				(13,LOC,过程
+					(11,mRELA,在)
+					(12,FEAT,生产)
+					(14,mDEPD,中))
+				(16,mDEPD,的))
+			(17,dFEAT,控制
+				(18,PAT,信息
+					(19,mPUNC,、)
+					(21,eCOO,状态
+						(20,FEAT,工况)
+						(22,mPUNC,、)
+						(23,FEAT,工艺参数)))
+				(24,mDEPD,等))
+			(25,FEAT,生产)
+			(27,mPUNC,。))))
 
 (0,Root
 	(3,Root,研发
@@ -5804,111 +5449,116 @@
 		(8,EXP,数据
 			(1,FEAT,典型
 				(2,mDEPD,的))
-			(7,FEAT,网络
-				(5,FEAT,健康类
-					(3,eCOO,人口)
-					(4,mRELA,与))
-				(6,FEAT,重要)))
+			(5,FEAT,健康类
+				(3,eCOO,人口)
+				(4,mRELA,与))
+			(6,FEAT,重要)
+			(7,FEAT,网络))
 		(9,mDEPD,主要)
-		(11,mPUNC,：)
-		(15,LINK,数据
-			(12,MEAS,a
-				(13,mPUNC,）))
-			(14,FEAT,人口))
-		(16,mPUNC,，)
-		(17,eSUCC,涉及
-			(19,CONT,普查
-				(18,PAT,人口)
-				(20,mPUNC,、)
-				(22,eCOO,数据
-					(21,FEAT,基因)
-					(23,mPUNC,、)
-					(25,eCOO,资源
-						(24,FEAT,遗传)
-						(26,mDEPD,等))))
-			(27,mPUNC,，))
-		(63,LINK,情况
-			(59,FEAT,细胞
-				(55,eCOO,器官
-					(46,eCOO,数据
-						(32,eCOO,资料
-							(28,mDEPD,如
-								(29,mPUNC,：))
-							(31,FEAT,普查
-								(30,CONT,人口))
-							(33,mPUNC,、)
-							(41,eCOO,信息
-								(36,eCOO,信息
-									(35,FEAT,登记
-										(34,PAT,生命))
-									(37,mPUNC,、))
-								(40,FEAT,资源
-									(39,FEAT,遗传
-										(38,AGT,人类))))
-							(42,mPUNC,、))
-						(44,dFEAT,测序
-							(43,PAT,基因))
-						(45,FEAT,原始)
-						(47,mPUNC,、)
-						(49,FEAT,基因组
-							(48,FEAT,人体)
-							(50,mPUNC,、)
-							(51,eCOO,基因
-								(52,mDEPD,等)))
-						(53,FEAT,遗传物质)
-						(54,mDEPD,的))
-					(56,mPUNC,、))
-				(57,eCOO,组织
-					(58,mPUNC,、))
-				(60,mDEPD,等)
-				(61,eCOO,遗传材料)
-				(62,mDEPD,的)))
-		(64,mPUNC,。)))
+		(11,mPUNC,：)))
 
 (0,Root
-	(17,Root,涉及
-		(7,mDEPD,如
-			(1,mRELA,b)
-			(2,mPUNC,）)
-			(5,EXP,数据
-				(4,FEAT,医疗
-					(3,FEAT,健康))
-				(6,mPUNC,，))
-			(8,mPUNC,：)
-			(9,mRELA,1
-				(10,mPUNC,）)))
-		(15,EXP,信息
-			(11,FEAT,诊疗)
-			(14,FEAT,管理
-				(12,mRELA,与)
-				(13,CONT,健康))
-			(16,mPUNC,，))
-		(32,DATV,信息
-			(25,FEAT,档案
-				(22,eCOO,结果
-					(19,eCOO,病历
-						(18,FEAT,电子)
-						(20,mPUNC,、))
-					(21,FEAT,检测)
-					(23,mPUNC,、))
-				(24,FEAT,健康)
-				(26,mDEPD,等))
-			(31,FEAT,数据
-				(27,SCO,各类)
-				(28,FEAT,诊疗
-					(29,mPUNC,、))
-				(30,FEAT,健康)))
-		(33,mPUNC,，)
-		(42,DATV,信息
-			(40,FEAT,结果
-				(34,mRELA,以及)
-				(38,dFEAT,开发
-					(37,CONT,数据
-						(36,FEAT,医疗
-							(35,FEAT,健康))))
-				(39,FEAT,利用)
-				(41,mDEPD,等)))
-		(43,mPUNC,。)))
+	(6,Root,涉及
+		(1,mRELA,a
+			(2,mPUNC,）))
+		(4,EXP,数据
+			(3,FEAT,人口)
+			(5,mPUNC,，))
+		(8,dCONT,普查
+			(7,FEAT,人口)
+			(9,mPUNC,、)
+			(11,eCOO,数据
+				(10,FEAT,基因)
+				(12,mPUNC,、)
+				(14,eCOO,资源
+					(13,FEAT,遗传)
+					(15,mDEPD,等))))
+		(16,mPUNC,，)
+		(53,CONT,情况
+			(17,mDEPD,如
+				(18,mPUNC,：))
+			(21,eCOO,资料
+				(20,dFEAT,普查
+					(19,CONT,人口))
+				(22,mPUNC,、)
+				(25,eCOO,信息
+					(24,FEAT,登记
+						(23,PAT,生命))
+					(26,mPUNC,、)
+					(30,eCOO,信息
+						(29,FEAT,资源
+							(27,FEAT,人类)
+							(28,FEAT,遗传))
+						(31,mPUNC,、)
+						(33,FEAT,测序
+							(32,FEAT,基因))
+						(35,eCOO,数据
+							(34,FEAT,原始)
+							(36,mPUNC,、)))))
+			(51,FEAT,材料
+				(40,FEAT,基因
+					(38,eCOO,基因组
+						(37,FEAT,人体)
+						(39,mPUNC,、))
+					(41,mDEPD,等))
+				(42,FEAT,遗传物质)
+				(43,mDEPD,的)
+				(44,eCOO,器官
+					(45,mPUNC,、))
+				(46,eCOO,组织
+					(47,mPUNC,、))
+				(48,eCOO,细胞
+					(49,mDEPD,等))
+				(50,FEAT,遗传)
+				(52,mDEPD,的)))
+		(54,mPUNC,。)))
+
+(0,Root
+	(7,Root,如
+		(1,mRELA,b)
+		(2,mPUNC,）)
+		(5,EXP,数据
+			(3,FEAT,健康)
+			(4,FEAT,医疗)
+			(6,mPUNC,，))
+		(8,mPUNC,：)))
+
+(0,Root
+	(9,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(7,EXP,信息
+			(3,FEAT,诊疗)
+			(6,dFEAT,管理
+				(4,mRELA,与)
+				(5,PAT,健康))
+			(8,mPUNC,，))
+		(24,DATV,信息
+			(17,FEAT,档案
+				(14,eCOO,结果
+					(11,eCOO,病历
+						(10,FEAT,电子)
+						(12,mPUNC,、))
+					(13,FEAT,检测)
+					(15,mPUNC,、))
+				(16,FEAT,健康)
+				(18,mDEPD,等))
+			(19,SCO,各类)
+			(23,FEAT,数据
+				(20,eCOO,诊疗
+					(21,mPUNC,、))
+				(22,FEAT,健康))
+			(25,mPUNC,，))
+		(34,DATV,信息
+			(32,FEAT,结果
+				(26,mRELA,以及)
+				(30,FEAT,开发
+					(29,CONT,数据
+						(28,FEAT,医疗
+							(27,FEAT,健康))))
+				(31,FEAT,利用)
+				(33,mDEPD,等)))
+		(35,mPUNC,。)))
 
 (0,Root
 	(8,Root,涉及
@@ -5959,85 +5609,89 @@
 			(4,FEAT,药品
 				(3,FEAT,食品))
 			(6,mPUNC,，))
-		(8,mPUNC,：)
-		(9,mRELA,1)
-		(10,mPUNC,）)
-		(29,EXP,数据
-			(25,rCONT,提交
-				(19,AGT,药品
-					(14,rEXP,涉及
-						(12,EXP,数据
-							(11,FEAT,药品)
-							(13,mPUNC,，)))
-					(17,FEAT,安全
-						(15,EXP,国家)
-						(16,EXP,战略)
-						(18,mDEPD,的)))
-				(23,SCO,过程
-					(20,mRELA,在)
-					(22,FEAT,审批
-						(21,PAT,药品))
-					(24,mDEPD,中))
-				(26,mDEPD,的))
-			(28,FEAT,实验
-				(27,CONT,药品))
-			(30,mPUNC,，)
-			(47,eCOO,信息
-				(31,mDEPD,如
-					(32,mPUNC,：))
-				(42,rPAT,获取
-					(40,SCO,过程
-						(33,mRELA,在)
-						(37,eCOO,报告
-							(34,FEAT,药品)
-							(35,FEAT,不良)
-							(36,FEAT,反应))
-						(39,FEAT,监测
-							(38,mRELA,和))
-						(41,mDEPD,中))
-					(43,mDEPD,的))
-				(44,FEAT,患者)
-				(46,FEAT,报告者
-					(45,mRELA,和))
-				(48,mPUNC,；)
-				(63,eCOO,数据
-					(52,rCONT,进行
-						(50,LOC,动物模型
-							(49,mRELA,在)
-							(51,mDEPD,上))
-						(53,mDEPD,的))
-					(56,FEAT,毒理
-						(54,eCOO,药理
-							(55,mPUNC,、))
-						(57,mPUNC,、)
-						(58,eCOO,稳定性
-							(59,mPUNC,、)
-							(60,eCOO,药代动力学)
-							(61,mDEPD,等)))
-					(62,FEAT,试验)
-					(64,mPUNC,，)
-					(68,rCONT,进行
-						(66,LOC,人体
-							(65,mRELA,在)
-							(67,mDEPD,中))
-						(69,mDEPD,的))
-					(72,eCOO,数据
-						(71,FEAT,试验
-							(70,MANN,临床))
-						(73,mPUNC,，)
-						(85,eCOO,数据
-							(74,mRELA,以及)
-							(82,mDEPD,有关
-								(81,DATV,设施
-									(75,mRELA,与)
-									(76,FEAT,药品
-										(77,mDEPD,的))
-									(78,FEAT,生产流程
-										(79,mPUNC,、))
-									(80,FEAT,生产))
-								(83,mDEPD,的))
-							(84,FEAT,试验))))))
-		(86,mPUNC,。)))
+		(8,mPUNC,：)))
+
+(0,Root
+	(21,Root,数据
+		(17,rCONT,提交
+			(11,AGT,药品
+				(6,rEXP,涉及
+					(4,EXP,数据
+						(1,mRELA,1)
+						(2,mPUNC,）)
+						(3,FEAT,药品)
+						(5,mPUNC,，)))
+				(9,dFEAT,安全
+					(7,EXP,国家)
+					(8,FEAT,战略)
+					(10,mDEPD,的)))
+			(15,SCO,过程
+				(12,mRELA,在)
+				(14,FEAT,审批
+					(13,PAT,药品))
+				(16,mDEPD,中))
+			(18,mDEPD,的))
+		(20,FEAT,实验
+			(19,CONT,药品))
+		(22,mPUNC,，)
+		(39,eCOO,信息
+			(23,mDEPD,如
+				(24,mPUNC,：))
+			(34,rPAT,获取
+				(32,SCO,过程
+					(25,mRELA,在)
+					(29,eCOO,报告
+						(26,FEAT,药品)
+						(27,FEAT,不良)
+						(28,FEAT,反应))
+					(30,mRELA,和)
+					(31,FEAT,监测)
+					(33,mDEPD,中))
+				(35,mDEPD,的))
+			(38,FEAT,报告者
+				(36,eCOO,患者)
+				(37,mRELA,和))
+			(40,mPUNC,；)
+			(56,eCOO,数据
+				(45,rCONT,进行
+					(43,LOC,模型
+						(41,mRELA,在)
+						(42,FEAT,动物)
+						(44,mDEPD,上))
+					(46,mDEPD,的))
+				(49,FEAT,毒理
+					(47,eCOO,药理
+						(48,mPUNC,、))
+					(50,mPUNC,、)
+					(51,eCOO,稳定性
+						(52,mPUNC,、))
+					(53,eCOO,药代动力学)
+					(54,mDEPD,等))
+				(55,FEAT,试验)
+				(57,mPUNC,，)
+				(61,rCONT,进行
+					(59,LOC,人体
+						(58,mRELA,在)
+						(60,mDEPD,中))
+					(62,mDEPD,的))
+				(65,eCOO,数据
+					(64,FEAT,试验
+						(63,MANN,临床))
+					(66,mPUNC,，)
+					(79,eCOO,数据
+						(67,mRELA,以及)
+						(76,mDEPD,有关
+							(75,DATV,设施
+								(68,mRELA,与)
+								(72,eCOO,流程
+									(69,FEAT,药品
+										(70,mDEPD,的))
+									(71,FEAT,生产)
+									(73,mPUNC,、))
+								(74,FEAT,生产))
+							(77,mDEPD,的))
+						(78,FEAT,试验)
+						(80,mPUNC,。)))))))
 
 (0,Root
 	(8,Root,涉及
@@ -6105,29 +5759,31 @@
 				(9,mPUNC,、)
 				(11,eCOO,名称
 					(10,FEAT,产品)
-					(12,mPUNC,、)
-					(14,eCOO,标准
-						(13,FEAT,执行)
-						(15,mPUNC,、)
-						(16,eCOO,配料
-							(17,mPUNC,、)
-							(18,FEAT,生产工艺)
-							(19,mPUNC,、)
-							(21,eCOO,标识
-								(20,FEAT,标签)))))))
-		(22,mPUNC,；)
-		(27,eSUCC,安全
-			(23,mRELA,4
-				(24,mPUNC,）))
-			(26,EXP,药品
-				(25,FEAT,食品))
-			(28,eCOO,重大
-				(33,eCOO,信息
-					(32,FEAT,事件
-						(30,FEAT,紧急
-							(29,mPUNC,（)
-							(31,mPUNC,）))))))
-		(34,mPUNC,。)))
+					(12,mPUNC,、))
+				(14,eCOO,标准
+					(13,FEAT,执行)
+					(15,mPUNC,、)
+					(16,eCOO,配料
+						(17,mPUNC,、)
+						(18,eCOO,生产工艺)
+						(19,mPUNC,、)
+						(21,eCOO,标识
+							(20,FEAT,标签))))))
+		(22,mPUNC,；)))
+
+(0,Root
+	(6,Root,重大
+		(1,mRELA,4)
+		(2,mPUNC,）)
+		(5,eCOO,安全
+			(4,EXP,药品
+				(3,FEAT,食品)))
+		(11,LINK,信息
+			(10,FEAT,事件
+				(8,FEAT,紧急
+					(7,mPUNC,（)
+					(9,mPUNC,）)))
+			(12,mPUNC,。))))
 
 (0,Root
 	(10,Root,包括
@@ -6137,33 +5793,37 @@
 			(5,FEAT,环境类
 				(3,eCOO,自然资源)
 				(4,mRELA,与))
-			(7,FEAT,网络
-				(6,FEAT,重要)))
+			(6,FEAT,重要)
+			(7,FEAT,网络))
 		(9,mDEPD,主要)
-		(11,mPUNC,：)
-		(15,LINK,数据
-			(12,MEAS,a
-				(13,mPUNC,）))
-			(14,FEAT,地理))
-		(16,mPUNC,，)
-		(18,eSUCC,包括
-			(17,mDEPD,可)
-			(19,mPUNC,：)
-			(23,LINK,数据
-				(20,MEAS,1
-					(21,mPUNC,）))
-				(22,FEAT,地图))
-			(24,mPUNC,，)
-			(25,eCOO,涉及
-				(33,DATV,数据
-					(28,DATV,信息
-						(26,mRELA,除)
-						(27,FEAT,涉密)
-						(29,mDEPD,之外)
-						(30,mDEPD,的))
-					(31,SCO,所有)
-					(32,FEAT,地图))
-				(34,mPUNC,。)))))
+		(11,mPUNC,：)))
+
+(0,Root
+	(7,Root,包括
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(4,EXP,数据
+			(3,FEAT,地理)
+			(5,mPUNC,，))
+		(6,mDEPD,可)
+		(8,mPUNC,：)))
+
+(0,Root
+	(6,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(4,EXP,数据
+			(3,FEAT,地图)
+			(5,mPUNC,，))
+		(14,DATV,数据
+			(9,FEAT,信息
+				(7,mRELA,除)
+				(8,FEAT,涉密)
+				(10,mDEPD,之外)
+				(11,mDEPD,的))
+			(12,SCO,所有)
+			(13,FEAT,地图))
+		(15,mPUNC,。)))
 
 (0,Root
 	(6,Root,涉及
@@ -6171,12 +5831,12 @@
 			(2,mPUNC,）))
 		(4,EXP,数据
 			(3,FEAT,导航)
-			(5,mPUNC,,))
+			(5,mPUNC,，))
 		(7,eCOO,属于
 			(21,LOC,通知
 				(8,mPUNC,《)
-				(10,rEXP,规范
-					(9,mRELA,关于)
+				(9,mRELA,关于)
+				(10,FEAT,规范
 					(17,CONT,划分
 						(15,CONT,数据
 							(14,FEAT,基准站
@@ -6195,7 +5855,7 @@
 				(27,FEAT,基准站
 					(26,FEAT,非涉密受控)))
 			(29,mPUNC,；)
-			(38,LINK,数据集
+			(38,EXP,数据集
 				(30,dFEAT,提供)
 				(37,FEAT,位置
 					(34,rCONT,产生
@@ -6212,21 +5872,21 @@
 							(41,FEAT,导航))
 						(43,FEAT,建设)
 						(44,FEAT,运行)
-						(46,mPUNC,，))
-					(51,FEAT,能力
-						(47,mDEPD,如)
-						(48,eCOO,灾备
-							(49,mPUNC,、))
-						(50,FEAT,服务)
-						(52,mDEPD,等))
+						(46,mPUNC,，)
+						(51,eCOO,能力
+							(47,mDEPD,如)
+							(48,FEAT,灾备
+								(49,mPUNC,、))
+							(50,FEAT,服务)
+							(52,mDEPD,等)))
+					(54,mPUNC,；)
 					(67,eCOO,数据
-						(54,mPUNC,；)
 						(64,FEAT,场所
 							(60,rCONT,记录
 								(58,LOC,应用
-									(57,eCOO,衍生
-										(56,eCOO,服务
-											(55,FEAT,导航)))
+									(56,FEAT,服务
+										(55,FEAT,导航))
+									(57,eCOO,衍生)
 									(59,mDEPD,中))
 								(61,mDEPD,的))
 							(63,FEAT,公开
@@ -6234,35 +5894,34 @@
 							(65,mDEPD,的))
 						(66,FEAT,位置)
 						(68,mPUNC,；)))))
-		(96,LINK,数据
-			(83,eCOO,数据
-				(81,eCOO,内容
-					(77,eCOO,识别号
-						(72,eCOO,名录
-							(71,FEAT,用户
-								(69,FEAT,北斗)
-								(70,FEAT,导航))
-							(73,mPUNC,、)
-							(74,eCOO,属性)
-							(75,mPUNC,、))
-						(76,FEAT,装备))
-					(78,mRELA,及)
-					(80,FEAT,服务
-						(79,FEAT,短信息))
-					(82,mDEPD,等))
-				(84,mPUNC,；)
-				(88,eCOO,轨迹
-					(86,FEAT,信息
-						(85,FEAT,地理))
-					(87,FEAT,坐标)))
-			(94,FEAT,车辆
-				(90,dFEAT,含
-					(89,mRELA,及)
-					(92,LINK,信息
-						(91,FEAT,位置))
-					(93,mDEPD,的)))
-			(95,FEAT,移动))
-		(97,mPUNC,。)))
+		(95,LINK,数据
+			(93,FEAT,车辆
+				(87,eCOO,轨迹
+					(72,eCOO,名录
+						(71,FEAT,用户
+							(69,FEAT,北斗)
+							(70,FEAT,导航))
+						(73,mPUNC,、)
+						(74,eCOO,属性)
+						(75,mPUNC,、)
+						(82,eCOO,数据
+							(80,eCOO,内容
+								(79,FEAT,服务
+									(76,FEAT,装备识别号)
+									(77,mRELA,及)
+									(78,FEAT,短信息))
+								(81,mDEPD,等))
+							(83,mPUNC,；)))
+					(85,FEAT,信息
+						(84,FEAT,地理))
+					(86,FEAT,坐标))
+				(89,dFEAT,含
+					(88,mRELA,及)
+					(91,LINK,信息
+						(90,FEAT,位置))
+					(92,mDEPD,的)))
+			(94,FEAT,移动))
+		(96,mPUNC,。)))
 
 (0,Root
 	(5,Root,数据
@@ -6611,39 +6270,43 @@
 			(3,FEAT,水利)
 			(5,mPUNC,，))
 		(6,mDEPD,主要)
-		(8,mPUNC,：)
-		(14,dLINK,涉及
-			(9,mRELA,1
-				(10,mPUNC,）))
-			(12,EXP,信息
-				(11,FEAT,水情)
-				(13,mPUNC,，))
-			(23,LINK,信息
-				(17,rPAT,发布
-					(15,mNEG,未经)
-					(16,MANN,批准)
-					(18,mDEPD,的))
-				(22,FEAT,预报
-					(21,CONT,旱情
-						(19,eCOO,水
-							(20,mPUNC,、)))))
-			(24,mPUNC,；)
-			(30,eCOO,涉及
-				(25,mRELA,2
-					(26,mPUNC,）))
-				(28,EXP,信息
-					(27,FEAT,水利工程)
-					(29,mPUNC,，))
-				(33,LINK,设施
-					(31,FEAT,大型)
-					(32,FEAT,水利))
-				(39,CONT,资料
-					(34,mRELA,及)
-					(37,FEAT,运行
-						(35,FEAT,水利工程)
-						(36,eCOO,建设))
-					(38,FEAT,管理))
-				(40,mPUNC,。)))))
+		(8,mPUNC,：)))
+
+(0,Root
+	(6,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(4,EXP,信息
+			(3,FEAT,水情)
+			(5,mPUNC,，))
+		(15,CONT,信息
+			(9,rCONT,发布
+				(7,mNEG,未经)
+				(8,MANN,批准)
+				(10,mDEPD,的))
+			(14,dFEAT,预报
+				(13,CONT,旱情
+					(11,eCOO,水
+						(12,mPUNC,、)))))
+		(16,mPUNC,；)))
+
+(0,Root
+	(6,Root,涉及
+		(1,mRELA,2)
+		(2,mPUNC,）)
+		(4,EXP,信息
+			(3,FEAT,水利工程)
+			(5,mPUNC,，))
+		(9,LINK,设施
+			(7,FEAT,大型)
+			(8,FEAT,水利))
+		(15,DATV,资料
+			(10,mRELA,及)
+			(14,dFEAT,管理
+				(12,FEAT,建设
+					(11,FEAT,水利工程))
+				(13,dMANN,运行)))
+		(16,mPUNC,。)))
 
 (0,Root
 	(7,Root,涉及
@@ -6686,22 +6349,24 @@
 			(3,FEAT,地震)
 			(5,mPUNC,，))
 		(6,mDEPD,主要)
-		(8,mPUNC,：)
-		(9,mRELA,1)
-		(10,mPUNC,）)
-		(13,LINK,信息
-			(12,FEAT,预报
-				(11,CONT,地震))
-			(14,mPUNC,，))
-		(15,eSUCC,涉及
-			(18,DATV,结果
-				(17,FEAT,预测
-					(16,CONT,地震))
-				(21,eCOO,数据
-					(19,mRELA,及)
-					(20,FEAT,基础)
-					(22,mDEPD,等)))
-			(23,mPUNC,。))))
+		(8,mPUNC,：)))
+
+(0,Root
+	(7,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(5,EXP,信息
+			(4,dFEAT,预报
+				(3,CONT,地震))
+			(6,mPUNC,，))
+		(10,CONT,结果
+			(9,dFEAT,预测
+				(8,CONT,地震))
+			(13,eCOO,数据
+				(11,mRELA,及)
+				(12,FEAT,基础)
+				(14,mDEPD,等)))
+		(15,mPUNC,。)))
 
 (0,Root
 	(7,Root,涉及
@@ -6721,66 +6386,68 @@
 
 (0,Root
 	(7,Root,包括
-		(1,mRELA,d
-			(2,mPUNC,）))
+		(1,mRELA,d)
+		(2,mPUNC,）)
 		(4,EXP,数据
 			(3,FEAT,气象)
 			(5,mPUNC,，))
 		(6,mDEPD,主要)
-		(8,mPUNC,：)
-		(9,mRELA,1)
-		(13,LINK,数据
-			(10,mPUNC,）)
-			(12,FEAT,观测
-				(11,CONT,气象))
-			(14,mPUNC,，)
-			(23,eCOO,资料
-				(15,mRELA,如)
-				(18,rPAT,广播
-					(16,mNEG,未)
-					(17,MANN,公开)
-					(19,mDEPD,的))
-				(20,FEAT,我国)
-				(21,FEAT,气象卫星)
-				(22,FEAT,原始))
-			(24,mPUNC,；))
-		(38,dLINK,观测
-			(37,AGT,气象台站
-				(35,rCONT,设置
-					(33,REAS,任务
-						(32,FEAT,保密
-							(31,FEAT,部门
-								(25,mRELA,为)
-								(28,eCOO,任务
-									(26,FEAT,国家)
-									(27,FEAT,保密))
-								(29,mRELA,或者)
-								(30,FEAT,军事))))
-					(34,MANN,专门)
-					(36,mDEPD,的)))
-			(40,CONT,数据
-				(39,FEAT,气象)
-				(41,mPUNC,、)
-				(49,eCOO,数据
-					(44,LOC,范围
-						(42,FEAT,特定)
-						(43,FEAT,管制)
-						(45,mDEPD,内)
-						(46,mDEPD,的))
-					(47,SCO,各种)
-					(48,FEAT,气象)
-					(50,mPUNC,，))
-				(60,eCOO,数据
-					(51,mRELA,以及)
-					(53,rCONT,统计
-						(52,MANN,专门))
-					(54,FEAT,整编)
-					(56,FEAT,分析
-						(55,mRELA,和)
-						(57,mDEPD,的))
-					(58,FEAT,重要)
-					(59,FEAT,气象))))
-		(61,mPUNC,。)))
+		(8,mPUNC,：)))
+
+(0,Root
+	(5,Root,数据
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(4,FEAT,观测
+			(3,CONT,气象))
+		(6,mPUNC,，)
+		(30,dCONT,观测
+			(15,DATV,资料
+				(7,mDEPD,如)
+				(10,rPAT,广播
+					(8,mNEG,未)
+					(9,MANN,公开)
+					(11,mDEPD,的))
+				(12,FEAT,我国)
+				(13,FEAT,气象卫星)
+				(14,FEAT,原始)
+				(16,mPUNC,；)
+				(27,rCONT,设置
+					(25,REAS,任务
+						(17,mRELA,为)
+						(23,FEAT,部门
+							(20,eCOO,任务
+								(18,FEAT,国家)
+								(19,FEAT,保密))
+							(21,mRELA,或者)
+							(22,FEAT,军事))
+						(24,FEAT,保密))
+					(26,MANN,专门)
+					(28,mDEPD,的)))
+			(29,CONT,气象台站)
+			(32,CONT,数据
+				(31,FEAT,气象)
+				(33,mPUNC,、)
+				(41,eCOO,数据
+					(36,LOC,范围
+						(34,FEAT,特定)
+						(35,rSCO,管制)
+						(37,mDEPD,内)
+						(38,mDEPD,的))
+					(39,SCO,各种)
+					(40,FEAT,气象)
+					(42,mPUNC,，))
+				(52,eCOO,数据
+					(43,mRELA,以及)
+					(45,rCONT,统计
+						(44,MANN,专门)
+						(46,eSUCC,整编))
+					(48,rCONT,分析
+						(47,mRELA,和)
+						(49,mDEPD,的))
+					(50,FEAT,重要)
+					(51,FEAT,气象)
+					(53,mPUNC,。))))))
 
 (0,Root
 	(26,Root,数据
@@ -6916,127 +6583,130 @@
 (0,Root
 	(7,Root,包括
 		(1,mRELA,e)
+		(2,mPUNC,）)
 		(4,EXP,数据
-			(2,mPUNC,）)
 			(3,FEAT,环保)
 			(5,mPUNC,，))
 		(6,mDEPD,主要)
-		(8,mPUNC,：)
-		(15,dLINK,涉及
-			(9,mRELA,1)
-			(10,mPUNC,）)
-			(13,EXP,数据
-				(11,FEAT,环保)
-				(12,FEAT,监测)
-				(14,mPUNC,，))
-			(23,CONT,数据
-				(17,rPAT,公布
-					(16,mNEG,未)
-					(18,mDEPD,的))
-				(20,FEAT,系列
-					(19,FEAT,长时间))
-				(22,FEAT,监测
-					(21,PAT,环保)))
-			(28,CONT,情况
-				(27,FEAT,事故
-					(24,mRELA,以及)
-					(25,FEAT,重大)
-					(26,FEAT,污染)))
-			(29,mPUNC,，)
-			(30,eSUCC,如
-				(31,mPUNC,：))
-			(44,CONT,数据
-				(33,rPAT,公布
-					(32,mNEG,未)
-					(34,mDEPD,的))
-				(35,FEAT,长时间)
-				(36,FEAT,系列)
-				(37,SCO,各行业)
-				(38,FEAT,环境)
-				(39,FEAT,污染
-					(40,mDEPD,的))
-				(41,FEAT,重要)
-				(42,FEAT,污染源)
-				(43,FEAT,监测)
-				(47,eCOO,程度
-					(45,mRELA,和)
-					(46,FEAT,危害)
-					(52,eCOO,情 况
-						(51,FEAT,事故
-							(48,mRELA,以及)
-							(49,FEAT,重大)
-							(50,FEAT,污染)))))
-			(53,mPUNC,；))
-		(58,dCONT,系列
-			(55,rPAT,公布
-				(54,mNEG,未)
-				(56,mDEPD,的))
-			(57,FEAT,长时间)
-			(66,LINK,资料
-				(59,FEAT,大
-					(60,mPUNC,、))
-				(63,FEAT,水源
-					(61,FEAT,中城市)
-					(62,FEAT,供水)
-					(64,mDEPD,的))
-				(65,FEAT,水质)
-				(78,eCOO,信息
-					(77,FEAT,系统
-						(67,mRELA,及)
-						(71,LOC,河段
-							(69,eCOO,江湖
-								(68,FEAT,主要)
-								(70,mPUNC,、)))
-						(74,eCOO,资料
-							(73,FEAT,监测
-								(72,PAT,水质)))
-						(75,mRELA,及)
-						(76,FEAT,监测))
-					(79,mPUNC,；))))
-		(122,LINK,信息
-			(119,FEAT,辐射
-				(112,eCOO,信息
-					(89,eCOO,资料
-						(81,rCONT,公布
-							(80,mNEG,未)
-							(82,mDEPD,的))
-						(83,FEAT,长时间)
-						(84,FEAT,系列)
-						(88,FEAT,监测
-							(86,PAT,空气
-								(85,LOC,城市))
-							(87,PAT,质量))
-						(94,eCOO,信息
-							(93,FEAT,系统
-								(90,mRELA,及)
-								(91,FEAT,相应)
-								(92,FEAT,监测))
-							(95,mPUNC,；))
-						(97,rCONT,公布
-							(96,mNEG,未)
-							(98,mDEPD,的))
-						(101,FEAT,监测
-							(100,FEAT,污染
-								(99,PAT,土壤)))
-						(104,eCOO,数据
-							(103,FEAT,调查
-								(102,mRELA,或))
-							(105,mPUNC,；)
-							(107,rCONT,公布
-								(106,mNEG,未)
-								(108,mDEPD,的))))
-					(110,FEAT,污染
-						(109,FEAT,放射性))
-					(111,FEAT,监测)
-					(113,mPUNC,、)
-					(115,FEAT,公布
-						(114,mNEG,未)
-						(116,mDEPD,的)))
-				(117,eCOO,核)
-				(118,mRELA,与))
-			(120,FEAT,应急)
-			(121,FEAT,监测))
-		(123,mPUNC,。)))
+		(8,mPUNC,：)))
+
+(0,Root
+	(7,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(5,EXP,数据
+			(3,FEAT,环保)
+			(4,FEAT,监测)
+			(6,mPUNC,，))
+		(16,LINK,数据
+			(9,rPAT,公布
+				(8,mNEG,未)
+				(10,mDEPD,的))
+			(12,TIME,时间
+				(11,FEAT,长))
+			(13,FEAT,系列)
+			(14,FEAT,环保)
+			(15,FEAT,监测)
+			(20,eCOO,事故
+				(17,mRELA,以及)
+				(18,FEAT,重大)
+				(19,FEAT,污染))
+			(21,eCOO,情况))
+		(22,mPUNC,，)
+		(23,eSUCC,如
+			(24,mPUNC,：))
+		(37,LINK,数据
+			(26,rPAT,公布
+				(25,mNEG,未)
+				(27,mDEPD,的)
+				(28,FEAT,长时间))
+			(29,FEAT,系列)
+			(32,FEAT,污染
+				(31,EXP,环境
+					(30,SCO,各行业))
+				(33,mDEPD,的))
+			(35,FEAT,污染源
+				(34,FEAT,重要))
+			(36,FEAT,监测)
+			(40,eCOO,程度
+				(38,mRELA,和)
+				(39,FEAT,危害)
+				(45,eCOO,情况
+					(41,mRELA,以及)
+					(44,FEAT,事故
+						(42,FEAT,重大)
+						(43,FEAT,污染)))
+				(46,mPUNC,；)))
+		(105,CONT,信息
+			(97,eCOO,数据
+				(82,eCOO,资料
+					(71,eCOO,信息
+						(59,eCOO,资料
+							(48,rPAT,公布
+								(47,mNEG,未)
+								(49,mDEPD,的))
+							(52,FEAT,大
+								(51,EXP,系列
+									(50,FEAT,长时间))
+								(53,mPUNC,、))
+							(56,FEAT,水源
+								(54,FEAT,中城市)
+								(55,FEAT,供水)
+								(57,mDEPD,的))
+							(58,FEAT,水质)
+							(67,eCOO,资料
+								(60,mRELA,及)
+								(64,LOC,河段
+									(62,eCOO,江湖
+										(61,FEAT,主要)
+										(63,mPUNC,、)))
+								(66,FEAT,监测
+									(65,PAT,水质))))
+						(70,FEAT,系统
+							(68,mRELA,及)
+							(69,FEAT,监测))
+						(72,mPUNC,；))
+					(74,rCONT,公布
+						(73,mNEG,未)
+						(75,mDEPD,的))
+					(77,FEAT,系列
+						(76,FEAT,长时间))
+					(81,dFEAT,监测
+						(80,PAT,质量
+							(78,LOC,城市)
+							(79,FEAT,空气)))
+					(87,eCOO,信息
+						(86,FEAT,系统
+							(83,mRELA,及)
+							(84,FEAT,相应)
+							(85,FEAT,监测))))
+				(88,mPUNC,；)
+				(90,rCONT,公布
+					(89,mNEG,未)
+					(91,mDEPD,的))
+				(94,eCOO,监测
+					(93,PAT,污染
+						(92,PAT,土壤)))
+				(96,FEAT,调查
+					(95,mRELA,或)))
+			(98,mPUNC,；)
+			(100,rCONT,公布
+				(99,mNEG,未)
+				(101,mDEPD,的))
+			(104,FEAT,监测
+				(103,PAT,污染
+					(102,FEAT,放射性)))
+			(106,mPUNC,、)
+			(115,eCOO,信息
+				(108,rCONT,公布
+					(107,mNEG,未)
+					(109,mDEPD,的))
+				(112,FEAT,辐射
+					(110,eCOO,核)
+					(111,mRELA,与))
+				(113,FEAT,应急)
+				(114,FEAT,监测)))
+		(116,mPUNC,。)))
 
 (0,Root
 	(5,Root,数据
@@ -7060,74 +6730,78 @@
 
 (0,Root
 	(7,Root,包括
-		(1,mRELA,f
-			(2,mPUNC,）))
+		(1,mRELA,f)
+		(2,mPUNC,）)
 		(4,EXP,数据
 			(3,FEAT,海洋)
 			(5,mPUNC,，))
 		(6,mDEPD,主要)
 		(11,LINK,数据
-			(10,FEAT,监测
+			(10,dFEAT,监测
 				(9,PAT,环境
 					(8,FEAT,海洋))))
 		(12,mPUNC,，)
-		(17,dLINK,涉及
-			(13,mDEPD,如
-				(14,mPUNC,：))
-			(15,mRELA,1
-				(16,mPUNC,）))
-			(32,DATV,观测
-				(28,CONT,环境
-					(25,eCOO,气象
-						(22,eCOO,水文
-							(19,eCOO,地形
-								(18,LOC,海底)
-								(20,mPUNC,、))
-							(21,FEAT,海洋)
-							(23,mPUNC,、))
-						(24,FEAT,海洋)
-						(26,mPUNC,、))
-					(27,FEAT,水声)
-					(30,FEAT,海洋物理场
-						(29,mRELA,和))
-					(31,mDEPD,等))
-				(36,eCOO,数据
-					(33,mRELA,和)
-					(34,FEAT,统计)
-					(35,FEAT,整编)))
-			(37,mPUNC,；)
-			(40,eSUCC,涉及
-				(38,mRELA,2
-					(39,mPUNC,）))
-				(53,LINK,数据
-					(47,eCOO,底质
-						(43,eCOO,温盐
-							(41,LOC,领海内
-								(42,mDEPD,的))
-							(44,mPUNC,、))
-						(45,eCOO,水声
-							(46,mPUNC,、))
-						(48,mPUNC,、)
-						(49,eCOO,潮汐)
-						(50,mPUNC,、))
-					(52,FEAT,实测
-						(51,CONT,海流))
-					(56,eCOO,成果
-						(54,mRELA,和)
-						(55,FEAT,相关)))
-				(57,mPUNC,；)
-				(60,eCOO,涉及
-					(58,mRELA,3)
-					(59,mPUNC,）)
-					(68,CONT,数据
-						(62,rCONT,公布
-							(61,mNEG,未)
-							(63,mDEPD,的))
-						(67,FEAT,监测
-							(66,PAT,环境
-								(64,FEAT,海洋)
-								(65,FEAT,生态))))
-					(69,mPUNC,。))))))
+		(13,eSUCC,如
+			(14,mPUNC,：))))
+
+(0,Root
+	(3,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(21,DATV,数据
+			(13,eCOO,环境
+				(10,eCOO,气象
+					(5,eCOO,地形
+						(4,LOC,海底)
+						(6,mPUNC,、)
+						(7,FEAT,海洋水文))
+					(8,mPUNC,、)
+					(9,FEAT,海洋)
+					(11,mPUNC,、))
+				(12,FEAT,水声)
+				(15,FEAT,海洋物理场
+					(14,mRELA,和))
+				(16,mDEPD,等))
+			(17,FEAT,观测)
+			(18,mRELA,和)
+			(19,FEAT,统计)
+			(20,FEAT,整编))
+		(22,mPUNC,；)))
+
+(0,Root
+	(3,Root,涉及
+		(1,mRELA,2)
+		(2,mPUNC,）)
+		(16,DATV,数据
+			(14,FEAT,海流
+				(10,eCOO,底质
+					(8,eCOO,水声
+						(6,eCOO,温盐
+							(4,LOC,领海内
+								(5,mDEPD,的))
+							(7,mPUNC,、))
+						(9,mPUNC,、))
+					(11,mPUNC,、))
+				(12,eCOO,潮汐
+					(13,mPUNC,、)))
+			(15,FEAT,实测)
+			(19,eCOO,成果
+				(17,mRELA,和)
+				(18,FEAT,相关)))
+		(20,mPUNC,；)))
+
+(0,Root
+	(3,Root,涉及
+		(1,mRELA,3)
+		(2,mPUNC,）)
+		(10,DATV,数据
+			(5,rCONT,公布
+				(4,mNEG,未)
+				(6,mDEPD,的))
+			(9,dFEAT,监测
+				(8,PAT,环境
+					(7,LOC,海洋生态))))
+		(11,mPUNC,。)))
 
 (0,Root
 	(8,Root,包括
@@ -7138,53 +6812,55 @@
 			(4,FEAT,重要)
 			(5,FEAT,网络))
 		(7,mDEPD,主要)
-		(9,mPUNC,：)
-		(10,mRELA,a
-			(11,mPUNC,）))
-		(14,LINK,物项
-			(13,FEAT,管制
-				(12,FEAT,出口))
-			(15,mPUNC,，))
-		(16,eSUCC,涉及
-			(24,DATV,物项
-				(17,mRELA,针对)
-				(18,rPAT,列入
-					(22,CONT,清单
-						(21,FEAT,管制
-							(19,FEAT,国家)
-							(20,eCOO,出口)))
-					(23,mDEPD,的))
-				(25,mPUNC,，))
-			(26,eSUCC,描述
-				(31,CONT,原理
-					(28,FEAT,物项
-						(27,SCO,这些)
-						(29,mDEPD,的))
-					(30,FEAT,设计)
-					(32,mPUNC,、)
-					(33,FEAT,工艺流程)
-					(34,mPUNC,、)
-					(38,eCOO,信息
-						(36,FEAT,方法
-							(35,FEAT,制作)
-							(37,mDEPD,的))
-						(39,mRELA,以及源代码))
-					(40,mPUNC,、)
-					(45,eCOO,方案
-						(42,eCOO,布图
-							(41,FEAT,集成电路)
-							(43,mPUNC,、)
-							(44,FEAT,技术))
-						(48,eCOO,参数
-							(46,mPUNC,、)
-							(47,FEAT,重要)
-							(49,mPUNC,、)
-							(51,eCOO,数据
-								(50,FEAT,实验)
-								(52,mPUNC,、)
-								(54,eCOO,报告
-									(53,FEAT,检测))))))))
-		(55,mPUNC,。)))
+		(9,mPUNC,：)))
+
+(0,Root
+	(7,Root,涉及
+		(1,mRELA,a
+			(2,mPUNC,）))
+		(5,EXP,物项
+			(4,FEAT,管制
+				(3,MANN,出口))
+			(6,mPUNC,，))
+		(15,DATV,物项
+			(8,mRELA,针对)
+			(9,rPAT,列入
+				(13,CONT,清单
+					(10,FEAT,国家)
+					(12,dFEAT,管制
+						(11,FEAT,出口)))
+				(14,mDEPD,的))
+			(16,mPUNC,，))
+		(17,eSUCC,描述
+			(22,CONT,原理
+				(19,FEAT,物项
+					(18,SCO,这些)
+					(20,mDEPD,的))
+				(21,FEAT,设计)
+				(23,mPUNC,、)
+				(24,FEAT,工艺流程)
+				(25,mPUNC,、)
+				(29,eCOO,信息
+					(27,FEAT,方法
+						(26,FEAT,制作)
+						(28,mDEPD,的))
+					(30,mRELA,以及源代码)
+					(36,eCOO,方案
+						(33,eCOO,布图
+							(31,mPUNC,、)
+							(32,FEAT,集成电路)
+							(34,mPUNC,、)
+							(35,FEAT,技术))
+						(37,mPUNC,、)
+						(39,eCOO,参数
+							(38,FEAT,重要)
+							(40,mPUNC,、)
+							(42,eCOO,数据
+								(41,FEAT,实验)
+								(43,mPUNC,、))
+							(45,eCOO,报告
+								(44,FEAT,检测)))))))
+		(46,mPUNC,。)))
 
 (0,Root
 	(6,Root,涉及
@@ -7269,144 +6945,152 @@
 (0,Root
 	(7,Root,包括
 		(1,mRELA,d)
+		(2,mPUNC,）)
 		(5,EXP,计划
-			(2,mPUNC,）)
 			(3,FEAT,国家)
 			(4,FEAT,科技)
 			(6,mPUNC,，))
-		(8,mPUNC,：)
-		(38,dLINK,产生
-			(9,mRELA,1
-				(10,mPUNC,）))
-			(31,EXP,项目
-				(20,FEAT,计划
-					(16,rEXP,相关
-						(13,DATV,安全
-							(11,mRELA,与)
-							(12,EXP,国家))
-						(14,MANN,直接)
-						(15,MANN,密切)
-						(17,mDEPD,的))
-					(18,FEAT,国家)
-					(19,FEAT,科技)
-					(22,rFEAT,含
-						(21,mPUNC,（)
-						(25,LINK,专项
-							(23,FEAT,国家)
-							(24,FEAT,重大)
-							(26,mPUNC,、))))
-				(29,FEAT,计划
-					(28,FEAT,研发
-						(27,FEAT,重点))
-					(30,mPUNC,）)))
-			(36,LOC,过程
-				(32,mRELA,在)
-				(33,FEAT,规划)
-				(35,FEAT,实施
-					(34,mRELA,和))
-				(37,mDEPD,中))
-			(50,CONT,数据
-				(40,dFEAT,涉及
-					(39,mDEPD,可能)
-					(42,DATV,安全
-						(41,EXP,国家)
-						(46,FEAT,社会利益
-							(43,mRELA,和)
-							(44,FEAT,重大)
-							(45,eCOO,经济)))
-					(47,mDEPD,的))
-				(48,FEAT,重要)
-				(49,FEAT,网络)
-				(51,mPUNC,，)
-				(55,eCOO,报告
-					(52,mDEPD,如)
-					(53,FEAT,可行性)
-					(54,FEAT,研究)
-					(56,mPUNC,、)
-					(58,eCOO,方案
-						(57,FEAT,建设))
-					(59,mPUNC,、)
-					(61,eCOO,数据
-						(60,FEAT,科学)
-						(62,mPUNC,、))
-					(67,eCOO,报告
-						(64,FEAT,公开
-							(63,mDEPD,尚未)
-							(65,mDEPD,的))
-						(66,FEAT,科技))))
-			(68,mPUNC,；))
-		(122,LINK,信息
-			(108,FEAT,反映
-				(90,CONT,信息
-					(77,rCONT,收集
-						(69,mRELA,2
-							(70,mPUNC,）))
-						(75,LOC,过程
-							(74,FEAT,管理
-								(73,PAT,计划
-									(71,FEAT,国家)
-									(72,FEAT,科技)))
-							(76,mDEPD,中))
-						(78,mPUNC,、))
-					(79,rCONT,产生
-						(80,mDEPD,的))
-					(82,FEAT,影响
-						(81,mDEPD,可能)
-						(84,PAT,安全
-							(83,EXP,国家))
-						(85,mPUNC,、)
-						(88,PAT,利益
-							(86,FEAT,社会)
-							(87,FEAT,公共))
-						(89,mDEPD,的))
-					(91,mPUNC,，)
-					(92,mDEPD,如
-						(99,LINK,日志
-							(95,FEAT,记录
-								(94,CONT,系 统
-									(93,FEAT,信息))
-								(96,mDEPD,的))
-							(97,FEAT,用户)
-							(98,FEAT,行为)
-							(100,mDEPD,等)
-							(101,mPUNC,；))
-						(102,mRELA,3)
-						(103,mPUNC,）)))
-				(104,mDEPD,可)
-				(105,MANN,真实
-					(106,mPUNC,、))
-				(107,MANN,准确)
-				(115,CONT,情况
-					(112,FEAT,国民经济
-						(110,eCOO,科技
-							(109,FEAT,国家)
-							(111,mPUNC,、))
-						(113,mDEPD,等))
-					(114,SCO,各种))
-				(116,mDEPD,的))
-			(117,FEAT,国家)
-			(120,FEAT,仪器
-				(118,FEAT,大型)
-				(119,FEAT,科学))
-			(121,FEAT,活动)
-			(123,mPUNC,；))
-		(124,mRELA,4
-			(125,mPUNC,）))
-		(138,LINK,内容
-			(134,FEAT,相关
-				(130,LOC,任务
-					(128,FEAT,发展
-						(127,PAT,科技
-							(126,FEAT,工业)))
-					(129,FEAT,重点)
-					(131,mDEPD,中))
-				(133,DATV,安全
-					(132,mRELA,与))
-				(135,mDEPD,的))
-			(137,FEAT,科技
-				(136,FEAT,关键))
-			(139,mDEPD,等))
-		(140,mPUNC,。)))
+		(8,mPUNC,：)))
+
+(0,Root
+	(30,Root,产生
+		(1,mRELA,1
+			(2,mPUNC,）))
+		(23,EXP,项目
+			(8,rEXP,相关
+				(5,DATV,安全
+					(3,mRELA,与)
+					(4,EXP,国家))
+				(6,MANN,直接)
+				(7,MANN,密切)
+				(9,mDEPD,的))
+			(12,FEAT,计划
+				(10,FEAT,国家)
+				(11,FEAT,科技)
+				(14,rFEAT,含
+					(13,mPUNC,（)
+					(17,LINK,专项
+						(15,FEAT,国家)
+						(16,FEAT,重大)
+						(18,mPUNC,、))
+					(21,LINK,计划
+						(20,FEAT,研发
+							(19,MANN,重点))
+						(22,mPUNC,）)))))
+		(28,STAT,过程
+			(24,mRELA,在)
+			(25,FEAT,规划)
+			(27,FEAT,实施
+				(26,mRELA,和))
+			(29,mDEPD,中))
+		(42,CONT,数据
+			(32,rFEAT,涉及
+				(31,mDEPD,可能)
+				(34,DATV,安全
+					(33,EXP,国家)
+					(38,eCOO,社会利益
+						(35,mRELA,和)
+						(36,FEAT,重大)
+						(37,eCOO,经济)))
+				(39,mDEPD,的))
+			(40,FEAT,重要)
+			(41,FEAT,网络))
+		(43,mPUNC,，)
+		(59,EXP,报告
+			(47,eCOO,报告
+				(44,mRELA,如)
+				(45,FEAT,可行性)
+				(46,FEAT,研究)
+				(48,mPUNC,、)
+				(50,eCOO,方案
+					(49,FEAT,建设))
+				(51,mPUNC,、))
+			(53,eCOO,数据
+				(52,FEAT,科学)
+				(54,mPUNC,、))
+			(56,rCONT,公开
+				(55,mDEPD,尚未)
+				(57,mDEPD,的))
+			(58,FEAT,科技))
+		(60,mPUNC,；)))
+
+(0,Root
+	(24,Root,如
+		(1,mRELA,2)
+		(2,mPUNC,）)
+		(22,EXP,信息
+			(9,rPAT,收集
+				(7,LOC,过程
+					(6,FEAT,管理
+						(5,PAT,计划
+							(3,FEAT,国家)
+							(4,FEAT,科技)))
+					(8,mDEPD,中))
+				(10,mPUNC,、))
+			(11,rEXP,产生
+				(12,mDEPD,的))
+			(14,dFEAT,影响
+				(13,mDEPD,可能)
+				(16,DATV,安全
+					(15,EXP,国家)
+					(17,mPUNC,、)
+					(20,eCOO,利益
+						(18,FEAT,社会)
+						(19,FEAT,公共)))
+				(21,mDEPD,的))
+			(23,mPUNC,，))
+		(31,LINK,日志
+			(27,rPAT,记录
+				(26,EXP,系统
+					(25,FEAT,信息))
+				(28,mDEPD,的))
+			(29,FEAT,用户)
+			(30,FEAT,行为)
+			(32,mDEPD,等))
+		(33,mPUNC,；)))
+
+(0,Root
+	(21,Root,信息
+		(1,mRELA,3)
+		(7,dFEAT,反映
+			(2,mPUNC,）)
+			(3,mDEPD,可)
+			(4,MANN,真实
+				(5,mPUNC,、))
+			(6,MANN,准确)
+			(14,CONT,情况
+				(11,FEAT,国民经济
+					(9,eCOO,科技
+						(8,FEAT,国家)
+						(10,mPUNC,、))
+					(12,mDEPD,等))
+				(13,SCO,各种))
+			(15,mDEPD,的))
+		(19,FEAT,仪器
+			(16,FEAT,国家)
+			(17,FEAT,大型)
+			(18,FEAT,科学))
+		(20,FEAT,活动)
+		(22,mPUNC,；)))
+
+(0,Root
+	(15,Root,内容
+		(1,mRELA,4)
+		(2,mPUNC,）)
+		(11,rFEAT,相关
+			(7,LOC,任务
+				(5,FEAT,发展
+					(4,EXP,科技
+						(3,FEAT,工业)))
+				(6,FEAT,重点)
+				(8,mDEPD,中))
+			(10,DATV,安全
+				(9,mRELA,与))
+			(12,mDEPD,的))
+		(13,FEAT,关键)
+		(14,FEAT,科技)
+		(16,mDEPD,等)
+		(17,mPUNC,。)))
 
 (0,Root
 	(9,Root,包括
@@ -7418,13 +7102,15 @@
 			(5,FEAT,重要)
 			(6,FEAT,网络))
 		(8,mDEPD,主要)
-		(10,mPUNC,：)
-		(15,LINK,数据
-			(11,FEAT,a
-				(12,mPUNC,）))
-			(14,FEAT,安全
-				(13,FEAT,物理)))
-		(16,mPUNC,。)))
+		(10,mPUNC,：)))
+
+(0,Root
+	(5,Root,数据
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(4,FEAT,安全
+			(3,FEAT,物理))
+		(6,mPUNC,。)))
 
 (0,Root
 	(6,Root,利用
@@ -7458,50 +7144,53 @@
 
 (0,Root
 	(1,Root,包括
-		(2,mPUNC,：)
-		(37,LINK,情况
-			(22,FEAT,资产
-				(14,eCOO,单位
-					(9,eCOO,数据
-						(6,eCOO,场所
-							(3,MEAS,1
-								(4,mPUNC,）))
-							(5,FEAT,重要))
-						(7,mRELA,与)
-						(8,FEAT,目标)
-						(10,mPUNC,，))
-					(11,mDEPD,如)
-					(12,FEAT,重点)
-					(13,FEAT,安保)
-					(15,mPUNC,、)
-					(18,eCOO,企业
-						(16,FEAT,重要)
-						(17,FEAT,生产)
-						(19,mPUNC,、)))
-				(20,FEAT,国家)
-				(21,FEAT,重要)
-				(27,FEAT,输油管道
-					(25,eCOO,铁路
-						(23,mPUNC,（)
-						(24,mDEPD,如)
-						(26,mPUNC,、))
-					(28,mPUNC,）))
-				(29,mPUNC,、))
-			(32,FEAT,施工图
-				(30,FEAT,人群聚集场所
-					(31,mDEPD,的))
-				(33,mPUNC,、)
-				(35,eCOO,结构
-					(34,FEAT,内部)
-					(36,mDEPD,等)))
-			(38,mPUNC,；)
-			(40,eSUCC,安全
-				(39,FEAT,民用核设施)
-				(44,eCOO,信息
-					(41,mRELA,和)
-					(42,FEAT,运行)
-					(43,FEAT,相关)
-					(45,mPUNC,。))))))
+		(2,mPUNC,：)))
+
+(0,Root
+	(36,Root,情况
+		(20,FEAT,资产
+			(7,eCOO,数据
+				(1,mRELA,1)
+				(2,mPUNC,）)
+				(4,eCOO,场所
+					(3,FEAT,重要))
+				(6,FEAT,目标
+					(5,mRELA,与))
+				(8,mPUNC,，))
+			(12,eCOO,单位
+				(9,mDEPD,如)
+				(11,FEAT,安保
+					(10,FEAT,重点))
+				(13,mPUNC,、)
+				(16,eCOO,企业
+					(14,FEAT,重要)
+					(15,FEAT,生产)
+					(17,mPUNC,、)))
+			(18,FEAT,国家)
+			(19,FEAT,重要)
+			(23,eCOO,铁路
+				(21,mPUNC,（)
+				(22,mDEPD,如)
+				(24,mPUNC,、))
+			(25,FEAT,输油管道
+				(26,mPUNC,）))
+			(27,mPUNC,、))
+		(31,FEAT,施工图
+			(29,FEAT,聚集场所
+				(28,AGT,人群)
+				(30,mDEPD,的))
+			(32,mPUNC,、)
+			(34,eCOO,结构
+				(33,FEAT,内部)
+				(35,mDEPD,等)))
+		(37,mPUNC,；)
+		(41,FEAT,运行
+			(38,FEAT,民用核设施)
+			(39,eCOO,安全)
+			(40,mRELA,和)
+			(43,CONT,信息
+				(42,FEAT,相关))
+			(44,mPUNC,。))))
 
 (0,Root
 	(7,Root,涉及
@@ -7673,7 +7362,7 @@
 			(16,mRELA,或)
 			(22,DATV,数据
 				(19,FEAT,人
-					(18,MEAS,1 万)
+					(18,MEAS,1万)
 					(20,mDEPD,的))
 				(21,FEAT,音频))
 			(23,mPUNC,。))))
@@ -7690,57 +7379,59 @@
 		(9,AGT,网络攻击者
 			(8,mRELA,被))
 		(10,mRELA,或)
-		(11,AGT,恶意竞争者)
+		(11,PAT,恶意竞争者)
 		(13,mPUNC,，)
+		(15,eSUCC,攻击
+			(14,mRELA,以)
+			(17,PAT,系统
+				(16,FEAT,网络)))
 		(26,eSUCC,包括
 			(24,EXP,数据
-				(15,rPAT,攻击
-					(14,mRELA,以)
-					(17,DATV,系统
-						(16,FEAT,网络)))
 				(21,dFEAT,发起
 					(18,mRELA,或)
-					(20,MANN,网络
+					(20,TOOL,网络
 						(19,mRELA,通过))
 					(22,CONT,攻击)
 					(23,mDEPD,的))
 				(25,mPUNC,，))
-			(27,mPUNC,：)
-			(39,eSUCC,涉及
-				(28,mRELA,1
-					(29,mPUNC,）))
-				(37,EXP,信息
-					(36,FEAT,防护
-						(33,PAT,设施
-							(30,FEAT,关键)
-							(31,FEAT,信息)
-							(32,FEAT,基础))
-						(34,PAT,网络)
-						(35,CONT,安全))
-					(38,mPUNC,，))
-				(46,LINK,方案
-					(43,FEAT,设施
-						(40,FEAT,关键)
-						(41,FEAT,信息)
-						(42,FEAT,基础))
-					(44,FEAT,网络)
-					(45,FEAT,安全)
-					(47,mPUNC,、)
-					(49,dFEAT,配置
-						(48,FEAT,系统)
-						(50,eCOO,信息
-							(51,mPUNC,、)
-							(54,eCOO,信息
-								(53,FEAT,设计
-									(52,CONT,核心软硬件))
-								(55,mPUNC,、)
-								(57,eCOO,拓扑
-									(56,FEAT,系统)
-									(58,mPUNC,、)
-									(60,eCOO,预案
-										(59,FEAT,应急)
-										(61,mDEPD,等))))))))
-			(62,mPUNC,。))))
+			(27,mPUNC,：))))
+
+(0,Root
+	(12,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(10,EXP,信息
+			(9,FEAT,防护
+				(6,PAT,设施
+					(4,FEAT,信息
+						(3,FEAT,关键))
+					(5,FEAT,基础))
+				(7,PAT,网络)
+				(8,MANN,安全))
+			(11,mPUNC,，))
+		(19,LINK,方案
+			(17,FEAT,网络
+				(16,FEAT,设施
+					(13,FEAT,关键)
+					(14,FEAT,信息)
+					(15,FEAT,基础)))
+			(18,FEAT,安全)
+			(20,mPUNC,、)
+			(23,eCOO,信息
+				(22,FEAT,配置
+					(21,FEAT,系统))
+				(24,mPUNC,、)
+				(27,eCOO,信息
+					(26,FEAT,设计
+						(25,CONT,核心软硬件))
+					(28,mPUNC,、)
+					(30,eCOO,拓扑
+						(29,FEAT,系统)
+						(31,mPUNC,、)
+						(33,eCOO,预案
+							(32,FEAT,应急)
+							(34,mDEPD,等))))))
+		(35,mPUNC,。)))
 
 (0,Root
 	(4,Root,为
@@ -7863,7 +7554,7 @@
 				(15,eCOO,承载网
 					(14,FEAT,IP)
 					(16,mPUNC,、)
-					(18,FEAT,IP 骨干网
+					(18,FEAT,IP骨干网
 						(17,FEAT,全国))
 					(19,mDEPD,的)))
 			(22,LINK,方案
@@ -7938,7 +7629,7 @@
 									(55,mPUNC,、)))
 							(57,LOC,系统
 								(56,FEAT,主要)
-								(58,mDEPD,内网 IP))
+								(58,mDEPD,内网IP))
 							(59,CONT,地址))
 						(62,mPUNC,、)))
 				(64,mRELA,及)
@@ -8014,24 +7705,24 @@
 (0,Root
 	(11,Root,规划
 		(1,mRELA,5)
-		(5,eCOO,数据
+		(7,mDEPD,如
 			(2,mPUNC,）)
-			(3,FEAT,应急)
-			(4,FEAT,通信)
-			(6,mPUNC,，))
-		(7,mDEPD,如)
-		(10,CONT,系统
+			(5,EXP,数据
+				(3,FEAT,应急)
+				(4,FEAT,通信)
+				(6,mPUNC,，)))
+		(10,PAT,系统
 			(8,FEAT,应急)
 			(9,FEAT,通信))
 		(12,mPUNC,、)
-		(17,CONT,信息
-			(13,eCOO,建设
-				(14,mPUNC,、))
-			(15,FEAT,运行)
-			(16,FEAT,相关)
-			(18,mPUNC,，))
+		(13,eCOO,建设
+			(14,mPUNC,、)
+			(17,PAT,信息
+				(15,FEAT,运行)
+				(16,FEAT,相关)
+				(18,mPUNC,，)))
 		(23,eCOO,信息
-			(21,FEAT,事件
+			(21,eCOO,事件
 				(19,FEAT,应急)
 				(20,FEAT,通信))
 			(22,FEAT,分级)
@@ -8045,40 +7736,44 @@
 				(30,FEAT,行动)
 				(32,mPUNC,、)
 				(33,dFEAT,保障
-					(35,CONT,信息
-						(34,FEAT,预案)
-						(36,mPUNC,、)
-						(40,eCOO,储备
-							(39,FEAT,物资
-								(38,FEAT,通信装备
-									(37,eCOO,应急)))
-							(41,mPUNC,、)
-							(44,eCOO,部署
-								(42,eCOO,保障)
-								(43,PAT,队伍)
-								(45,mDEPD,等.6)
-								(46,mPUNC,）)))))))
-		(53,mRELA,如
-			(51,LINK,信息
-				(50,FEAT,客户
-					(47,FEAT,网络)
-					(48,FEAT,安全)
-					(49,eCOO,厂商))
-				(52,mPUNC,，))
-			(66,LINK,关系
-				(58,FEAT,客户
-					(57,FEAT,设施
-						(54,FEAT,关键)
-						(55,FEAT,信息)
-						(56,FEAT,基础)))
-				(59,mRELA,与)
-				(63,FEAT,服务
-					(61,eCOO,产品
-						(60,FEAT,具体)
-						(62,mPUNC,、))
-					(64,mDEPD,的))
-				(65,FEAT,对应))
-			(67,mPUNC,。))))
+					(34,DATV,预案))
+				(35,eCOO,信息
+					(36,mPUNC,、)
+					(40,eCOO,储备
+						(39,FEAT,物资
+							(38,FEAT,通信装备
+								(37,FEAT,应急)))
+						(41,mPUNC,、)
+						(44,eCOO,部署
+							(43,CONT,队伍
+								(42,FEAT,保障))
+							(45,mDEPD,等)
+							(46,mPUNC,。))))))))
+
+(0,Root
+	(7,Root,信息
+		(1,mRELA,6
+			(2,mPUNC,）))
+		(6,FEAT,客户
+			(5,eCOO,厂商
+				(4,FEAT,安全
+					(3,EXP,网络))))
+		(8,mPUNC,，)
+		(22,eCOO,关系
+			(9,mDEPD,如)
+			(14,FEAT,客户
+				(13,FEAT,设施
+					(10,FEAT,关键)
+					(11,FEAT,信息)
+					(12,FEAT,基础)))
+			(19,FEAT,服务
+				(15,mRELA,与)
+				(17,eCOO,产品
+					(16,FEAT,具体)
+					(18,mPUNC,、))
+				(20,mDEPD,的))
+			(21,FEAT,对应)
+			(23,mPUNC,。))))
 
 (0,Root
 	(6,Root,发现
@@ -8215,41 +7910,43 @@
 			(1,FEAT,上述)
 			(3,mDEPD,中))
 		(4,mDEPD,已)
-		(21,eSUCC,除外
-			(20,EXP,信息
-				(13,LOC,总表
+		(23,eSUCC,除外
+			(22,EXP,信息
+				(14,LOC,总表
 					(8,FEAT,联盟
 						(6,FEAT,国际)
-						(7,FEAT,电信))
-					(10,FEAT,ITU）
+						(7,FEAT,电信)
 						(9,mPUNC,（))
-					(11,FEAT,国际)
-					(12,FEAT,频率登记)
-					(14,mPUNC,（)
-					(15,FEAT,Master International Frequency Register)
-					(16,mPUNC,，)
-					(17,eCOO,MIFR）
-						(18,mDEPD,内)
-						(19,mDEPD,的))))
-			(22,mPUNC,；))
-		(39,eSUCC,除外
-			(38,EXP,数据
-				(37,FEAT,网络
-					(33,rCONT,进行
-						(26,AGT,机构
-							(23,FEAT,国家)
-							(25,FEAT,管理
-								(24,PAT,无线电)))
-						(27,mDEPD,正在)
-						(30,mDEPD,需
-							(28,mRELA,向)
-							(29,mRELA,或))
-						(32,DATV,ITU
-							(31,mRELA,向))
-						(34,CONT,申报)
-						(35,mDEPD,的))
-					(36,FEAT,无线电)))
-			(40,mPUNC,。))))
+					(10,FEAT,ITU）)
+					(13,FEAT,登记
+						(11,FEAT,国际)
+						(12,PAT,频率))
+					(15,mPUNC,（)
+					(16,FEAT,MasterInternationalFrequencyRegister)
+					(17,mPUNC,，)
+					(18,eCOO,MIFR
+						(19,mPUNC,）)
+						(20,mDEPD,内)
+						(21,mDEPD,的))))
+			(24,mPUNC,；))
+		(41,eSUCC,除外
+			(40,EXP,数据
+				(39,FEAT,网络
+					(35,dFEAT,进行
+						(28,AGT,机构
+							(25,FEAT,国家)
+							(27,FEAT,管理
+								(26,PAT,无线电)))
+						(29,mDEPD,正在)
+						(32,mDEPD,需
+							(30,mRELA,向)
+							(31,mRELA,或))
+						(34,DATV,ITU
+							(33,mRELA,向))
+						(36,CONT,申报)
+						(37,mDEPD,的))
+					(38,FEAT,无线电)))
+			(42,mPUNC,。))))
 
 (0,Root
 	(9,Root,包括
@@ -8261,13 +7958,15 @@
 			(5,FEAT,重要)
 			(6,FEAT,网络))
 		(8,mDEPD,主要)
-		(10,mPUNC,：)
-		(15,LINK,数据
-			(11,FEAT,a
-				(12,mPUNC,）))
-			(14,FEAT,委托
-				(13,AGT,用户)))
-		(16,mPUNC,。)))
+		(10,mPUNC,：)))
+
+(0,Root
+	(5,Root,数据
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(4,FEAT,委托
+			(3,AGT,用户))
+		(6,mPUNC,。)))
 
 (0,Root
 	(15,Root,转移
@@ -8463,13 +8162,15 @@
 			(5,FEAT,重要)
 			(6,FEAT,网络))
 		(8,mDEPD,主要)
-		(10,mPUNC,：)
-		(15,LINK,数据
-			(11,MEAS,a
-				(12,mPUNC,）))
-			(13,FEAT,执法)
-			(14,FEAT,相关))
-		(16,mPUNC,。)))
+		(10,mPUNC,：)))
+
+(0,Root
+	(5,Root,数据
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(3,FEAT,执法)
+		(4,FEAT,相关)
+		(6,mPUNC,。)))
 
 (0,Root
 	(3,Root,信息
@@ -8488,68 +8189,70 @@
 (0,Root
 	(9,Root,包括
 		(1,mRELA,b)
+		(2,mPUNC,）)
 		(7,EXP,文件
-			(2,mPUNC,）)
 			(4,eCOO,政策
 				(3,FEAT,政府))
 			(5,mRELA,与)
 			(6,FEAT,决策)
 			(8,mPUNC,，))
-		(10,mPUNC,：)
-		(18,dLINK,涉及
-			(11,mRELA,1
-				(12,mPUNC,）))
-			(16,EXP,材料
-				(14,FEAT,法规
-					(13,FEAT,政策))
-				(15,FEAT,支撑性)
-				(17,mPUNC,，))
-			(23,CONT,文件
-				(20,FEAT,公开
-					(19,mDEPD,尚未)
-					(21,mDEPD,的))
-				(22,FEAT,政策))
-			(24,mPUNC,，)
-			(35,CONT,资料
-				(25,dFEAT,支撑)
-				(33,FEAT,数据
-					(30,eCOO,调研
-						(28,eSUCC,起草
-							(27,EXP,法规
-								(26,FEAT,政策))
-							(29,mDEPD,的))
-						(31,mPUNC,、))
-					(32,FEAT,统计)
-					(34,mDEPD,等))
-				(36,mPUNC,，)
-				(52,eCOO,措施
-					(37,mRELA,如)
-					(40,FEAT,安全
-						(38,mRELA,与)
-						(39,EXP,国家))
-					(44,FEAT,社会利益
-						(41,mRELA,和)
-						(42,FEAT,重大)
-						(43,FEAT,经济))
-					(47,rEXP,相关
-						(45,MANN,直接)
-						(46,MANN,密切)
-						(48,mDEPD,的))
-					(49,FEAT,国家)
-					(50,FEAT,重大)
-					(51,FEAT,政策)
-					(53,mPUNC,、)
-					(55,eCOO,任务
-						(54,FEAT,重点)
-						(56,mPUNC,、)
-						(58,eCOO,内容
-							(57,FEAT,关键)
-							(59,mPUNC,、))
-						(62,eCOO,资料
-							(60,FEAT,主要)
-							(61,FEAT,技术)
-							(63,mDEPD,等))))))
-		(64,mPUNC,。)))
+		(10,mPUNC,：)))
+
+(0,Root
+	(8,Root,涉及
+		(1,mRELA,1)
+		(2,mPUNC,）)
+		(6,EXP,材料
+			(4,FEAT,法规
+				(3,eCOO,政策))
+			(5,FEAT,支撑性)
+			(7,mPUNC,，))
+		(13,CONT,文件
+			(10,FEAT,公开
+				(9,mDEPD,尚未)
+				(11,mDEPD,的))
+			(12,FEAT,政策))
+		(14,mPUNC,，)
+		(15,eSUCC,支撑
+			(25,CONT,资料
+				(18,rCONT,起草
+					(17,EXP,法规
+						(16,FEAT,政策))
+					(19,mDEPD,的))
+				(23,FEAT,数据
+					(20,eCOO,调研
+						(21,mPUNC,、))
+					(22,FEAT,统计)
+					(24,mDEPD,等)))
+			(26,mPUNC,，)
+			(42,CONT,措施
+				(27,mRELA,如)
+				(37,rEXP,相关
+					(30,DATV,安全
+						(28,mRELA,与)
+						(29,EXP,国家))
+					(34,DATV,社会利益
+						(31,mRELA,和)
+						(32,FEAT,重大)
+						(33,FEAT,经济))
+					(35,MANN,直接)
+					(36,MANN,密切)
+					(38,mDEPD,的))
+				(39,FEAT,国家)
+				(40,FEAT,重大)
+				(41,FEAT,政策)
+				(43,mPUNC,、)
+				(45,eCOO,任务
+					(44,FEAT,重点)
+					(46,mPUNC,、)
+					(52,eCOO,资料
+						(48,eCOO,内容
+							(47,FEAT,关键)
+							(49,mPUNC,、))
+						(50,FEAT,主要)
+						(51,FEAT,技术)
+						(53,mDEPD,等))))
+			(54,mPUNC,。))))
 
 (0,Root
 	(9,Root,如
@@ -8662,49 +8365,53 @@
 			(4,FEAT,敏感)
 			(5,FEAT,政务)
 			(7,mPUNC,，))
-		(14,DATV,信息注1
+		(14,DATV,信息
 			(9,SCO,其他)
-			(11,rPAT,公开
+			(11,rCONT,公开
 				(10,mNEG,不宜)
 				(12,mDEPD,的))
-			(13,FEAT,政务))
-		(15,mPUNC,：)
-		(19,eSUCC,包括
-			(18,EXP,信息
-				(16,FEAT,个人)
-				(17,FEAT,金融))
-			(21,LINK,信息
-				(20,FEAT,账户)
-				(22,mPUNC,、)
-				(24,eCOO,信息
-					(23,FEAT,鉴别)
-					(25,mPUNC,、)
-					(27,FEAT,交易
-						(26,FEAT,金融))
-					(28,eCOO,信息)
-					(29,mPUNC,、)
-					(32,eCOO,信息
-						(31,FEAT,身份
-							(30,FEAT,个人))
-						(33,mPUNC,、)
-						(35,eCOO,信息
-							(34,FEAT,财产)
-							(36,mPUNC,、)
-							(38,eCOO,信息
-								(37,FEAT,借贷))))))
-			(46,LINK,信息
-				(39,mRELA,及其他)
-				(40,rEXP,反映
-					(44,CONT,情况
-						(41,FEAT,特定)
-						(42,FEAT,个人)
-						(43,SCO,某些))
-					(45,mDEPD,的)))
-			(47,mPUNC,。))))
+			(13,FEAT,政务))))
 
 (0,Root
-	(26,Root,划分
-		(2,AGT,标准
+	(7,Root,包括
+		(1,mDEPD,注)
+		(2,mRELA,1
+			(3,mPUNC,：))
+		(6,EXP,信息
+			(4,FEAT,个人)
+			(5,FEAT,金融))
+		(9,LINK,信息
+			(8,FEAT,账户)
+			(10,mPUNC,、)
+			(12,eCOO,信息
+				(11,FEAT,鉴别)
+				(13,mPUNC,、)
+				(16,eCOO,信息
+					(15,FEAT,交易
+						(14,FEAT,金融))
+					(17,mPUNC,、)
+					(20,eCOO,信息
+						(19,FEAT,身份
+							(18,FEAT,个人))
+						(21,mPUNC,、)
+						(23,eCOO,信息
+							(22,FEAT,财产)
+							(24,mPUNC,、)
+							(26,eCOO,信息
+								(25,FEAT,借贷)))))))
+		(34,LINK,信息
+			(27,mRELA,及其他)
+			(28,rEXP,反映
+				(32,CONT,情况
+					(30,FEAT,个人
+						(29,FEAT,特定))
+					(31,SCO,某些))
+				(33,mDEPD,的)))
+		(35,mPUNC,。)))
+
+(0,Root
+	(27,Root,划分
+		(2,EXP,标准
 			(1,SCO,本))
 		(19,STAT,程度
 			(3,mRELA,根据)
@@ -8719,7 +8426,7 @@
 			(13,eCOO,对象
 				(12,FEAT,影响))
 			(14,mRELA,和)
-			(16,FEAT,造成
+			(16,rSTAT,造成
 				(15,mDEPD,所)
 				(17,mDEPD,的))
 			(18,FEAT,影响)
@@ -8727,125 +8434,135 @@
 		(24,PAT,级别
 			(21,mRELA,将)
 			(22,FEAT,数据)
-			(23,FEAT,安全)
-			(25,mRELA,从高到低))
-		(27,eSUCC,为
-			(28,LINK,5级
-				(29,mPUNC,、)
-				(30,eCOO,4级
-					(31,mPUNC,、)
-					(32,eCOO,3级
-						(33,mPUNC,、)
-						(34,eCOO,2级
-							(35,mPUNC,、)
-							(36,eCOO,1级))))))
-		(37,mPUNC,，)
-		(39,eSUCC,具有
-			(38,mDEPD,一般)
-			(41,EXP,特征
-				(40,FEAT,如下))
-			(42,mPUNC,：)
-			(48,eSUCC,如下
-				(43,mPUNC,—)
-				(44,mPUNC,—)
-				(47,EXP,特征
-					(46,FEAT,数据
-						(45,MEAS,5 级)))
-				(49,mPUNC,：)
-				(50,mPUNC,*)
-				(56,eSUCC,用于
-					(52,EXP,数据
-						(51,FEAT,重要)
-						(53,mPUNC,，))
-					(54,mDEPD,通常)
-					(55,mDEPD,主要)
-					(74,CONT,使用
-						(73,PAT,业务
-							(70,FEAT,机构
-								(61,eCOO,机构
-									(57,FEAT,金融业)
-									(58,FEAT,大型)
-									(59,mRELA,或)
-									(60,FEAT,特大型)
-									(62,mPUNC,、))
-								(65,LOC,过程
-									(64,FEAT,交易
-										(63,FEAT,金融))
-									(66,mDEPD,中))
-								(67,FEAT,重要)
-								(69,FEAT,节点类
-									(68,FEAT,核心))
-								(71,mDEPD,的))
-							(72,FEAT,关键))
-						(75,mPUNC,，))
-					(80,eCOO,公开
-						(76,mDEPD,一般)
-						(79,DATV,人员
-							(77,mRELA,针对)
-							(78,FEAT,特定))
-						(81,mPUNC,，)
-						(89,eSUCC,访问
-							(88,DATV,对象
-								(84,mRELA,为
-									(82,mRELA,且)
-									(83,mDEPD,仅))
-								(86,rCONT,知悉
-									(85,mDEPD,必须)
-									(87,mDEPD,的)))
-							(91,eCOO,使用
-								(90,mRELA,或)
-								(92,mPUNC,。)))))))))
+			(23,FEAT,安全))
+		(26,STAT,高到低
+			(25,mRELA,从))
+		(28,eSUCC,为
+			(29,LINK,5级
+				(30,mPUNC,、)
+				(31,eCOO,4级
+					(32,mPUNC,、)
+					(33,eCOO,3级
+						(34,mPUNC,、)
+						(35,eCOO,2级
+							(36,mPUNC,、)
+							(37,eCOO,1级))))))
+		(38,mPUNC,，)
+		(40,eSUCC,具有
+			(39,mDEPD,一般)
+			(42,LINK,特征
+				(41,FEAT,如下))
+			(43,mPUNC,：))))
 
 (0,Root
 	(5,Root,如下
 		(1,mPUNC,——)
 		(4,EXP,特征
 			(3,FEAT,数据
-				(2,FEAT,4 级)))
-		(6,mPUNC,：)
-		(7,mPUNC,*)
-		(14,eSUCC,信息
-			(10,LOC,信息
-				(8,FEAT,个人)
-				(9,FEAT,金融)
-				(11,mDEPD,中)
-				(12,mDEPD,的))
-			(13,FEAT,C3 类)
-			(15,mPUNC,。))))
+				(2,FEAT,5级)))
+		(6,mPUNC,：)))
+
+(0,Root
+	(7,Root,用于
+		(3,EXP,数据
+			(1,mPUNC,*)
+			(2,FEAT,重要)
+			(4,mPUNC,，))
+		(5,mDEPD,通常)
+		(6,mDEPD,主要)
+		(25,LOC,使用
+			(21,CONT,机构
+				(12,eCOO,机构
+					(8,FEAT,金融业)
+					(9,FEAT,大型)
+					(10,mRELA,或)
+					(11,FEAT,特大型)
+					(13,mPUNC,、))
+				(16,LOC,过程
+					(15,FEAT,交易
+						(14,FEAT,金融))
+					(17,mDEPD,中))
+				(20,FEAT,节点类
+					(18,FEAT,重要)
+					(19,FEAT,核心))
+				(22,mDEPD,的))
+			(24,PAT,业务
+				(23,FEAT,关键)))
+		(26,mPUNC,，)
+		(31,eSUCC,公开
+			(27,mDEPD,一般)
+			(30,DATV,人员
+				(28,mRELA,针对)
+				(29,FEAT,特定))
+			(32,mPUNC,，)
+			(40,eSUCC,访问
+				(33,mRELA,且)
+				(39,DATV,对象
+					(35,mRELA,为
+						(34,mDEPD,仅))
+					(37,rCONT,知悉
+						(36,mDEPD,必须)
+						(38,mDEPD,的)))
+				(42,eCOO,使用
+					(41,mRELA,或)
+					(43,mPUNC,。))))))
 
 (0,Root
 	(5,Root,如下
 		(1,mPUNC,——)
 		(4,EXP,特征
 			(3,FEAT,数据
-				(2,FEAT,3 级)))
-		(6,mPUNC,：)
-		(7,mPUNC,*)
-		(14,eSUCC,信息
-			(10,LOC,信息
-				(8,FEAT,个人)
-				(9,FEAT,金融)
-				(11,mDEPD,中)
-				(12,mDEPD,的))
-			(13,FEAT,C2 类)
-			(15,mPUNC,。))))
+				(2,FEAT,4级)))
+		(6,mPUNC,：)))
+
+(0,Root
+	(8,Root,信息
+		(1,mPUNC,*)
+		(4,LOC,信息
+			(2,FEAT,个人)
+			(3,FEAT,金融)
+			(5,mDEPD,中)
+			(6,mDEPD,的))
+		(7,FEAT,C3类)
+		(9,mPUNC,。)))
 
 (0,Root
 	(5,Root,如下
 		(1,mPUNC,——)
 		(4,EXP,特征
 			(3,FEAT,数据
-				(2,FEAT,2 级)))
-		(6,mPUNC,：)
-		(7,mPUNC,*)
-		(14,eSUCC,信息
-			(10,LOC,信息
-				(8,FEAT,个人)
-				(9,FEAT,金融)
-				(11,mDEPD,中)
-				(12,mDEPD,的))
-			(13,FEAT,C1 类))
-		(15,mPUNC,。)))
+				(2,FEAT,3级)))
+		(6,mPUNC,：)))
+
+(0,Root
+	(8,Root,信息
+		(1,mPUNC,*)
+		(4,LOC,信息
+			(2,FEAT,个人)
+			(3,FEAT,金融)
+			(5,mDEPD,中)
+			(6,mDEPD,的))
+		(7,FEAT,C2类)
+		(9,mPUNC,。)))
+
+(0,Root
+	(5,Root,如下
+		(1,mPUNC,——)
+		(4,EXP,特征
+			(3,FEAT,数据
+				(2,FEAT,2级)))
+		(6,mPUNC,：)))
+
+(0,Root
+	(8,Root,信息
+		(1,mPUNC,*)
+		(4,LOC,信息
+			(2,FEAT,个人)
+			(3,FEAT,金融)
+			(5,mDEPD,中)
+			(6,mDEPD,的))
+		(7,FEAT,C1类)
+		(9,mPUNC,。)))
 
 (0,Root
 	(10,Root,低于
@@ -8854,7 +8571,7 @@
 			(3,FEAT,数据
 				(2,FEAT,重要)
 				(4,FEAT,1
-					(5,mPUNC,)))
+					(5,mPUNC,）))
 				(6,mDEPD,的))
 			(7,FEAT,安全))
 		(9,mNEG,不可)
@@ -8862,51 +8579,51 @@
 			(12,EXP,标准
 				(11,SCO,本))
 			(13,mDEPD,所))
-		(15,LINK,5 级)
+		(15,MEAS,5级)
 		(16,mPUNC,。)))
 
 (0,Root
 	(12,Root,导致
+		(3,EXP,信息
+			(1,FEAT,敏感)
+			(2,FEAT,个人))
+		(4,mDEPD,是)
 		(6,ePREC,泄露
-			(3,EXP,信息
-				(1,FEAT,敏感)
-				(2,FEAT,个人))
-			(4,mRELA,是)
 			(5,mRELA,一旦)
 			(9,eCOO,使用
 				(7,mRELA,或者)
-				(8,MANN,非法)
-				(10,mPUNC,,)))
+				(8,mDEPD,非法)
+				(10,mPUNC,，)))
 		(11,mDEPD,可能)
 		(14,dCONT,受到
 			(13,EXP,个人)
 			(15,CONT,歧视))
+		(26,CONT,信息
+			(21,dFEAT,受到
+				(16,mRELA,或者)
+				(20,EXP,安全
+					(19,EXP,财产
+						(17,eCOO,人身
+							(18,mPUNC,、))))
+				(23,CONT,危害
+					(22,FEAT,严重))
+				(24,mDEPD,的))
+			(25,FEAT,个人))
+		(27,mPUNC,，)
 		(28,eSUCC,包括
-			(26,EXP,信息
-				(21,dFEAT,受到
-					(16,mRELA,或者)
-					(20,EXP,安全
-						(19,EXP,财产
-							(17,eCOO,人身
-								(18,mPUNC,、))))
-					(23,CONT,危害
-						(22,FEAT,严重))
-					(24,mDEPD,的))
-				(25,FEAT,个人)
-				(27,mPUNC,,))
 			(49,LINK,信息
 				(44,FEAT,账户
-					(41,eCOO,健康
+					(38,eCOO,特征
 						(31,eCOO,民族
 							(29,eCOO,种族
 								(30,mPUNC,、))
 							(32,mPUNC,、))
-						(33,EXP,宗教)
-						(38,eCOO,特征
-							(34,eCOO,信仰
-								(35,mPUNC,、))
-							(37,FEAT,生物
-								(36,FEAT,个人)))
+						(34,eCOO,信仰
+							(33,FEAT,宗教)
+							(35,mPUNC,、))
+						(37,FEAT,生物
+							(36,FEAT,个人)))
+					(41,eCOO,健康
 						(39,mPUNC,、)
 						(40,EXP,医疗)
 						(42,mPUNC,、))
@@ -9080,10 +8797,10 @@
 	(8,Root,涉及
 		(6,EXP,信息
 			(1,dFEAT,支付)
-			(4,FEAT,sensitive information
-				(3,FEAT,信息	payment
-					(2,FEAT,敏感)))
-			(5,FEAT,支付)
+			(5,FEAT,支付
+				(3,AGT,信息
+					(2,FEAT,敏感)
+					(4,FEAT,paymentsensitiveinformation)))
 			(7,mDEPD,中))
 		(17,LINK,信息
 			(9,dFEAT,支付
@@ -9135,33 +8852,32 @@
 		(36,mPUNC,。)))
 
 (0,Root
-	(38,Root,如下
-		(35,EXP,信息
-			(4,dFEAT,包括
-				(3,EXP,信息
-					(1,FEAT,个人)
-					(2,FEAT,金融))
-				(6,LINK,信息
-					(5,FEAT,账户)
-					(7,mPUNC,、)))
-			(23,eCOO,信息
-				(17,eCOO,信息
-					(13,eCOO,信息
-						(9,eCOO,信息
-							(8,FEAT,鉴别)
-							(10,mPUNC,、))
-						(12,FEAT,交易
-							(11,FEAT,金融))
-						(14,mPUNC,、))
-					(16,FEAT,身份
-						(15,FEAT,个人))
-					(18,mPUNC,、))
-				(20,eCOO,信息
-					(19,FEAT,财产)
-					(21,mPUNC,、))
-				(22,FEAT,借贷))
+	(4,Root,包括
+		(3,EXP,信息
+			(1,FEAT,个人)
+			(2,FEAT,金融))
+		(6,LINK,信息
+			(5,FEAT,账户)
+			(7,mPUNC,、)
+			(9,eCOO,信息
+				(8,FEAT,鉴别)
+				(10,mPUNC,、)
+				(13,eCOO,信息
+					(12,FEAT,交易
+						(11,FEAT,金融))
+					(14,mPUNC,、)
+					(17,eCOO,信息
+						(16,FEAT,身份
+							(15,FEAT,个人))
+						(18,mPUNC,、)
+						(20,eCOO,信息
+							(19,FEAT,财产)
+							(21,mPUNC,、)
+							(23,eCOO,信息
+								(22,FEAT,借贷)))))))
+		(35,LINK,信息
 			(24,mRELA,和)
-			(25,SCO,其   他)
+			(25,SCO,其他)
 			(26,rEXP,反映
 				(33,CONT,情况
 					(31,FEAT,主体
@@ -9170,72 +8886,76 @@
 							(28,FEAT,个人)
 							(29,FEAT,金融)))
 					(32,SCO,某些))
-				(34,mDEPD,的))
-			(36,mPUNC,，))
-		(37,mDEPD,具体)
-		(39,mPUNC,：)
-		(40,mRELA,a
-			(41,mPUNC,)))
-		(50,eSUCC,包括
-			(43,EXP,信息指
-				(42,FEAT,账户))
-			(48,EXP,信息
-				(44,FEAT,账户)
-				(46,FEAT,账户
-					(45,mRELA,及))
-				(47,FEAT,相关)
-				(49,mPUNC,，))
-			(55,LINK,账号
-				(53,rEXP,限于
-					(51,mRELA,但)
-					(52,mNEG,不))
-				(54,rPAT,支付)
-				(56,mPUNC,、)
-				(63,eCOO,信息
-					(58,eCOO,数据
-						(57,FEAT,银行卡磁道))
-					(59,mPUNC,（)
-					(62,FEAT,等效
-						(61,EXP,芯片
-							(60,mRELA,或)))
-					(64,mPUNC,）)
-					(65,mPUNC,、))
-				(67,FEAT,有效期
-					(66,FEAT,银行卡))
-				(68,mPUNC,、)
-				(70,eCOO,账户
-					(69,FEAT,证券)
-					(71,mPUNC,、)
-					(73,eCOO,账户
-						(72,FEAT,保险)
-						(74,mPUNC,、)
-						(80,eCOO,机构
-							(77,eCOO,时间
-								(76,dFEAT,开立
-									(75,EXP,账户))
-								(78,mPUNC,、))
-							(79,FEAT,开户)
-							(81,mPUNC,、)
-							(83,eCOO,余额
-								(82,FEAT,账户)
-								(92,eCOO,信息
-									(84,mRELA,以及)
-									(88,rCONT,产生
-										(85,mRELA,基于)
-										(87,EXP,信息
-											(86,FEAT,上述))
-										(89,mDEPD,的))
-									(90,FEAT,支付)
-									(91,FEAT,标记)
-									(93,mDEPD,等))))))))
-		(94,mPUNC,。)))
+				(34,mDEPD,的)))
+		(36,mPUNC,，)
+		(38,eSUCC,如下
+			(37,FEAT,具体)
+			(39,mPUNC,：))))
+
+(0,Root
+	(5,Root,指
+		(1,mRELA,a)
+		(2,mPUNC,）)
+		(4,EXP,信息
+			(3,FEAT,账户))
+		(6,DATV,账户)
+		(10,EXP,信息
+			(8,FEAT,账户
+				(7,mRELA,及))
+			(9,FEAT,相关)
+			(11,mPUNC,，))
+		(12,eSUCC,包括
+			(15,dLINK,限于
+				(13,mDEPD,但)
+				(14,mNEG,不)
+				(17,DATV,账号
+					(16,FEAT,支付)
+					(18,mPUNC,、)
+					(25,eCOO,信息
+						(20,eCOO,数据
+							(19,FEAT,银行卡磁道))
+						(21,mPUNC,（)
+						(23,FEAT,芯片
+							(22,mRELA,或))
+						(24,FEAT,等效)
+						(26,mPUNC,）)
+						(27,mPUNC,、)
+						(29,eCOO,有效期
+							(28,FEAT,银行卡)
+							(30,mPUNC,、)
+							(32,eCOO,账户
+								(31,FEAT,证券)
+								(33,mPUNC,、)
+								(35,eCOO,账户
+									(34,FEAT,保险))
+								(36,mPUNC,、)
+								(39,eCOO,时间
+									(38,rTIME,开立
+										(37,EXP,账户))
+									(40,mPUNC,、)
+									(42,eCOO,机构
+										(41,FEAT,开户)
+										(43,mPUNC,、)
+										(45,eCOO,余额
+											(44,FEAT,账户)
+											(54,eCOO,信息
+												(46,mRELA,以及)
+												(50,rCONT,产生
+													(49,EXP,信息
+														(47,mRELA,基于)
+														(48,FEAT,上述))
+													(51,mDEPD,的))
+												(53,FEAT,标记
+													(52,FEAT,支付))
+												(55,mDEPD,等)))))))))))
+		(56,mPUNC,。)))
 
 (0,Root
 	(5,Root,指用于
 		(1,mRELA,b
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(4,PAT,信息
-			(3,mRELA,鉴别))
+			(3,rCONT,鉴别))
 		(15,DATV,信息
 			(6,dFEAT,验证)
 			(9,dFEAT,具有
@@ -9295,11 +9015,11 @@
 (0,Root
 	(6,Root,指
 		(1,mRELA,c)
-		(2,mPUNC,))
+		(2,mPUNC,）)
 		(5,EXP,信息
 			(4,FEAT,交易
 				(3,FEAT,金融)))
-		(18,EXP,信息
+		(18,CONT,信息
 			(15,rCONT,产生
 				(10,EXP,主体
 					(7,FEAT,个人)
@@ -9320,7 +9040,7 @@
 					(24,FEAT,交易)
 					(26,mPUNC,、))
 				(28,CONT,记录
-					(27,FEAT,支   付)
+					(27,FEAT,支付)
 					(29,mPUNC,、)
 					(31,eCOO,记录
 						(30,FEAT,透支)
@@ -9348,133 +9068,138 @@
 		(53,mPUNC,。)))
 
 (0,Root
-	(20,Root,包括
-		(1,mRELA,d
-			(2,mPUNC,)))
-		(13,DATV,信息
-			(5,eCOO,信息指
-				(4,FEAT,身份
-					(3,FEAT,个人)))
-			(8,eCOO,信息
-				(6,FEAT,个人)
-				(7,FEAT,基本)
-				(9,mPUNC,、))
-			(12,FEAT,识别
-				(11,FEAT,生物
-					(10,FEAT,个人)))
-			(14,mDEPD,等)
-			(15,mPUNC,：))
-		(16,mPUNC,*)
-		(19,EXP,信息
-			(17,FEAT,个人)
-			(18,FEAT,基本))
-		(23,dCONT,限于
-			(21,mDEPD,但)
-			(22,mNEG,不)
-			(26,CONT,名称
-				(24,FEAT,客户)
-				(25,FEAT,法定)
-				(27,mPUNC,、)
-				(28,eCOO,性别
-					(29,mPUNC,、)
-					(30,eCOO,国籍)
-					(31,mPUNC,、)
-					(32,eCOO,民族)
-					(33,mPUNC,、)
-					(34,eCOO,职业)
-					(35,mPUNC,、)))
-			(50,CONT,信息
-				(47,FEAT,护照
-					(43,eCOO,情况
-						(40,eCOO,状   况
-							(36,FEAT,婚姻)
-							(37,eCOO,状况
-								(38,mPUNC,、))
-							(39,FEAT,家庭)
-							(41,mPUNC,、))
-						(42,FEAT,收入)
-						(44,mPUNC,、)
-						(45,eCOO,身份证))
-					(46,mRELA,和)
-					(48,mDEPD,等))
-				(49,FEAT,证件类)
-				(51,mPUNC,、)
-				(53,eCOO,号码
-					(52,FEAT,手机)
-					(54,mPUNC,、)
-					(55,FEAT,固定电话)
-					(56,eCOO,号码)
-					(57,mPUNC,、)
-					(58,FEAT,电子邮箱)
-					(59,mPUNC,、)
-					(60,eCOO,工作))
-				(63,eCOO,地址
-					(61,mRELA,及)
-					(62,FEAT,家庭)
-					(64,mPUNC,，))))
-		(86,eSUCC,包括
-			(79,LINK,信息
-				(73,rCONT,收集
-					(65,mRELA,以及)
-					(67,dTIME,提供
-						(66,mRELA,在))
-					(71,LOC,过程
-						(70,FEAT,服务
-							(68,eCOO,产品)
-							(69,mRELA,和))
-						(72,mDEPD,中))
-					(74,mDEPD,的))
-				(77,FEAT,音视频
-					(75,eCOO,照片
-						(76,mPUNC,、))
-					(78,mDEPD,等)))
-			(80,mPUNC,；)
-			(81,mPUNC,*)
-			(85,EXP,信息
-				(82,FEAT,个人)
-				(83,FEAT,生物)
-				(84,FEAT,识别))
-			(89,dCONT,限于
-				(87,mRELA,但)
-				(88,mNEG,不)
-				(90,CONT,指纹
-					(91,mPUNC,、)
-					(92,eCOO,人脸)
-					(93,mPUNC,、)
-					(94,eCOO,虹膜)
-					(95,mPUNC,、))
-				(113,CONT,数据
-					(112,FEAT,样本
-						(108,FEAT,笔迹
-							(96,eCOO,耳纹
-								(97,mPUNC,、))
-							(98,eCOO,掌纹)
-							(100,eCOO,静脉
-								(99,mPUNC,、)
-								(101,mPUNC,、))
-							(102,eCOO,声纹
-								(103,mPUNC,、))
-							(104,eCOO,眼纹
-								(105,mPUNC,、))
-							(106,eCOO,步   态
-								(107,mPUNC,、))
-							(109,mDEPD,等))
-						(111,FEAT,特征
-							(110,FEAT,生物)))
-					(114,mPUNC,、)
-					(115,FEAT,特征值)
-					(117,eCOO,模板
-						(116,mRELA,与))))
-			(118,mPUNC,。))))
+	(6,Root,指
+		(1,mRELA,d)
+		(2,mPUNC,）)
+		(5,EXP,信息
+			(4,FEAT,身份
+				(3,FEAT,个人)))
+		(9,EXP,信息
+			(7,FEAT,个人)
+			(8,FEAT,基本)
+			(10,mPUNC,、)
+			(14,eCOO,信息
+				(13,dFEAT,识别
+					(12,FEAT,生物
+						(11,FEAT,个人)))
+				(15,mDEPD,等)))
+		(16,mPUNC,：)))
+
+(0,Root
+	(5,Root,包括
+		(1,mPUNC,*)
+		(4,EXP,信息
+			(2,FEAT,个人)
+			(3,FEAT,基本))
+		(8,dCONT,限于
+			(6,mRELA,但)
+			(7,mNEG,不)
+			(11,CONT,名称
+				(9,FEAT,客户)
+				(10,FEAT,法定)
+				(12,mPUNC,、)
+				(13,eCOO,性别)
+				(14,mPUNC,、)
+				(15,eCOO,国籍
+					(16,mPUNC,、)
+					(17,eCOO,民族)
+					(18,mPUNC,、)
+					(19,eCOO,职业
+						(20,mPUNC,、))))
+			(35,CONT,信息
+				(34,FEAT,证件类
+					(32,FEAT,护照
+						(22,eCOO,状况
+							(21,FEAT,婚姻)
+							(23,mPUNC,、))
+						(25,eCOO,状况
+							(24,FEAT,家庭)
+							(26,mPUNC,、))
+						(28,eCOO,情况
+							(27,FEAT,收入)
+							(29,mPUNC,、))
+						(30,eCOO,身份证)
+						(31,mRELA,和)
+						(33,mDEPD,等)))
+				(36,mPUNC,、)
+				(38,eCOO,号码
+					(37,FEAT,手机)
+					(39,mPUNC,、)
+					(40,FEAT,固定电话))
+				(41,eCOO,号码
+					(42,mPUNC,、)
+					(43,FEAT,电子邮箱)
+					(44,mPUNC,、)
+					(48,eCOO,地址
+						(45,eCOO,工作)
+						(46,mRELA,及)
+						(47,FEAT,家庭))
+					(49,mPUNC,，)))
+			(64,LINK,信息
+				(50,mRELA,以及)
+				(58,rCONT,收集
+					(56,LOC,过程
+						(51,mRELA,在)
+						(52,dFEAT,提供)
+						(55,FEAT,服务
+							(53,eCOO,产品)
+							(54,mRELA,和))
+						(57,mDEPD,中))
+					(59,mDEPD,的))
+				(62,FEAT,音视频
+					(60,eCOO,照片
+						(61,mPUNC,、))
+					(63,mDEPD,等))))
+		(65,mPUNC,；)))
+
+(0,Root
+	(6,Root,包括
+		(1,mPUNC,*)
+		(5,CONT,信息
+			(4,FEAT,识别
+				(3,PAT,生物
+					(2,FEAT,个人))))
+		(9,dCONT,限于
+			(7,mRELA,但)
+			(8,mNEG,不)
+			(10,CONT,指纹
+				(11,mPUNC,、)
+				(12,eCOO,人脸
+					(13,mPUNC,、))
+				(14,eCOO,虹膜
+					(15,mPUNC,、)
+					(16,eCOO,耳纹
+						(17,mPUNC,、)
+						(18,eCOO,掌纹
+							(19,mPUNC,、)
+							(20,eCOO,静脉
+								(21,mPUNC,、)
+								(22,eCOO,声纹
+									(23,mPUNC,、)
+									(24,eCOO,眼纹
+										(25,mPUNC,、)
+										(26,eCOO,步态
+											(27,mPUNC,、)
+											(28,eCOO,笔迹
+												(29,mDEPD,等))))))))))
+			(33,CONT,数据
+				(32,FEAT,样本
+					(31,FEAT,特征
+						(30,FEAT,生物)))
+				(34,mPUNC,、)
+				(35,eCOO,特征值)
+				(37,eCOO,模板
+					(36,mRELA,与)))
+			(38,mPUNC,。))))
 
 (0,Root
 	(5,Root,指
 		(1,mRELA,e)
-		(2,mPUNC,))
+		(2,mPUNC,）)
 		(4,EXP,信息
 			(3,FEAT,财产))
 		(28,eSUCC,包括
-			(26,EXP,信   息
+			(26,EXP,信息
 				(17,rPAT,收集
 					(7,AGT,机构
 						(6,FEAT,金融业))
@@ -9517,14 +9242,14 @@
 								(47,mPUNC,、)
 								(50,eCOO,金额
 									(49,FEAT,存缴
-										(48,PAT,公积金))
+										(48,CONT,公积金))
 									(51,mDEPD,等))))))))
 		(52,mPUNC,。)))
 
 (0,Root
 	(5,Root,指
 		(1,mRELA,f)
-		(2,mPUNC,))
+		(2,mPUNC,）)
 		(4,EXP,信息
 			(3,FEAT,借贷))
 		(17,CONT,信息
@@ -9546,9 +9271,9 @@
 				(21,mNEG,不)
 				(23,CONT,授信
 					(24,mPUNC,、)
-					(25,eCOO,信   用卡))
+					(25,eCOO,信用卡))
 				(29,dCONT,发放
-					(27,PAT,贷款
+					(27,CONT,贷款
 						(26,mRELA,和)
 						(28,mDEPD,的))
 					(34,eCOO,情况
@@ -9560,67 +9285,72 @@
 				(36,mPUNC,。)))))
 
 (0,Root
-	(17,Root,反映
-		(4,LOC,信息
-			(1,mRELA,g)
-			(2,mPUNC,))
-			(3,SCO,其他)
-			(5,mPUNC,：)
-			(6,mPUNC,*))
-		(14,EXP,的
-			(9,dFEAT,进行
-				(7,mRELA,对)
-				(8,CONT,原始数据)
-				(10,CONT,处理
-					(11,mPUNC,、)
-					(12,eCOO,分析))
-				(13,eSUCC,形成))
-			(15,mPUNC,，))
-		(16,mDEPD,能够)
-		(21,CONT,情况
-			(19,FEAT,个人
-				(18,FEAT,特定))
-			(20,SCO,某些))
-		(22,mDEPD,的)
-		(23,CONT,信息
-			(24,mPUNC,，))
-		(25,eSUCC,包括
-			(36,LINK,意愿
-				(28,rEXP,限于
-					(26,mRELA,但)
-					(27,mNEG,不)
-					(33,LINK,主体
-						(29,FEAT,特   定)
-						(32,FEAT,信息
-							(30,FEAT,个人)
-							(31,FEAT,金融))
-						(34,mDEPD,的)))
-				(35,FEAT,消费)
-				(37,mPUNC,、)
-				(39,eCOO,习惯
-					(38,FEAT,支付)
-					(43,eCOO,信息
-						(40,mRELA,和)
-						(41,SCO,其他)
-						(42,FEAT,衍生))))
-			(44,mPUNC,；)
-			(45,mPUNC,*)
-			(54,eSUCC,获取
-				(52,LOC,过程
-					(46,mRELA,在)
-					(47,dFEAT,提供)
-					(51,FEAT,服务
-						(49,eCOO,产品
-							(48,FEAT,金融))
-						(50,mRELA,与))
-					(53,mDEPD,中))
-				(55,mPUNC,、)
-				(60,LINK,信息
-					(56,rPAT,保存
-						(57,mDEPD,的))
-					(58,SCO,其他)
-					(59,FEAT,个人))
-				(61,mPUNC,。)))))
+	(4,Root,信息
+		(1,mRELA,g)
+		(2,mPUNC,）)
+		(3,SCO,其他)
+		(5,mPUNC,：)))
+
+(0,Root
+	(21,Root,包括
+		(19,EXP,信息
+			(5,dFEAT,进行
+				(1,mPUNC,*)
+				(4,DATV,数据
+					(2,mRELA,对)
+					(3,FEAT,原始))
+				(6,CONT,处理
+					(7,mPUNC,、)
+					(8,eCOO,分析)))
+			(9,rCONT,形成
+				(10,mDEPD,的)
+				(11,mPUNC,，))
+			(13,rEXP,反映
+				(12,mDEPD,能够)
+				(17,CONT,情况
+					(14,FEAT,特定)
+					(15,FEAT,个人)
+					(16,SCO,某些))
+				(18,mDEPD,的))
+			(20,mPUNC,，))
+		(24,eCOO,限于
+			(22,mRELA,但)
+			(23,mNEG,不)
+			(32,CONT,意愿
+				(29,FEAT,主体
+					(25,FEAT,特定)
+					(28,FEAT,信息
+						(26,FEAT,个人)
+						(27,FEAT,金融))
+					(30,mDEPD,的))
+				(31,FEAT,消费)
+				(33,mPUNC,、)
+				(35,eCOO,习惯
+					(34,FEAT,支付)
+					(39,eCOO,信息
+						(36,mRELA,和)
+						(37,SCO,其他)
+						(38,dFEAT,衍生)))))
+		(40,mPUNC,；)))
+
+(0,Root
+	(16,Root,信息
+		(10,dCONT,获取
+			(1,mPUNC,*)
+			(8,TIME,过程
+				(2,mRELA,在)
+				(3,dFEAT,提供
+					(5,CONT,产品
+						(4,FEAT,金融)
+						(7,eCOO,服务
+							(6,mRELA,与))))
+				(9,mDEPD,中))
+			(11,mPUNC,、))
+		(12,rEXP,保存
+			(13,mDEPD,的))
+		(14,SCO,其他)
+		(15,FEAT,个人)
+		(17,mPUNC,。)))
 
 (0,Root
 	(29,Root,分为
@@ -9648,7 +9378,7 @@
 			(21,mRELA,将)
 			(22,FEAT,个人)
 			(23,FEAT,金融))
-		(27,MANN,程   度
+		(27,MANN,程度
 			(25,mRELA,按)
 			(26,FEAT,敏感)
 			(28,mRELA,从高到低))
@@ -9663,19 +9393,21 @@
 
 (0,Root
 	(2,Root,如下
-		(1,FEAT,具体)
-		(3,mPUNC,：)
-		(4,mRELA,a
-			(5,mPUNC,)))
-		(12,eSUCC,鉴别
-			(8,EXP,信息
-				(7,FEAT,类别
-					(6,FEAT,C3)))
-			(9,mDEPD,主要)
-			(11,DATV,用户
-				(10,mRELA,为))
-			(13,CONT,信息)
-			(14,mPUNC,。))))
+		(1,EXP,具体)
+		(3,mPUNC,：)))
+
+(0,Root
+	(9,Root,鉴别
+		(1,mRELA,a
+			(2,mPUNC,）))
+		(5,EXP,信息
+			(4,FEAT,类别
+				(3,FEAT,C3)))
+		(6,mDEPD,主要)
+		(8,DATV,用户
+			(7,mRELA,为))
+		(10,PAT,信息)
+		(11,mPUNC,。)))
 
 (0,Root
 	(27,Root,造成
@@ -9686,21 +9418,21 @@
 			(8,CONT,查看
 				(5,mNEG,未经)
 				(6,FEAT,授权
-					(7,mDEPD,的)))
-			(13,CONT,变更
-				(9,mRELA,或)
-				(11,EXP,授权
+					(7,mDEPD,的))
+				(13,eCOO,变更
+					(9,mRELA,或)
 					(10,mNEG,未经)
-					(12,mDEPD,的)))
+					(11,EXP,授权
+						(12,mDEPD,的))))
 			(14,mPUNC,，))
 		(15,mDEPD,会)
-		(26,DATV,安全
-			(16,mRELA,对)
+		(26,PAT,安全
 			(23,eCOO,安全
-				(19,EXP,信息
-					(17,FEAT,个人)
-					(18,FEAT,金融))
 				(20,EXP,主体
+					(16,mRELA,对)
+					(19,FEAT,信息
+						(17,FEAT,个人)
+						(18,FEAT,金融))
 					(21,mDEPD,的))
 				(22,EXP,信息))
 			(24,mRELA,与)
@@ -9708,84 +9440,87 @@
 		(29,CONT,危害
 			(28,FEAT,严重))
 		(30,mPUNC,，)
-		(31,eSUCC,包括)
-		(34,eSUCC,限于
-			(32,mDEPD,但)
-			(33,mNEG,不)
-			(35,mPUNC,：)
-			(36,mPUNC,*)
-			(39,CONT,数据
-				(37,FEAT,银行卡)
-				(38,FEAT,磁道)
-				(44,eCOO,信息
-					(40,mPUNC,（)
-					(41,mRELA,或)
-					(42,FEAT,芯片)
-					(43,FEAT,等效)
-					(45,mPUNC,）)
-					(46,mPUNC,、)
-					(48,eCOO,验证码
-						(47,FEAT,卡片))
-					(49,mPUNC,（)
-					(50,eCOO,CVN)
-					(52,eCOO,CVN2
-						(51,mRELA,和))
-					(53,mPUNC,）)
-					(54,mPUNC,、)
-					(59,eCOO,密码
-						(55,FEAT,卡片)
-						(56,eCOO,有效期
-							(57,mPUNC,、))
-						(58,FEAT,银行卡)
-						(60,mPUNC,、)
-						(64,eCOO,密码
-							(62,FEAT,支付
-								(61,FEAT,网络))
-							(63,FEAT,交易)))))
-			(65,mPUNC,；)
-			(69,eSUCC,包括
-				(66,mPUNC,*)
-				(67,EXP,账户
-					(68,mPUNC,（))
-				(82,eSUCC,登录
-					(72,eCOO,限于
-						(70,mRELA,但)
-						(71,mNEG,不)
-						(73,dCONT,支付
-							(74,CONT,账号)
-							(77,CONT,账户
-								(75,mPUNC,、)
-								(76,FEAT,证券)
-								(78,mPUNC,、)
-								(80,eCOO,账户
-									(79,FEAT,保险)
-									(81,mPUNC,）)))))
-					(83,PAT,密码
-						(84,mPUNC,、)
-						(86,eCOO,密码
-							(85,FEAT,交易)
-							(87,mPUNC,、)
-							(89,eCOO,密码
-								(88,FEAT,查询)
-								(90,mPUNC,；)
-								(92,mRELA,用于
-									(91,mPUNC,*)
-									(94,CONT,鉴别
-										(93,AGT,用户)
-										(95,mDEPD,的))
-									(99,PAT,信息
-										(97,FEAT,生物
-											(96,FEAT,个人))
-										(98,FEAT,识别))
-									(100,mPUNC,。))))))))))
+		(31,eSUCC,包括
+			(34,dCONT,限于
+				(32,mDEPD,但)
+				(33,mNEG,不)))
+		(35,mPUNC,：)))
+
+(0,Root
+	(7,Root,信息
+		(1,mPUNC,*)
+		(2,FEAT,银行卡磁道数据)
+		(3,mPUNC,（)
+		(4,mRELA,或)
+		(6,FEAT,等效
+			(5,EXP,芯片))
+		(8,mPUNC,）)
+		(9,mPUNC,、)
+		(13,eCOO,CVN
+			(11,eCOO,验证码
+				(10,FEAT,卡片))
+			(12,mPUNC,（)
+			(15,eCOO,CVN2
+				(14,mRELA,和)
+				(16,mPUNC,）))
+			(17,mPUNC,、)
+			(19,eCOO,有效期
+				(18,FEAT,卡片)
+				(20,mPUNC,、)
+				(22,eCOO,密码
+					(21,FEAT,银行卡)
+					(23,mPUNC,、)
+					(27,eCOO,密码
+						(25,dFEAT,支付
+							(24,FEAT,网络))
+						(26,FEAT,交易)
+						(28,mPUNC,；)))))))
+
+(0,Root
+	(17,Root,登录
+		(2,PAT,账户
+			(1,mPUNC,*)
+			(4,rFEAT,包括
+				(3,mPUNC,（)
+				(7,dLINK,限于
+					(5,mRELA,但)
+					(6,mNEG,不)
+					(9,CONT,账号
+						(8,FEAT,支付)
+						(10,mPUNC,、)
+						(12,eCOO,账户
+							(11,FEAT,证券)
+							(13,mPUNC,、)
+							(15,eCOO,账户
+								(14,FEAT,保险)
+								(16,mPUNC,）)))))))
+		(18,PAT,密码
+			(19,mPUNC,、)
+			(21,eCOO,密码
+				(20,FEAT,交易)
+				(22,mPUNC,、)
+				(24,eCOO,密码
+					(23,rCONT,查询))))
+		(25,mPUNC,；)))
+
+(0,Root
+	(7,Root,识别
+		(1,mPUNC,*)
+		(2,dMANN,用于
+			(4,eSUCC,鉴别
+				(3,AGT,用户)
+				(5,mDEPD,的)))
+		(6,AGT,个人生物)
+		(8,CONT,信息)
+		(9,mPUNC,。)))
 
 (0,Root
 	(7,Root,为
 		(1,mRELA,b
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(5,EXP,信息
-			(3,FEAT,C2)
-			(4,FEAT,类别))
+			(4,FEAT,类别
+				(3,FEAT,C2)))
 		(6,mDEPD,主要)
 		(21,LINK,信息
 			(8,mDEPD,可识别)
@@ -9799,8 +9534,8 @@
 					(15,mRELA,与)
 					(16,FEAT,金融)
 					(18,mDEPD,的)))
-			(20,FEAT,金融
-				(19,FEAT,个人))
+			(19,FEAT,个人)
+			(20,FEAT,金融)
 			(22,mPUNC,，))
 		(31,LINK,信息
 			(23,mRELA,以及)
@@ -9822,18 +9557,18 @@
 			(8,CONT,查看
 				(5,mNEG,未经)
 				(6,FEAT,授权
-					(7,mDEPD,的)))
-			(13,CONT,变更
-				(9,mRELA,或)
-				(10,mNEG,未经)
-				(11,EXP,授权
-					(12,mDEPD,的)))
+					(7,mDEPD,的))
+				(13,eCOO,变更
+					(9,mRELA,或)
+					(10,mNEG,未经)
+					(11,EXP,授权
+						(12,mDEPD,的))))
 			(14,mPUNC,，))
 		(15,mDEPD,会)
-		(26,DATV,安全
-			(16,mRELA,对)
+		(26,PAT,安全
 			(23,eCOO,安全
 				(20,EXP,主体
+					(16,mRELA,对)
 					(19,FEAT,信息
 						(17,FEAT,个人)
 						(18,FEAT,金融))
@@ -9845,37 +9580,38 @@
 			(28,FEAT,一定))
 		(30,mPUNC,，)
 		(31,eSUCC,包括
-			(34,dCONT,限于
+			(34,eCOO,限于
 				(32,mDEPD,但)
-				(33,mNEG,不)
-				(35,mPUNC,：)
-				(36,mPUNC,*)
-				(41,LINK,信息
-					(37,dFEAT,支付
-						(38,PAT,账号))
-					(39,mRELA,及其)
-					(40,FEAT,等效)
-					(42,mPUNC,，))
-				(44,dCONT,支付
-					(43,mDEPD,如)
-					(45,PAT,账号
-						(46,mPUNC,、))
-					(49,CONT,标识
-						(47,FEAT,证件类)
-						(48,FEAT,识别)
-						(52,eCOO,信息
-							(51,FEAT,证件
-								(50,mRELA,与))
-							(54,eCOO,身份证
-								(53,mPUNC,（)
-								(55,mPUNC,、))
-							(56,eCOO,护照
-								(57,mDEPD,等)
-								(58,mPUNC,）))
-							(59,mPUNC,、)
-							(61,eCOO,号码
-								(60,FEAT,手机))))))
-			(62,mPUNC,。))))
+				(33,mNEG,不)))
+		(35,mPUNC,：)))
+
+(0,Root
+	(3,Root,账号
+		(1,mPUNC,*)
+		(2,FEAT,支付)
+		(6,eCOO,信息
+			(4,mRELA,及其)
+			(5,FEAT,等效)
+			(7,mPUNC,，))
+		(13,eCOO,标识
+			(8,mDEPD,如)
+			(10,eCOO,账号
+				(9,FEAT,支付)
+				(11,mPUNC,、))
+			(12,FEAT,证件类识别)
+			(16,eCOO,信息
+				(14,mRELA,与)
+				(15,FEAT,证件)
+				(18,eCOO,身份证
+					(17,mPUNC,（)
+					(19,mPUNC,、)
+					(20,eCOO,护照
+						(21,mDEPD,等)
+						(22,mPUNC,）))
+					(23,mPUNC,、))
+				(25,eCOO,号码
+					(24,FEAT,手机)
+					(26,mPUNC,。))))))
 
 (0,Root
 	(2,Root,账户
@@ -10067,14 +9803,14 @@
 (0,Root
 	(6,Root,为
 		(1,mRELA,c
-			(2,mPUNC,)))
+			(2,mPUNC,）))
 		(4,EXP,信息
-			(3,FEAT,C1 类别))
+			(3,FEAT,C1类别))
 		(5,mDEPD,主要)
 		(11,LINK,资产
 			(7,FEAT,机构
-				(8,mDEPD,内部
-					(9,mDEPD,的)))
+				(8,mDEPD,内部)
+				(9,mDEPD,的))
 			(10,FEAT,信息))
 		(12,mPUNC,，)
 		(14,eSUCC,指供
@@ -10101,63 +9837,70 @@
 					(7,mDEPD,的))
 				(13,eCOO,变更
 					(9,mRELA,或)
+					(10,mNEG,未经)
 					(11,EXP,授权
-						(10,mNEG,未经)
 						(12,mDEPD,的))))
 			(14,mPUNC,，))
 		(15,mDEPD,可能)
 		(16,mDEPD,会)
-		(27,DATV,安全
-			(17,mRELA,对)
-			(21,EXP,主体
-				(20,FEAT,信息
-					(18,FEAT,个人)
-					(19,FEAT,金融))
-				(22,mDEPD,的))
+		(27,PAT,安全
 			(24,eCOO,安全
+				(17,mRELA,对)
+				(21,EXP,主体
+					(20,FEAT,信息
+						(18,FEAT,个人)
+						(19,FEAT,金融))
+					(22,mDEPD,的))
 				(23,EXP,信息))
 			(25,mRELA,与)
 			(26,EXP,财产))
 		(30,CONT,影响
 			(29,FEAT,一定))
 		(31,mPUNC,，)
-		(32,eSUCC,包括)
-		(35,eSUCC,限于
-			(33,mDEPD,但)
-			(34,mNEG,不)
-			(36,mPUNC,：)
-			(37,mPUNC,*)
-			(39,dCONT,开立
-				(38,EXP,账户)
-				(40,CONT,时间
-					(41,mPUNC,、)
-					(43,eCOO,机构
-						(42,rEXP,开户)
-						(44,mPUNC,；)))
-				(45,mPUNC,*))
-			(53,CONT,信息
-				(46,mRELA,基于)
-				(49,rCONT,产生
-					(48,STAT,信息
-						(47,FEAT,账户))
-					(50,mDEPD,的))
-				(52,FEAT,标记
-					(51,FEAT,支付))
-				(54,mPUNC,；)
-				(67,eCOO,信息
-					(62,rFEAT,包含
-						(59,LOC,信息
-							(55,mPUNC,* C2)
-							(57,FEAT,C3
-								(56,mRELA,和))
-							(58,FEAT,类别)
-							(60,mDEPD,中))
-						(61,mNEG,未)
-						(63,mDEPD,的))
-					(64,SCO,其他)
-					(65,FEAT,个人)
-					(66,FEAT,金融))))
-		(68,mPUNC,。)))
+		(32,eSUCC,包括
+			(35,dCONT,限于
+				(33,mRELA,但)
+				(34,mNEG,不)))
+		(36,mPUNC,：)))
+
+(0,Root
+	(3,Root,开立
+		(1,mPUNC,*)
+		(2,EXP,账户)
+		(4,PAT,时间
+			(5,mPUNC,、)
+			(7,eCOO,机构
+				(6,FEAT,开户)
+				(8,mPUNC,；)))))
+
+(0,Root
+	(9,Root,信息
+		(1,mPUNC,*)
+		(8,DATV,标记
+			(5,rCONT,产生
+				(4,EXP,信息
+					(2,mRELA,基于)
+					(3,FEAT,账户))
+				(6,mDEPD,的))
+			(7,FEAT,支付))
+		(10,mPUNC,；)))
+
+(0,Root
+	(14,Root,信息
+		(9,rEXP,包含
+			(6,LOC,信息
+				(5,FEAT,类别
+					(4,FEAT,C3
+						(2,eCOO,C2
+							(1,mPUNC,*))
+						(3,mRELA,和)))
+				(7,mDEPD,中))
+			(8,mNEG,未)
+			(10,mDEPD,的))
+		(11,SCO,其他)
+		(12,FEAT,个人)
+		(13,FEAT,金融)
+		(15,mPUNC,。)))
 
 (0,Root
 	(42,Root,进行
