@@ -1,17 +1,19 @@
 from treelib import Tree, Node
 
 
-def tuple2tree(ltp_tree, segment):
+def tuple2tree(ltp_tree, segment, root_id=0):
     """
     将哈工大输出的树结构转为treelib的树
     :param ltp_tree: 列表，每个节点为一个tuple，(节点编号，父节点，依存标记)，节点编号为下标+1
-    :type ltp_tree:list
+    :type ltp_tree:listb
+    :param root_id: 将句子编号存到root的data中
+    :type root_id: int
     :return: treelib tree
     :rtype:Tree
     """
     # 转换为树 treelib库
     tree = Tree()
-    tree.create_node(identifier=0, data='Root', tag='Root')
+    tree.create_node(identifier=0, data=str(root_id+1), tag='isRoot')
     while len(ltp_tree) > 0:
         ltp_tree_steady = tuple(ltp_tree)
         for ltp_tuple in ltp_tree_steady:
@@ -55,15 +57,34 @@ def treelib2s_expr(tree):
     return s_expr
 
 
-def trans2s_expr(ltp_tree, segment):
+def trans2s_expr(ltp_tree, segment, id=0):
     """
     将哈工大输出的树结构转为tregex可读的s expression格式
     :param ltp_tree: 列表，每个节点为一个tuple，(节点编号，父节点，依存标记)，节点编号为下标+1
     :type ltp_tree:list
+    :param id: 将句子编号存到root的data中
+    :type id: int
     :return:s expression
     :rtype:str
     """
-    tree = tuple2tree(ltp_tree, segment)
+    tree = tuple2tree(ltp_tree, segment, id)
 
     s_expr = treelib2s_expr(tree)
     return s_expr
+
+
+def load_from_ltp(path_sdps='data/ltp_sdps.txt', path_segs='data/ltp_segs.txt'):
+    """从ltp生成的文本文件中，提取转换生成树列表"""
+    fortrees = []
+    for ltp_path in (path_sdps, path_segs):
+        with open(ltp_path, 'r', encoding='utf-8') as f:
+            str_ltp = f.read()
+        ltp_obj = eval(str_ltp)
+        fortrees.append(ltp_obj)
+
+    assert len(fortrees[0]) == len(fortrees[1])
+    assert len(fortrees) == 2
+    sdps, segs = fortrees
+
+    trees = [tuple2tree(sdp, seg, i) for i, (sdp, seg) in enumerate(zip(sdps, segs))]
+    return trees

@@ -1,37 +1,45 @@
 from ltp import LTP
-from s_expr_parse import trans2s_expr
+from gen_tree import trans2s_expr
 
 
-def preprocessing():
-    with open("data/useful_sent.txt", "r", encoding="utf-8") as f:
+def preprocessing(path="data/useful_sent.txt"):
+    """预处理：去掉空格和换行符，英文标点转换为中文，去掉空行
+    :rtype: list
+    """
+    with open(path, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     trantab = str.maketrans(u',.!?:;()"\'', u'，。！？：；（）“‘')  # 制作翻译表
     lines = [ln.strip().replace(" ", "") for ln in lines]  # 去掉空格和换行符
     lines = [ln.translate(trantab) for ln in lines]  # 英文标点转换为中文
-    sents = [ln for ln in lines if len(ln) > 0]   # 去掉空行
+    sents = [ln for ln in lines if len(ln) > 0]  # 去掉空行
 
     return sents
 
 
-def ltp_prepro(expand=True):
-    preprocessing()
+def ltp_prepro():
+    """
+    将文本转换为ltp对象
+    :return: sents, ltp, sdps, segments, hiddens
+    :rtype: tuple
+    """
     ltp = LTP()
     sents = preprocessing()
     segments, hiddens = ltp.seg(sents)
     sdps = ltp.sdp(hiddens, mode='tree')
-    # print("trees number", len(sdps))
-    # if expand:
-    #     new_sdps = []  # 把原文附在标记后面
-    #     for segment, sdp in zip(segments, sdps):  # 一句
-    #         new_sentents = []
-    #         for seg, sd in zip(segment, sdp):  # 一词
-    #             # new_sentents.append((sd[0], sd[1], sd[2] + "," + seg))
-    #             new_sentents.append((sd[0], sd[1], sd[2], seg))
-    #         new_sdps.append(new_sentents)
 
     return sents, ltp, sdps, segments, hiddens
 
+
+def save2file(sdps, segs, path1="data/ltp_sdps.txt", path2="data/ltp_segs.txt"):
+    """ltp存到文件"""
+    for ltp_s, path in ((sdps, path1), (segs, path2)):
+        with open(path, "w", encoding="utf-8") as f:
+            f.write('[')
+            for s in ltp_s:
+                f.write(str(s))
+                f.write(', \n')
+            f.write(']')
 
 
 if __name__ == '__main__':
