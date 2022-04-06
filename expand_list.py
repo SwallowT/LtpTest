@@ -1,8 +1,8 @@
 import re
-import numpy as np
 from cn2an import an2cn, cn2an
-
 from ltp_standard import preprocessing
+
+from gen_tree import load_from_mutiple_tuple
 
 chi_num = "一二三四五六七八九十"
 
@@ -12,7 +12,7 @@ def assign_role(lines):
     role_per_line = [0] * len(lines)  # 每行的角色：0文本，+1列表标题，+2列表项，(3列表标题和列表项），第一项列表项+4(即为6或7)
     expecting = ""
     for index, ln in enumerate(lines):
-        x=1
+        x = 1
         # 判断是否是列表标题，be like "包括以下数据："
         if ("以下" in ln or "如下" in ln or ln.endswith("：")) \
                 and re.search("[表图][0-9]", ln) is None:
@@ -29,7 +29,7 @@ def assign_role(lines):
             if res is None:  # 没有括号，即无序列表
                 symbol = ln[0]
                 next_expecting = symbol
-                if symbol != expecting and role_per_line[index]<5:
+                if symbol != expecting and role_per_line[index] < 5:
                     role_per_line[index] += 4
             else:  # 有括号，一般是有序列表
                 symbol = res.group(1)
@@ -44,11 +44,12 @@ def assign_role(lines):
                     print("alert new type: ", symbol)
                     exit(1)
                     next_expecting = symbol
-                # 判断是否为第一个列表项
-                if symbol in (1, 'a', 'A', '一') and role_per_line[index]<5:
-                    role_per_line[index] += 4
-                elif symbol != expecting:  # 否则可能是接着上一级列表
-                    role_per_line[index] += 10
+                # 判断漏网之鱼
+                if role_per_line[index] < 5:
+                    if symbol in (1, 'a', 'A', '一'):  # 是否为第一个列表项
+                        role_per_line[index] += 4
+                    elif symbol != expecting:  # 否则可能是接着上一级列表
+                        role_per_line[index] += 10
 
             expecting = next_expecting
         # if role_per_line[index] == 0:
@@ -58,105 +59,69 @@ def assign_role(lines):
 
 # 展开列表
 # role总结，1：标题；2：非开头的列表项；3：同时是标题和列表项，下一行是嵌套的子列表；6：开头列表项；7：开头的、是标题的列表项
-def expand_texts_after_list_item(lines):
+def expand_texts_after_list_item(role_per_line):
     """第一轮，将非开头列表项前的正文解释（即非列表项），附到列表项后面"""
 
-    role_per_line = assign_role(lines)
-
-    index = 0
-    new_lines = []
-    while index < len(role_per_line):
-        skip = i = 1
-        if role_per_line[index] > 0:
-            # 找下一个非正文的角色
-            next_list_role = 0
-            while next_list_role == 0 and index + i < len(role_per_line):
-                next_list_role = role_per_line[index + i]
-                i += 1
-            i -= 1
-            # 下一个是非开头的列表项 即2或3
-            if (next_list_role == 2 or next_list_role == 3) and i > 1:
-                str_temp = "".join(lines[index:index + i])
-                # print(str_temp)
-                new_lines.append(str_temp)
-                skip = i
-                # del lines[index+1:index+i]
-            else:
-                new_lines.append(lines[index])
-        else:
-            new_lines.append(lines[index])
-        index += skip
-    return new_lines
-
-
-def expand_nested_lists(lines, filter, roles=None):
-    """第二轮，合并被嵌套的列表"""
-    if roles == None:
-        role_per_line = assign_role(lines)
-    else:
-        role_per_line = roles
-    new_lines = []
-    new_roles = []
+    parent_child = []
     index = 0
     while index < len(role_per_line):
         skip = 1
-        if role_per_line[index] in filter:  # 奇数就是标题项
-            nextRole = role_per_line[index + 1]
-            if nextRole > 5:  # 是第一项
-                n_nextRole = role_per_line[index + 2]
-                i = 3
-                while n_nextRole == 2 and index + i < len(role_per_line):
-                    n_nextRole = role_per_line[index + i]
-                    i += 1
-                i -= 1
+        i = 0
+        if role_per_line[index] > 1:
+            # 找下一个非正文的角色
+            next_role = 0
+            while next_role == 0 and index + i + 1 < len(role_per_line):
+                i += 1
+                next_role = role_per_line[index + i]
+            # 下一个是非开头的列表项 即2或3
+            if (next_role == 2 or next_role == 3) and i > 1:
+                # 以index为父节点、index+1到index+i为子节点，存储为元组关系
+                for j in range(index + 1, index + i):
+                    parent_child.append((index, j))
+                skip = i
 
-                if i > 2:  # (n_nextRole > 10 or n_nextRole == 1) and
-                    nested_list = lines[index:index + i]
-                    nested_list[0] = nested_list[0].strip("：")
-                    new_lines.append(nested_list[0])
-                    new_roles.append(2)
-                    for idx in range(1, i):
-                        # if idx < len(role_per_line) and index < len(role_per_line):
-                        temp_sent = nested_list[0] + re.sub("^（?(.{1,3}?)）", "", nested_list[idx])
-                        new_lines.append(temp_sent)
-                        new_roles.append(2)
-                        # print(temp_sent)
-                    skip = i
-                else:
-                    # new_lines.append(lines[index])
-                    # print(index, role_per_line[index], lines[index], role_per_line[index + i], n_nextRole, i)
-                    new_lines.append(lines[index])
-                    new_roles.append(role_per_line[index])
-            else:
-                new_lines.append(lines[index])
-                new_roles.append(role_per_line[index])
-        else:
-            new_lines.append(lines[index])
-            new_roles.append(role_per_line[index])
         index += skip
+    return parent_child
 
-    return new_lines, new_roles
+
+def hierarchy(role_per_line: list):
+    """
+    梳理标题的嵌套层级关系
+    :param role_per_line: 每行的角色
+    :return: [(parent_line_no, child_line_no),]
+    """
+    last_parent_stack = [-1, ]
+    hiers = []
+
+    for index, role in enumerate(role_per_line):
+        if role == 1:  # 一级标题，重置
+            last_parent_stack = [-1, ]
+        if role > 10:  # 嵌套标题结束，弹出栈
+            last_parent_stack.pop()
+        if role > 1:  # 所有列表项
+            if role == 6 and role_per_line[index - 1] == 0:  # 没有一级标题，不计入
+                last_parent_stack = [-1, ]
+            if last_parent_stack[-1] != -1:  # 必须有可用的标题行
+                hiers.append((last_parent_stack[-1], index))
+        if role % 2 == 1:  # 标题，压入栈
+            last_parent_stack.append(index)
+
+    return hiers
+
+
+def gen_list_struct(lines):
+    """把文本列表关系整理为tree"""
+    roles = assign_role(lines)
+    hiers1 = expand_texts_after_list_item(roles)
+    hiers2 = hierarchy(roles)
+    # print(roles)
+    # print(hiers1)
+    # print(hiers2)
+    return load_from_mutiple_tuple(hiers1 + hiers2)
 
 
 if __name__ == '__main__':
     lines = preprocessing()
-    print(0, len(lines))
-    # 第一轮
-    new_lines = expand_texts_after_list_item(lines)
-    print(1, len(new_lines))
-    # for ln in new_lines:
-    #     print(ln)
-    # 第二轮
-    lines = new_lines
-    del new_lines
-    new_lines, new_roles = expand_nested_lists(lines, (3, 7))
-    print(2, len(new_lines))
+    hiers = gen_list_struct(lines)
+    print(hiers)
 
-    # 第三轮
-    lines = new_lines
-    del new_lines
-    new_lines, new_roles = expand_nested_lists(lines, (1,), new_roles)
-    print(3, len(new_lines))
-
-    with open('data/expanded.txt', 'w', encoding='utf-8') as f:
-        f.write("\n".join(new_lines))
