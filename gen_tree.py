@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from typing import List
-from operator import itemgetter
+from operator import itemgetter, attrgetter
 from itertools import count, groupby
 from treelib import Tree, Node
 from sexpdata import loads
@@ -114,7 +114,7 @@ def trans2s_expr(ltp_tree, segment, id=0):
     return s_expr
 
 
-def load_from_ltp_files(path_sdps='data/ltp_sdps.txt', path_segs='data/ltp_segs.txt', with_seg=True):
+def load_from_ltp_files(path_sdps='data/ltp_sdps.txt', path_segs='data/ltp_segs.txt', with_seg=True) -> List[Tree]:
     """从ltp生成的文本文件中，提取转换生成树列表"""
     fortrees = []
     for ltp_path in (path_sdps, path_segs):
@@ -136,8 +136,6 @@ def load_from_ltp_files(path_sdps='data/ltp_sdps.txt', path_segs='data/ltp_segs.
 
 def load_from_sexpr(s_str):
     """从s expression读取到树"""
-    tree = Tree()
-    tree.create_node('root', 'root')
 
     def build_tree(s, t, p=None):
         last_p = None
@@ -151,11 +149,17 @@ def load_from_sexpr(s_str):
                 for i in b:
                     build_tree(i, t, p=last_p)
 
-    build_tree(loads(s_str), tree, 'root')
+    tree = Tree()
+    if "Root" not in s_str:
+        tree.create_node('root', 'root')
+        build_tree(loads(s_str), tree, 'root')
+    else:
+        build_tree(loads(s_str), tree)
+
     return tree
 
 
-def load_from_sexpr_to_nodes(s_str):
+def load_from_sexpr_to_nodes(s_str, isReturnedMerged=False):
     nodes = []
 
     def build_tree(s):
@@ -165,18 +169,46 @@ def load_from_sexpr_to_nodes(s_str):
                 # a: bool, b:List[Symbol] iter or Symbol iter
                 if a:  # b is a Symbol iter
                     for i in b:  # i: Symbol
-                        seperates = i._val.split(",")
-                        nodes.append(Node(identifier=seperates[0], tag=seperates[1], data=seperates[2]))
+                        nodes.append(gen_node(i._val))
                 else:  # b is List[Symbol] iter
                     for i in b:  # i is a List[Symbol]
                         build_tree(i)
         except TypeError:  # 不可迭代，只有一个节点
-            seperates = s._val.split(",")
-            nodes.append(Node(identifier=seperates[0], tag=seperates[1], data=seperates[2]))
+            nodes.append(nodes.append(gen_node(s._val)))
 
     build_tree(loads(s_str))
-    return nodes
+    if isReturnedMerged:
+        sorted_nodes = sorted(nodes, key=attrgetter('identifier'))
+        return "".join([n.data for n in sorted_nodes])
+    else:
+        return nodes
 
+
+def gen_node(n_s_str: str):
+    """
+    由sexp生成节点Node
+    :param n_s_str: 形如“3,sTOOL,个人信息”
+    :type n_s_str: str
+    :return: node
+    :rtype:Node
+    """
+    assert "(" not in n_s_str  # 确保只有一个节点
+    id, tag, data = n_s_str.split(',')
+    return Node(identifier=id, tag=tag, data=data)
+
+
+def load_from_sexp_file(path='data/cutted_trees_sexpr.txt') -> List[Tree]:
+    """从cutted s expression还原到treelib树"""
+    with open(path, 'r', encoding='utf-8') as f:
+        cutted_s = f.read()
+    cutted_ss = re.split('(?=\(0,isRoot,[0-9]+)', cutted_s)
+
+    trees = []
+    for ct in cutted_ss:
+        if len(ct) == 1:
+            continue
+        trees.append(load_from_sexpr(ct))
+    return trees
 
 if __name__ == '__main__':
     tree = load_from_sexpr('(18,LINK,三类 17,eCOO,系统运行安全数据)')

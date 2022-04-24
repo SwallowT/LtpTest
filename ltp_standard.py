@@ -17,14 +17,14 @@ def preprocessing(path="data/useful_sent.txt"):
     return sents
 
 
-def ltp_prepro():
+def ltp_prepro(path="data/useful_sent.txt"):
     """
     将文本转换为ltp对象
     :return: sents, ltp, sdps, segments, hiddens
     :rtype: tuple
     """
     ltp = LTP()
-    sents = preprocessing()
+    sents = preprocessing(path)
     segments, hiddens = ltp.seg(sents)
     sdps = ltp.sdp(hiddens, mode='tree')
 
