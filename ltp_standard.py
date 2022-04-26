@@ -42,22 +42,27 @@ def save2file(sdps, segs, path1="data/ltp_sdps.txt", path2="data/ltp_segs.txt"):
             f.write(']')
 
 
+def add_pos(ltp, hiddens, sdps):
+    """在语义依存树上添加词性, part of speech, pos"""
+    poss = ltp.pos(hiddens)
+
+    new_sdps = []
+    for sdp, pos in zip(sdps, poss):
+        new_sdps.append([(p, c, tag+'|'+pos) for (p, c, tag), pos in zip(sdp, pos)])
+
+    return new_sdps
+
+
 if __name__ == '__main__':
 
     sents, ltp, sdps, segments, hiddens = ltp_prepro()
 
-    outputs = [trans2s_expr(sdp, seg) for sdp, seg in zip(sdps, segments)]
+    sdps = add_pos(ltp, hiddens, sdps)
 
-    # outputs = []
-    # for index, sdp in enumerate(new_sdps):
-    #     outputs.append(trans2s_expr(sdp))
+    outputs = [trans2s_expr(sdp, seg, id) for id, (sdp, seg) in enumerate(zip(sdps, segments))]
 
     with open("data/trees_output_words.txt", "w", encoding="utf-8") as f:
         for out in outputs:
             f.write(out)
             f.write('\n')
 
-    # for index, sdp in enumerate(new_sdps):
-    #     s_temp = trans2s_expr(sdp)
-    #     with open(f"data/s_expr_files/tree_{index}.txt", 'w', encoding='utf-8') as f:
-    #         f.write(s_temp)
