@@ -40,9 +40,9 @@ def load_from_ltp_tuple(ltp_tree, segment=None, root_id=0):
 
             if tree.contains(parent):
                 if segment is not None:
-                    tree.create_node(identifier=node_id, data=segment[node_id - 1], parent=parent, tag=tag)
+                    tree.create_node(identifier=int(node_id), data=segment[node_id - 1], parent=parent, tag=tag)
                 else:
-                    tree.create_node(identifier=node_id, parent=parent, tag=tag)
+                    tree.create_node(identifier=int(node_id), parent=parent, tag=tag)
                 ltp_tree.remove(ltp_tuple)
     # tree.show()
     return tree
@@ -143,8 +143,8 @@ def load_from_sexpr(s_str):
             if a:
                 for i in b:
                     seperates = i._val.split(",")
-                    last_p = seperates[0]
-                    t.create_node(identifier=seperates[0], tag=seperates[1], data=seperates[2], parent=p)
+                    last_p = int(seperates[0])
+                    t.create_node(identifier=int(seperates[0]), tag=seperates[1], data=seperates[2], parent=p)
             else:
                 for i in b:
                     build_tree(i, t, p=last_p)
@@ -194,7 +194,7 @@ def gen_node(n_s_str: str):
     """
     assert "(" not in n_s_str  # 确保只有一个节点
     id, tag, data = n_s_str.split(',')
-    return Node(identifier=id, tag=tag, data=data)
+    return Node(identifier=int(id), tag=tag, data=data)
 
 
 def load_from_sexp_file(path='data/cutted_trees_sexpr.txt') -> List[Tree]:
