@@ -8,7 +8,7 @@ from treelib import Tree, Node
 from gen_tree import save2s_expr, show_tree
 
 logging.basicConfig(level=logging.DEBUG,  # 控制台打印的日志级别
-                    filename='data/dumped/new.log',
+                    filename='data/logs/new.log',
                     filemode='w',  # 模式，有w和a，默认是a
                     format=
                     '%(asctime)s - %(levelname)s: %(message)s'
@@ -41,7 +41,7 @@ def Rule_Merge(old_tree: Tree):
 
     def delete_and_merge(parent: int, current_node: Node):
         subtree = new_tree.remove_subtree(current_node.identifier)  # remove
-        _dum = subtree.nodes.keys()  # dumped nodes id
+        _dum = subtree.nodes.keys()  # logs nodes id
         dumped_ids.extend(_dum)
 
         if len(_dum) > 0:
@@ -138,7 +138,7 @@ def Rule_Delete(old_tree: Tree, isprint=True):
         sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
         if sdp_tag.strip('rd') in dump_tag and node.data not in verb_keys:
             subtree = new_tree.remove_subtree(id)  # remove
-            _dum = subtree.nodes.keys()  # dumped nodes id
+            _dum = subtree.nodes.keys()  # logs nodes id
             dumped_ids.extend(_dum)
 
     if isprint and len(dumped_ids) > 0:
