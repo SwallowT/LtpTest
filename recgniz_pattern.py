@@ -7,34 +7,28 @@ import subprocess
 from collections import defaultdict
 
 from gen_tree import gen_node, load_from_sexp_file, show_tree
+from expand_list import gen_list_struct
 from gen_log import Logger
 
-log = Logger('pat.log', level='debug')
+log = Logger('pat.log', level='debug', when='D')
 
 SUB = ['AGT', 'EXP']
 VEB = ['ePREC', 'eSUCC', 'ROOT']
 OBJ = ['PAT', 'CONT', 'DATV', 'LINK']
 # verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下', '示例']
 
-verb_keys = ['包括']
-rev_verb_keys = []
+verb_keys = ['包括', '属于']
+rev_verb_keys = ['属于']
 
 constellation = ['、', '以及', '和', '/', '与']  # 并列关系
 
-# ent_patterns: List[str] = [f'/(数据)|(信息)/=hyper >/{v}/ $/、/= hypo' for v in verb_keys]
-ent_patterns: List[str] = []
 v_patterns: List[str] = []
-output_pattern: List[str] = []
+output_pattern = {}
 
 hypers_id = {}  # tree_id: 上义词id,
 hypos_id = defaultdict(list)  # tree_id: [下义词id1, ...]
+key_v_id = {}
 
-
-# hyper_hypos: Dict[str, List[str]] = defaultdict(list)  # {上义词str: [下义词str1, ...]}
-# hypo_hyper: Dict[str, str] = dict()  # hypo.data: hyper.data
-
-
-# hyper_hypo_id: Dict[str, List[str]] = dict()  # hyper.data: [hypo_node]
 
 def get_sdp_pos(tag: str, flag='sdp'):
     sdp, pos = tag.split("|")
@@ -45,19 +39,20 @@ def get_sdp_pos(tag: str, flag='sdp'):
 
 
 def is_hyper(data: str) -> bool:
-    return data.endswith(("数据", "信息", '数据域')) and all([x not in data for x in ('、', '，')]) and 2 < len(data) < 10
+    return data.endswith(("数据", "信息", '数据域')) and all([x not in data for x in ('、', '，')])
 
 
 def is_hypo(data: str) -> bool:
-    return any([c in data for c in constellation]) or (
-            data.endswith(("数据", "信息", '数据域')) and '的' not in data) or '等' in data
+    return any([c in data for c in constellation]) or \
+           (data.endswith(("数据", "信息", '数据域')) and '的' not in data) or \
+           '等' in data or 2 < len(data) < 5
 
 
 def init_hyper(trees: List[Tree]):
     for tree in trees:
         hyper, hyper_id = 0, 0
         for node_id in tree.expand_tree(mode=tree.WIDTH):
-
+            pat = r'/%s/ > '
             # Root在第一层，Root主语在第2层
             depth = tree.depth(node_id)
             if depth > 2:
@@ -80,29 +75,32 @@ def init_hyper(trees: List[Tree]):
                         if not hyper or hyper_id > node_id:
                             hyper, hyper_id = node_data, node_id
                         else:
-                            print(tree[0].data, node.identifier, node_data, hyper)
+                            log.logger.info('hyper conflict: tree id %s, old %s, new %s' % (
+                                tree[0].data, hyper, node_data))  # 上义词冲突，记录
 
                 # Root是名词，hyper是Root
                 elif depth == 1 and pos_tag == 'n':
                     if not hyper:
-                        hyper = node_data
+                        hyper, hyper_id = node_data, node_id
                     else:
-                        print(tree[0].data, node.identifier, node_data, hyper)
-            if hyper:
+                        log.logger.info('hyper conflict: tree id %s, old %s, new %s' % (
+                            tree[0].data, hyper, node_data))  # 上义词冲突，记录
+            if hyper_id:
                 # hypers[tree[0].data] = hyper
                 hypers_id[tree[0].data] = hyper_id
 
 
 def init_hypo(trees: List[Tree]):
-    new_hypos_id = update_hypo(trees, verb_keys)
+    new_hypos_id = update_hypo_and_revhyper(trees, verb_keys, rev_verb_keys)
     hypos_id.update(new_hypos_id)
 
 
-def update_hypo(trees: List[Tree], new_key_verbs: List[str]):
+def update_hypo_and_revhyper(trees: List[Tree], new_k_v: List[str], new_rev_k_v: List[str]):
     new_hypos_id = defaultdict(list)
+    new_hypers_id = defaultdict(list)
     for tree in trees:
         for node_id in tree.expand_tree(mode=tree.WIDTH):
-            # 跳过root
+            # 跳过root、ROOT
             if tree.depth(node_id) < 2:
                 continue
 
@@ -111,14 +109,46 @@ def update_hypo(trees: List[Tree], new_key_verbs: List[str]):
             node_data: str = node.data
             sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
 
-            if is_hypo(node_data) and tree[node.predecessor(tree.identifier)].data in new_key_verbs and sdp_tag in OBJ:
-                # 父节点是关键动词，下义词是宾语
-                new_hypos_id[tree[0].data].append(node_id)
+            parent_str = tree[node.predecessor(tree.identifier)].data
+            if parent_str in new_k_v:
+                tree_no = tree[0].data
+
+                if parent_str in new_rev_k_v:
+                    # 逆反关键动词
+                    if is_hypo(node_data) and sdp_tag in SUB:
+                        new_hypos_id[tree_no].append(node_id)
+                    elif is_hyper(node_data) and sdp_tag in OBJ:
+                        new_hypers_id[tree_no].append(node_id)
+
+                elif is_hypo(node_data) and sdp_tag in OBJ:
+                    # 父节点是关键动词，下义词是宾语
+                    new_hypos_id[tree_no].append(node_id)
 
         # if len(hypos_current) > 0:
         #     print(tree[0].data, hypos_current)
         #     hypos[tree[0].data].extend(hypos_current)
     return new_hypos_id
+
+
+def find_v_id(trees: List[Tree]):
+    for tree in trees:
+        # 已有，跳过
+        tree_no = tree[0].data
+        if tree_no in key_v_id:
+            continue
+
+        for node_id in tree.expand_tree(mode=tree.WIDTH):
+            # 跳过root
+            if tree.depth(node_id) < 1:
+                continue
+
+            node: Node = tree.get_node(node_id)
+            if node.data in verb_keys:
+                if node.data in rev_verb_keys:
+                    key_v_id[tree_no] = 1000 + node_id
+                else:
+                    key_v_id[tree_no] = node_id
+                break
 
 
 def gen_tregex_from_shortest_path(trees):
@@ -195,22 +225,22 @@ def gen_tregex_from_shortest_path(trees):
 
         return tregex_out, trgex_search_keyv
 
-    new_out, new_search = [], []
+    new_search = []
     for t in trees:
         t_id = t[0].data
+        if t_id in output_pattern.keys():
+            continue
         if t_id in hypers_id.keys() and t_id in hypos_id.keys():
             for hypo in hypos_id[t_id]:
                 tregex_out, trgex_search = gen_tgx_per_tree(t, hypers_id[t_id], hypo)
 
-                if tregex_out not in output_pattern:
-                    output_pattern.append(tregex_out)
-                    new_out.append(tregex_out)
+                output_pattern[t_id] = tregex_out
 
                 if trgex_search not in v_patterns:
                     v_patterns.append(trgex_search)
                     new_search.append(trgex_search)
 
-    return new_out, new_search
+    return new_search
 
 
 def tregex_search_terminal(pattern: str, para='-h hyper -h hypo'):
@@ -263,7 +293,6 @@ def parse_terminal(resstr):
                 suc_node = gen_node(mat)
                 temp_node_list.append(suc_node)
         nodes_per_line.pop('0')
-        # log.logger.debug(nodes_per_line)
         return nodes_per_line
     else:
         kv_node_per_line: Dict[str, Node] = {}
@@ -290,6 +319,7 @@ def split_hypo(hypo_sent: str) -> list:
         ent_list = re.split('|'.join(sep), sb)
 
         if len(ent_list) == 1:
+            res.extend(ent_list)
             continue
 
         for ent in ent_list:
@@ -332,50 +362,14 @@ def split_hypo(hypo_sent: str) -> list:
                 res.append(rm_reg.sub('', ent))
     # print(res)
     return res
-    # temp=""
-    # i=0
-    # trees = []
-    # while i < len(hypo_sent):
-    #     chr = hypo_sent[i]
-    #     if chr == '、':
-
-
-# def main_proc():
-#     # 根据ent_pattern实体模式找实体
-#     for pt in ent_patterns:
-#         tregex_res_str = tregex_search_terminal(pattern=pt)
-#         nodes_dict = parse_terminal(tregex_res_str)
-#
-#         # 存到hypo-hyper
-#         for t_id, pairs in nodes_dict.items():
-#             for hyper, hypo in pairs:
-#                 if hypo.data in hypo_hyper.keys():
-#                     # 已经存在该下义词
-#                     old_hyper, new_hyper = hypo_hyper[hypo.data], hyper.data
-#                     if old_hyper != new_hyper and (len(old_hyper) < len(new_hyper) or len(old_hyper) > 10):
-#                         # 上义词不一致
-#                         print('changed:', old_hyper, new_hyper)
-#                         hypo_hyper[hypo.data] = new_hyper
-#                     else:
-#                         print('unchanged:', old_hyper, new_hyper)
-#                 else:
-#                     hypo_hyper[hypo.data] = hyper.data
-#
-#         # 分开hypo, 转换为hyper-hypo
-#         for hypo, hyper in hypo_hyper.items():
-#             splitted_hypos = split_hypo(hypo)
-#             hyper_hypos[hyper].extend(splitted_hypos)
-#
-#         print(hyper_hypos)
-#     # print(ent_node_per_line)
-#     # 根据ent_list找v_pattern
 
 
 def search_kv_by_tregex(v_search_pattern):
+    """搜索新的关键动词"""
     new_v: List[Node] = []
     new_rev_v: List[Node] = []
 
-    restored = []
+    all_new_v = []
 
     for trgx in v_search_pattern:
 
@@ -387,22 +381,23 @@ def search_kv_by_tregex(v_search_pattern):
 
         for t_id, nodes_list in nodes_perline.items():
             for keyv, hyper, hypo in nodes_list:
-                if keyv.tag + keyv.data in restored:
+                if keyv.data in all_new_v or keyv.data in verb_keys:
                     break
                 if keyv.data not in verb_keys:
                     if is_hyper(hyper.data) and is_hypo(hypo.data):
                         new_v.append(keyv)
-                        restored.append(keyv.tag + keyv.data)
+                        all_new_v.append(keyv.data)
                     elif is_hyper(hypo.data) and is_hypo(hyper.data):  # 交换位置
                         new_rev_v.append(keyv)
-                        restored.append(keyv.tag + keyv.data)
+                        all_new_v.append(keyv.data)
                     else:
-                        log.logger.info("%s %s %s" % (keyv.data, hyper.data, hypo.data))
+                        log.logger.info("上义词或下义词被过滤。keyv, hyper, hypo依次为：%s %s %s" % (keyv.data, hyper.data, hypo.data))
 
     return new_v, new_rev_v
 
 
 def search_ent_by_tregex(new_v: List[Node], new_rev_v: List[Node]):
+    """生成新的pattern，match新的上下义词"""
     new_hypers_id = {}  # tree_id: 上义词id,
     new_hypos_id = defaultdict(list)  # tree_id: [下义词id1, ...]
 
@@ -411,6 +406,7 @@ def search_ent_by_tregex(new_v: List[Node], new_rev_v: List[Node]):
             # 用新的动词替换旧的pattern v
             forsub = ",%s.*,%s" % (get_sdp_pos(keyv.tag), keyv.data)
             temp_pat = re.sub(r'(?<=\(/)(,[A-Za-z]+\\\|[a-z]+,)(?=/=keyv <)', forsub, pat)
+            temp_pat = temp_pat.replace('=keyv', '')
             if keyv in new_rev_v:  # 交换hyper、hypo
                 temp_pat = temp_pat.replace('hyper', 'temp')
                 temp_pat = temp_pat.replace('hypo', 'hyper')
@@ -424,25 +420,27 @@ def search_ent_by_tregex(new_v: List[Node], new_rev_v: List[Node]):
 
             for t_id, pairs in nodes_dict.items():
                 for hyper, hypo in pairs:
-                    hyper: Node
-                    hypo: Node
                     if is_hyper(hyper.data) and is_hypo(hypo.data):
-                        output_pattern.append(temp_pat)
-                        # log.logger.debug(temp_pat)
+                        if t_id not in output_pattern:
+                            output_pattern[t_id] = temp_pat
+                            log.logger.debug('output pattern: %s, tid: %s, hyper: %s, hypo: %s' %
+                                             (temp_pat, t_id, hyper, hypo))
                         # 存上义词
                         if t_id not in hypers_id:
                             new_hypers_id[t_id] = hyper.identifier
                         elif hypers_id[t_id] != hyper.identifier:
-                            log.logger.info('old: ' + hypers_id[t_id] + ', ' + 'new: ' + hyper.data)  # 上义词冲突，记录
+                            log.logger.info('hyper conflict: tree id %s, old %s, new %s' % (
+                                t_id, hypers_id[t_id], hyper.data))  # 上义词冲突，记录
                         # 存下义词
-                        if not (t_id in hypos_id and hypo.identifier in hypos_id[t_id]):
+                        if t_id not in hypos_id or hypo.identifier not in hypos_id[t_id]:
                             new_hypos_id[t_id].append(hypo.identifier)
+
     return new_hypers_id, new_hypos_id
 
 
-def merge_hypos(hypos:Dict[str, List]):
+def merge_hypos(hypos: Dict[str, List]):
     """
-    将新的hypo添加到hypos_id
+    将新的hypo添加到hypos_id，去重
     :param hypos: tree_id: [hypo_node_id]
     :type hypos: dict
     :return:
@@ -450,7 +448,7 @@ def merge_hypos(hypos:Dict[str, List]):
     """
     for t_id, _hypos in hypos.items():
         if t_id not in hypos_id:
-            hypos[t_id] = _hypos
+            hypos_id[t_id] = list(set(_hypos))
             continue
 
         for _hypo_id in _hypos:
@@ -458,35 +456,59 @@ def merge_hypos(hypos:Dict[str, List]):
                 hypos_id[t_id].append(_hypo_id)
 
 
-if __name__ == '__main__':
+def exam_identical_hyper_hypo():
+    concurrence = set(hypers_id).intersection(set(hypos_id))
+    for t_id in concurrence:
+        _hyper = hypers_id[t_id]
+        for _hypo in hypos_id[t_id]:
+            if _hyper == _hypo:
+                if t_id in key_v_id:
+                    # 在关键动词前的就是主语
+                    v_id = key_v_id[t_id]
+                    if v_id > 1000:  # 逆反
+                        if _hyper < v_id - 1000:  # hyper在v_id前，是主语，错误
+                            hypers_id.pop(t_id)
+                        else:
+                            hypos_id[t_id].remove(_hypo)
+                    else:
+                        if _hyper < v_id:  # hyper在v_id前，是主语，正确
+                            hypos_id[t_id].remove(_hypo)
+                        else:
+                            hypers_id.pop(t_id)
+                else:
+                    hypos_id[t_id].remove(_hypo)
 
+
+def main_proc():
     # 初始化
     trees = load_from_sexp_file()
     init_hyper(trees)
     init_hypo(trees)
-
+    find_v_id(trees)
+    exam_identical_hyper_hypo()
+    new_v_search_pattern = gen_tregex_from_shortest_path(trees)
     times = 1
+    for t_id, pt in output_pattern.items(): log.logger.debug(t_id + " " + pt)
 
+    # 循环
     while times < 10:
         log.logger.debug('time: ' + str(times))
-        # 生成最短路径tregex，输出
-        new_out_pattern, new_v_search_pattern = gen_tregex_from_shortest_path(trees)
-        for x in output_pattern: log.logger.debug('output ' + x)
-        for x in v_patterns: log.logger.debug('search v ' + x)
 
         # 搜索新的关键动词
         new_v, new_rev_v = search_kv_by_tregex(new_v_search_pattern)
-        new_v.extend(new_rev_v)
-        new_v_str = [vnode.data for vnode in new_v]
+        all_new_v = new_v + new_rev_v
+        all_new_v_str = [vnode.data for vnode in all_new_v]
+        new_rev_v_str = [vnode.data for vnode in new_rev_v]
 
-        if not len(new_v):
+        if not len(all_new_v):
             break
+        log.logger.debug('new key verb: '+str(all_new_v_str))
 
-        # 搜索新的上下义词
-        # 1. 新关键动词带入旧的tregex，替换旧动词
-        new_hypers_id, new_hypos_id = search_ent_by_tregex(new_v, new_rev_v)
+        # 生成新的模式，搜索新的上下义词
+        # 1. 新关键动词替换旧动词，代入旧的tregex，生成了新的模式；搜索新的上下义词
+        new_hypers_id, new_hypos_id = search_ent_by_tregex(all_new_v, new_rev_v)
         # 2. 搜索新动词的宾语；root不变，init hyper不变，而init hypo随key v增加而增加
-        new_hypos_id2 = update_hypo(trees, new_v_str)
+        new_hypos_id2 = update_hypo_and_revhyper(trees, all_new_v_str, new_rev_v_str)
 
         if not (len(new_hypers_id) + len(new_hypos_id2) + len(new_hypos_id)):
             break
@@ -495,23 +517,33 @@ if __name__ == '__main__':
         hypers_id.update(new_hypers_id)
         merge_hypos(new_hypos_id)
         merge_hypos(new_hypos_id2)
+        # 将新动词加入总集
+        verb_keys.extend(all_new_v_str)
+        rev_verb_keys.extend(new_rev_v_str)
+
+        # 去除上下义词相同的情况
+        find_v_id(trees)
+        exam_identical_hyper_hypo()
+        # 生成最短路径tregex，输出
+        new_v_search_pattern = gen_tregex_from_shortest_path(trees)
 
         times += 1
 
-    # 上下义词的id转换为文本
+    # 上义词的id转换为文本
     hypers_str = dict()
     for t_id, node_id in hypers_id.items():
-        node = trees[int(t_id)-1].get_node(node_id)
-        node_data = node.data
+        node = trees[int(t_id) - 1].get_node(node_id)
+        node_data: str = node.data
 
-        if '的' in node_data:
-            former, latter = node_data.split('的')
-            if len(latter) > 2:
-                node_data = latter
+        # if '的' in node_data:
+        #     former, latter = node_data.split('的', maxsplit=1)
+        #     if len(latter) > 2:
+        #         node_data = latter
 
         hypers_str[t_id] = node_data
 
-    hypos_str = dict()
+    # 下义词的id转换为文本，同时分开
+    hypos_str = defaultdict(list)
     for t_id, nodes_ids in hypos_id.items():
         tree = trees[int(t_id) - 1]
         for node_id in nodes_ids:
@@ -534,16 +566,24 @@ if __name__ == '__main__':
                     else:
                         # 其他合并
                         hypos_current[-1] += desc.data
+            for hypo_sent in hypos_current:
+                splitted_hypos = split_hypo(hypo_sent)
+                hypos_str[t_id].extend(splitted_hypos)
 
-            hypos_str[t_id] = node_data
-
+    # 打印结果
     print('---------result--------------')
-    for x in output_pattern: print(x)
+    # 打印pattern
+    instinct_pattern = set(output_pattern.values())
+    for i in instinct_pattern: log.logger.info("output pattern: " + i)
+    # 打印上下义词
     for i in range(len(trees)):
-        index=str(i+1)
+        index = str(i + 1)
         if index in hypers_str:
-            print(index)
-            print('hyper:', hypers_str[index])
+            log.logger.debug(index + ' hyper:' + hypers_str[index])
         if index in hypos_str:
-            print(index)
-            print('hypo:', hypos_str[index])
+            log.logger.debug(index + ' hypo:' + str(hypos_str[index]))
+    return hypers_str, hypos_str
+
+
+if __name__ == '__main__':
+    hypers, hypos = main_proc()
