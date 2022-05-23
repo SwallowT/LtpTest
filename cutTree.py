@@ -16,6 +16,7 @@ logging.basicConfig(level=logging.DEBUG,  # 控制台打印的日志级别
                     )
 
 verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下']  # '可识别为', '是', '如', '涉及'
+not_to_delete = verb_keys + ['将']
 
 SCENE = ['TOOL', 'MATL', 'MANN', 'SCO', 'REAS', 'TIME', 'LOC', 'STAT']  # , 'FEAT', 'MEAS'
 dump_tag = SCENE + ['mRELA', 'mDEPD']  # 删除情景依存关系\关系标记\依附标记
@@ -136,10 +137,17 @@ def Rule_Delete(old_tree: Tree, isprint=True):
             continue
 
         sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
-        if sdp_tag.strip('rd') in dump_tag and node.data not in verb_keys:
-            subtree = new_tree.remove_subtree(id)  # remove
-            _dum = subtree.nodes.keys()  # logs nodes id
-            dumped_ids.extend(_dum)
+        if sdp_tag.strip('rd') in dump_tag and node.data not in not_to_delete:
+            if sdp_tag == 'mDEPD' and pos_tag == 'v' and tree.parent(id).tag.endswith('n'):
+                pass  # /mDEPD\|v/>/n/
+            elif sdp_tag == 'mDEPD' and (('是' == node.data and not node.is_leaf(old_tree.identifier))
+                                       or '是否' == node.data):  # /mDEPD.*是/<__不删
+                pass
+            else:
+                replace_entity(new_tree, id)
+                subtree = new_tree.remove_subtree(id)  # remove
+                _dum = subtree.nodes.keys()  # logs nodes id
+                dumped_ids.extend(_dum)
 
     if isprint and len(dumped_ids) > 0:
         sorted_dumped_ids = sorted(dumped_ids)
@@ -192,29 +200,21 @@ def move_punc(tree: Tree):
                 continue
             tree.get_node(last_node).data += punc_node.data
 
-        elif pos == 'c' and tree.contains(id+1):
+        elif pos == 'c' and tree.contains(id + 1):
             tree.remove_node(id)
             tree.get_node(id + 1).data = punc_node.data + tree.get_node(id + 1).data
 
-def replace_entity(tree: Tree):
+
+def replace_entity(tree: Tree, deleted_id:int):
     """把以“数据”等关键词结尾的节点提前挪到不会被删除的位置"""
-    for node in tree.all_nodes():
+    if not tree.contains(deleted_id):
+        return
+    subtree = tree.subtree(deleted_id)
+    parent:Node = tree.parent(deleted_id)
+    for node in subtree.all_nodes():
         if node.data.strip("、，）").endswith(("数据", "信息", '数据域')):
-            # 找路径中会被删减的父节点
-            parents_dumpting: List[Node] = []
-            for i in tree.rsearch(node.identifier):
-                if i == 0:
-                    continue
-                ancestor = tree.get_node(i)
-                sdp_tag, pos_tag = ancestor.tag.split("|", maxsplit=1)
-                if sdp_tag.strip('rd') in dump_tag:
-                    parents_dumpting.append(ancestor.identifier)
-            # 找到了，移动到不会被删除的位置
-            if len(parents_dumpting) != 0:
-                node.tag = "s" + node.tag  # 特殊标记，防止被删除和合并
-                new_parent: Node = tree.parent(parents_dumpting[-1])
-                tree.move_node(node.identifier, new_parent.identifier)
-                # tree.remove_node(parents_dumpting[-1])
+            node.tag = "s" + node.tag  # 特殊标记，防止被删除和合并
+            tree.move_node(node.identifier, parent.identifier)
 
 
 def strip_punc(tree: Tree):
@@ -224,7 +224,7 @@ def strip_punc(tree: Tree):
 
 def cut_tree(ltp_tree):
     move_punc(ltp_tree)  # 标点附回去
-    replace_entity(ltp_tree)  # 实体节点防删
+    # replace_entity(ltp_tree)  # 实体节点防删
     ltp_tree = Rule_Merge(ltp_tree)  # 合并依存关系
     strip_punc(ltp_tree)
     ltp_tree = Rule_Delete(ltp_tree, isprint=True)  # 删除该删除的依存关系tag
