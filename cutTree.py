@@ -56,7 +56,7 @@ def Rule_Merge(old_tree: Tree):
         sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
         if sdp_tag in merge_tag:
             parent_id = node.predecessor(old_tree.identifier)
-            if tree[parent_id].tag == 'Root|v':
+            if old_tree[parent_id].tag == 'Root|v':
                 continue
             if id > parent_id and parent_id in record_comma_path:
                 if parent_id not in record_comma:  # parent没逗号
@@ -64,7 +64,7 @@ def Rule_Merge(old_tree: Tree):
                         # 特殊情况需要合并，其他的不合并
 
                         # 得到最大的后代节点id
-                        descendants = tree.subtree(id).all_nodes()  # 包括自己
+                        descendants = old_tree.subtree(id).all_nodes()  # 包括自己
                         max_id = max([n.identifier for n in descendants])
                         # 得到逗号节点id
                         comma_id = [n.identifier for n in descendants if is_endswith_comma(n)][0]
@@ -74,7 +74,7 @@ def Rule_Merge(old_tree: Tree):
                             delete_and_merge(parent_id, node)
                         else:
                             record_comma.append(id)
-                            for child in tree.children(node.identifier):
+                            for child in old_tree.children(node.identifier):
                                 if (child.identifier < comma_id and child.identifier not in record_comma_path) or (
                                         child.identifier == comma_id and child.is_leaf(old_tree.identifier)):
                                     # 子节点在逗号左边
@@ -85,17 +85,17 @@ def Rule_Merge(old_tree: Tree):
             elif id < parent_id and id in record_comma_path:
                 if comma_counter[id] == 1:
                     # 得到逗号节点id
-                    descendants = tree.subtree(id).all_nodes()  # 包括自己
+                    descendants = old_tree.subtree(id).all_nodes()  # 包括自己
                     comma_id = [n.identifier for n in descendants if is_endswith_comma(n)][0]
                     if id <= comma_id:
                         record_comma.append(id)
-                        for child in tree.children(node.identifier):
+                        for child in old_tree.children(node.identifier):
                             if (child.identifier < comma_id and child.identifier not in record_comma_path) or (
                                     child.identifier == comma_id and child.is_leaf(old_tree.identifier)):
                                 # 子节点在逗号左边
                                 delete_and_merge(id, child)  # 合并它的子节点
                     else:
-                        for child in tree.children(node.identifier):
+                        for child in old_tree.children(node.identifier):
                             if (child.identifier < comma_id and child.identifier not in record_comma_path) or (
                                     child.identifier == comma_id):  # and child.is_leaf(old_tree.identifier)):
                                 # 子节点在逗号左边
@@ -138,7 +138,7 @@ def Rule_Delete(old_tree: Tree, isprint=True):
 
         sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
         if sdp_tag.strip('rd') in dump_tag and node.data not in not_to_delete:
-            if sdp_tag == 'mDEPD' and pos_tag == 'v' and tree.parent(id).tag.endswith('n'):
+            if sdp_tag == 'mDEPD' and pos_tag == 'v' and old_tree.parent(id).tag.endswith('n'):
                 pass  # /mDEPD\|v/>/n/
             elif sdp_tag == 'mDEPD' and (('是' == node.data and not node.is_leaf(old_tree.identifier))
                                        or '是否' == node.data):  # /mDEPD.*是/<__不删
@@ -206,7 +206,7 @@ def move_punc(tree: Tree):
 
 
 def replace_entity(tree: Tree, deleted_id:int):
-    """把以“数据”等关键词结尾的节点提前挪到不会被删除的位置"""
+    """把以“数据”等关键词结尾的节点挪到不会被删除的位置"""
     if not tree.contains(deleted_id):
         return
     subtree = tree.subtree(deleted_id)
@@ -217,12 +217,23 @@ def replace_entity(tree: Tree, deleted_id:int):
             tree.move_node(node.identifier, parent.identifier)
 
 
+def mark_entity(tree:Tree):
+    # 在合并之前，实体节点防删
+    for node in tree.all_nodes():
+        if node.identifier == 0:
+            continue
+        sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
+        if sdp_tag in dump_tag and node.data.endswith(("数据", "信息", '数据域')):
+            node.tag = "s" + node.tag
+
+
 def strip_punc(tree: Tree):
     for node in tree.all_nodes():
         node.data = node.data.strip("：，。；")
 
 
 def cut_tree(ltp_tree):
+    mark_entity(ltp_tree)
     move_punc(ltp_tree)  # 标点附回去
     # replace_entity(ltp_tree)  # 实体节点防删
     ltp_tree = Rule_Merge(ltp_tree)  # 合并依存关系
