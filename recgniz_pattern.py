@@ -12,11 +12,11 @@ import logging
 
 # log = Logger('pat.log', level='debug', when='D')
 logging.basicConfig(level=logging.DEBUG,  # 控制台打印的日志级别
-                    filename='data/logs/pat.log',
+                    filename='data/logs/pat-0525.log',
                     filemode='w',  # 模式，有w和a，默认是a
                     format=
-                    '[line:%(lineno)d]%(levelname)s: %(message)s'
-
+                    '%(levelname)s: %(message)s'
+                    # [line:%(lineno)d]
                     # 日志格式
                     )
 SUB = ['AGT', 'EXP']
@@ -124,7 +124,9 @@ def init_hypo(trees: List[Tree]):
                 add_hypo(node, t_id)
                 # if t_id in output_pattern:  # 已经有上义词表达式
                 #     output_pattern[t_id] = output_pattern[t_id].strip()
-                hypo_patterns[t_id] = pat.split('=hypo', maxsplit=1)[1]
+                suffix = pat.split('=hypo', maxsplit=1)[1].strip('()')
+                if len(suffix)>1:
+                    hypo_patterns[t_id] = suffix
     # # 额外的方法 2 Root is hypo
     # for tr in trees:
     #     root:Node = tr[0]
@@ -231,7 +233,7 @@ def gen_tregex_from_shortest_path(trees):
                 hyper_pat += hyper_patterns[t_id]
             if t_id in hypo_patterns:
                 hypo_pat += hypo_patterns[t_id]
-                hypo_pat = '(' + hypo_pat + ')'
+                # hypo_pat = '(' + hypo_pat + ')'
 
             if len(q_path) == len(p_path):  # pq同一个父节点
                 if key_v_search:
@@ -448,7 +450,7 @@ def search_kv_by_tregex(new_v_search_pattern):
             # if t_id in output_pattern.keys() and 'keyv' in output_pattern[t_id]:
             #     break
             for keyv, hyper, hypo in nodes_list:
-                if keyv.data in all_new_v_str or keyv.data in verb_keys or keyv.data in blacklist:
+                if keyv.data in all_new_v_str or keyv.data in verb_keys or keyv.data in blacklist: #
                     break
                 if keyv.data not in verb_keys:
                     if is_hyper(hyper.data) and is_hypo(hypo.data):
