@@ -109,19 +109,19 @@ def hierarchy(role_per_line: list):
     return hiers
 
 
-def gen_list_struct(lines):
+def gen_list_struct():
     """把文本列表关系整理为tree"""
+    lines = preprocessing()
     roles = assign_role(lines)
     hiers1 = expand_texts_after_list_item(roles)
     hiers2 = hierarchy(roles)
     # print(roles)
     # print(hiers1)
     # print(hiers2)
-    return load_from_mutiple_tuple(hiers1 + hiers2)
-
+    # return load_from_mutiple_tuple(hiers1 + hiers2)
+    return hiers1+hiers2
 
 if __name__ == '__main__':
-    lines = preprocessing()
-    hiers = gen_list_struct(lines)
+    hiers = load_from_mutiple_tuple(gen_list_struct())
     print(hiers)
 
