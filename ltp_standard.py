@@ -1,3 +1,5 @@
+import re
+
 from ltp import LTP
 from gen_tree import trans2s_expr
 
@@ -19,12 +21,15 @@ def preprocessing(path="data/useful_sent.txt"):
 
 def ltp_prepro(path="data/useful_sent.txt"):
     """
-    将文本转换为ltp对象
+    将文本预处理，转换为ltp对象
     :return: sents, ltp, sdps, segments, hiddens
     :rtype: tuple
     """
+    # 读取文本，去除前面的列表符号
+    old_sents = preprocessing(path)
+    sents = [re.sub('^(\*|[a-z]）|[0-9]+）|—|（[一二三四五六七八九十]+）)\s?', '', s) for s in old_sents]
+    # 转换为ltp对象
     ltp = LTP()
-    sents = preprocessing(path)
     segments, hiddens = ltp.seg(sents)
     sdps = ltp.sdp(hiddens, mode='tree')
 
@@ -48,7 +53,7 @@ def add_pos(ltp, hiddens, sdps):
 
     new_sdps = []
     for sdp, pos in zip(sdps, poss):
-        new_sdps.append([(p, c, tag+'|'+pos) for (p, c, tag), pos in zip(sdp, pos)])
+        new_sdps.append([(p, c, tag + '|' + pos) for (p, c, tag), pos in zip(sdp, pos)])
 
     return new_sdps
 
@@ -65,4 +70,3 @@ if __name__ == '__main__':
         for out in outputs:
             f.write(out)
             f.write('\n')
-
