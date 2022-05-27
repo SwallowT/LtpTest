@@ -29,7 +29,7 @@ sub_str = "|".join(SUB)
 # verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下', '示例']
 verb_keys = ['包括', '属于', '如', '例如']
 rev_verb_keys = ['属于']
-blacklist = ['指']
+blacklist = ['指', '是']
 
 constellation = ['、', '以及', '和', '/', '与']  # 并列关系
 
@@ -111,7 +111,7 @@ def init_hypo(trees: List[Tree]):
     # 额外的方法 1
     patterns = ['/,s|{0}|eCOO|eSUCC\|n/=hypo < /mDEPD\|v/=keyv'.format(obj_str),
                 '/,s|{0}\|n/=hypo $ /mDEPD\|v/=keyv'.format(obj_str),
-                '/包括/<(/限于/</n/=hypo)',
+                '/n/=hypo > (/限于/>/包括/)',
                 '/Root\|n/=hypo'
                 ]
 
@@ -124,8 +124,8 @@ def init_hypo(trees: List[Tree]):
                 add_hypo(node, t_id)
                 # if t_id in output_pattern:  # 已经有上义词表达式
                 #     output_pattern[t_id] = output_pattern[t_id].strip()
-                suffix = pat.split('=hypo', maxsplit=1)[1].strip('()')
-                if len(suffix)>1:
+                suffix = pat.split('=hypo', maxsplit=1)[1]
+                if suffix.count('(') == suffix.count(')'):
                     hypo_patterns[t_id] = suffix
     # # 额外的方法 2 Root is hypo
     # for tr in trees:
@@ -450,7 +450,7 @@ def search_kv_by_tregex(new_v_search_pattern):
             # if t_id in output_pattern.keys() and 'keyv' in output_pattern[t_id]:
             #     break
             for keyv, hyper, hypo in nodes_list:
-                if keyv.data in all_new_v_str or keyv.data in verb_keys or keyv.data in blacklist: #
+                if keyv.data in all_new_v_str or keyv.data in verb_keys or keyv.data in blacklist:  #
                     break
                 if keyv.data not in verb_keys:
                     if is_hyper(hyper.data) and is_hypo(hypo.data):
@@ -471,12 +471,16 @@ def search_ent_by_tregex(new_v: List[Node], new_rev_v: List[Node]):
     new_hypers_id = {}  # tree_id: 上义词id,
     new_hypos_id = defaultdict(list)  # tree_id: [下义词id1, ...]
 
+    def new_pattern(old_pat: str, sub: str) -> str:
+        former, latter = old_pat.split('=keyv', maxsplit=1)
+        slash_indeces = [i.start() for i in re.finditer('/', former)]
+        return former[:slash_indeces[-2]] + '/' + sub + '/' + latter
+
     for keyv in new_v:
         for pat in v_patterns:
             # 用新的动词替换旧的pattern v
             forsub = ",%s.*,%s" % (get_sdp_pos(keyv.tag), keyv.data)
-            temp_pat = re.sub(r'(?<=\(/)(,[A-Za-z]+\\\|[a-z]+,)(?=/=keyv <)', forsub, pat)
-            temp_pat = temp_pat.replace('=keyv', '')
+            temp_pat = new_pattern(pat, forsub)
             if keyv in new_rev_v:  # 交换hyper、hypo
                 temp_pat = temp_pat.replace('hyper', 'temp')
                 temp_pat = temp_pat.replace('hypo', 'hyper')
