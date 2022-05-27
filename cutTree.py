@@ -2,6 +2,7 @@ import logging
 from collections import defaultdict, Counter
 from operator import attrgetter
 from typing import List
+import re
 
 from gen_tree import load_from_sexp_file
 from treelib import Tree, Node
@@ -25,7 +26,7 @@ merge_tag = ['FEAT', 'rFEAT', 'dFEAT', 'MEAS', 'eCOO', 'rCONT', 'rPAT', 'rEXP'] 
 record_comma_path = []  # [node_id,] 记录每棵树逗号路径上的节点
 record_comma = []  # [node_id,] 记录每棵树逗号路径上的节点
 
-commas = ("，", "；", '：')
+commas = ("，", "；", '：')  # , '。'
 
 
 def is_endswith_comma(node: Node) -> bool:
@@ -57,8 +58,13 @@ def Rule_Merge(old_tree: Tree):
         if sdp_tag in merge_tag:
             parent_id = node.predecessor(old_tree.identifier)
             if old_tree[parent_id].tag == 'Root|v':
-                continue
-            if id > parent_id and parent_id in record_comma_path:
+                continue  # 不能融合到动词根节点上
+            if sdp_tag == 'MEAS' and 'v' in old_tree[parent_id].tag:
+                continue  # MEAS > v，不融合
+            if sdp_tag == 'eCOO' and pos_tag=='v' and any([re.search('[0-9]级', c.data) for c in old_tree.children(id)]):
+                continue  # /eCOO\|v/ < /MEAS/，不融合
+            # 处理逗号
+            if id > parent_id and parent_id in record_comma_path:  # 父节点
                 if parent_id not in record_comma:  # parent没逗号
                     if id in record_comma_path and comma_counter[id] == 1:
                         # 特殊情况需要合并，其他的不合并
@@ -107,20 +113,20 @@ def Rule_Merge(old_tree: Tree):
 
     # 统一合并
     for parent_id, children in to_merge.items():
-        parent_id = new_tree[parent_id]
+        parent = new_tree[parent_id]
         # 防止关键字动词被合并，先挪到父节点下面
         notmoved: List[Node] = []
         for suc in children:
             if suc.data.strip("，：；") in verb_keys:
-                new_tree.add_node(suc, parent_id.identifier)
+                new_tree.add_node(suc, parent.identifier)
             else:
                 notmoved.append(suc)
         # 加入父节点
-        notmoved.append(parent_id)
+        notmoved.append(parent)
 
         # 合并
         sorted_dums = sorted(notmoved, key=attrgetter('identifier'))
-        parent_id.data = "".join([i.data for i in sorted_dums])
+        parent.data = "".join([i.data for i in sorted_dums])
 
     return new_tree
 
@@ -141,7 +147,7 @@ def Rule_Delete(old_tree: Tree, isprint=True):
             if sdp_tag == 'mDEPD' and pos_tag == 'v' and old_tree.parent(id).tag.endswith('n'):
                 pass  # /mDEPD\|v/>/n/
             elif sdp_tag == 'mDEPD' and (('是' == node.data and not node.is_leaf(old_tree.identifier))
-                                       or '是否' == node.data):  # /mDEPD.*是/<__不删
+                                         or '是否' == node.data):  # /mDEPD.*是/<__不删
                 pass
             else:
                 replace_entity(new_tree, id)
@@ -205,19 +211,19 @@ def move_punc(tree: Tree):
             tree.get_node(id + 1).data = punc_node.data + tree.get_node(id + 1).data
 
 
-def replace_entity(tree: Tree, deleted_id:int):
+def replace_entity(tree: Tree, deleted_id: int):
     """把以“数据”等关键词结尾的节点挪到不会被删除的位置"""
     if not tree.contains(deleted_id):
         return
     subtree = tree.subtree(deleted_id)
-    parent:Node = tree.parent(deleted_id)
+    parent: Node = tree.parent(deleted_id)
     for node in subtree.all_nodes():
         if node.data.strip("、，）").endswith(("数据", "信息", '数据域')):
             node.tag = "s" + node.tag  # 特殊标记，防止被删除和合并
             tree.move_node(node.identifier, parent.identifier)
 
 
-def mark_entity(tree:Tree):
+def mark_entity(tree: Tree):
     # 在合并之前，实体节点防删
     for node in tree.all_nodes():
         if node.identifier == 0:
@@ -233,9 +239,8 @@ def strip_punc(tree: Tree):
 
 
 def cut_tree(ltp_tree):
-    mark_entity(ltp_tree)
+    mark_entity(ltp_tree)  # 实体节点防删
     move_punc(ltp_tree)  # 标点附回去
-    # replace_entity(ltp_tree)  # 实体节点防删
     ltp_tree = Rule_Merge(ltp_tree)  # 合并依存关系
     strip_punc(ltp_tree)
     ltp_tree = Rule_Delete(ltp_tree, isprint=True)  # 删除该删除的依存关系tag
