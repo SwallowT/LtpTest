@@ -1,0 +1,9 @@
+/,(PAT|CONT|DATV|LINK)/=hypo > /包括/
+/,(PAT|CONT|DATV|LINK)/=hypo > (/限于/>/包括/) $ /但不/
+/,(PAT|CONT|DATV|LINK)/=hypo > /Root.*限于/ $ /不/
+/EXP.*、/=hypo > /包括/
+/Root\|n.*、/=hypo
+/n/=hypo</如/
+/n/=hypo $ (/n/</如/)
+/n/=hypo $ /如/
+/EXP((?![、的]).)*$/=hyper > /包括/ $ /,(PAT|CONT|DATV|LINK)/=hypo

@@ -1682,6 +1682,141 @@
 		(31,mPUNC|wp,，)))
 
 (0,isRoot,45
+	(5,Root|v,指
+		(17,CONT|n,数据
+			(12,dFEAT|v,结合
+				(11,DATV|n,信息
+					(10,SCO|r,其他)
+					(9,mRELA|p,与))
+				(7,MANN|d,单独)
+				(13,eSUCC|v,识别
+					(15,DATV|n,自然人
+						(14,FEAT|b,特定))
+					(16,mDEPD|u,的))
+				(6,mDEPD|v,能够)
+				(8,mRELA|c,或者)))
+		(3,EXP|n,数据
+			(2,FEAT|n,属性
+				(1,FEAT|n,个人)))
+		(4,mDEPD|v,是)
+		(18,mPUNC|wp,。)))
+
+(0,isRoot,46
+	(5,Root|v,指
+		(3,EXP|n,数据
+			(2,FEAT|n,状况
+				(1,FEAT|a,健康)))
+		(20,LINK|n,数据
+			(7,dFEAT|v,反映
+				(10,CONT|n,情况
+					(9,FEAT|a,健康)
+					(8,FEAT|n,个人))
+				(6,mDEPD|v,能))
+			(16,rFEAT|v,有着
+				(15,DATV|n,情况
+					(14,FEAT|a,健康)
+					(13,FEAT|n,个人)
+					(12,mRELA|p,同))
+				(18,LINK|n,关系
+					(17,FEAT|a,密切))
+				(19,mDEPD|u,的)
+				(11,mRELA|c,或)))
+		(4,mDEPD|v,是)
+		(21,mPUNC|wp,。)))
+
+(0,isRoot,47
+	(5,Root|v,指
+		(22,CONT|n,数据
+			(7,dFEAT|v,反映
+				(20,dCONT|n,情况
+					(19,FEAT|v,服务
+						(18,FEAT|n,医疗)
+						(17,SCO|r,其他)
+						(11,eCOO|n,门诊
+							(9,eCOO|n,保健
+								(8,FEAT|n,医疗)
+								(10,mPUNC|wp,、))
+							(13,eCOO|v,住院
+								(14,mPUNC|wp,、))
+							(12,mPUNC|wp,、))
+						(15,eCOO|v,出院)
+						(16,mRELA|c,和)))
+				(21,mDEPD|u,的)
+				(6,mDEPD|v,能)))
+		(3,EXP|n,数据
+			(2,FEAT|v,应用
+				(1,EXP|n,医疗)))
+		(4,mDEPD|v,是)
+		(23,mPUNC|wp,。)))
+
+(0,isRoot,48
+	(5,Root|v,指
+		(19,CONT|n,数据
+			(13,rCONT|v,涉及
+				(10,LOC|v,服务
+					(8,FEAT|n,保险
+						(6,eCOO|n,医疗)
+						(9,mDEPD|u,等)
+						(7,mRELA|c,或))
+					(11,mDEPD|nd,中))
+				(14,mDEPD|u,的)
+				(12,mDEPD|u,所))
+			(17,rEXP|v,相关
+				(16,DATV|n,费用
+					(15,mRELA|p,与))
+				(18,mDEPD|u,的)))
+		(3,EXP|n,数据
+			(2,FEAT|v,支付
+				(1,CONT|n,医疗)))
+		(4,mDEPD|v,是)
+		(20,mPUNC|wp,。)))
+
+(0,isRoot,49
+	(5,Root|v,指
+		(23,CONT|n,数据
+			(19,FEAT|n,能力
+				(17,FEAT|n,体系
+					(16,FEAT|a,卫生)
+					(14,eCOO|n,计划
+						(13,FEAT|a,卫生))
+					(18,mDEPD|u,的)
+					(15,mRELA|c,和))
+				(21,eCOO|n,特征
+					(22,mDEPD|u,的)
+					(20,mRELA|c,与)))
+			(6,SCO|r,那些)
+			(8,dFEAT|v,反映
+				(11,CONT|n,人员
+					(10,dFEAT|v,服务
+						(9,FEAT|a,卫生))
+					(12,mPUNC|wp,、))
+				(7,mDEPD|v,可以)))
+		(3,EXP|n,数据
+			(2,FEAT|n,资源
+				(1,FEAT|a,卫生)))
+		(4,mDEPD|v,是)
+		(24,mPUNC|wp,。)))
+
+(0,isRoot,50
+	(5,Root|v,指
+		(16,CONT|n,数据
+			(14,FEAT|b,公共事业)
+			(15,FEAT|v,相关)
+			(6,rEXP|v,关系
+				(12,dCONT|a,健康
+					(10,EXP|n,地区
+						(8,eCOO|n,国家)
+						(9,mRELA|c,或))
+					(11,EXP|n,大众))
+				(13,mDEPD|u,的)
+				(7,mDEPD|v,到)))
+		(3,EXP|n,数据
+			(2,FEAT|a,卫生)
+			(1,FEAT|b,公共))
+		(4,mDEPD|v,是)
+		(17,mPUNC|wp,。)))
+
+(0,isRoot,51
 	(26,Root|v,划分
 		(22,CONT|n,级别
 			(20,FEAT|v,影响
@@ -1714,7 +1849,7 @@
 		(27,eSUCC|v,为)
 		(31,mPUNC|wp,：)))
 
-(0,isRoot,46
+(0,isRoot,52
 	(9,Root|n,数据
 		(2,MEAS|q,级
 			(1,MEAS|m,第1)
@@ -1726,7 +1861,7 @@
 			(8,mDEPD|u,的)
 			(4,mDEPD|v,可))))
 
-(0,isRoot,47
+(0,isRoot,53
 	(17,Root|v,公开
 		(16,AGT|n,公众)
 		(7,EXP|n,电话
@@ -1746,7 +1881,7 @@
 		(10,mDEPD|v,可)
 		(18,mPUNC|wp,。)))
 
-(0,isRoot,48
+(0,isRoot,54
 	(14,Root|n,数据
 		(10,dFEAT|v,供
 			(8,LOC|n,范围
@@ -1763,7 +1898,7 @@
 			(4,mDEPD|v,可))
 		(15,mPUNC|wp,。)))
 
-(0,isRoot,49
+(0,isRoot,55
 	(15,Root|v,用于
 		(10,AGT|n,医生
 			(9,SCO|r,各科室))
@@ -1783,7 +1918,7 @@
 		(14,mDEPD|v,可以)
 		(18,mPUNC|wp,。)))
 
-(0,isRoot,50
+(0,isRoot,56
 	(13,Root|n,数据
 		(9,dFEAT|v,供
 			(10,CONT|v,访问
@@ -1799,7 +1934,7 @@
 			(4,mDEPD|v,可))
 		(14,mPUNC|wp,。)))
 
-(0,isRoot,51
+(0,isRoot,57
 	(15,Root|v,限于
 		(12,EXP|n,数据
 			(10,dFEAT|v,重标识
@@ -1824,7 +1959,7 @@
 		(23,mPUNC|wp,。)
 		(7,mRELA|c,但)))
 
-(0,isRoot,52
+(0,isRoot,58
 	(13,Root|n,数据
 		(2,FEAT|q,级
 			(1,MEAS|m,第4)
@@ -1840,7 +1975,7 @@
 					(12,mDEPD|u,的))))
 		(14,mPUNC|wp,。)))
 
-(0,isRoot,53
+(0,isRoot,59
 	(11,Root|v,限于
 		(8,EXP|n,数据
 			(4,dFEAT|v,标识
@@ -1859,7 +1994,7 @@
 		(1,mDEPD|v,例如)
 		(17,mPUNC|wp,。)))
 
-(0,isRoot,54
+(0,isRoot,60
 	(19,Root|n,数据
 		(15,dFEAT|v,供
 			(16,CONT|v,访问
@@ -1881,7 +2016,7 @@
 			(9,mRELA|c,且))
 		(20,mPUNC|wp,。)))
 
-(0,isRoot,55
+(0,isRoot,61
 	(15,Root|v,限于
 		(12,EXP|n,资料
 			(11,FEAT|a,详细)
@@ -1907,7 +2042,7 @@
 		(1,mDEPD|v,例如)
 		(24,mPUNC|wp,。)))
 
-(0,isRoot,56
+(0,isRoot,62
 	(5,Root|v,包括
 		(4,LINK|n,数据
 			(1,FEAT|n,个人)
@@ -1918,7 +2053,7 @@
 			(9,mPUNC|wp,：)
 			(6,mRELA|c,但))))
 
-(0,isRoot,57
+(0,isRoot,63
 	(1,Root|v,提供
 		(9,CONT|n,信息
 			(8,FEAT|n,个人)
@@ -1930,7 +2065,7 @@
 					(5,mDEPD|n,时))
 				(7,mDEPD|u,的)))))
 
-(0,isRoot,58
+(0,isRoot,64
 	(4,Root|n,目的
 		(20,FEAT|n,标识号码
 			(19,FEAT|b,唯一)
@@ -1956,7 +2091,7 @@
 		(5,mPUNC|wp,，)
 		(1,mRELA|v,出于)))
 
-(0,isRoot,59
+(0,isRoot,65
 	(16,Root|n,数据
 		(13,FEAT|n,个人
 			(12,FEAT|v,有关)
@@ -1994,15 +2129,51 @@
 				(1,mRELA|p,在))
 			(11,mDEPD|u,的))))
 
-(0,isRoot,60
-	(1,Root|v,来自
-		(3,DATV|n,部位
-			(2,FEAT|n,身体)
-			(6,eCOO|n,物质
-				(5,FEAT|n,身体)
-				(4,mRELA|c,或)))))
+(0,isRoot,66
+	(41,Root|n,数据
+		(40,FEAT|n,结果)
+		(38,FEAT|v,检验
+			(39,mDEPD|u,的)
+			(37,mRELA|c,或))
+		(42,mPUNC|wp,；)
+		(36,rCONT|v,检查
+			(18,CONT|n,气体
+				(13,eCOO|n,血
+					(15,eCOO|n,尿
+						(16,mPUNC|wp,、便)
+						(17,mPUNC|wp,、))
+					(11,eCOO|n,体液
+						(3,eCOO|n,部位
+							(2,FEAT|n,身体)
+							(6,eCOO|n,物质
+								(5,FEAT|n,身体)
+								(9,eCOO|n,组织
+									(8,mDEPD|v,例如))
+								(7,mPUNC|wp,，)
+								(4,mRELA|c,或))
+							(10,mPUNC|wp,、))
+						(12,mPUNC|wp,、))
+					(14,mPUNC|wp,、))
+				(19,mPUNC|wp,，))
+			(34,CONT|n,微生物
+				(33,FEAT|n,肠道)
+				(30,FEAT|v,代谢
+					(31,CONT|n,小分子
+						(32,mPUNC|wp,、))
+					(28,eCOO|n,大分子
+						(27,FEAT|n,生物)
+						(29,mPUNC|wp,、)))
+				(25,eCOO|n,蛋白质
+					(21,eCOO|n,DNA
+						(22,mPUNC|wp,、))
+					(23,eCOO|n,RNA
+						(24,mPUNC|wp,、))
+					(26,mDEPD|u,等)
+					(20,mRELA|c,以及))
+				(35,mDEPD|u,等)))
+		(1,rEXP|v,来自)))
 
-(0,isRoot,61
+(0,isRoot,67
 	(11,Root|n,数据
 		(15,eCOO|n,数据
 			(14,SCO|r,该种)
@@ -2020,7 +2191,7 @@
 				(6,mRELA|p,与))
 			(10,mDEPD|u,的))))
 
-(0,isRoot,62
+(0,isRoot,68
 	(4,Root|v,为
 		(1,EXP|r,本身)
 		(8,LINK|n,数据
@@ -2031,7 +2202,7 @@
 		(9,mPUNC|wp,；)
 		(2,mRELA|c,或者)))
 
-(0,isRoot,63
+(0,isRoot,69
 	(14,Root|v,结合
 		(13,DATV|n,数据
 			(12,SCO|r,其他)
@@ -2064,7 +2235,7 @@
 		(7,mRELA|c,并且)
 		(10,mRELA|c,或者)))
 
-(0,isRoot,64
+(0,isRoot,70
 	(21,Root|n,结论
 		(17,dTIME|v,进行
 			(18,CONT|v,判断)
@@ -2088,7 +2259,7 @@
 		(1,mRELA|c,或是)
 		(7,mRELA|c,并且)))
 
-(0,isRoot,65
+(0,isRoot,71
 	(19,Root|v,提供
 		(17,AGT|n,使用者
 			(16,FEAT|n,设备
@@ -2111,30 +2282,32 @@
 		(14,mDEPD|v,并非)
 		(21,mPUNC|wp,；)))
 
-(0,isRoot,66
-	(9,Root|v,例如
-		(7,EXP|n,数据
+(0,isRoot,72
+	(10,Root|v,检验
+		(7,CONT|n,数据
 			(5,FEAT|v,服务
-				(3,FEAT|a,健康)
-				(4,FEAT|n,医疗))
+				(4,FEAT|n,医疗
+					(3,FEAT|a,健康)))
 			(6,FEAT|v,相关)
 			(8,mPUNC|wp,，)
 			(1,rEXP|v,接受
 				(2,mDEPD|u,的)))
-		(10,LINK|n,医嘱
-			(12,eCOO|v,诊断
-				(14,eCOO|v,操作
-					(19,eCOO|n,效果
-						(18,FEAT|n,医疗)
-						(16,eCOO|n,药物
-							(17,mPUNC|wp,、))
-						(20,mDEPD|u,等))
+		(11,eSUCC|v,检查
+			(12,CONT|n,医嘱
+				(14,eCOO|v,诊断
+					(16,eCOO|v,操作
+						(18,eCOO|n,药物
+							(21,eCOO|n,效果
+								(20,FEAT|n,医疗)
+								(22,mDEPD|u,等))
+							(19,mPUNC|wp,、))
+						(17,mPUNC|wp,、))
 					(15,mPUNC|wp,、))
-				(13,mPUNC|wp,、))
-			(11,mPUNC|wp,、))
-		(21,mPUNC|wp,；)))
+				(13,mPUNC|wp,、)))
+		(9,mDEPD|v,例如)
+		(23,mPUNC|wp,；)))
 
-(0,isRoot,67
+(0,isRoot,73
 	(3,Root|v,提供
 		(10,CONT|n,数据
 			(9,FEAT|n,身份
@@ -2147,7 +2320,7 @@
 			(1,mRELA|p,为))
 		(11,mPUNC|wp,；)))
 
-(0,isRoot,68
+(0,isRoot,74
 	(8,Root|n,数据
 		(6,FEAT|j,医保)
 		(7,FEAT|v,相关)
@@ -2158,7 +2331,7 @@
 		(5,mRELA|c,或)
 		(1,mRELA|p,关于)))
 
-(0,isRoot,69
+(0,isRoot,75
 	(4,Root|n,数据
 		(2,FEAT|n,科研
 			(1,FEAT|n,医学))
@@ -2187,7 +2360,7 @@
 			(20,mPUNC|wp,、))
 		(5,mPUNC|wp,，)))
 
-(0,isRoot,70
+(0,isRoot,76
 	(6,Root|n,数据
 		(1,FEAT|b,公共)
 		(5,FEAT|n,医学)
@@ -2212,7 +2385,7 @@
 				(17,mDEPD|u,的)))
 		(7,mPUNC|wp,，)))
 
-(0,isRoot,71
+(0,isRoot,77
 	(3,Root|n,数据
 		(2,FEAT|n,保健
 			(1,FEAT|n,妇幼))
@@ -2236,7 +2409,7 @@
 				(14,mDEPD|u,的)))
 		(4,mPUNC|wp,，)))
 
-(0,isRoot,72
+(0,isRoot,78
 	(8,Root|v,包括
 		(6,EXP|n,数据
 			(5,FEAT|n,汽车)
@@ -2268,7 +2441,7 @@
 			(23,rEXP|v,涉及))
 		(30,mPUNC|wp,。)))
 
-(0,isRoot,73
+(0,isRoot,79
 	(6,Root|v,指
 		(3,EXP|n,信息
 			(1,FEAT|a,敏感)
@@ -2322,7 +2495,7 @@
 			(13,mDEPD|v,可能))
 		(5,mDEPD|v,是)))
 
-(0,isRoot,74
+(0,isRoot,80
 	(4,Root|v,指
 		(2,EXP|n,数据
 			(1,FEAT|a,重要))
@@ -2360,7 +2533,7 @@
 			(36,mPUNC|wp,：))
 		(3,mDEPD|v,是)))
 
-(0,isRoot,75
+(0,isRoot,81
 	(24,Root|n,数据
 		(22,FEAT|n,流量
 			(21,FEAT|n,车辆)
@@ -2387,7 +2560,7 @@
 			(2,mPUNC|wp,、))
 		(25,mPUNC|wp,；)))
 
-(0,isRoot,76
+(0,isRoot,82
 	(11,Root|n,数据
 		(4,FEAT|n,物流
 			(2,eCOO|n,流量
@@ -2401,7 +2574,7 @@
 			(10,mDEPD|u,的))
 		(12,mPUNC|wp,；)))
 
-(0,isRoot,77
+(0,isRoot,83
 	(5,Root|n,数据
 		(2,FEAT|n,充电网
 			(1,FEAT|n,汽车)
@@ -2409,7 +2582,7 @@
 		(4,FEAT|v,运行)
 		(6,mPUNC|wp,；)))
 
-(0,isRoot,78
+(0,isRoot,84
 	(1,Root|v,包含
 		(3,LINK|n,信息
 			(2,FEAT|n,人脸)
@@ -2424,7 +2597,7 @@
 				(8,mDEPD|u,的))
 			(4,mPUNC|wp,、))))
 
-(0,isRoot,79
+(0,isRoot,85
 	(10,Root|n,信息
 		(9,FEAT|n,个人)
 		(5,dFEAT|v,超过
@@ -2437,7 +2610,7 @@
 			(8,mDEPD|u,的))
 		(11,mPUNC|wp,；)))
 
-(0,isRoot,80
+(0,isRoot,86
 	(37,Root|n,数据
 		(22,SCO|r,其他)
 		(24,dFEAT|v,危害
@@ -2477,7 +2650,7 @@
 				(4,mRELA|c,和))
 			(21,mDEPD|u,的))))
 
-(0,isRoot,81
+(0,isRoot,87
 	(8,Root|v,包括
 		(7,EXP|v,分类维度
 			(6,PAT|n,数据
@@ -2564,7 +2737,7 @@
 			(9,mRELA|c,但))
 		(85,mPUNC|wp,。)))
 
-(0,isRoot,82
+(0,isRoot,88
 	(8,Root|v,包括
 		(7,EXP|v,分类维度
 			(6,PAT|n,数据
@@ -2611,7 +2784,7 @@
 			(9,mRELA|c,但))
 		(45,mPUNC|wp,。)))
 
-(0,isRoot,83
+(0,isRoot,89
 	(7,Root|v,考虑
 		(9,CONT|n,因素
 			(8,FEAT|v,如下))
@@ -2623,7 +2796,7 @@
 		(6,mDEPD|v,可)
 		(10,mPUNC|wp,：)))
 
-(0,isRoot,84
+(0,isRoot,90
 	(14,Root|v,属于
 		(8,EXP|n,能力
 			(7,FEAT|v,动员
@@ -2642,7 +2815,7 @@
 		(10,mDEPD|v,如)
 		(17,mPUNC|wp,；)))
 
-(0,isRoot,85
+(0,isRoot,91
 	(32,Root|v,属于
 		(31,EXP|n,数据
 			(29,FEAT|v,生产
@@ -2679,7 +2852,7 @@
 			(12,mDEPD|v,如))
 		(35,mPUNC|wp,；)))
 
-(0,isRoot,86
+(0,isRoot,92
 	(51,Root|v,属于
 		(50,EXP|n,数据
 			(1,dFEAT|v,反映
@@ -2735,7 +2908,7 @@
 			(52,FEAT|a,重要))
 		(54,mPUNC|wp,；)))
 
-(0,isRoot,87
+(0,isRoot,93
 	(38,Root|v,属于
 		(37,EXP|n,报告
 			(36,FEAT|v,检测)
@@ -2778,37 +2951,35 @@
 			(6,mDEPD|v,如))
 		(41,mPUNC|wp,；)))
 
-(0,isRoot,88
+(0,isRoot,94
 	(7,Root|v,利用
 		(6,AGT|n,组织
 			(3,FEAT|r,其他)
 			(4,eCOO|n,国家)
 			(5,mRELA|c,或)
 			(2,mRELA|p,被))
-		(15,PAT|n,数据
-			(8,dFEAT|v,发起
-				(13,CONT|v,打击
-					(10,DATV|n,我国
-						(11,mDEPD|u,的)
-						(9,mRELA|p,对))
-					(12,FEAT|n,军事))
-				(14,mDEPD|u,的)))
-		(25,eSUCC|v,属于
-			(24,EXP|n,信息
-				(23,FEAT|n,地理)
-				(18,rEXP|v,满足
-					(21,CONT|n,要求
-						(20,FEAT|n,精度
-							(19,FEAT|b,一定)))
-					(22,mDEPD|u,的)
-					(17,mDEPD|v,比如)))
-			(27,LINK|n,数据
-				(26,FEAT|a,重要))
-			(28,mPUNC|wp,；))
-		(1,mDEPD|v,可能)
-		(16,mPUNC|wp,，)))
+		(8,eSUCC|v,发起
+			(13,CONT|v,打击
+				(10,DATV|n,我国
+					(11,mDEPD|u,的)
+					(9,mRELA|p,对))
+				(12,FEAT|n,军事))
+			(16,eSUCC|v,满足
+				(19,CONT|n,要求
+					(18,FEAT|n,精度
+						(17,FEAT|b,一定)))
+				(20,mDEPD|u,的)
+				(15,mRELA|c,如))
+			(23,eSUCC|v,属于
+				(22,EXP|n,信息
+					(21,FEAT|n,地理))
+				(25,LINK|n,数据
+					(24,FEAT|a,重要))
+				(26,mPUNC|wp,；))
+			(14,mPUNC|wp,，))
+		(1,mDEPD|v,可能)))
 
-(0,isRoot,89
+(0,isRoot,95
 	(25,Root|v,利用
 		(24,AGT|n,犯罪分子
 			(22,eCOO|n,分子
@@ -2887,7 +3058,7 @@
 		(19,mDEPD|v,可能)
 		(28,mPUNC|wp,，)))
 
-(0,isRoot,90
+(0,isRoot,96
 	(3,Root|v,利用
 		(4,eSUCC|v,实施
 			(13,CONT|v,破坏
@@ -2938,7 +3109,7 @@
 		(1,mDEPD|v,可能)
 		(2,mRELA|p,被)))
 
-(0,isRoot,91
+(0,isRoot,97
 	(30,Root|v,属于
 		(15,EXP|n,数据
 			(11,FEAT|n,信息
@@ -2973,7 +3144,7 @@
 			(31,FEAT|a,重要))
 		(33,mPUNC|wp,；)))
 
-(0,isRoot,92
+(0,isRoot,98
 	(26,Root|v,属于
 		(6,EXP|n,数据
 			(2,FEAT|i,自然资源
@@ -3004,7 +3175,7 @@
 			(27,FEAT|a,重要))
 		(29,mPUNC|wp,；)))
 
-(0,isRoot,93
+(0,isRoot,99
 	(22,Root|v,属于
 		(21,EXP|n,数据
 			(1,dFEAT|v,关系
@@ -3031,7 +3202,7 @@
 			(23,FEAT|a,重要))
 		(25,mPUNC|wp,；)))
 
-(0,isRoot,94
+(0,isRoot,100
 	(19,Root|v,实施
 		(16,AGT|n,政府
 			(15,FEAT|n,外国)
@@ -3088,7 +3259,7 @@
 		(13,mDEPD|v,可能)
 		(21,mPUNC|wp,，)))
 
-(0,isRoot,95
+(0,isRoot,101
 	(16,Root|v,产生
 		(21,CONT|n,信息
 			(23,eCOO|v,如
@@ -3125,7 +3296,7 @@
 			(1,mRELA|p,在))
 		(17,mDEPD|u,的)))
 
-(0,isRoot,96
+(0,isRoot,102
 	(17,Root|v,如
 		(15,EXP|n,数据
 			(14,FEAT|n,司法
@@ -3150,7 +3321,48 @@
 			(21,FEAT|v,统计))
 		(23,mPUNC|wp,；)))
 
-(0,isRoot,97
+(0,isRoot,103
+	(38,Root|n,数据
+		(1,SCO|r,其他)
+		(39,mPUNC|wp,。)
+		(3,rEXP|v,影响
+			(5,DATV|n,政治
+				(4,FEAT|n,国家)
+				(7,eCOO|n,国土
+					(11,eCOO|n,经济
+						(13,eCOO|n,文化
+							(15,eCOO|n,社会
+								(17,eCOO|n,科技
+									(19,eCOO|n,生态
+										(21,eCOO|n,资源
+											(23,eCOO|n,核设施)
+											(22,mPUNC|wp,、)
+											(24,mPUNC|wp,、))
+										(20,mPUNC|wp,、))
+									(18,mPUNC|wp,、))
+								(16,mPUNC|wp,、))
+							(14,mPUNC|wp,、))
+						(9,eCOO|n,军事
+							(10,mPUNC|wp,、))
+						(12,mPUNC|wp,、))
+					(8,mPUNC|wp,、))
+				(6,mPUNC|wp,、))
+			(36,PAT|a,安全
+				(34,FEAT|n,深海
+					(32,eCOO|n,极地
+						(30,eCOO|nl,太空
+							(31,mPUNC|wp,、))
+						(33,mPUNC|wp,、))
+					(35,mDEPD|u,等))
+				(26,eCOO|n,利益
+					(25,LOC|nl,海外)
+					(28,eCOO|n,生物
+						(29,mPUNC|wp,、))
+					(27,mPUNC|wp,、)))
+			(37,mDEPD|u,的)
+			(2,mDEPD|v,可能))))
+
+(0,isRoot,104
 	(7,Root|v,是
 		(5,EXP|u,的
 			(4,eCOO|r,之一
@@ -3162,7 +3374,195 @@
 			(8,FEAT|a,重要))
 		(10,mPUNC|wp,。)))
 
-(0,isRoot,98
+(0,isRoot,105
+	(7,Root|v,包括
+		(6,EXP|n,信息
+			(4,FEAT|n,个人)
+			(5,FEAT|n,金融))
+		(9,LINK|n,信息
+			(8,FEAT|n,账户)
+			(12,eCOO|n,信息
+				(11,FEAT|v,鉴别)
+				(16,eCOO|n,信息
+					(15,FEAT|v,交易
+						(14,FEAT|n,金融))
+					(20,eCOO|n,信息
+						(19,FEAT|n,身份
+							(18,FEAT|n,个人))
+						(23,eCOO|n,信息
+							(22,FEAT|n,财产)
+							(26,eCOO|n,信息
+								(25,FEAT|v,借贷))
+							(24,mPUNC|wp,、))
+						(21,mPUNC|wp,、))
+					(17,mPUNC|wp,、))
+				(13,mPUNC|wp,、))
+			(10,mPUNC|wp,、))
+		(34,LINK|n,信息
+			(27,mRELA|c,及其他)
+			(28,rEXP|v,反映
+				(32,CONT|n,情况
+					(30,FEAT|n,个人
+						(29,FEAT|b,特定))
+					(31,SCO|r,某些))
+				(33,mDEPD|u,的)))
+		(1,mDEPD|v,注)
+		(35,mPUNC|wp,。)
+		(2,mRELA|m,1
+			(3,mPUNC|wp,：))))
+
+(0,isRoot,106
+	(27,Root|v,划分
+		(2,EXP|n,标准
+			(1,SCO|r,本))
+		(24,PAT|n,级别
+			(23,FEAT|a,安全)
+			(22,FEAT|n,数据)
+			(21,mRELA|p,将))
+		(26,STAT|a,高到低
+			(25,mRELA|p,从))
+		(19,STAT|n,程度
+			(18,FEAT|v,影响)
+			(8,dTIME|v,遭受
+				(7,CONT|n,安全性
+					(5,FEAT|n,机构
+						(4,FEAT|n,金融业))
+					(6,FEAT|n,数据))
+				(9,CONT|v,破坏)
+				(10,mDEPD|nd,后)
+				(11,mDEPD|u,的))
+			(13,eCOO|n,对象
+				(12,FEAT|v,影响))
+			(20,mPUNC|wp,，)
+			(14,mRELA|c,和)
+			(3,mRELA|p,根据)
+			(16,rSTAT|v,造成
+				(17,mDEPD|u,的)
+				(15,mDEPD|u,所)))
+		(28,eSUCC|v,为
+			(29,LINK|m,5级
+				(31,eCOO|m,4级
+					(33,eCOO|m,3级
+						(35,eCOO|m,2级
+							(37,eCOO|m,1级)
+							(36,mPUNC|wp,、))
+						(34,mPUNC|wp,、))
+					(32,mPUNC|wp,、))
+				(30,mPUNC|wp,、)))
+		(40,eSUCC|v,具有
+			(42,LINK|n,特征
+				(41,FEAT|v,如下))
+			(39,mDEPD|a,一般)
+			(43,mPUNC|wp,：))
+		(38,mPUNC|wp,，)))
+
+(0,isRoot,107
+	(5,Root|v,如下
+		(4,EXP|n,特征
+			(3,FEAT|n,数据
+				(2,FEAT|m,5级)))
+		(6,mPUNC|wp,：)
+		(1,mPUNC|wp,—)))
+
+(0,isRoot,108
+	(6,Root|v,用于
+		(2,EXP|n,数据
+			(1,FEAT|a,重要)
+			(3,mPUNC|wp,，))
+		(24,dCONT|v,使用
+			(20,CONT|n,机构
+				(17,FEAT|a,重要)
+				(19,FEAT|n,节点类
+					(18,FEAT|n,核心))
+				(15,LOC|n,过程
+					(14,FEAT|v,交易
+						(13,FEAT|n,金融))
+					(16,mDEPD|nd,中))
+				(11,eCOO|n,机构
+					(8,FEAT|b,大型)
+					(10,FEAT|b,特大型)
+					(7,FEAT|n,金融业)
+					(12,mPUNC|wp,、)
+					(9,mRELA|c,或))
+				(21,mDEPD|u,的))
+			(23,PAT|n,业务
+				(22,FEAT|a,关键)))
+		(30,eSUCC|v,公开
+			(29,DATV|n,人员
+				(28,FEAT|b,特定)
+				(27,mRELA|p,针对))
+			(39,eCOO|v,访问
+				(38,DATV|n,对象
+					(34,mRELA|p,为
+						(33,mDEPD|d,仅)
+						(32,mRELA|c,且))
+					(36,rCONT|v,知悉
+						(35,mDEPD|d,必须)
+						(37,mDEPD|u,的)))
+				(41,eCOO|v,使用
+					(42,mPUNC|wp,。)
+					(40,mRELA|c,或)))
+			(26,mDEPD|a,一般)
+			(31,mPUNC|wp,，))
+		(4,mDEPD|d,通常)
+		(5,mDEPD|d,主要)
+		(25,mPUNC|wp,，)))
+
+(0,isRoot,109
+	(5,Root|v,如下
+		(4,EXP|n,特征
+			(3,FEAT|n,数据
+				(2,FEAT|m,4级)))
+		(6,mPUNC|wp,：)
+		(1,mPUNC|wp,—)))
+
+(0,isRoot,110
+	(7,Root|n,信息
+		(6,FEAT|n,C3类)
+		(3,LOC|n,信息
+			(1,FEAT|n,个人)
+			(2,FEAT|n,金融)
+			(4,mDEPD|nd,中)
+			(5,mDEPD|u,的))
+		(8,mPUNC|wp,。)))
+
+(0,isRoot,111
+	(5,Root|v,如下
+		(4,EXP|n,特征
+			(3,FEAT|n,数据
+				(2,FEAT|m,3级)))
+		(6,mPUNC|wp,：)
+		(1,mPUNC|wp,—)))
+
+(0,isRoot,112
+	(7,Root|n,信息
+		(6,FEAT|m,C2类)
+		(3,LOC|n,信息
+			(1,FEAT|n,个人)
+			(2,FEAT|n,金融)
+			(4,mDEPD|nd,中)
+			(5,mDEPD|u,的))
+		(8,mPUNC|wp,。)))
+
+(0,isRoot,113
+	(5,Root|v,如下
+		(4,EXP|n,特征
+			(3,FEAT|n,数据
+				(2,FEAT|m,2级)))
+		(6,mPUNC|wp,：)
+		(1,mPUNC|wp,—)))
+
+(0,isRoot,114
+	(7,Root|n,信息
+		(6,FEAT|n,C1类)
+		(3,LOC|n,信息
+			(1,FEAT|n,个人)
+			(2,FEAT|n,金融)
+			(4,mDEPD|nd,中)
+			(5,mDEPD|u,的))
+		(8,mPUNC|wp,。)))
+
+(0,isRoot,115
 	(12,Root|v,导致
 		(26,CONT|n,信息
 			(25,FEAT|n,个人)
@@ -3214,7 +3614,7 @@
 		(11,mDEPD|v,可能)
 		(27,mPUNC|wp,，)))
 
-(0,isRoot,99
+(0,isRoot,116
 	(5,Root|v,指
 		(2,EXP|n,信息
 			(1,FEAT|n,个人)
@@ -3268,7 +3668,7 @@
 		(4,mDEPD|v,是)
 		(52,mPUNC|wp,。)))
 
-(0,isRoot,100
+(0,isRoot,117
 	(5,Root|v,指
 		(2,EXP|n,数据
 			(1,FEAT|a,重要)
@@ -3314,7 +3714,7 @@
 		(4,mDEPD|v,是)
 		(44,mPUNC|wp,。)))
 
-(0,isRoot,101
+(0,isRoot,118
 	(5,Root|v,包括
 		(2,EXP|n,数据
 			(1,FEAT|a,重要))
@@ -3332,7 +3732,7 @@
 		(4,mNEG|d,不)
 		(16,mPUNC|wp,。)))
 
-(0,isRoot,102
+(0,isRoot,119
 	(11,Root|v,包括
 		(10,EXP|n,信息
 			(8,FEAT|n,个人)
@@ -3373,7 +3773,27 @@
 		(2,mRELA|m,1
 			(3,mPUNC|wp,：))))
 
-(0,isRoot,103
+(0,isRoot,120
+	(8,Root|v,涉及
+		(6,EXP|n,信息
+			(5,FEAT|v,支付
+				(3,AGT|n,信息
+					(2,FEAT|a,敏感)
+					(4,FEAT|n,paymentsensitiveinformation)))
+			(1,dFEAT|v,支付)
+			(7,mDEPD|nd,中))
+		(17,LINK|n,信息
+			(16,FEAT|a,重要)
+			(9,dFEAT|v,支付
+				(11,CONT|v,隐私
+					(10,FEAT|n,主体)
+					(14,eCOO|v,识别
+						(13,PAT|n,身份)
+						(12,mRELA|c,和)))
+				(15,mDEPD|u,的)))
+		(18,mPUNC|wp,。)))
+
+(0,isRoot,121
 	(6,Root|v,包括
 		(5,EXP|n,信息
 			(4,FEAT|a,敏感))
@@ -3411,7 +3831,7 @@
 			(2,mPUNC|wp,：))
 		(36,mPUNC|wp,。)))
 
-(0,isRoot,104
+(0,isRoot,122
 	(4,Root|v,包括
 		(3,EXP|n,信息
 			(1,FEAT|n,个人)
@@ -3452,196 +3872,191 @@
 			(39,mPUNC|wp,：))
 		(36,mPUNC|wp,，)))
 
-(0,isRoot,105
-	(4,Root|v,指
-		(9,EXP|n,信息
-			(7,FEAT|n,账户
-				(6,mRELA|c,及))
-			(8,FEAT|v,相关)
-			(5,eCOO|n,账户)
-			(10,mPUNC|wp,，))
+(0,isRoot,123
+	(3,Root|v,指
+		(4,DATV|n,账户)
+		(8,EXP|n,信息
+			(6,FEAT|n,账户
+				(5,mRELA|c,及))
+			(7,FEAT|v,相关)
+			(9,mPUNC|wp,，))
 		(2,EXP|n,信息
-			(1,FEAT|n,账户)
-			(3,mPUNC|wp,，))
-		(14,dCONT|v,限于
-			(16,DATV|n,账号
-				(15,FEAT|v,支付)
-				(25,eCOO|n,信息
-					(23,FEAT|n,芯片
-						(22,mRELA|c,或))
-					(24,FEAT|v,等效)
-					(20,eCOO|n,数据
-						(18,FEAT|n,银行卡)
-						(19,FEAT|n,磁道))
-					(26,mPUNC|wp,）)
-					(27,mPUNC|wp,、)
-					(21,mPUNC|wp,（))
-				(29,eCOO|n,有效期
-					(28,FEAT|n,银行卡)
-					(32,eCOO|n,账户
-						(34,FEAT|n,保险账户)
-						(31,FEAT|n,证券)
-						(38,eCOO|n,时间
-							(41,eCOO|n,机构
-								(40,FEAT|v,开户)
-								(44,eCOO|n,余额
-									(43,FEAT|n,账户)
-									(53,eCOO|n,信息
-										(52,FEAT|n,标记
-											(51,FEAT|v,支付))
-										(54,mDEPD|u,等)
-										(45,mRELA|c,以及)
-										(49,rCONT|v,产生
-											(48,EXP|n,信息
-												(47,FEAT|b,上述)
-												(46,mRELA|p,基于))
-											(50,mDEPD|u,的))))
-								(42,mPUNC|wp,、))
-							(39,mPUNC|wp,、)
-							(37,rTIME|v,开立
-								(36,EXP|n,账户)))
-						(33,mPUNC|wp,、)
-						(35,mPUNC|wp,、))
-					(30,mPUNC|wp,、))
-				(17,mPUNC|wp,、))
-			(12,mDEPD|c,但)
-			(13,mNEG|d,不))
-		(11,eSUCC|v,包括)
-		(55,mPUNC|wp,。)))
-
-(0,isRoot,106
-	(4,Root|v,指用于
-		(14,DATV|n,信息
-			(8,rFEAT|v,具有
-				(6,EXP|n,主体)
-				(12,LINK|n,权限
-					(11,FEAT|v,使用
-						(9,eCOO|v,访问)
-						(10,mRELA|c,或)))
-				(13,mDEPD|u,的)
-				(7,mDEPD|v,是否)))
-		(2,EXP|n,信息
-			(3,mPUNC|wp,，)
-			(1,rCONT|v,鉴别))
-		(5,dLINK|v,验证)
-		(16,eSUCC|v,包括
-			(19,dLINK|v,限于
-				(21,CONT|n,密码
-					(20,FEAT|n,银行卡)
-					(25,eCOO|n,密码
-						(23,FEAT|n,预付卡)
-						(24,FEAT|v,支付))
-					(22,mPUNC|wp,、))
-				(32,CONT|n,密码
-					(31,FEAT|v,登录
-						(30,AGT|n,主体)
-						(29,PAT|n,信息
-							(27,FEAT|n,个人)
-							(28,FEAT|n,金融)))
-					(36,eCOO|n,密码
-						(38,FEAT|v,交易)
-						(35,FEAT|v,查询
-							(34,CONT|n,账户))
-						(37,mPUNC|wp,、))
-					(39,eCOO|n,密码
-						(42,eCOO|n,验证码
-							(41,FEAT|n,卡片))
-						(44,eCOO|n,CVN
-							(43,mPUNC|wp,（))
-						(46,eCOO|n,CVN2
-							(47,mPUNC|wp,）)
-							(45,mRELA|c,和))
-						(50,eCOO|n,口令
-							(49,FEAT|n,动态)
-							(52,FEAT|v,短信验证码)
-							(57,eCOO|n,答案
-								(56,FEAT|n,问题)
-								(55,FEAT|v,提示
-									(54,MANN|n,密码))
-								(58,mDEPD|u,等))
-							(51,mPUNC|wp,、)
-							(53,mPUNC|wp,、))
-						(40,mPUNC|wp,、)
-						(48,mPUNC|wp,、))
-					(33,mPUNC|wp,、)
+			(1,FEAT|n,账户))
+		(13,dCONT|v,限于
+			(15,DATV|n,账号
+				(14,FEAT|v,支付)
+				(19,eCOO|n,数据
+					(17,FEAT|n,银行卡)
+					(18,FEAT|n,磁道)
+					(24,eCOO|n,信息
+						(22,FEAT|n,芯片
+							(21,mRELA|c,或))
+						(23,FEAT|v,等效)
+						(25,mPUNC|wp,）)
+						(20,mPUNC|wp,（))
 					(26,mPUNC|wp,、))
-				(18,mNEG|d,不)
-				(17,mRELA|c,但))
-			(59,mPUNC|wp,。))
-		(15,mPUNC|wp,，)))
+				(28,eCOO|n,有效期
+					(27,FEAT|n,银行卡)
+					(31,eCOO|n,账户
+						(33,FEAT|n,保险账户)
+						(30,FEAT|n,证券)
+						(40,eCOO|n,机构
+							(39,FEAT|v,开户)
+							(43,eCOO|n,余额
+								(42,FEAT|n,账户)
+								(52,eCOO|n,信息
+									(51,FEAT|n,标记
+										(50,FEAT|v,支付))
+									(53,mDEPD|u,等)
+									(44,mRELA|c,以及)
+									(48,rCONT|v,产生
+										(47,EXP|n,信息
+											(46,FEAT|b,上述)
+											(45,mRELA|p,基于))
+										(49,mDEPD|u,的))))
+							(37,eCOO|n,时间
+								(38,mPUNC|wp,、)
+								(36,rTIME|v,开立
+									(35,EXP|n,账户)))
+							(41,mPUNC|wp,、))
+						(32,mPUNC|wp,、)
+						(34,mPUNC|wp,、)
+						(29,mPUNC|wp,、)))
+				(16,mPUNC|wp,、))
+			(11,mDEPD|c,但)
+			(12,mNEG|d,不))
+		(10,eSUCC|v,包括)
+		(54,mPUNC|wp,。)))
 
-(0,isRoot,107
-	(5,Root|v,指
-		(17,EXP|n,信息
-			(16,SCO|r,各类)
-			(18,mPUNC|wp,，)
-			(14,rCONT|v,产生
-				(9,EXP|n,主体
-					(6,FEAT|n,个人)
-					(8,FEAT|n,信息
-						(7,FEAT|n,金融)))
-				(12,LOC|n,过程
-					(11,FEAT|v,交易)
-					(13,mDEPD|nd,中)
-					(10,mRELA|p,在))
-				(15,mDEPD|u,的)))
+(0,isRoot,124
+	(3,Root|v,指用于
+		(13,DATV|n,信息
+			(14,mPUNC|wp,，)
+			(7,rFEAT|v,具有
+				(5,EXP|n,主体)
+				(11,LINK|n,权限
+					(10,FEAT|v,使用
+						(8,eCOO|v,访问)
+						(9,mRELA|c,或)))
+				(12,mDEPD|u,的)
+				(6,mDEPD|v,是否)))
+		(56,DATV|n,答案
+			(55,FEAT|n,问题)
+			(54,FEAT|v,提示
+				(53,MANN|n,密码))
+			(49,eCOO|n,口令
+				(51,FEAT|a,短信验证码)
+				(48,FEAT|n,动态)
+				(41,eCOO|n,验证码
+					(40,FEAT|n,卡片)
+					(31,eCOO|n,密码
+						(30,dFEAT|v,登录
+							(29,AGT|n,主体
+								(28,FEAT|n,信息
+									(26,FEAT|n,个人)
+									(27,FEAT|n,金融))))
+						(35,eCOO|n,密码
+							(34,FEAT|v,查询
+								(33,AGT|n,账户))
+							(38,eCOO|n,密码
+								(37,FEAT|v,交易)
+								(39,mPUNC|wp,；))
+							(36,mPUNC|wp,、))
+						(32,mPUNC|wp,、)))
+				(43,eCOO|n,CVN
+					(42,mPUNC|wp,（))
+				(45,eCOO|n,CVN2
+					(46,mPUNC|wp,）)
+					(44,mRELA|c,和))
+				(50,mPUNC|wp,、)
+				(52,mPUNC|wp,、)
+				(47,mPUNC|wp,、))
+			(57,mDEPD|u,等))
+		(2,EXP|n,信息
+			(1,rCONT|v,鉴别))
+		(4,dCONT|v,验证)
+		(15,eSUCC|v,包括
+			(18,dLINK|v,限于
+				(20,CONT|n,密码
+					(19,FEAT|n,银行卡)
+					(24,eCOO|n,密码
+						(22,FEAT|n,预付卡)
+						(23,FEAT|v,支付))
+					(21,mPUNC|wp,、))
+				(17,mNEG|d,不)
+				(25,mPUNC|wp,；)
+				(16,mRELA|c,但)))
+		(58,mPUNC|wp,。)))
+
+(0,isRoot,125
+	(4,Root|v,指
+		(16,EXP|n,信息
+			(15,SCO|r,各类)
+			(17,mPUNC|wp,，)
+			(13,rCONT|v,产生
+				(8,EXP|n,主体
+					(5,FEAT|n,个人)
+					(7,FEAT|n,信息
+						(6,FEAT|n,金融)))
+				(11,LOC|n,过程
+					(10,FEAT|v,交易)
+					(12,mDEPD|nd,中)
+					(9,mRELA|p,在))
+				(14,mDEPD|u,的)))
 		(3,EXP|n,信息
 			(2,FEAT|v,交易
-				(1,FEAT|n,金融))
-			(4,mPUNC|wp,，))
-		(19,eSUCC|v,包括
-			(22,dLINK|v,限于
-				(27,CONT|n,记录
-					(26,FEAT|v,支付)
-					(30,eCOO|n,记录
-						(29,FEAT|v,透支)
-						(31,mPUNC|wp,、))
-					(33,eCOO|n,日志
-						(32,FEAT|v,交易)
-						(36,eCOO|n,凭证
-							(35,FEAT|v,交易)
-							(47,eCOO|n,信息
-								(50,eCOO|n,信息
-									(49,FEAT|v,理赔)
-									(51,mDEPD|u,等))
-								(44,eCOO|n,信息
-									(46,FEAT|n,保单)
-									(41,FEAT|v,成交
-										(42,mPUNC|wp,、))
-									(43,FEAT|v,持仓)
-									(39,eCOO|v,委托
-										(38,FEAT|n,证券)
-										(40,mPUNC|wp,、))
-									(45,mPUNC|wp,；))
-								(48,mPUNC|wp,、))
-							(37,mPUNC|wp,；))
-						(34,mPUNC|wp,、))
-					(28,mPUNC|wp,、))
-				(24,DATV|n,金额
-					(23,FEAT|v,交易)
-					(25,mPUNC|wp,、))
-				(21,mNEG|d,不)
-				(20,mRELA|c,但))
-			(52,mPUNC|wp,。))))
+				(1,FEAT|n,金融)))
+		(18,eSUCC|v,包括
+			(21,dLINK|v,限于
+				(23,DATV|n,金额
+					(22,FEAT|v,交易)
+					(24,mPUNC|wp,、))
+				(26,DATV|n,记录
+					(25,FEAT|v,支付)
+					(29,eCOO|n,记录
+						(28,FEAT|v,透支)
+						(32,eCOO|n,日志
+							(31,FEAT|v,交易)
+							(35,eCOO|n,凭证
+								(34,FEAT|v,交易)
+								(36,mPUNC|wp,；))
+							(33,mPUNC|wp,、))
+						(30,mPUNC|wp,、))
+					(43,eCOO|n,信息
+						(45,FEAT|n,保单)
+						(40,FEAT|v,成交
+							(41,mPUNC|wp,、))
+						(42,FEAT|v,持仓)
+						(46,eCOO|n,信息
+							(49,eCOO|n,信息
+								(48,FEAT|v,理赔)
+								(50,mDEPD|u,等))
+							(47,mPUNC|wp,、))
+						(38,eCOO|v,委托
+							(37,FEAT|n,证券)
+							(39,mPUNC|wp,、))
+						(44,mPUNC|wp,；))
+					(27,mPUNC|wp,、))
+				(20,mNEG|d,不)
+				(19,mRELA|c,但))
+			(51,mPUNC|wp,。))))
 
-(0,isRoot,108
-	(5,Root|v,指
-		(8,EXP|n,信息
-			(7,FEAT|a,基本)
-			(6,FEAT|n,个人)
-			(13,eCOO|n,信息
-				(12,dFEAT|v,识别
-					(11,FEAT|n,生物
-						(10,FEAT|n,个人)))
-				(14,mDEPD|u,等))
-			(9,mPUNC|wp,、))
+(0,isRoot,126
+	(4,Root|v,指
 		(3,EXP|n,信息
 			(2,FEAT|n,身份
-				(1,FEAT|n,个人))
-			(4,mPUNC|wp,，))
-		(15,mPUNC|wp,：)))
+				(1,FEAT|n,个人)))
+		(7,LINK|n,信息
+			(6,FEAT|a,基本)
+			(5,FEAT|n,个人)
+			(11,eCOO|n,信息
+				(10,dFEAT|v,识别
+					(9,AGT|n,个人生物))
+				(12,mDEPD|u,等))
+			(8,mPUNC|wp,、))
+		(13,mPUNC|wp,：)))
 
-(0,isRoot,109
+(0,isRoot,127
 	(7,Root|v,限于
 		(10,CONT|n,名称
 			(9,FEAT|b,法定)
@@ -3707,7 +4122,7 @@
 		(6,mNEG|d,不)
 		(64,mPUNC|wp,；)))
 
-(0,isRoot,110
+(0,isRoot,128
 	(5,Root|v,包括
 		(4,EXP|n,信息
 			(3,FEAT|v,识别
@@ -3746,102 +4161,100 @@
 			(37,mPUNC|wp,。)
 			(6,mRELA|c,但))))
 
-(0,isRoot,111
-	(4,Root|v,指
+(0,isRoot,129
+	(3,Root|v,指
 		(2,EXP|n,信息
 			(1,FEAT|n,财产))
-		(27,eSUCC|v,包括
-			(25,EXP|n,信息
-				(24,FEAT|n,财产
-					(22,FEAT|n,信息
-						(20,FEAT|n,个人)
-						(21,FEAT|n,金融))
-					(23,FEAT|n,主体))
-				(26,mPUNC|wp,，)
-				(18,rEXP|v,生成
-					(19,mDEPD|u,的)
-					(17,mRELA|c,或))
-				(16,rPAT|v,收集
-					(6,AGT|n,机构
-						(5,FEAT|n,金融业))
-					(13,LOC|n,过程
-						(8,dFEAT|v,提供
-							(10,CONT|n,产品
-								(9,FEAT|n,金融)
-								(12,eCOO|v,服务
-									(11,mRELA|c,和))))
-						(14,mDEPD|nd,中)
-						(15,mPUNC|wp,，)
-						(7,mRELA|p,在))))
-			(30,dCONT|v,限于
-				(33,CONT|n,状况
-					(31,FEAT|n,个人)
-					(32,FEAT|n,收入)
-					(38,eCOO|n,状况
-						(37,FEAT|n,不动产)
-						(35,FEAT|v,拥有
-							(36,mDEPD|u,的))
-						(39,mPUNC|wp,、))
-					(43,eCOO|n,状况
-						(42,FEAT|n,车辆)
-						(45,eCOO|n,纳税额
-							(49,eCOO|n,金额
-								(48,FEAT|v,存缴
-									(47,CONT|n,公积金))
-								(50,mDEPD|u,等))
-							(46,mPUNC|wp,、))
-						(44,mPUNC|wp,、)
-						(40,rCONT|v,拥有
-							(41,mDEPD|u,的)))
-					(34,mPUNC|wp,、))
-				(29,mNEG|d,不)
-				(28,mRELA|d,但)))
-		(3,mDEPD|v,是)
-		(51,mPUNC|wp,。)))
+		(29,dCONT|v,限于
+			(32,CONT|n,状况
+				(30,FEAT|n,个人)
+				(31,FEAT|n,收入)
+				(37,eCOO|n,状况
+					(36,FEAT|n,不动产)
+					(34,FEAT|v,拥有
+						(35,mDEPD|u,的))
+					(42,eCOO|n,状况
+						(41,FEAT|n,车辆)
+						(39,FEAT|v,拥有
+							(40,mDEPD|u,的))
+						(44,eCOO|n,纳税额
+							(48,eCOO|n,金额
+								(47,FEAT|v,存缴
+									(46,CONT|n,公积金))
+								(49,mDEPD|u,等))
+							(45,mPUNC|wp,、))
+						(43,mPUNC|wp,、))
+					(38,mPUNC|wp,、))
+				(33,mPUNC|wp,、))
+			(27,mDEPD|d,但)
+			(28,mNEG|d,不))
+		(26,eSUCC|v,包括
+			(24,EXP|n,信息
+				(21,FEAT|n,信息
+					(19,FEAT|n,个人)
+					(20,FEAT|n,金融))
+				(23,FEAT|n,财产
+					(22,FEAT|n,主体))
+				(25,mPUNC|wp,，)
+				(17,rEXP|v,生成
+					(18,mDEPD|u,的)
+					(16,mRELA|c,或))
+				(15,rPAT|v,收集
+					(5,AGT|n,机构
+						(4,FEAT|n,金融业))
+					(12,LOC|n,过程
+						(7,dFEAT|v,提供
+							(9,CONT|n,产品
+								(8,FEAT|n,金融)
+								(11,eCOO|v,服务
+									(10,mRELA|c,和))))
+						(13,mDEPD|nd,中)
+						(14,mPUNC|wp,，)
+						(6,mRELA|p,在)))))
+		(50,mPUNC|wp,。)))
 
-(0,isRoot,112
-	(4,Root|v,指
-		(16,CONT|n,信息
-			(17,mPUNC|wp,，)
-			(12,rCONT|v,发生
-				(13,EXP|v,借贷业务)
-				(8,LOC|n,主体
-					(5,FEAT|n,个人)
-					(7,FEAT|n,信息
-						(6,FEAT|n,金融)))
-				(11,LOC|n,机构
-					(10,FEAT|n,金融业)
-					(9,mRELA|p,在)))
-			(14,rCONT|v,产生
-				(15,mDEPD|u,的)))
+(0,isRoot,130
+	(3,Root|v,指
 		(2,EXP|n,信息
 			(1,FEAT|v,借贷))
-		(18,eSUCC|v,包括
-			(21,eSUCC|v,限于
-				(22,CONT|v,授信
-					(24,eCOO|n,信用卡)
-					(23,mPUNC|wp,、))
-				(28,dCONT|v,发放
-					(26,CONT|n,贷款
-						(27,mDEPD|u,的)
-						(25,mRELA|c,和))
-					(33,eCOO|n,情况
-						(30,FEAT|v,还款
-							(31,mPUNC|wp,、)
-							(29,mRELA|c,及))
-						(32,FEAT|v,担保)
-						(34,mDEPD|u,等)))
-				(20,mNEG|d,不)
-				(35,mPUNC|wp,。)
-				(19,mRELA|c,但)))
-		(3,mDEPD|v,是)))
+		(11,dCONT|v,发生
+			(15,CONT|n,信息
+				(13,rCONT|v,产生
+					(14,mDEPD|u,的)))
+			(12,EXP|v,借贷业务)
+			(7,LOC|n,主体
+				(6,FEAT|n,信息
+					(4,FEAT|n,个人)
+					(5,FEAT|n,金融)))
+			(10,LOC|n,机构
+				(9,FEAT|n,金融业)
+				(8,mRELA|p,在)))
+		(17,eSUCC|v,包括
+			(20,eCOO|v,限于
+				(21,CONT|v,授信
+					(23,eCOO|n,信用卡)
+					(22,mPUNC|wp,、))
+				(27,dCONT|v,发放
+					(25,CONT|n,贷款
+						(26,mDEPD|u,的)
+						(24,mRELA|c,和))
+					(32,eCOO|n,情况
+						(29,FEAT|v,还款
+							(30,mPUNC|wp,、)
+							(28,mRELA|c,及))
+						(31,FEAT|v,担保)
+						(33,mDEPD|u,等)))
+				(19,mNEG|d,不)
+				(34,mPUNC|wp,。)
+				(18,mRELA|c,但)))
+		(16,mPUNC|wp,，)))
 
-(0,isRoot,113
+(0,isRoot,131
 	(2,Root|n,信息
 		(1,SCO|r,其他)
 		(3,mPUNC|wp,：)))
 
-(0,isRoot,114
+(0,isRoot,132
 	(19,Root|v,包括
 		(17,EXP|n,信息
 			(3,dFEAT|v,进行
@@ -3881,7 +4294,7 @@
 			(20,mRELA|c,但))
 		(38,mPUNC|wp,；)))
 
-(0,isRoot,115
+(0,isRoot,133
 	(15,Root|n,信息
 		(14,FEAT|n,个人)
 		(13,SCO|r,其他)
@@ -3899,7 +4312,7 @@
 		(11,rEXP|v,保存
 			(12,mDEPD|u,的))))
 
-(0,isRoot,116
+(0,isRoot,134
 	(29,Root|v,分为
 		(24,EXP|n,信息
 			(22,FEAT|n,个人)
@@ -3938,12 +4351,12 @@
 			(1,mRELA|p,根据))
 		(37,mPUNC|wp,。)))
 
-(0,isRoot,117
+(0,isRoot,135
 	(2,Root|v,如下
 		(1,EXP|a,具体)
 		(3,mPUNC|wp,：)))
 
-(0,isRoot,118
+(0,isRoot,136
 	(7,Root|v,鉴别
 		(6,DATV|n,用户
 			(5,mRELA|p,为))
@@ -3954,7 +4367,7 @@
 		(4,mDEPD|d,主要)
 		(9,mPUNC|wp,。)))
 
-(0,isRoot,119
+(0,isRoot,137
 	(27,Root|v,造成
 		(29,CONT|v,危害
 			(28,FEAT|a,严重))
@@ -3991,7 +4404,7 @@
 		(30,mPUNC|wp,，)
 		(35,mPUNC|wp,：)))
 
-(0,isRoot,120
+(0,isRoot,138
 	(2,Root|n,数据
 		(11,FEAT|n,验证码
 			(10,FEAT|n,卡片)
@@ -4021,7 +4434,7 @@
 			(4,mRELA|c,或))
 		(9,mPUNC|wp,、)))
 
-(0,isRoot,121
+(0,isRoot,139
 	(17,Root|n,密码
 		(16,dFEAT|v,登录)
 		(20,eCOO|n,密码
@@ -4047,7 +4460,7 @@
 			(1,EXP|n,账户)
 			(2,mPUNC|wp,（))))
 
-(0,isRoot,122
+(0,isRoot,140
 	(7,Root|n,信息
 		(5,FEAT|n,个人生物)
 		(3,dFEAT|v,鉴别
@@ -4057,12 +4470,39 @@
 		(8,mPUNC|wp,。)
 		(1,rEXP|v,用于)))
 
-(0,isRoot,123
-	(3,Root|n,信息
-		(2,FEAT|n,类别
-			(1,MEAS|m,C2))))
+(0,isRoot,141
+	(5,Root|v,为
+		(3,EXP|n,信息
+			(2,FEAT|n,类别
+				(1,MEAS|m,C2)))
+		(19,LINK|n,信息
+			(15,FEAT|n,状况
+				(14,FEAT|n,金融)
+				(12,eCOO|n,身份
+					(10,FEAT|n,信息
+						(7,FEAT|b,特定)
+						(8,FEAT|n,个人)
+						(9,FEAT|n,金融))
+					(11,FEAT|n,主体))
+				(16,mDEPD|u,的)
+				(13,mRELA|c,与))
+			(17,FEAT|n,个人)
+			(18,FEAT|n,金融)
+			(6,mDEPD|v,可识别)
+			(20,mPUNC|wp,，))
+		(29,LINK|n,信息
+			(28,FEAT|a,关键)
+			(21,mRELA|c,以及)
+			(22,rPAT|v,用于
+				(24,LOC|n,产品
+					(23,FEAT|n,金融)
+					(26,eCOO|v,服务
+						(25,mRELA|c,与)))
+				(27,mDEPD|u,的)))
+		(4,mDEPD|d,主要)
+		(30,mPUNC|wp,。)))
 
-(0,isRoot,124
+(0,isRoot,142
 	(27,Root|v,造成
 		(29,CONT|v,危害
 			(28,FEAT|b,一定))
@@ -4099,7 +4539,7 @@
 		(30,mPUNC|wp,，)
 		(35,mPUNC|wp,：)))
 
-(0,isRoot,125
+(0,isRoot,143
 	(2,Root|n,账号
 		(5,eCOO|n,信息
 			(4,FEAT|v,等效)
@@ -4127,7 +4567,7 @@
 			(3,mRELA|c,及其))
 		(1,rPAT|v,支付)))
 
-(0,isRoot,126
+(0,isRoot,144
 	(18,Root|n,用户名
 		(3,dFEAT|v,包括
 			(1,EXP|n,账户)
@@ -4148,44 +4588,49 @@
 			(15,mPUNC|wp,）)
 			(4,mRELA|c,但))))
 
-(0,isRoot,127
-	(31,Root|v,属于
-		(1,EXP|n,用户鉴别辅助信息)
-		(13,EXP|n,答案
-			(10,dFEAT|v,提示
-				(11,CONT|n,问题)
-				(9,CONT|n,密码
-					(5,eCOO|n,口令
-						(7,FEAT|n,短信验证码)
-						(4,FEAT|n,动态)
-						(3,mDEPD|v,如)
-						(6,mPUNC|wp,、)
-						(8,mPUNC|wp,、)
-						(2,mPUNC|wp,，)))
-				(12,mDEPD|u,的))
-			(16,eCOO|n,密码
-				(15,FEAT|n,动态声纹)
-				(17,mPUNC|wp,；))
-			(14,mPUNC|wp,、))
-		(34,LINK|n,信息
-			(33,FEAT|n,类别)
-			(32,MEAS|m,C3))
-		(26,ePREC|v,完成
-			(25,MANN|a,直接)
-			(28,dCONT|v,鉴别
-				(27,AGT|n,用户))
-			(22,dREAS|v,结合
-				(19,AGT|n,用户鉴别辅助信息)
-				(21,DATV|n,账号
-					(20,mRELA|p,与))
-				(23,eSUCC|v,使用)
-				(18,mRELA|c,若))
-			(24,mDEPD|v,可)
-			(29,mPUNC|wp,，))
-		(35,mPUNC|wp,。)
-		(30,mRELA|c,则)))
+(0,isRoot,145
+	(36,Root|v,属于
+		(39,LINK|n,信息
+			(38,FEAT|n,类别
+				(37,MEAS|m,C3)))
+		(2,dEXP|v,鉴别
+			(1,AGT|n,用户)
+			(4,CONT|n,信息
+				(3,FEAT|v,辅助)
+				(5,mPUNC|wp,，))
+			(13,eSUCC|v,提示
+				(15,CONT|n,答案
+					(14,FEAT|n,问题)
+					(18,eCOO|n,密码
+						(17,FEAT|n,动态声纹))
+					(16,mPUNC|wp,、))
+				(12,CONT|n,密码
+					(8,eCOO|n,口令
+						(10,FEAT|n,短信验证码)
+						(7,FEAT|n,动态)
+						(6,mDEPD|v,如)
+						(9,mPUNC|wp,、)
+						(11,mPUNC|wp,、)))
+				(19,mPUNC|wp,；)))
+		(31,ePREC|v,完成
+			(30,MANN|a,直接)
+			(33,dCONT|v,鉴别
+				(32,AGT|n,用户))
+			(27,dMANN|v,结合
+				(24,CONT|n,信息
+					(23,FEAT|v,辅助)
+					(22,mRELA|v,鉴别
+						(21,AGT|n,用户)))
+				(26,DATV|n,账号
+					(25,mRELA|p,与))
+				(28,eSUCC|v,使用)
+				(20,mRELA|c,若))
+			(29,mDEPD|v,可)
+			(34,mPUNC|wp,，))
+		(40,mPUNC|wp,。)
+		(35,mRELA|c,则)))
 
-(0,isRoot,128
+(0,isRoot,146
 	(2,Root|v,反映
 		(10,CONT|n,信息
 			(8,FEAT|n,状况
@@ -4213,7 +4658,7 @@
 		(1,MANN|a,直接)
 		(26,mPUNC|wp,。)))
 
-(0,isRoot,129
+(0,isRoot,147
 	(10,Root|v,如
 		(8,EXP|n,信息
 			(7,FEAT|a,关键)
@@ -4243,7 +4688,7 @@
 				(14,mRELA|v,如)))
 		(28,mPUNC|wp,。)))
 
-(0,isRoot,130
+(0,isRoot,148
 	(2,Root|v,履行
 		(1,AGT|v,用于)
 		(40,CONT|n,信息
@@ -4286,7 +4731,7 @@
 				(12,mRELA|p,按)))
 		(41,mPUNC|wp,。)))
 
-(0,isRoot,131
+(0,isRoot,149
 	(3,Root|v,识别
 		(8,CONT|n,信息
 			(6,FEAT|n,主体
@@ -4302,7 +4747,7 @@
 		(2,mDEPD|v,能够)
 		(14,mPUNC|wp,。)))
 
-(0,isRoot,132
+(0,isRoot,150
 	(4,Root|v,为
 		(2,EXP|n,信息
 			(1,FEAT|m,C1类别))
@@ -4325,7 +4770,7 @@
 		(3,mDEPD|d,主要)
 		(10,mPUNC|wp,，)))
 
-(0,isRoot,133
+(0,isRoot,151
 	(28,Root|v,造成
 		(30,CONT|v,影响
 			(29,FEAT|b,一定))
@@ -4363,15 +4808,16 @@
 		(31,mPUNC|wp,，)
 		(36,mPUNC|wp,：)))
 
-(0,isRoot,134
-	(2,Root|n,时间
-		(5,eCOO|n,机构
-			(6,mPUNC|wp,；)
-			(4,rEXP|v,开户))
-		(3,mPUNC|wp,、)
-		(1,rTIME|v,开户)))
+(0,isRoot,152
+	(2,Root|v,开立
+		(1,EXP|n,账户)
+		(3,PAT|n,时间
+			(6,eCOO|n,机构
+				(5,FEAT|v,开户))
+			(4,mPUNC|wp,、))
+		(7,mPUNC|wp,；)))
 
-(0,isRoot,135
+(0,isRoot,153
 	(8,Root|n,信息
 		(7,DATV|n,标记
 			(6,FEAT|v,支付)
@@ -4382,7 +4828,7 @@
 				(5,mDEPD|u,的)))
 		(9,mPUNC|wp,；)))
 
-(0,isRoot,136
+(0,isRoot,154
 	(13,Root|n,信息
 		(11,FEAT|n,个人)
 		(12,FEAT|n,金融)
@@ -4398,7 +4844,7 @@
 			(9,mDEPD|u,的)
 			(7,mNEG|d,未))))
 
-(0,isRoot,137
+(0,isRoot,155
 	(42,Root|v,进行
 		(43,CONT|v,分类)
 		(18,DATV|n,信息
@@ -4451,7 +4897,7 @@
 		(32,mDEPD|v,应)
 		(44,mPUNC|wp,，)))
 
-(0,isRoot,138
+(0,isRoot,156
 	(21,Root|v,产生
 		(26,CONT|n,信息
 			(24,FEAT|n,程度
@@ -4480,7 +4926,7 @@
 		(20,mDEPD|v,可能)
 		(27,mPUNC|wp,。)))
 
-(0,isRoot,139
+(0,isRoot,157
 	(4,Root|v,分类
 		(3,CONT|n,视角)
 		(2,EXP|n,领域
@@ -4559,7 +5005,7 @@
 			(40,mPUNC|wp,，))
 		(5,mPUNC|wp,，)))
 
-(0,isRoot,140
+(0,isRoot,158
 	(4,Root|v,分为
 		(8,LINK|n,数据
 			(6,FEAT|n,个人

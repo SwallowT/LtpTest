@@ -1,7 +1,8 @@
+import pickle
 import re
 
 from ltp import LTP
-from gen_tree import trans2s_expr
+from gen_tree import trans2s_expr, load_from_ltp_tuple, save2s_expr
 
 
 def preprocessing(path="data/useful_sent.txt"):
@@ -30,6 +31,7 @@ def ltp_prepro(path="data/useful_sent.txt"):
     sents = [re.sub('^(\*|[a-z]）|[0-9]+）|—|（[一二三四五六七八九十]+）)\s?', '', s) for s in old_sents]
     # 转换为ltp对象
     ltp = LTP()
+    ltp.init_dict(path="../data/user_dict.txt", max_window=4)
     segments, hiddens = ltp.seg(sents)
     sdps = ltp.sdp(hiddens, mode='tree')
 
@@ -64,9 +66,13 @@ if __name__ == '__main__':
 
     sdps = add_pos(ltp, hiddens, sdps)
 
-    outputs = [trans2s_expr(sdp, seg, id) for id, (sdp, seg) in enumerate(zip(sdps, segments))]
+    tree_outputs = [load_from_ltp_tuple(sdp, seg, id) for id, (sdp, seg) in enumerate(zip(sdps, segments))]
+    with open('../data/serialized/original_trees', 'wb') as f:
+        pickle.dump(tree_outputs, f)
 
-    with open("data/trees_output_words.txt", "w", encoding="utf-8") as f:
+    # outputs = [trans2s_expr(sdp, seg, id) for id, (sdp, seg) in enumerate(zip(sdps, segments))]
+    outputs = [save2s_expr(tree) for tree in tree_outputs]
+    with open("../data/trees_output_words.txt", "w", encoding="utf-8") as f:
         for out in outputs:
             f.write(out)
             f.write('\n')

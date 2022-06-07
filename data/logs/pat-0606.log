@@ -1,0 +1,323 @@
+DEBUG: output pattern: /n,/=hypo < (/n,/=hyper < /v.*识别/=keyv), tid: 13, hyper: Node(tag=eCOO|n, identifier=62, data=个人信息), hypo: Node(tag=eCOO|n, identifier=55, data=（如个人位置信息、个人通话记录、网页浏览记录等）)
+DEBUG: output pattern: /EXP/=hyper > (/mDEPD\|v.*是/ > (/ePREC/ $ (/eSUCC/ < (/CONT\|n/=hypo < /mDEPD.*如/=keyv)))), tid: 17, hyper: Node(tag=EXP|n, identifier=3, data=一般个人信息), hypo: Node(tag=CONT|n, identifier=41, data=网络身份标识信息)
+DEBUG: output pattern: /EXP\|n/=hyper > (/Root\|v/ < (/eSUCC.*例如/=keyv < /EXP\|n/=hypo)), tid: 42, hyper: Node(tag=EXP|n, identifier=2, data=直接标识符：微数据), hypo: Node(tag=EXP|n, identifier=21, data=姓名、地址、电子邮件地址、电话号码、传真号码、信用卡号码、车牌号码、车辆识别号码、社会保险号码、健康卡号码、病历号码、设备标识符、生物识别码、互联网协议（IP）地址号和网络通用资源定位符（URL）等)
+INFO: hyper conflict: tree id 13, old 5, new 信息
+INFO: hyper conflict: tree id 42, old 2, new 直接标识符：微数据
+INFO: hyper conflict: tree id 115, old 2, new 账户信息
+INFO: hyper conflict: tree id 117, old 3, new 金融交易信息
+INFO: hyper conflict: tree id 126, old 2, new 信息
+INFO: hyper conflict: tree id 53, old 8, new 可以直接标识个人身份的数据
+DEBUG: time: 1
+INFO: 上义词或下义词被过滤。keyv, hyper, hypo依次为：定为 数据 （公开数据）
+INFO: 上义词或下义词被过滤。keyv, hyper, hypo依次为：定为 （公开数据） 数据
+DEBUG: new key verb: ['有', '分为', '涉及', '限于', '则属于']
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo, tid: 11, hyper: Node(tag=EXP|n, identifier=5, data=直接标识信息), hypo: Node(tag=LINK|n, identifier=8, data=姓名、)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo, tid: 12, hyper: Node(tag=EXP|n, identifier=4, data=准标识信息), hypo: Node(tag=LINK|n, identifier=7, data=性别、)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo, tid: 23, hyper: Node(tag=EXP|n, identifier=12, data=私密个人信息), hypo: Node(tag=LINK|n, identifier=16, data=身体缺陷、女性三围、心理特征、个人感情生活、性取向、未公开的违法犯罪记录、个人身体私密部位信息、个人私密录音等)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo, tid: 14, hyper: Node(tag=EXP|n, identifier=8, data=个人信息), hypo: Node(tag=LINK|n, identifier=21, data=个人基本资料、个人身份信息等多个类别)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo, tid: 25, hyper: Node(tag=EXP|n, identifier=2, data=法人数据), hypo: Node(tag=LINK|n, identifier=6, data=业务数据、经营管理数据、)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo, tid: 44, hyper: Node(tag=EXP|n, identifier=3, data=健康医疗数据), hypo: Node(tag=LINK|n, identifier=8, data=个人属性数据、健康状况数据、医疗应用数据、医疗支付数据、卫生资源数据以及公共卫生数据等)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo, tid: 126, hyper: Node(tag=EXP|n, identifier=24, data=个人金融信息), hypo: Node(tag=LINK|n, identifier=36, data=C3、C2、C1三个类别)
+INFO: hyper conflict: tree id 126, old 2, new 个人金融信息
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,涉及/ $ /,LINK\|n,/=hypo, tid: 36, hyper: Node(tag=EXP|n, identifier=4, data=网络与系统类数据), hypo: Node(tag=LINK|n, identifier=26, data=与运行维护信息、软硬件资源信息、安全管理信息等数据)
+DEBUG: output pattern: /,EXP\|n,/=hyper > /,Root.*,则属于/ $ /,LINK\|n,/=hypo, tid: 137, hyper: Node(tag=EXP|n, identifier=1, data=用户鉴别辅助信息), hypo: Node(tag=LINK|n, identifier=34, data=C3类别信息)
+DEBUG: time: 2
+DEBUG: new key verb: []
+DEBUG: 13 /n,/=hypo < (/n,/=hyper < /v.*识别/=keyv)
+DEBUG: 17 /EXP/=hyper > (/mDEPD\|v.*是/ > (/ePREC/ $ (/eSUCC/ < (/CONT\|n/=hypo < /mDEPD.*如/=keyv))))
+DEBUG: 42 /EXP\|n/=hyper > (/Root\|v/ < (/eSUCC.*例如/=keyv < /EXP\|n/=hypo))
+DEBUG: 1 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 2 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 7 /,EXP\|n,/=hyper> (/,指/ < (/,国家秘密、重要数据、商业秘密、个人信息、条件或禁止共享开放的公共数据、知识产权作品等/ < /,rPAT\|v,/=hypo $ /mDEPD\|v/=keyv))
+DEBUG: 10 /,EXP\|n,/=hyper > /,Root.*,属于/ $ /,EXP\|n,/=hypo
+DEBUG: 18 /,EXP\|n,/=hyper> (/,是/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+DEBUG: 27 /,EXP\|n,/=hyper> (/,是/ < (/,组织进行内部管理过程中收集和产生的数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 28 /,EXP\|n,/=hyper> (/,指/ < (/,网络、系统、应用及网络安全数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 34 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 35 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 43 /,EXP\|a,/=hyper> (/,结合/ < (/,识别/ < /,eSUCC\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 59 /,Root\|n,/=hyper< (/,数据/ < /,rCONT\|v,/=hypo)
+DEBUG: 66 /,EXP\|n,/=hyper > /,Root.*,例如/ $ /,LINK\|n,/=hypo
+DEBUG: 69 /,Root\|n,/=hyper< /,eCOO\|n,/=hypo
+DEBUG: 72 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 73 /,EXP\|n,/=hyper> (/,指/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+DEBUG: 81 /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,DATV\|n,/=hypo > (/限于/>/包括/)
+DEBUG: 82 /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,sLOC\|n,/=hypo > (/限于/>/包括/)
+DEBUG: 98 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 108 /,EXP\|n,/=hyper> (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 109 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 110 /,EXP\|n,/=hyper> (/,指/ < (/,泄露/ < (/,eSUCC.*,如/ < /,LINK\|n,/=hypo)))
+DEBUG: 111 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|v,/=hypo
+DEBUG: 112 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 113 /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,sLOC\|n,/=hypo > (/限于/>/包括/)))
+DEBUG: 114 /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 116 /,EXP\|n,/=hyper> (/,指用于/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 117 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,DATV\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 119 /,EXP\|n,/=hyper > /,Root.*,限于/ $ /,LINK\|n,/=hypo $ /mDEPD\|v/=keyv
+DEBUG: 120 /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/)))
+DEBUG: 121 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 139 /,EXP\|n,/=hyper > /,Root.*,如/ $ /,LINK\|n,/=hypo
+DEBUG: 11 /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 12 /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 23 /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 14 /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 25 /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 44 /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 126 /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 36 /,EXP\|n,/=hyper > /,Root.*,涉及/ $ /,LINK\|n,/=hypo
+DEBUG: 137 /,EXP\|n,/=hyper > /,Root.*,则属于/ $ /,LINK\|n,/=hypo
+DEBUG: 3 /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 5 /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 37 /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+DEBUG: 38 /,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 39 /,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 115 /,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,限于/ < /,DATV\|n,/=hypo))
+DEBUG: 122 /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,eSUCC.*,限于/ < /,CONT\|v,/=hypo)))
+DEBUG: 149 /,PAT\|n,/=hyper < /将/ > /,eSUCC.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 150 /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+DEBUG: 13: /n,/=hypo < (/n,/=hyper < /v.*识别/=keyv)
+DEBUG: 17: /EXP/=hyper > (/mDEPD\|v.*是/ > (/ePREC/ $ (/eSUCC/ < (/CONT\|n/=hypo < /mDEPD.*如/=keyv))))
+DEBUG: 42: /EXP\|n/=hyper > (/Root\|v/ < (/eSUCC.*例如/=keyv < /EXP\|n/=hypo))
+DEBUG: 1: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 2: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 7: /,EXP\|n,/=hyper> (/,指/ < (/,国家秘密、重要数据、商业秘密、个人信息、条件或禁止共享开放的公共数据、知识产权作品等/ < /,rPAT\|v,/=hypo $ /mDEPD\|v/=keyv))
+DEBUG: 10: /,EXP\|n,/=hyper > /,Root.*,属于/ $ /,EXP\|n,/=hypo
+DEBUG: 18: /,EXP\|n,/=hyper> (/,是/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+DEBUG: 27: /,EXP\|n,/=hyper> (/,是/ < (/,组织进行内部管理过程中收集和产生的数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 28: /,EXP\|n,/=hyper> (/,指/ < (/,网络、系统、应用及网络安全数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 34: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 35: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 43: /,EXP\|a,/=hyper> (/,结合/ < (/,识别/ < /,eSUCC\|n,/=hypo < /mDEPD\|v/=keyv))
+DEBUG: 59: /,Root\|n,/=hyper< (/,数据/ < /,rCONT\|v,/=hypo)
+DEBUG: 66: /,EXP\|n,/=hyper > /,Root.*,例如/ $ /,LINK\|n,/=hypo
+DEBUG: 69: /,Root\|n,/=hyper< /,eCOO\|n,/=hypo
+DEBUG: 72: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 73: /,EXP\|n,/=hyper> (/,指/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+DEBUG: 81: /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,DATV\|n,/=hypo > (/限于/>/包括/)
+DEBUG: 82: /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,sLOC\|n,/=hypo > (/限于/>/包括/)
+DEBUG: 98: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 108: /,EXP\|n,/=hyper> (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+DEBUG: 109: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 110: /,EXP\|n,/=hyper> (/,指/ < (/,泄露/ < (/,eSUCC.*,如/ < /,LINK\|n,/=hypo)))
+DEBUG: 111: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|v,/=hypo
+DEBUG: 112: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 113: /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,sLOC\|n,/=hypo > (/限于/>/包括/)))
+DEBUG: 114: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+DEBUG: 116: /,EXP\|n,/=hyper> (/,指用于/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 117: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,DATV\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 119: /,EXP\|n,/=hyper > /,Root.*,限于/ $ /,LINK\|n,/=hypo $ /mDEPD\|v/=keyv
+DEBUG: 120: /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/)))
+DEBUG: 121: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+DEBUG: 139: /,EXP\|n,/=hyper > /,Root.*,如/ $ /,LINK\|n,/=hypo
+DEBUG: 11: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 12: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 23: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+DEBUG: 14: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 25: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 44: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 126: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 36: /,EXP\|n,/=hyper > /,Root.*,涉及/ $ /,LINK\|n,/=hypo
+DEBUG: 137: /,EXP\|n,/=hyper > /,Root.*,则属于/ $ /,LINK\|n,/=hypo
+DEBUG: 3: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 5: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 37: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+DEBUG: 38: /,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 39: /,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 115: /,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,限于/ < /,DATV\|n,/=hypo))
+DEBUG: 122: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,eSUCC.*,限于/ < /,CONT\|v,/=hypo)))
+DEBUG: 149: /,PAT\|n,/=hyper < /将/ > /,eSUCC.*,分为/ $ /,LINK\|n,/=hypo
+DEBUG: 150: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper> (/,是/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,属于/ $ /,EXP\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,DATV\|n,/=hypo > (/限于/>/包括/)
+INFO: output pattern: /,Root\|n,/=hyper< (/,数据/ < /,rCONT\|v,/=hypo)
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指用于/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,eSUCC.*,限于/ < /,CONT\|v,/=hypo)))
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,涉及/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper> (/,是/ < (/,组织进行内部管理过程中收集和产生的数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,例如/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper> (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,泄露/ < (/,eSUCC.*,如/ < /,LINK\|n,/=hypo)))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,sLOC\|n,/=hypo > (/限于/>/包括/)))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,DATV\|n,/=hypo > (/限于/>/包括/))))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/)))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+INFO: output pattern: /EXP/=hyper > (/mDEPD\|v.*是/ > (/ePREC/ $ (/eSUCC/ < (/CONT\|n/=hypo < /mDEPD.*如/=keyv))))
+INFO: output pattern: /EXP\|n/=hyper > (/Root\|v/ < (/eSUCC.*例如/=keyv < /EXP\|n/=hypo))
+INFO: output pattern: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,PAT\|n,/=hyper < /将/ > /,eSUCC.*,分为/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,国家秘密、重要数据、商业秘密、个人信息、条件或禁止共享开放的公共数据、知识产权作品等/ < /,rPAT\|v,/=hypo $ /mDEPD\|v/=keyv))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+INFO: output pattern: /,PAT\|n,/=hyper > /,Root.*,包括/ $ /,sLOC\|n,/=hypo > (/限于/>/包括/)
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,则属于/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,限于/ $ /,LINK\|n,/=hypo $ /mDEPD\|v/=keyv
+INFO: output pattern: /,Root\|n,/=hyper< /,eCOO\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|v,/=hypo
+INFO: output pattern: /,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /,EXP\|n,/=hyper > /,Root.*,如/ $ /,LINK\|n,/=hypo
+INFO: output pattern: /n,/=hypo < (/n,/=hyper < /v.*识别/=keyv)
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,网络、系统、应用及网络安全数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+INFO: output pattern: /,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,限于/ < /,DATV\|n,/=hypo))
+INFO: output pattern: /,EXP\|a,/=hyper> (/,结合/ < (/,识别/ < /,eSUCC\|n,/=hypo < /mDEPD\|v/=keyv))
+INFO: output pattern: /,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+DEBUG: 1 hyper:重要数据
+DEBUG: 1 hypo:['国家秘密']
+DEBUG: 2 hyper:重要数据
+DEBUG: 2 hypo:['个人信息']
+DEBUG: 3 hyper:数据
+DEBUG: 3 hypo:['公共数据', '个人信息', '法人数据类别']
+DEBUG: 4 hyper:数据
+DEBUG: 5 hyper:数据
+DEBUG: 5 hypo:['公共传播数据和非公共传播数据']
+DEBUG: 6 hyper:公共传播数据
+DEBUG: 7 hyper:非公共传播数据
+DEBUG: 7 hypo:['有同意的', '未经同意的']
+DEBUG: 8 hypo:['内部级', '敏感级', '重要级', '核心级数据']
+DEBUG: 9 hypo:['准标识信息', '非标识信息', '直接标识信息']
+DEBUG: 10 hyper:个人信息
+DEBUG: 10 hypo:['直接标识信息', '准标识信息']
+DEBUG: 11 hyper:直接标识信息
+DEBUG: 11 hypo:['姓名', '车辆识别号码', '社会保险号码', '唯一设备识别码', '公民身份号码', '电子邮件地址', '移动电话号码', '银行卡号码']
+DEBUG: 12 hyper:准标识信息
+DEBUG: 12 hypo:['出生日期或年龄', ['事件日期及地点', ['入院', '手术', '出院', '访问']], '职业', '婚姻状况', '受教育水平', '宗教信仰', '性别']
+DEBUG: 13 hyper:信息
+DEBUG: 13 hypo:[['', ['个人位置信息', '个人通话记录', '网页浏览记录']], '个人信息', '个人信息']
+DEBUG: 14 hyper:个人信息
+DEBUG: 14 hypo:['个人基本资料', '个人身份信息']
+DEBUG: 15 hypo:['一般个人信息与敏感个人信息']
+DEBUG: 17 hyper:一般个人信息
+DEBUG: 17 hypo:['网络身份标识信息']
+DEBUG: 18 hyper:敏感个人信息
+DEBUG: 18 hypo:['生物识别', '宗教信仰', '特定身份', '医疗健康', '金融账户', '行踪轨迹', '不满']
+DEBUG: 19 hypo:['敏感个人信息', '个人信息']
+DEBUG: 20 hypo:['特定身份', '医疗健康', '性取向信息', '犯罪记录', '侵害人格尊严的']
+DEBUG: 22 hyper:私密个人信息
+DEBUG: 23 hyper:私密个人信息
+DEBUG: 23 hypo:['身体缺陷', '女性三围', '心理特征', '个人感情生活', '性取向', '未公开的违法犯罪记录', '个人身体私密部位信息', '个人私密录音']
+DEBUG: 25 hyper:法人数据
+DEBUG: 25 hypo:['业务数据', '经营管理数据', '系统运行和安全数据三类']
+DEBUG: 26 hyper:业务数据
+DEBUG: 27 hyper:经营管理数据
+DEBUG: 27 hypo:['经营战略', '财务数据', '并购及融资信息', '经营信息']
+DEBUG: 28 hyper:系统运行和安全数据
+DEBUG: 28 hypo:['网络和信息系统的配置数据', '网络安全监测数据', '备份数据', '日志数据', '安全漏洞信息']
+DEBUG: 32 hyper:敏感个人信息
+DEBUG: 34 hyper:用户相关数据
+DEBUG: 34 hypo:['身份相关数据', '服务内容数据', '用户服务衍生数据']
+DEBUG: 35 hyper:企业自身数据
+DEBUG: 35 hypo:['网络与系统类数据', '企业管理类数据', '合作伙伴数据']
+DEBUG: 36 hyper:网络与系统类数据
+DEBUG: 36 hypo:['运行维护信息', '软硬件资源信息', '安全管理信息', '企业战略', '规划建设', '经营分析', '办公自动化']
+DEBUG: 37 hyper:企业数据
+DEBUG: 37 hypo:['用户相关数据和企业自身相关数据']
+DEBUG: 38 hyper:公共数据
+DEBUG: 38 hypo:['综合政务', '经济管理', '国土资源', '能源', '工业', '交通', '邮政', '信息产业', '城乡建设', '城市管理', '环境保护', '口岸物流', '农业', '水利', '财政', '商业', '贸易', '旅游', '服务业', '气象', '水文', '测绘', '地震', '对外事务', '政法', '监察', '科技', '教育', '文化', '卫生', '体育', '军事', '国防', '劳动', '人事', '民政', '社区', '文秘', '行政', '综合党团']
+DEBUG: 39 hyper:公共数据
+DEBUG: 39 hypo:['大类', '农', '林', '牧', '渔业', '采矿业', '制造业', '电力', '热力', '燃气及水生产和供应业', '建筑业', '交通运输', '仓储和邮政业', '住宿和餐饮业', '软件', '信息技术服务业', '金融业', '房地产业', '租赁和商务服务业', '科学研究和技术服务业', '水利', '环境和公共设施管理业', '居民服务', '修理服务业', '文化', '体育和娱乐业', '社会组织']
+DEBUG: 40 hyper:公共数据
+DEBUG: 41 hyper:数据
+DEBUG: 42 hyper:直接标识符
+DEBUG: 42 hypo:['姓名', '地址', '电子邮件地址', '电话号码', '传真号码', '信用卡号码', '车牌号码', '车辆识别号码', '社会保险号码', '健康卡号码', '病历号码', '设备标识符', '生物识别码', '互联网协议（IP）地址号和网络通用资源定位符（URL）']
+DEBUG: 43 hyper:准标识符
+DEBUG: 43 hypo:['性别', '出生日期或年龄', ['事件日期', ['入院', '手术', '出院', '访问']], ['地点', ['邮政编码', '建筑名称', '地区']], '族裔血统', '出生国', '语言', '原住民身份', '可见的少数民族地位', '职业', '婚姻状况', '受教育水平', '上学年限', '犯罪历史', '总收入和宗教信仰']
+DEBUG: 44 hyper:健康医疗数据
+DEBUG: 44 hypo:['个人属性数据', '健康状况数据', '医疗应用数据', '医疗支付数据', '卫生资源数据以及公共卫生数据']
+DEBUG: 45 hyper:建议数据
+DEBUG: 46 hyper:数据
+DEBUG: 49 hypo:['不能个人身份的']
+DEBUG: 56 hypo:['个人健康医疗数据']
+DEBUG: 59 hypo:['既往病史', '社会史', '家族史', '症状和生活方式', '数据', '既往病史', '社会史', '家族史', '症状和生活方式']
+DEBUG: 61 hyper:数据
+DEBUG: 64 hypo:[]
+DEBUG: 66 hyper:健康医疗服务相关数据
+DEBUG: 66 hypo:['医嘱', '诊断', '操作', '药物', '医疗效果']
+DEBUG: 68 hyper:个人的支付或医保相关数据
+DEBUG: 69 hyper:医学科研相关数据
+DEBUG: 69 hypo:['临床研究病例数据', '生物样本库', '全基因组', '医学相关队列研究结果']
+DEBUG: 70 hyper:公共卫生与预防医学数据
+DEBUG: 71 hyper:妇幼保健数据
+DEBUG: 72 hyper:汽车数据
+DEBUG: 72 hypo:['涉']
+DEBUG: 73 hyper:敏感个人信息
+DEBUG: 73 hypo:['车辆行踪轨迹', '音频', '视频', '图像和生物识别特征']
+DEBUG: 74 hyper:重要数据
+DEBUG: 75 hypo:['军事管理区', '国防科工单位以及县级以上党政机关', '人员流量', '车辆流量']
+DEBUG: 78 hypo:['人脸信息', '车牌信息', '图像数据']
+DEBUG: 80 hypo:['国家网信部门和国务院发展改革', '工业和信息化', '公安', '交通运输']
+DEBUG: 81 hyper:工业企业工业数据
+DEBUG: 81 hypo:[['研发数据域', ['研发设计数据', '开发测试数据']], ['生产数据域', ['控制信息', '工况状态', '工艺参数', '系统日志']], ['运维数据域', ['物流数据', '产品售后服务数据']], ['管理数据域', ['系统设备资产信息', '客户与产品信息', '产品供应链数据', '业务统计数据']]]
+DEBUG: 82 hyper:平台企业工业数据
+DEBUG: 82 hypo:[['平台运营数据域和企业管理数据域（客户数据', ['物联采集数据', '知识库模型库数据', '研发数据']], '业务合作数据', '人事财务数据']
+DEBUG: 83 hyper:重要数据
+DEBUG: 84 hypo:['反映国家战略储备', '应急动员能力', '战略物资产能', '储备量', '重要数据']
+DEBUG: 86 hypo:['反映关键信息基础设施的']
+DEBUG: 87 hypo:['源代码', '集成电路布图', '技术方案', '重要参数', '实验数据', '检测报告', '出口管制物项的设计原理', '工艺流程', '制作方法等的信息']
+DEBUG: 88 hypo:['满足一定精度要求的']
+DEBUG: 89 hypo:['反映重点安保单位', '重要生产企业', ['国家重要资产的施工图', ['铁路', '输油管道']]]
+DEBUG: 90 hypo:['未公开的', '重要数据']
+DEBUG: 91 hypo:['反映群体健康生理状况', '族群特征', '遗传信息', '人口普查资料', '人类遗传资源信息', '基因测序原始数据']
+DEBUG: 92 hypo:['国家自然资源', '环境基础数据公开的', '水情信息', '水文观测数据', '气象观测数据', '环保监测数据', '未公开的', '水情信息', '水文观测数据', '气象观测数据', '环保监测数据', '未公开的']
+DEBUG: 93 hypo:['关系科技实力']
+DEBUG: 94 hypo:['重点企业金融交易数据', '重要装备生产制造信息', '以及国家重大工程施工过程中的重要装备配备', '使用']
+DEBUG: 95 hypo:['军工企业用车信息']
+DEBUG: 96 hypo:['未公开的统计数据', '未公开的政务数据', '工作秘密', '情报数据和执法司法数据']
+DEBUG: 98 hyper:个人金融信息
+DEBUG: 98 hypo:['账户信息', '鉴别信息', '金融交易信息', '个人身份信息', '财产信息', '借贷信息', '其他反映特定个人情况的']
+DEBUG: 101 hyper:重要数据
+DEBUG: 103 hyper:C3类别信息
+DEBUG: 105 hyper:C2类别信息
+DEBUG: 107 hyper:C1类别信息
+DEBUG: 108 hyper:敏感个人信息
+DEBUG: 108 hypo:['种族', '民族', '宗教信仰', '个人生物特征', '医疗健康', '金融账户', '个人行踪']
+DEBUG: 109 hyper:个人信息
+DEBUG: 109 hypo:['自然人的姓名', '出生日期', '身份证件号码', '个人生物识别信息', '住址', '电话号码']
+DEBUG: 110 hyper:重要数据
+DEBUG: 110 hypo:['未公开的政府信息']
+DEBUG: 111 hyper:重要数据
+DEBUG: 111 hypo:['企业']
+DEBUG: 112 hyper:个人金融信息
+DEBUG: 112 hypo:['账户信息', '鉴别信息', '金融交易信息', '个人身份信息', '财产信息', '借贷信息', '其他反映特定个人情况的']
+DEBUG: 113 hyper:敏感信息
+DEBUG: 113 hypo:['个人金融信息', '芯片效信息', '卡片验证码', '卡片有效期', '银行卡密码', '网络支付交易密码', '银行卡磁道数据']
+DEBUG: 114 hyper:个人金融信息
+DEBUG: 114 hypo:['账户信息', '鉴别信息', '金融交易信息', '个人身份信息', '财产信息', '借贷信息', '反映特定个人金融信息主体情况的']
+DEBUG: 115 hyper:账户信息
+DEBUG: 115 hypo:['支付账号', '银行卡磁道数据（或芯片效信息）', '银行卡有效期', '证券账户', '保险账户', '账户开立时间', '开户机构', '账户余额以及基于上述信息产生的支付标记信息']
+DEBUG: 116 hyper:信息
+DEBUG: 116 hypo:['银行卡密码', '预付卡支付密码', '个人金融信息主体登录密码', '账户查询密码', '交易密码', '卡片验证码（CVN和CVN2）', '动态口令', '短信验证码', '密码提示问题答案']
+DEBUG: 117 hyper:金融交易信息
+DEBUG: 117 hypo:['支付记录', '透支记录', '交易日志', '交易凭证', '证券委托', '成交', '持仓信息', '保单', '信息', '理赔信息', '交易金额']
+DEBUG: 118 hyper:个人身份信息
+DEBUG: 119 hyper:个人基本信息
+DEBUG: 119 hypo:['客户法定名称', '性别', '国籍', '民族', '职业', '婚姻状况', '家庭状况', '收入情况', '身份证和护照', '手机号码', '固定电话号码', '电子邮箱', '工作及家庭地址', '收集的']
+DEBUG: 120 hyper:个人生物识别信息
+DEBUG: 120 hypo:['指纹', '人脸', '虹膜', '耳纹', '掌纹', '静脉', '声纹', '眼纹', '步态', '笔迹', '生物特征样本数据', '特征值与模板']
+DEBUG: 121 hyper:财产信息
+DEBUG: 121 hypo:['个人收入状况', '拥有的不动产状况', '拥有的车辆状况', '纳税额', '公积金存缴金额']
+DEBUG: 122 hyper:借贷信息
+DEBUG: 122 hypo:['授信', '信用卡']
+DEBUG: 124 hypo:['特定个人金融信息主体的消费意愿', '支付习惯和其他衍生信息']
+DEBUG: 126 hyper:信息
+DEBUG: 126 hypo:['C3', 'C2', 'C1类别']
+DEBUG: 128 hyper:C3类别信息
+DEBUG: 130 hypo:['银行卡磁道数据（或芯片效信息）', '卡片验证码（CVN和CVN2）', '卡片有效期', '银行卡密码', '网络支付交易密码']
+DEBUG: 131 hypo:[['账户登录密码', ['支付账号', '证券账户', '保险账户']], '交易密码', '查询密码']
+DEBUG: 133 hyper:C2类别信息
+DEBUG: 135 hypo:['支付账号', ['证件类识别标识与证件信息', ['身份证', '护照']], '手机号码']
+DEBUG: 136 hypo:['登录的']
+DEBUG: 137 hyper:用户鉴别辅助信息
+DEBUG: 137 hypo:['C3类别信息', '动态口令', '短信验证码', '密码提示问题的答案', '动态声纹密码']
+DEBUG: 138 hypo:['个人财产信息（包括网络支付账号余额）', '借贷信息']
+DEBUG: 139 hyper:用于关键信息
+DEBUG: 139 hypo:[['交易信息', ['交易指令', '交易流水', '证券委托', '保险理赔']]]
+DEBUG: 141 hypo:['家庭地址等']
+DEBUG: 142 hyper:C1类别信息
+DEBUG: 144 hypo:['时间', '开户机构']
+DEBUG: 149 hyper:数据
+DEBUG: 149 hypo:['工业数据', '电信数据', '交通数据', '自然资源数据', '卫生健康数据', '教育数据', '科技数据']
+DEBUG: 150 hyper:政务数据
+DEBUG: 150 hypo:['个人的数据', '组织的数据']

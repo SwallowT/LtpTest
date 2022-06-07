@@ -1,27 +1,28 @@
 import logging
+import pickle
 from collections import defaultdict, Counter
 from operator import attrgetter
 from typing import List
 import re
 
-from gen_tree import load_from_sexp_file
 from treelib import Tree, Node
 from gen_tree import save2s_expr, show_tree
+from recgniz_pattern import OBJ
 
 logging.basicConfig(level=logging.DEBUG,  # 控制台打印的日志级别
-                    filename='data/logs/new.log',
+                    filename='../data/logs/new.log',
                     filemode='w',  # 模式，有w和a，默认是a
                     format=
                     '%(asctime)s - %(levelname)s: %(message)s'
                     # 日志格式
                     )
 
-verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下']  # '可识别为', '是', '如', '涉及'
+verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有：', '如下']  # '可识别为', '是', '如', '涉及'
 not_to_delete = verb_keys + ['将']
 
 SCENE = ['TOOL', 'MATL', 'MANN', 'SCO', 'REAS', 'TIME', 'LOC', 'STAT']  # , 'FEAT', 'MEAS'
 dump_tag = SCENE + ['mRELA', 'mDEPD']  # 删除情景依存关系\关系标记\依附标记
-merge_tag = ['FEAT', 'rFEAT', 'dFEAT', 'MEAS', 'eCOO', 'rCONT', 'rPAT', 'rEXP']  # 删除子树FEAT\MEAS\eCOO并合并到父节点, 'mNEG'
+merge_tag = ['FEAT', 'rFEAT', 'dFEAT', 'MEAS', 'eCOO']  # 删除子树FEAT\MEAS\eCOO并合并到父节点, 'mNEG', 'rEXP', 'rCONT', 'rPAT'
 
 record_comma_path = []  # [node_id,] 记录每棵树逗号路径上的节点
 record_comma = []  # [node_id,] 记录每棵树逗号路径上的节点
@@ -31,6 +32,45 @@ commas = ("，", "；", '：')  # , '。'
 
 def is_endswith_comma(node: Node) -> bool:
     return node.data.endswith(commas)
+
+
+def delete_before_merge(tree: Tree):
+    new_tree = Tree(tree, deep=True)
+    for id in tree.expand_tree():
+
+        if tree.depth(id) < 3:
+            continue
+
+        node: Node = tree.get_node(id)
+        sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
+
+        if (sdp_tag == 'FEAT' and pos_tag == 'a' and '的' in node.data) \
+                or (node.tag == 'mRELA|p' and node.data == '关于')\
+                or ('dFEAT' in node.tag and any([c.data == '一旦' for c in tree.children(id)])):
+            if new_tree.contains(id):
+                new_tree.remove_node(id)
+    return new_tree
+
+
+def should_merge(node: Node, tree: Tree) -> bool:
+    id = node.identifier
+    sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
+    parent_id = node.predecessor(tree.identifier)
+
+    res = False
+    if sdp_tag in merge_tag \
+            or (sdp_tag in OBJ and 'n' in tree[parent_id].tag) \
+            or (node.tag == 'SCO|r' and node.data == '其他') \
+            or ('rEXP' in node.tag and node.data == '限于'):  # /n/</,(PAT|CONT|DATV|LINK)/
+        res = True
+        if tree[parent_id].tag == 'Root|v':
+            res = False  # 不能融合到动词根节点上
+        if sdp_tag == 'MEAS' and 'v' in tree[parent_id].tag:
+            res = False  # MEAS > v，不融合
+        if sdp_tag == 'eCOO' and pos_tag == 'v' and any(
+                [re.search('[0-9]级', c.data) for c in tree.children(id)]):
+            res = False  # /eCOO\|v/ < /[0-9]级/，不融合
+    return res
 
 
 def Rule_Merge(old_tree: Tree):
@@ -54,15 +94,8 @@ def Rule_Merge(old_tree: Tree):
         if id in dumped_ids or id == 0:
             continue
 
-        sdp_tag, pos_tag = node.tag.split("|", maxsplit=1)
-        if sdp_tag in merge_tag:
-            parent_id = node.predecessor(old_tree.identifier)
-            if old_tree[parent_id].tag == 'Root|v':
-                continue  # 不能融合到动词根节点上
-            if sdp_tag == 'MEAS' and 'v' in old_tree[parent_id].tag:
-                continue  # MEAS > v，不融合
-            if sdp_tag == 'eCOO' and pos_tag=='v' and any([re.search('[0-9]级', c.data) for c in old_tree.children(id)]):
-                continue  # /eCOO\|v/ < /MEAS/，不融合
+        parent_id = node.predecessor(old_tree.identifier)
+        if should_merge(node, old_tree):
             # 处理逗号
             if id > parent_id and parent_id in record_comma_path:  # 父节点
                 if parent_id not in record_comma:  # parent没逗号
@@ -77,10 +110,16 @@ def Rule_Merge(old_tree: Tree):
 
                         if comma_id == max_id:  # 逗号在最右边，直接合并所有
                             record_comma.append(parent_id)
+                            # 如果有兄弟节点在自己之前，应该一起合并
+                            siblings = new_tree.siblings(id)
+                            for s in siblings:
+                                if parent_id < s.identifier < id and should_merge(s, old_tree) and s.identifier not in dumped_ids:
+                                    delete_and_merge(parent_id, s)
                             delete_and_merge(parent_id, node)
+
                         else:
                             record_comma.append(id)
-                            for child in old_tree.children(node.identifier):
+                            for child in old_tree.children(id):
                                 if (child.identifier < comma_id and child.identifier not in record_comma_path) or (
                                         child.identifier == comma_id and child.is_leaf(old_tree.identifier)):
                                     # 子节点在逗号左边
@@ -241,6 +280,7 @@ def strip_punc(tree: Tree):
 def cut_tree(ltp_tree):
     mark_entity(ltp_tree)  # 实体节点防删
     move_punc(ltp_tree)  # 标点附回去
+    ltp_tree = delete_before_merge(ltp_tree)
     ltp_tree = Rule_Merge(ltp_tree)  # 合并依存关系
     strip_punc(ltp_tree)
     ltp_tree = Rule_Delete(ltp_tree, isprint=True)  # 删除该删除的依存关系tag
@@ -249,10 +289,16 @@ def cut_tree(ltp_tree):
 
 
 if __name__ == "__main__":
-    trees = load_from_sexp_file('data/trees_output_words.txt')
-
-    with open(f'data/cutted_trees_sexpr.txt', 'w', encoding='utf-8') as f:  # merged
+    # trees = load_from_sexp_file('data/trees_output_words.txt')
+    with open('../data/serialized/original_trees', 'rb') as f:
+        trees = pickle.load(f)
+    new_trees = []
+    with open(f'../data/cutted_trees_sexpr.txt', 'w', encoding='utf-8') as f:  # merged
         for i, tree in enumerate(trees):
             cutted_tree = cut_tree(tree)
             # show_tree(cutted_tree)
+            new_trees.append(cutted_tree)
             f.write(save2s_expr(cutted_tree))
+
+    with open(f'../data/serialized/cutted_trees', 'wb') as f:
+        pickle.dump(new_trees, f)

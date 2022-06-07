@@ -1,0 +1,36 @@
+/,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+/,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|v,/=hypo
+/EXP\|n/=hyper > (/Root\|v/ < (/eSUCC.*例如/=keyv < /EXP\|n/=hypo))
+/,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,DATV\|n,/=hypo > (/限于/>/包括/))))
+/n,/=hypo < (/n,/=hyper < /v.*识别/=keyv)
+/,EXP\|n,/=hyper > /,Root.*,有/ $ /,LINK\|n,/=hypo
+/,EXP\|n,/=hyper> (/,指/ < (/,泄露/ < (/,eSUCC.*,如/ < /,LINK\|n,/=hypo)))
+/,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,发生/ < /,CONT\|n,/=hypo))
+/,EXP\|n,/=hyper> (/,是/ < (/,组织进行内部管理过程中收集和产生的数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+/,EXP\|n,/=hyper > /,Root.*,限于/ $ /,LINK\|n,/=hypo $ /mDEPD\|v/=keyv
+/,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,限于/ < /,CONT\|n,/=hypo))
+/,EXP\|n,/=hyper> (/,指/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+/,EXP\|n,/=hyper> (/,指/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+/,EXP\|n,/=hyper > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+/EXP/=hyper > (/mDEPD\|v.*是/ > (/ePREC/ $ (/eSUCC/ < (/CONT\|n/=hypo < /mDEPD.*如/=keyv))))
+/,EXP\|n,/=hyper> (/,指/ < (/,网络、系统、应用及网络安全数据/ < /,eCOO\|n,/=hypo < /mDEPD\|v/=keyv))
+/,EXP\|n,/=hyper > /,Root.*,指/ $ /,LINK\|n,/=hypo < /mDEPD\|v/=keyv
+/,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+/,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/)))
+/,EXP\|n,/=hyper > /,Root.*,如/ $ /,LINK\|n,/=hypo
+/,EXP\|n,/=hyper> (/,是/ < (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo)))
+/,Root\|n,/=hyper< (/,检查/ < /,CONT\|n,/=hypo)
+/,EXP\|n,/=hyper > /,Root.*,为/ $ /,LINK\|n,/=hypo
+/,EXP\|n,/=hyper> (/,Root.*,包括/ < (/,限于/ < /,sLOC\|n,/=hypo > (/限于/>/包括/)))
+/,EXP\|n,/=hyper> (/,指用于/ < (/,eSUCC.*,包括/ < (/,限于/ < /,CONT\|n,/=hypo > (/限于/>/包括/))))
+/,EXP\|n,/=hyper> (/,指/ < (/,dCONT.*,限于/ < /,DATV\|n,/=hypo))
+/,EXP\|n,/=hyper > /,Root.*,包括/ $ /,LINK\|n,/=hypo
+/,Root\|n,/=hyper< /,eCOO\|n,/=hypo
+/,EXP\|a,/=hyper> (/,结合/ < (/,识别/ < /,eSUCC\|n,/=hypo < /mDEPD\|v/=keyv))
+/,CONT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|n,/=hypo
+/,EXP\|n,/=hyper > /,Root.*,属于/ $ /,EXP\|n,/=hypo
+/,EXP\|n,/=hyper > /,Root.*,为/ $ /,LINK\|n,/=hypo < /mDEPD\|v/=keyv
+/,PAT\|n,/=hyper < /将/ > /,eSUCC.*,分为/ $ /,LINK\|n,/=hypo
+/,PAT\|n,/=hyper < /将/ > /,Root.*,分为/ $ /,LINK\|q,/=hypo
+/,EXP\|n,/=hyper> (/,导致/ < (/,eSUCC.*,包括/ < /,LINK\|n,/=hypo))
+/,EXP\|n,/=hyper > /,Root.*,涉及/ $ /,LINK\|n,/=hypo

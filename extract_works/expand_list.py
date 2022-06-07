@@ -123,5 +123,6 @@ def gen_list_struct():
 
 if __name__ == '__main__':
     hiers = load_from_mutiple_tuple(gen_list_struct())
+
     print(hiers)
 

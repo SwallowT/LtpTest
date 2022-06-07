@@ -1,3 +1,4 @@
+import copy
 import re
 from collections import defaultdict
 from typing import List
@@ -17,7 +18,7 @@ def show_tree(tree: Tree, nid=None, level=0, filter=None,
         func('{0}{1}'.format(pre, label))
 
 
-def load_from_ltp_tuple(ltp_tree, segment=None, root_id=0):
+def load_from_ltp_tuple(ltp_tree_old, segment=None, root_id=0):
     """
     将哈工大输出的树结构转为treelib的树
     :param segment: 分词的词汇
@@ -32,6 +33,7 @@ def load_from_ltp_tuple(ltp_tree, segment=None, root_id=0):
     # 转换为树 treelib库
     tree = Tree()
     tree.create_node(identifier=0, data=str(root_id + 1), tag='isRoot')
+    ltp_tree = copy.deepcopy(ltp_tree_old)
     while len(ltp_tree) > 0:
         ltp_tree_steady = tuple(ltp_tree)
         for ltp_tuple in ltp_tree_steady:
@@ -150,11 +152,17 @@ def load_from_sexpr(s_str):
                     build_tree(i, t, p=last_p)
 
     tree = Tree()
-    if "Root" not in s_str:
-        tree.create_node('root', 'root')
-        build_tree(loads(s_str), tree, 'root')
-    else:
-        build_tree(loads(s_str), tree)
+    s_obj = loads(s_str)
+    try:
+        iter(s_obj)
+        if "Root" not in s_str:
+            tree.create_node('root', 'root')
+            build_tree(s_obj, tree, 'root')
+        else:
+            build_tree(s_obj, tree)
+    except TypeError:
+        node = gen_node(s_obj._val)
+        tree.add_node(node)
 
     return tree
 
@@ -210,6 +218,33 @@ def load_from_sexp_file(path='data/cutted_trees_sexpr.txt') -> List[Tree]:
         trees.append(load_from_sexpr(ct))
     return trees
 
+
+def gen_tree_from_sexpr(t_b:str):
+    t_b = t_b.strip()
+    parent_stack = [-1]
+    tree = Tree()
+    tree.create_node(identifier=-1, tag='isRoot')
+    lines = t_b.split('\n')
+    for ln in lines:
+        ln = ln.strip()
+        nodes_str = ln.split(' ')
+        for n_str in nodes_str:
+            node = gen_node(n_str.strip('()'))
+            tree.add_node(node, parent=parent_stack[-1])
+            if '(' in n_str:
+                parent_stack.append(node.identifier)
+            if ')' in n_str:
+                cnt = n_str.count(')')
+                for i in range(cnt):
+                    parent_stack.pop()
+    # if 'Root' in t_b:
+    #     tree.remove_node(-1)
+    # show_tree(tree)
+
+    return tree
+
+
 if __name__ == '__main__':
-    tree = load_from_sexpr('(18,LINK,三类 17,eCOO,系统运行安全数据)')
-    show_tree(tree)
+    # tree = load_from_sexpr('(18,LINK,三类 17,eCOO,系统运行安全数据)')
+    # show_tree(tree)
+    pass

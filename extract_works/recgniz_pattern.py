@@ -7,12 +7,12 @@ import subprocess
 from collections import defaultdict
 
 from gen_tree import gen_node, load_from_sexp_file, show_tree
-from expand_list import gen_list_struct
 import logging
+import pickle
 
 # log = Logger('pat.log', level='debug', when='D')
 logging.basicConfig(level=logging.DEBUG,  # 控制台打印的日志级别
-                    filename='data/logs/pat-0525.log',
+                    filename='../data/logs/pat-0606.log',
                     filemode='w',  # 模式，有w和a，默认是a
                     format=
                     '%(levelname)s: %(message)s'
@@ -27,11 +27,11 @@ obj_str = "|".join(OBJ)
 sub_str = "|".join(SUB)
 
 # verb_keys = ['包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下', '示例']
-verb_keys = ['包括', '属于', '如', '例如']
+verb_keys = ['包括', '属于', '如', '例如', '包含']
 rev_verb_keys = ['属于']
-blacklist = ['指', '是']
+blacklist = ['指', '是', '为', '泄露']
 
-constellation = ['、', '以及', '和', '/', '与']  # 并列关系
+constellation = ['、', '以及', '和', '/', '与', '及', '或']  # 并列关系
 
 v_patterns: List[str] = []
 output_pattern: Dict[str, str] = {}
@@ -64,6 +64,8 @@ def is_hypo(data: str) -> bool:
 def add_hyper(node: Node, t_id: str):
     if is_hyper(node.data):
         if t_id in hypers_id:
+            if node.identifier < hypers_id[t_id]:
+                hypers_id[t_id] = node.identifier
             logging.info('hyper conflict: tree id %s, old %s, new %s' % (
                 t_id, hypers_id[t_id], node.data))  # 上义词冲突，记录
         else:
@@ -90,10 +92,11 @@ def init_hyper():
                 '/Root\|n/=hyper',
                 '/,s|,{0}\|n,/=hyper < /将/'.format(obj_str),
                 '/,PAT\|n,/=hyper $ /将/',
-                '/EXP\|n/=hyper $ /mDEPD.*如/=keyv'
+                '/EXP\|n/=hyper $ /mDEPD.*如/=keyv',
+                '/,EXP/>/Root.*包括/</n/=hyper'
                 ]
     for pat in patterns:
-        res_str = tregex_search_terminal(pat, para='-h hyper')
+        res_str = tregex_search_terminal(pat, para='-u -h hyper')
         res_dict: Dict[str, List[Node]] = parse_terminal(res_str)
 
         pat_suc = pat.split('=hyper', maxsplit=1)[1]
@@ -112,11 +115,12 @@ def init_hypo(trees: List[Tree]):
     patterns = ['/,s|{0}|eCOO|eSUCC\|n/=hypo < /mDEPD\|v/=keyv'.format(obj_str),
                 '/,s|{0}\|n/=hypo $ /mDEPD\|v/=keyv'.format(obj_str),
                 '/n/=hypo > (/限于/>/包括/)',
-                '/Root\|n/=hypo'
+                '/Root\|n/=hypo',
+                '/EXP.*、/=hypo>/v.*如/'
                 ]
 
     for pat in patterns:
-        res_str = tregex_search_terminal(pat, para='-h hypo')
+        res_str = tregex_search_terminal(pat, para='-u -h hypo')
         res_dict: Dict[str, List[Node]] = parse_terminal(res_str)
 
         for t_id, nodes in res_dict.items():
@@ -315,17 +319,18 @@ def gen_tregex_from_shortest_path(trees):
     return new_search
 
 
-def tregex_search_terminal(pattern: str, para='-h hyper -h hypo'):
+def tregex_search_terminal(pattern: str, para='-u -h hyper -h hypo',
+                           filepath="/home/tanly/pywork/SyntaxTree/data/cutted_trees_sexpr.txt "):
     """
     tregex命令行匹配
+    :param filepath: 文件路径
     :param pattern: tregex模式
-    :param para: 参数, 会自动添上-u -n
+    :param para: 参数, 会自动添上-n
     :return:匹配到的节点
     """
-    parastr = '-u -n ' + para
+    parastr = '-n ' + para
     command = f"java -cp '/home/tanly/pywork/stanford-tregex/stanford-tregex.jar:' " \
-              f"edu.stanford.nlp.trees.tregex.TregexPattern {parastr} '{pattern}' " \
-              f"/home/tanly/pywork/SyntaxTree/data/cutted_trees_sexpr.txt "
+              f"edu.stanford.nlp.trees.tregex.TregexPattern {parastr} '{pattern}' {filepath}"
     res = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
     resstr = str(res.stdout, encoding='utf-8')
     return resstr
@@ -372,19 +377,34 @@ def parse_terminal(resstr):
 
 
 def split_hypo(hypo_sent: str) -> list:
+    _verb_keys = ['包括但不限于', '包括', '属于', '分为', '分成', '例如', '如', '比如', '有', '如下', '示例']
+    cons_Ch_char = ['和', '与']
     # 假设：左右括号完整，没有嵌套括号
     if "、" in hypo_sent:  # 分开逗号分割的子句
         subs = re.split('[，；。]', hypo_sent)
-        sep = constellation
+        # sep = constellation
+        sep = ['、']
     else:
         subs = re.split('[；。]', hypo_sent)
-        sep = constellation + ['，']
+        # sep = constellation + ['，']
+        sep = ['、', '，']
 
     res = []  # 'A(B、C)' -> ['A', ['B', 'C']]
     is_inBracket = False
-    is_after_colon = False
     for sb in subs:
+        if len(sb) == 0:
+            continue
+
+        is_after_colon = False
         ent_list = re.split('|'.join(sep), sb)
+
+        for ent in ent_list:
+            if any([c in ent for c in cons_Ch_char]):
+                sep_char = cons_Ch_char[0] if cons_Ch_char[0] in ent else cons_Ch_char[1]
+                new_sep = ent.split(sep_char)
+                if new_sep[0].endswith(("数据", "信息", '数据域')):  # or abs(len(new_sep[0])-len(new_sep[1])) <2
+                    ent_list.remove(ent)
+                    ent_list.extend(new_sep)
 
         if len(ent_list) == 1:
             res.extend(ent_list)
@@ -394,14 +414,15 @@ def split_hypo(hypo_sent: str) -> list:
             if len(ent) == 0:
                 continue
 
-            rm_reg = re.compile('等.*')
+            rm_reg = re.compile('等[^效]*')
 
             if "（" in ent and "）" not in ent:  # eg. 存款信息（包括资金数量
 
                 is_inBracket = True
 
                 p, c = ent.split("（")
-                for v in verb_keys: c = c.strip(v)  # 去掉“包括”
+                for v in _verb_keys: c = c.strip(v)  # 去掉“包括”
+                c, p = rm_reg.sub('', c), rm_reg.sub('', p)
                 res.append([p, [c]])
 
             elif is_inBracket:  # eg. 业务订购等）数据等
@@ -411,15 +432,31 @@ def split_hypo(hypo_sent: str) -> list:
                     is_inBracket = False
                     c, p = ent.split("）")
                     c, p = rm_reg.sub('', c), rm_reg.sub('', p)
-                    res[-1][-2] += p
                     res[-1][-1].append(c)
+                    if '（' in ent and ent.index('（') > ent.index('）'): # ）在（ 之前
+                        is_inBracket = True
+
+                        _p, _c = ent.split("（")
+                        for v in _verb_keys: _c = _c.strip(v)  # 去掉“包括”
+                        _c, _p = rm_reg.sub('', _c), rm_reg.sub('', _p)
+
+                        # if _p.startswith(tuple(cons_Ch_char)) and res[-1][-2].endswith(("数据", "信息", '数据域')):
+                        #     sep_char = cons_Ch_char[0] if cons_Ch_char[0] in _p else cons_Ch_char[1]
+                        #     new_sep = _p.split(sep_char)
+                        #     if new_sep[0]:  # or abs(len(new_sep[0])-len(new_sep[1])) <2
+                        #         ent_list.remove(ent)
+                        #         ent_list.extend(new_sep)
+
+                        res.append([_p, [_c]])
+                    else:
+                        res[-1][-2] += p
                 else:
                     res[-1][-1].append(ent)
 
             elif "：" in ent:  # 示例：老年人优待证信息，无偿献血证
                 p, c = ent.split("：")
                 c = rm_reg.sub('', c)
-                if p in verb_keys:
+                if p in _verb_keys:
                     res.append(c)
                 else:
                     res.append([p, [c]])
@@ -440,7 +477,7 @@ def search_kv_by_tregex(new_v_search_pattern):
     all_new_v_str = []
 
     for trgx in new_v_search_pattern:
-        res = tregex_search_terminal(trgx, para='-h keyv -h hyper -h hypo')
+        res = tregex_search_terminal(trgx, para='-u -h keyv -h hyper -h hypo')
         nodes_perline: Dict[str, List[List[Node]]] = parse_terminal(res)
 
         if not nodes_perline:
@@ -553,16 +590,105 @@ def exam_identical_hyper_hypo():
                     hypos_id[t_id].remove(_hypo)
 
 
+def hypo_node2str(trees: List[Tree], hypos_node_id: dict):
+    def hypo_filter(node_data: str):
+        node_data = node_data.strip('以下').strip(''.join(constellation))
+        node_data = re.sub('[一二两三四五六](个|大?类).*', '', node_data)
+        if (node_data.endswith('的数据') and len(node_data) > 5) or node_data.endswith('的'):
+            return ''
+        return node_data
+
+    # 下义词的id转换为文本，同时分开
+    hypos_str = defaultdict(list)
+    for t_id, nodes_ids in hypos_node_id.items():
+        tree = trees[int(t_id) - 1]
+        for node_id in nodes_ids:
+            node = tree.get_node(node_id)
+            node_data = node.data
+
+            hypos_current = []
+            if node.is_leaf(tree.identifier):
+                # 叶节点，直接加
+                hypos_current.append(node_data)
+            else:
+                # 子节点重排序
+                desc_tree: Tree = tree.subtree(node_id)  # 包括node自己
+                # sorted_desc = sorted(descendants, key=attrgetter('identifier'))
+                for desc_id in desc_tree.expand_tree():
+                    desc = desc_tree[desc_id]
+                    if not desc.data:
+                        continue
+                    if desc.tag == 'mDEPD|v' or (desc.tag == 'eCOO|v' and len(desc.data) > 1):
+                        continue
+                    if desc.tag.startswith(('r', 'd')) or tree.parent(desc_id).tag.startswith(('r', 'd')):
+                        continue
+                    # if desc.tag == 'eCOO|n':  #  and "（" not in desc.data and "）" not in desc.data
+                    # len(hypos_current) == 0 or \
+                    # 没有括号的并列关系
+                    # hypos_current.append(desc.data)
+                    # elif desc.tag.startswith('FEAT'):
+                    #     hypos_current.append(desc.data)
+                    # else:
+                    # 其他合并
+                    if desc.data.endswith('的') and len(hypos_current) > 0:
+                        hypos_current[-1] += desc.data
+                    else:
+                        hypos_current.append(desc.data)
+
+            for hypo_sent in hypos_current:
+                hypo_sent = hypo_filter(hypo_sent)
+                if not hypo_sent:
+                    continue
+
+                splitted_hypos = split_hypo(hypo_sent)
+                for hypo in splitted_hypos:
+                    if isinstance(hypo, str) and '的数据' in hypo:
+                        if len(hypo.replace('的数据', '')) > 2:
+                            splitted_hypos.remove(hypo)
+                hypos_str[t_id].extend(splitted_hypos)
+    return hypos_str
+
+
+def hyper_node2str(trees: List[Tree], hypers_node_id: dict):
+    # 上义词的id转换为文本
+    hypers_str = dict()
+    for t_id, node_id in hypers_node_id.items():
+        tree: Tree = trees[int(t_id) - 1]
+        node: Node = tree.get_node(node_id)
+        node_data: str = node.data
+
+        if '的' in node_data:
+            former, latter = node_data.split('的', maxsplit=1)
+            if len(former) > 2:
+                # node_data = latter
+                continue
+        if '：' in node_data:
+            node_data = node_data.split('：')[0]
+        if len(tree.children(node_id)) == 1:
+            child: Node = tree.children(node_id)[0]
+            if '及其' in child.data:
+                node_data += child.data
+        # node_data = re.sub('基于.*的', '', node_data)
+        if '产生的' in node_data:
+            node_data = node_data.rsplit('产生的', maxsplit=1)[1]
+        if '敏感程度' in node_data or '其他' in node_data:
+            continue
+
+        hypers_str[t_id] = node_data
+    return hypers_str
+
+
 def main_proc():
     # 初始化
-    trees = load_from_sexp_file()
+    # trees = load_from_sexp_file()
+    with open('../data/serialized/cutted_trees', 'rb') as f:
+        trees = pickle.load(f)
     init_hyper()
     init_hypo(trees)
     find_v_id(trees)
     exam_identical_hyper_hypo()
     new_v_search_pattern = gen_tregex_from_shortest_path(trees)
     times = 1
-    for t_id, pt in output_pattern.items(): logging.debug(t_id + " " + pt)
 
     # 循环
     while times < 10:
@@ -602,50 +728,20 @@ def main_proc():
 
         times += 1
 
+    with open('../data/serialized/hypers_hypos_id', 'wb') as f:
+        pickle.dump((hypers_id, hypos_id), f)
+
     # 上义词的id转换为文本
-    hypers_str = dict()
-    for t_id, node_id in hypers_id.items():
-        node = trees[int(t_id) - 1].get_node(node_id)
-        node_data: str = node.data
-
-        # if '的' in node_data:
-        #     former, latter = node_data.split('的', maxsplit=1)
-        #     if len(latter) > 2:
-        #         node_data = latter
-
-        hypers_str[t_id] = node_data
+    hypers_str = hyper_node2str(trees, hypers_id)
 
     # 下义词的id转换为文本，同时分开
-    hypos_str = defaultdict(list)
-    for t_id, nodes_ids in hypos_id.items():
-        tree = trees[int(t_id) - 1]
-        for node_id in nodes_ids:
-            node = tree.get_node(node_id)
-            node_data = node.data
+    hypos_str = hypo_node2str(trees, hypos_id)
 
-            hypos_current = []
-            if node.is_leaf(tree.identifier):
-                # 叶节点，直接加
-                hypos_current.append(node_data)
-            else:
-                # 子节点重排序
-                descendants: List[Node] = tree.subtree(node_id).all_nodes()  # 包括node自己
-                sorted_desc = sorted(descendants, key=attrgetter('identifier'))
-                for desc in sorted_desc:
-                    if len(hypos_current) == 0 or \
-                            ('eCOO' in desc.tag and "（" not in desc.data and "）" not in desc.data):
-                        # 没有括号的并列关系，直接加
-                        hypos_current.append(desc.data)
-                    else:
-                        # 其他合并
-                        hypos_current[-1] += desc.data
-            for hypo_sent in hypos_current:
-                splitted_hypos = split_hypo(hypo_sent)
-                hypos_str[t_id].extend(splitted_hypos)
-
+    for t_id, pt in output_pattern.items(): logging.debug(t_id + " " + pt)
     # 打印结果
     print('---------result--------------')
     # 打印pattern
+    for t_id, i in output_pattern.items(): logging.debug(t_id + ": " + i)
     instinct_pattern = set(output_pattern.values())
     for i in instinct_pattern: logging.info("output pattern: " + i)
     # 打印上下义词
@@ -664,7 +760,7 @@ def add_extra(extra_pattern: List[str]):
     for pat in extra_pattern:
         # 先把上下义词加入
         if pat.count('=') == 2 and 'hyper' in extra_pattern and 'hypo' in extra_pattern:
-            res_str = tregex_search_terminal(pat, para='-h hyper -h hypo')
+            res_str = tregex_search_terminal(pat, para='-u -h hyper -h hypo')
             res_dict: Dict[str, List[List[Node]]] = parse_terminal(res_str)
             for t_id, triples in res_dict.items():
                 for hyper, hypo in triples:
@@ -677,7 +773,7 @@ def add_extra(extra_pattern: List[str]):
                         # 存下义词
                         add_hypo(hypo, t_id)
         elif pat.count('=') == 3:
-            res_str = tregex_search_terminal(pat, para='-h hyper -h hypo -h keyv')
+            res_str = tregex_search_terminal(pat, para='-u -h hyper -h hypo -h keyv')
             res_dict: Dict[str, List[List[Node]]] = parse_terminal(res_str)
             for t_id, triples in res_dict.items():
                 for hyper, hypo, keyv in triples:
@@ -700,4 +796,8 @@ if __name__ == '__main__':
                      ]
     add_extra(extra_pattern)
     hypers, hypos = main_proc()
+    with open('../data/serialized/text_hypers_for_line', 'wb') as f:
+        pickle.dump(hypers, f)
+    with open('../data/serialized/text_hypos_for_line', 'wb') as f:
+        pickle.dump(hypos, f)
     print(len(hypers), len(hypos))
